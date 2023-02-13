@@ -16,5 +16,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // button to go to demo login page (can be deleted later)
+        Button btnGoToForgotPassword = findViewById(R.id.btn_go_to_demo_login_page);
+        btnGoToForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, demo_login_page.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -16,5 +16,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<!--    This Button to test the demo login page-->
+    <Button
+        android:id="@+id/btn_go_to_demo_login_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Demo Login Page (test)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

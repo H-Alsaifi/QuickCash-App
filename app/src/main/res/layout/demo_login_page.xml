@@ -39,6 +39,8 @@
             android:layout_height="wrap_content"
             android:text="Login"/>
 
+
+<!--        Forgot password Option-->
         <TextView
             android:id="@+id/tv_forgot_password"
             android:layout_width="match_parent"

@@ -49,6 +49,11 @@ public class demo_login_page extends AppCompatActivity {
             }
         });
 
+
+
+
+
+        //This is the forgot password option that should be added to the main login page
         tvForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
