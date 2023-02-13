@@ -1,6 +1,5 @@
-package com.example.g2_qc.forgot_password;
+package com.example.g2_qc.login_page;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.forgot_password.forgot_password_page;
 
 public class demo_login_page extends AppCompatActivity {
     private EditText etUsername;

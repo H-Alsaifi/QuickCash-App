@@ -9,6 +9,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.login_page.demo_login_page;
 
 public class reset_password_page extends AppCompatActivity {
 

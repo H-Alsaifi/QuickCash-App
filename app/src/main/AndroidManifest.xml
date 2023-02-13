@@ -22,7 +22,7 @@
         </activity>
 
         <activity
-            android:name=".forgot_password.demo_login_page"
+            android:name=".login_page.demo_login_page"
             android:exported="true" />
         <activity
             android:name=".forgot_password.forgot_password_page"
