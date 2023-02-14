@@ -21,7 +21,7 @@ public class Welcome extends AppCompatActivity {
         TextView welcomeMessage = findViewById(R.id.welcome_message);
         welcomeMessage.setText("Join our community, which includes many jobs and qualified workers in various fields");
 
-        // Intent to move from welcome page to the sign-in page
+        // To move from welcome page to the sign-in page
 //        signInButton = (Button) findViewById(R.id.button1);
 //        signInButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -30,7 +30,7 @@ public class Welcome extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
-        // Intent to move from welcome page to the sign-up page
+        // To move from welcome page to the sign-up page
 //        createAccountButton = (Button) findViewById(R.id.button2);
 //        createAccountButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
