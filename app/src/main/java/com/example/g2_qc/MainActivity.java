@@ -25,5 +25,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //No one works in the main
     }
 }
