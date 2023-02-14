@@ -1,4 +1,4 @@
-package com.example.g2_qc;
+package com.example.g2_qc.welcome_page;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.g2_qc.R;
+import com.example.g2_qc.login_page.demo_login_page;
 
 public class Welcome extends AppCompatActivity {
 
@@ -22,14 +25,14 @@ public class Welcome extends AppCompatActivity {
         welcomeMessage.setText("Join our community, which includes many jobs and qualified workers in various fields");
 
         // To move from welcome page to the sign-in page
-//        signInButton = (Button) findViewById(R.id.button1);
-//        signInButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Welcome.this,signin,....class);
-//                startActivity(intent);
-//            }
-//        });
+        signInButton = (Button) findViewById(R.id.button1);
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Welcome.this, demo_login_page.class);
+                startActivity(intent);
+            }
+        });
         // To move from welcome page to the sign-up page
 //        createAccountButton = (Button) findViewById(R.id.button2);
 //        createAccountButton.setOnClickListener(new View.OnClickListener() {
