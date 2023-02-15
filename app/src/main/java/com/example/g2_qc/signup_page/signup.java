@@ -43,8 +43,8 @@ public class signup extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent forgotPasswordIntent = new Intent(signup.this, Welcome.class);
-                startActivity(forgotPasswordIntent);
+                Intent back = new Intent(signup.this, Welcome.class);
+                startActivity(back);
             }
         });
     }
