@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.login_page.demo_login_page;
+import com.example.g2_qc.signup_page.signup;
 
 public class Welcome extends AppCompatActivity {
 
@@ -33,14 +34,15 @@ public class Welcome extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         // To move from welcome page to the sign-up page
-//        createAccountButton = (Button) findViewById(R.id.button2);
-//        createAccountButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Welcome.this,....class);
-//                startActivity(intent);
-//            }
-//        });
+        createAccountButton = (Button) findViewById(R.id.button2);
+        createAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Welcome.this, signup.class);
+                startActivity(intent);
+            }
+        });
     }
 }
