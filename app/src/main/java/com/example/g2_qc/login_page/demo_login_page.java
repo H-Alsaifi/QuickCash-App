@@ -18,6 +18,8 @@ public class demo_login_page extends AppCompatActivity {
     private EditText etPassword;
     private Button btnLogin;
     private TextView tvForgotPassword;
+    private TextView tvCreateAccount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class demo_login_page extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_login);
         tvForgotPassword = findViewById(R.id.tv_forgot_password);
         tvForgotPassword.setPaintFlags(tvForgotPassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        tvCreateAccount = findViewById(R.id.tv_create_account);
+        tvCreateAccount.setPaintFlags(tvCreateAccount.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +65,17 @@ public class demo_login_page extends AppCompatActivity {
                 startActivity(forgotPasswordIntent);
             }
         });
+
+
+        //To switch to SignUp page
+        tvCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent forgotPasswordIntent = new Intent(demo_login_page.this, com.example.g2_qc.signup_page.signup.class);
+                startActivity(forgotPasswordIntent);
+            }
+        });
+
     }
 }
 
