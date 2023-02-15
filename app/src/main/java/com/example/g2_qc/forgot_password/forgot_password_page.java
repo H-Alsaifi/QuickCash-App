@@ -16,7 +16,6 @@ import com.example.g2_qc.login_page.demo_login_page;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
 
 public class forgot_password_page extends AppCompatActivity {
 
@@ -28,7 +27,7 @@ public class forgot_password_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forgot_password_page);
 
-        etEmail = findViewById(R.id.et_email);
+        etEmail = findViewById(R.id.et_email_address);
         btnSubmit = findViewById(R.id.btn_submit);
 
         mAuth = FirebaseAuth.getInstance();
