@@ -34,9 +34,11 @@
             android:name=".login_page.demo_login_page"
             android:exported="true" />
         <activity
+            android:name=".signup_page.signup"
+            android:exported="true" />
+        <activity
             android:name=".forgot_password.forgot_password_page"
             android:exported="true" />
-
 
     </application>
 
