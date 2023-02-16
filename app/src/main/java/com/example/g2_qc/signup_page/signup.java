@@ -31,7 +31,7 @@ public class signup extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_page);
-
+        Button instructionsButton = findViewById(R.id.instructionsButton);
         fName = findViewById(R.id.firstName);
         lName = findViewById(R.id.lastName);
         age = findViewById(R.id.age);
@@ -40,6 +40,19 @@ public class signup extends AppCompatActivity {
         confirmPassword = findViewById(R.id.confirmPassword);
         signUp = findViewById(R.id.signup_button);
         back = findViewById(R.id.backToWelcomePage);
+        instructionsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(signup.this, "How to Join!" +
+                        "Add Your First and Last name" +
+                        "Please add a valid email address. For example: abc123@gmail.com"
+                        + "Your password must include: 8 characters" +
+                        "An uppercase and lowercase letter" +
+                        "At least 1 number" +
+                        "At least 1 special character(!,@,#,$,%,^,&,*" +
+                        "Enter your Age", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
