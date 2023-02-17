@@ -62,13 +62,17 @@ public class signup extends AppCompatActivity {
             public void onClick(View view) {
                 new AlertDialog.Builder(signup.this)
                         .setTitle("How to Join!")
-                        .setMessage("Add Your First and Last name \n" +
-                                "Please add a valid email address. For example: abc123@gmail.com\n" +
-                                "Your password must include: 8 characters\n" +
-                                "An uppercase and lowercase letter\n" +
-                                "At least 1 number\n" +
-                                "At least 1 special character(!,@,#,$,%,^,&,*)\n" +
-                                "Enter your Age\n")
+                        .setMessage("1- Enter your first and last name(just letters). \n\n" +
+                                "2- Enter your Age.\n\n" +
+                                "3- Please enter a valid email address.\n" +
+                                "\t\t\t\t-ex: abc123@gmail.com\n\n" +
+                                "4- Your password must include: \n" +
+                                "\t\t* At least 1 number\n" +
+                                "\t\t* At least 1 special character:\n" +
+                                "\t\t\t\t-ex: (!,@,#,$,%,^,&,*,.)\n" +
+                                "\t\t* 8 characters with at least one:\n"+
+                                "\t\t\t\tA- uppercase letter.\n"+
+                                "\t\t\t\tB- lowercase letter.\n")
                         .setPositiveButton(android.R.string.ok, null)
                         .setIcon(android.R.drawable.ic_dialog_info)
                         .show();
@@ -102,6 +106,18 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
+                //check if the first name contains any symbols
+                if (!isValidFirstName(firstName)) {
+                    Toast.makeText(signup.this, "Please enter a valid first name.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                //check if the last name contains any symbols
+                if (!isValidLastName(lastName)) {
+                    Toast.makeText(signup.this, "Please enter a valid last name.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 // Check if age is a valid number
                 try {
                     int ageInt = Integer.parseInt(userAge);
@@ -132,11 +148,17 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
+
+
+
+
+                // All input values are valid, create new account and go to login page
+                //add data to firebase (email and password to auth database And the other data to realtime database)
                 mAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(firstName, lastName, userAge, userEmail);
+                            User user = new User(firstName, lastName, userEmail, userAge);
 
                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -157,16 +179,6 @@ public class signup extends AppCompatActivity {
 
 
 
-                // All input values are valid, create new account and go to login page
-                // Code to create new account goes here
-
-
-                //add data to firebase (email and password to auth database And the other data to realtime database)
-
-
-
-
-
 
 
 
@@ -177,6 +189,21 @@ public class signup extends AppCompatActivity {
             }
         });
     }
+
+    public boolean isValidFirstName(String firstName){
+
+        String firstNameRegex = "^[A-Za-z][A-Za-z]+$";
+
+        return firstName.matches(firstNameRegex);
+    }
+
+    public boolean isValidLastName(String firstName){
+
+        String lastNameRegex = "^[A-Za-z][A-Za-z]+( ?[A-Za-z][A-Za-z]+)?$";
+
+        return firstName.matches(lastNameRegex);
+    }
+
     private boolean isValidEmail(String email) {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         return email.matches(emailRegex);
@@ -198,7 +225,15 @@ public class signup extends AppCompatActivity {
         }
 
         // Check if password contains at least 1 special character
-        if (!Pattern.compile(".*[!@#$%^&*].*").matcher(password).matches()) {
+        if (!Pattern.compile(".*[!@#$%^&*\\.].*").matcher(password).matches()) {
+            return false;
+        }
+        //at least an lowercase letter
+        if (!password.matches(".[a-z].")) {
+            return false;
+        }
+        //at least an uppercase letter
+        if (!password.matches(".[A-Z].")) {
             return false;
         }
 
