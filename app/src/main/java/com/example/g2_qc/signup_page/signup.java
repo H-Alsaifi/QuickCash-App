@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.ListViewAutoScrollHelper;
 
@@ -24,6 +25,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthSettings;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.regex.Pattern;
 
 public class signup extends AppCompatActivity {
 
@@ -57,14 +60,18 @@ public class signup extends AppCompatActivity {
         instructionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(signup.this, "How to Join!" +
-                        "Add Your First and Last name" +
-                        "Please add a valid email address. For example: abc123@gmail.com"
-                        + "Your password must include: 8 characters" +
-                        "An uppercase and lowercase letter" +
-                        "At least 1 number" +
-                        "At least 1 special character(!,@,#,$,%,^,&,*" +
-                        "Enter your Age", Toast.LENGTH_SHORT).show();
+                new AlertDialog.Builder(signup.this)
+                        .setTitle("How to Join!")
+                        .setMessage("Add Your First and Last name \n" +
+                                "Please add a valid email address. For example: abc123@gmail.com\n" +
+                                "Your password must include: 8 characters\n" +
+                                "An uppercase and lowercase letter\n" +
+                                "At least 1 number\n" +
+                                "At least 1 special character(!,@,#,$,%,^,&,*)\n" +
+                                "Enter your Age\n")
+                        .setPositiveButton(android.R.string.ok, null)
+                        .setIcon(android.R.drawable.ic_dialog_info)
+                        .show();
             }
         });
 
@@ -95,12 +102,6 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
-                // Check if password and confirm password fields match
-                if (!userPassword.equals(userConfirmPassword)) {
-                    Toast.makeText(signup.this, "Passwords don't match.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
                 // Check if age is a valid number
                 try {
                     int ageInt = Integer.parseInt(userAge);
@@ -116,6 +117,18 @@ public class signup extends AppCompatActivity {
                 // Check if email is valid
                 if (!isValidEmail(userEmail)) {
                     Toast.makeText(signup.this, "Please enter a valid email address.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Check if password is valid
+                if (!isValidPassword(userPassword)) {
+                    Toast.makeText(signup.this, "Invalid password!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Check if password and confirm password fields match
+                if (!userPassword.equals(userConfirmPassword)) {
+                    Toast.makeText(signup.this, "Passwords don't match.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -168,4 +181,28 @@ public class signup extends AppCompatActivity {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         return email.matches(emailRegex);
     }
+
+    public static boolean isValidPassword(String password) {
+        if (password == null) {
+            return false;
+        }
+
+        // Check if password is at least 8 characters long
+        if (password.length() < 8) {
+            return false;
+        }
+
+        // Check if password contains at least 1 digit
+        if (!Pattern.compile(".*\\d.*").matcher(password).matches()) {
+            return false;
+        }
+
+        // Check if password contains at least 1 special character
+        if (!Pattern.compile(".*[!@#$%^&*].*").matcher(password).matches()) {
+            return false;
+        }
+
+        return true;
+    }
+
 }
