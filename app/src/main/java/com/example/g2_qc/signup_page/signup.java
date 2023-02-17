@@ -106,13 +106,14 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
-
+                //check if the first name contains any symbols
                 if (!isValidFirstName(firstName)) {
                     Toast.makeText(signup.this, "Please enter a valid first name.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (!isValidFirstName(firstName)) {
+                //check if the last name contains any symbols
+                if (!isValidLastName(lastName)) {
                     Toast.makeText(signup.this, "Please enter a valid last name.", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -191,14 +192,14 @@ public class signup extends AppCompatActivity {
 
     public boolean isValidFirstName(String firstName){
 
-        String firstNameRegex = "^[A-Za-z]$";
+        String firstNameRegex = "^[A-Za-z][A-Za-z]+$";
 
         return firstName.matches(firstNameRegex);
     }
 
     public boolean isValidLastName(String firstName){
 
-        String lastNameRegex = "^[A-Za-z]$";
+        String lastNameRegex = "^[A-Za-z][A-Za-z]+( ?[A-Za-z][A-Za-z]+)?$";
 
         return firstName.matches(lastNameRegex);
     }
