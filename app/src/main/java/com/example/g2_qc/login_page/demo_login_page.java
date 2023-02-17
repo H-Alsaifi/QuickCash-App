@@ -44,7 +44,7 @@ public class demo_login_page extends AppCompatActivity {
                     etEmail.setError("Email Address is required");
                 } else if (password.isEmpty()) {
                     etPassword.setError("Password is required");
-                } else {
+                } else{
                     // Add code here to validate the email and password and show a Toast message if the login is successful
 
 
