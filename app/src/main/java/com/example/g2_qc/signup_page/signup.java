@@ -9,15 +9,25 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.ListViewAutoScrollHelper;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.forgot_password.forgot_password_page;
 import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.welcome_page.Welcome;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthSettings;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class signup extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
     private EditText fName;
     private EditText lName;
     private EditText age;
@@ -32,6 +42,10 @@ public class signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_page);
 
+        mAuth = FirebaseAuth.getInstance();
+
+
+        Button instructionsButton = findViewById(R.id.instructionsButton);
         fName = findViewById(R.id.firstName);
         lName = findViewById(R.id.lastName);
         age = findViewById(R.id.age);
@@ -40,6 +54,19 @@ public class signup extends AppCompatActivity {
         confirmPassword = findViewById(R.id.confirmPassword);
         signUp = findViewById(R.id.signup_button);
         back = findViewById(R.id.backToWelcomePage);
+        instructionsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(signup.this, "How to Join!" +
+                        "Add Your First and Last name" +
+                        "Please add a valid email address. For example: abc123@gmail.com"
+                        + "Your password must include: 8 characters" +
+                        "An uppercase and lowercase letter" +
+                        "At least 1 number" +
+                        "At least 1 special character(!,@,#,$,%,^,&,*" +
+                        "Enter your Age", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +118,30 @@ public class signup extends AppCompatActivity {
                     Toast.makeText(signup.this, "Please enter a valid email address.", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                mAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            User user = new User(firstName, lastName, userAge, userEmail);
+
+                            FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()){
+                                        Toast.makeText(signup.this, "Success", Toast.LENGTH_LONG).show();
+                                    }else{
+                                        Toast.makeText(signup.this, "Failed", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+
+                        }else{
+                            Toast.makeText(signup.this, "Failed", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
 
 
                 // All input values are valid, create new account and go to login page

@@ -1,0 +1,18 @@
+package com.example.g2_qc.signup_page;
+
+public class User {
+
+    public String firstName, lastname, emailAddress, agePerson;
+
+    public  User(){}
+
+
+    public User(String firstName, String lastname, String emailAddress, String agePerson){
+        this.firstName = firstName;
+        this.lastname = lastname;
+        this.emailAddress = emailAddress;
+        this.agePerson = agePerson;
+
+    }
+
+}
