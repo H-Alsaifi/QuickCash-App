@@ -13,17 +13,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.ListViewAutoScrollHelper;
 
 import com.example.g2_qc.R;
-import com.example.g2_qc.forgot_password.forgot_password_page;
 import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.welcome_page.Welcome;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthSettings;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
@@ -118,15 +115,9 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
-                // Check if age is a valid number
-                try {
-                    int ageInt = Integer.parseInt(userAge);
-                    if (ageInt <= 0) {
-                        Toast.makeText(signup.this, "Please enter a valid age.", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                } catch (NumberFormatException e) {
-                    Toast.makeText(signup.this, "Please enter a valid age.", Toast.LENGTH_SHORT).show();
+                // Check if Age is valid
+                if (!isValidAge(userAge)) {
+                    Toast.makeText(signup.this, "Please enter a valid Age.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -203,6 +194,20 @@ public class signup extends AppCompatActivity {
 
         return firstName.matches(lastNameRegex);
     }
+
+    public boolean isValidAge(String userAge) {
+        try {
+            int ageInt = Integer.parseInt(userAge);
+            if (ageInt <= 0) {
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            Toast.makeText(signup.this, "Please enter a valid age.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
 
     private boolean isValidEmail(String email) {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
