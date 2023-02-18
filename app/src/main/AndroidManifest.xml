@@ -12,6 +12,27 @@
         android:theme="@style/Theme.G2QC"
         tools:targetApi="31">
         <activity
+            android:name=".userProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".user_Profile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".user_userProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".welcome_page.Welcome"
             android:exported="true">
             <intent-filter>
@@ -29,7 +50,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".login_page.demo_login_page"
             android:exported="true" />
@@ -39,7 +59,6 @@
         <activity
             android:name=".forgot_password.forgot_password_page"
             android:exported="true" />
-
     </application>
 
 </manifest>
