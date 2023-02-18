@@ -234,11 +234,11 @@ public class signup extends AppCompatActivity {
             return false;
         }
         //at least an lowercase letter
-        if (!password.matches(".[a-z].")) {
+        if (!password.matches("^(?=.*[a-z]).+$")) {
             return false;
         }
         //at least an uppercase letter
-        if (!password.matches(".[A-Z].")) {
+        if (!password.matches("^(?=.*[A-Z]).+$")) {
             return false;
         }
 
