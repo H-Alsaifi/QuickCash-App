@@ -20,7 +20,7 @@ public class Welcome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome_page);
+        setContentView(R.layout.welcome);
 
         TextView welcomeMessage = findViewById(R.id.welcome_message);
         welcomeMessage.setText("Join our community, which includes many jobs and qualified workers in various fields");
