@@ -7,11 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.forgot_password.forgot_password_page;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class demo_login_page extends AppCompatActivity {
     private EditText etEmail;
@@ -34,6 +40,9 @@ public class demo_login_page extends AppCompatActivity {
         tvCreateAccount = findViewById(R.id.tv_create_account);
         tvCreateAccount.setPaintFlags(tvCreateAccount.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
+        // Initialize Firebase authentication
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,10 +54,22 @@ public class demo_login_page extends AppCompatActivity {
                 } else if (password.isEmpty()) {
                     etPassword.setError("Password is required");
                 } else {
-                    // Add code here to validate the email and password and show a Toast message if the login is successful
-
-
-
+                    // Authenticate the user with Firebase
+                    mAuth.signInWithEmailAndPassword(emailAddress, password)
+                            .addOnCompleteListener(demo_login_page.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        // Sign in success, show a Toast message and go to the next activity
+                                        Toast.makeText(demo_login_page.this, "Login successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(demo_login_page.this,com.example.g2_qc.user_profile.userProfile.class);
+                                        startActivity(intent);
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+                                        Toast.makeText(demo_login_page.this, "Incorrect email address or password.\nPlease try again", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
                 }
             }
         });

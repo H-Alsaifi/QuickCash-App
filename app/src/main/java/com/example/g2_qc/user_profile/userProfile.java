@@ -3,7 +3,6 @@ package com.example.g2_qc.user_profile;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -30,7 +29,7 @@ public class userProfile extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_profile);
+        setContentView(R.layout.user_profile_page);
 
         getSupportActionBar().setTitle("Homepage");
 
@@ -45,13 +44,15 @@ public class userProfile extends AppCompatActivity{
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser user = authProfile.getCurrentUser();
 
-        if(user ==  null) {
-            Toast.makeText(userProfile.this, "user profile details not found", Toast.LENGTH_LONG).show();
-        }
-        else{
-            progressBar.setVisibility(View.VISIBLE);
-            showProfile(user);
-        }
+        showProfile(user);
+
+//        if(user ==  null) {
+//            Toast.makeText(userProfile.this, "user profile details not found", Toast.LENGTH_LONG).show();
+//        }
+//        else{
+//            progressBar.setVisibility(View.VISIBLE);
+//            showProfile(user);
+//        }
     }
 
     private void showProfile(FirebaseUser firebaseUser) {
@@ -75,14 +76,14 @@ public class userProfile extends AppCompatActivity{
                     textViewPhoneNumber.setText(phoneNumber);
                     textViewGender.setText(gender);
                 }
-                progressBar.setVisibility(View.GONE);
+//                progressBar.setVisibility(View.GONE);
             }
 
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(userProfile.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
-                progressBar.setVisibility(View.GONE);
+//                progressBar.setVisibility(View.GONE);
             }
         });
     }
