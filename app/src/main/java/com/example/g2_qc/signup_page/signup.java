@@ -60,6 +60,7 @@ public class signup extends AppCompatActivity {
                 new AlertDialog.Builder(signup.this)
                         .setTitle("How to Join!")
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .setMessage("Add Your First and Last name \n" +
                                 "Please add a valid email address. For example: abc123@gmail.com\n" +
                                 "Your password must include: 8 characters\n" +
@@ -68,6 +69,8 @@ public class signup extends AppCompatActivity {
                                 "At least 1 special character(!,@,#,$,%,^,&,*)\n" +
                                 "Enter your Age\n")
 =======
+=======
+>>>>>>> origin/development
                         .setMessage("1- Enter your first and last name(just letters). \n\n" +
                                 "2- Enter your Age.\n\n" +
                                 "3- Please enter a valid email address.\n" +
@@ -79,6 +82,9 @@ public class signup extends AppCompatActivity {
                                 "\t\t* 8 characters with at least one:\n"+
                                 "\t\t\t\tA- uppercase letter.\n"+
                                 "\t\t\t\tB- lowercase letter.\n")
+<<<<<<< HEAD
+>>>>>>> origin/development
+=======
 >>>>>>> origin/development
                         .setPositiveButton(android.R.string.ok, null)
                         .setIcon(android.R.drawable.ic_dialog_info)
@@ -114,6 +120,7 @@ public class signup extends AppCompatActivity {
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // Check if age is a valid number
                 try {
                     int ageInt = Integer.parseInt(userAge);
@@ -124,6 +131,8 @@ public class signup extends AppCompatActivity {
                 } catch (NumberFormatException e) {
                     Toast.makeText(signup.this, "Please enter a valid age.", Toast.LENGTH_SHORT).show();
 =======
+=======
+>>>>>>> origin/development
                 //check if the first name contains any symbols
                 if (!isValidFirstName(firstName)) {
                     Toast.makeText(signup.this, "Please enter a valid first name.", Toast.LENGTH_SHORT).show();
@@ -139,6 +148,9 @@ public class signup extends AppCompatActivity {
                 // Check if Age is valid
                 if (!isValidAge(userAge)) {
                     Toast.makeText(signup.this, "Please enter a valid Age.", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
+>>>>>>> origin/development
+=======
 >>>>>>> origin/development
                     return;
                 }
@@ -162,13 +174,19 @@ public class signup extends AppCompatActivity {
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/development
 
 
 
 
                 // All input values are valid, create new account and go to login page
                 //add data to firebase (email and password to auth database And the other data to realtime database)
+<<<<<<< HEAD
+>>>>>>> origin/development
+=======
 >>>>>>> origin/development
                 mAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -256,8 +274,11 @@ public class signup extends AppCompatActivity {
 
         // Check if password contains at least 1 special character
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!Pattern.compile(".*[!@#$%^&*].*").matcher(password).matches()) {
 =======
+=======
+>>>>>>> origin/development
         if (!Pattern.compile(".*[!@#$%^&*\\.].*").matcher(password).matches()) {
             return false;
         }
@@ -267,6 +288,9 @@ public class signup extends AppCompatActivity {
         }
         //at least an uppercase letter
         if (!password.matches("^(?=.*[A-Z]).+$")) {
+<<<<<<< HEAD
+>>>>>>> origin/development
+=======
 >>>>>>> origin/development
             return false;
         }
