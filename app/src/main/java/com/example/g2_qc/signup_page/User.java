@@ -19,7 +19,5 @@ public class User {
         this.lastname = lastname;
         this.emailAddress = emailAddress;
         this.agePerson = agePerson;
-
     }
-
 }

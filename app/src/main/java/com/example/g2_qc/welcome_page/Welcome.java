@@ -13,7 +13,6 @@ import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.signup_page.signup;
 
 public class Welcome extends AppCompatActivity {
-
     private Button signInButton;
     private Button createAccountButton;
 

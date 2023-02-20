@@ -44,7 +44,6 @@ public class signup extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-
         Button instructionsButton = findViewById(R.id.instructionsButton);
         fName = findViewById(R.id.firstName);
         lName = findViewById(R.id.lastName);
@@ -58,21 +57,21 @@ public class signup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new AlertDialog.Builder(signup.this)
-                        .setTitle("How to Join!")
-                        .setMessage("1- Enter your first and last name(just letters). \n\n" +
-                                "2- Enter your Age.\n\n" +
-                                "3- Please enter a valid email address.\n" +
-                                "\t\t\t\t-ex: abc123@gmail.com\n\n" +
-                                "4- Your password must include: \n" +
-                                "\t\t* At least 1 number\n" +
-                                "\t\t* At least 1 special character:\n" +
-                                "\t\t\t\t-ex: (!,@,#,$,%,^,&,*,.)\n" +
-                                "\t\t* 8 characters with at least one:\n"+
-                                "\t\t\t\tA- uppercase letter.\n"+
-                                "\t\t\t\tB- lowercase letter.\n")
-                        .setPositiveButton(android.R.string.ok, null)
-                        .setIcon(android.R.drawable.ic_dialog_info)
-                        .show();
+                    .setTitle("How to Join!")
+                    .setMessage("1- Enter your first and last name(just letters). \n\n" +
+                            "2- Enter your Age.\n\n" +
+                            "3- Please enter a valid email address.\n" +
+                            "\t\t\t\t-ex: abc123@gmail.com\n\n" +
+                            "4- Your password must include: \n" +
+                            "\t\t* At least 1 number\n" +
+                            "\t\t* At least 1 special character:\n" +
+                            "\t\t\t\t-ex: (!,@,#,$,%,^,&,*,.)\n" +
+                            "\t\t* 8 characters with at least one:\n"+
+                            "\t\t\t\tA- uppercase letter.\n"+
+                            "\t\t\t\tB- lowercase letter.\n")
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .show();
             }
         });
 
@@ -139,39 +138,30 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
-
-
-
-
                 // All input values are valid, create new account and go to login page
-                //add data to firebase (email and password to auth database And the other data to realtime database)
+                // add data to firebase (email and password to auth database And the other data to realtime database)
                 mAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             User user = new User(firstName, lastName, userEmail, userAge);
-
                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
                                         Toast.makeText(signup.this, "Success", Toast.LENGTH_LONG).show();
-                                    }else{
+                                    }
+                                    else {
                                         Toast.makeText(signup.this, "Failed", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
-
-                        }else{
+                        }
+                        else {
                             Toast.makeText(signup.this, "Failed", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
-
-
-
-
-
 
                 //go back to to login data base
                 Intent loginIntent = new Intent(signup.this, demo_login_page.class);
@@ -187,9 +177,7 @@ public class signup extends AppCompatActivity {
      * @return returns a boolean after validating.
      */
     public boolean isValidFirstName(String firstName){
-
         String firstNameRegex = "^[A-Za-z][A-Za-z]+$";
-
         return firstName.matches(firstNameRegex);
     }
 
@@ -198,11 +186,8 @@ public class signup extends AppCompatActivity {
      * @param lastName user's lastName
      * @return returns a boolean after validating.
      */
-
     public boolean isValidLastName(String lastName){
-
         String lastNameRegex = "^[A-Za-z][A-Za-z]+( ?[A-Za-z][A-Za-z]+)?$";
-
         return lastName.matches(lastNameRegex);
     }
 
@@ -211,14 +196,14 @@ public class signup extends AppCompatActivity {
      * @param userAge user's age
      * @return returns a boolean after validating.
      */
-
     public boolean isValidAge(String userAge) {
         try {
             int ageInt = Integer.parseInt(userAge);
             if (ageInt <= 0) {
                 return false;
             }
-        } catch (NumberFormatException e) {
+        }
+        catch (NumberFormatException e) {
             Toast.makeText(signup.this, "Please enter a valid age.", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -234,6 +219,7 @@ public class signup extends AppCompatActivity {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         return email.matches(emailRegex);
     }
+
     /**
      * Checks if the  password is actually a valid one.
      * @param password user's password
@@ -258,15 +244,16 @@ public class signup extends AppCompatActivity {
         if (!Pattern.compile(".*[!@#$%^&*\\.].*").matcher(password).matches()) {
             return false;
         }
+
         //at least an lowercase letter
         if (!password.matches("^(?=.*[a-z]).+$")) {
             return false;
         }
+
         //at least an uppercase letter
         if (!password.matches("^(?=.*[A-Z]).+$")) {
             return false;
         }
-
         return true;
     }
 
