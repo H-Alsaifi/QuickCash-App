@@ -181,6 +181,11 @@ public class signup extends AppCompatActivity {
         });
     }
 
+    /**
+     * Checks if the first name is actually a valid one.
+     * @param firstName user's firstNamw
+     * @return returns a boolean after validating.
+     */
     public boolean isValidFirstName(String firstName){
 
         String firstNameRegex = "^[A-Za-z][A-Za-z]+$";
@@ -188,12 +193,24 @@ public class signup extends AppCompatActivity {
         return firstName.matches(firstNameRegex);
     }
 
-    public boolean isValidLastName(String firstName){
+    /**
+     * Checks if the last name is actually a valid one.
+     * @param lastName user's lastName
+     * @return returns a boolean after validating.
+     */
+
+    public boolean isValidLastName(String lastName){
 
         String lastNameRegex = "^[A-Za-z][A-Za-z]+( ?[A-Za-z][A-Za-z]+)?$";
 
-        return firstName.matches(lastNameRegex);
+        return lastName.matches(lastNameRegex);
     }
+
+    /**
+     * Checks if the user age is actually a valid one.
+     * @param userAge user's age
+     * @return returns a boolean after validating.
+     */
 
     public boolean isValidAge(String userAge) {
         try {
@@ -208,12 +225,20 @@ public class signup extends AppCompatActivity {
         return true;
     }
 
-
+    /**
+     * Checks if the email is actually a valid one.
+     * @param email user's email
+     * @return returns a boolean after validating.
+     */
     private boolean isValidEmail(String email) {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         return email.matches(emailRegex);
     }
-
+    /**
+     * Checks if the  password is actually a valid one.
+     * @param password user's password
+     * @return returns a boolean after validating.
+     */
     public static boolean isValidPassword(String password) {
         if (password == null) {
             return false;
