@@ -2,8 +2,11 @@ package com.example.g2_qc.user_profile;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.g2_qc.R;
@@ -18,72 +21,73 @@ import com.google.firebase.database.ValueEventListener;
 
 public class userProfile extends AppCompatActivity{
 
-    private TextView textViewWelcome, textViewName, textViewEmail, textViewGender, textViewPhoneNumber, textViewAge;
+    private TextView textViewWelcome, textViewFirstName, textViewLastName, textViewEmail, textViewAge;
     private ProgressBar progressBar;
-    private ImageView imageView;
-    private TextView textView = null;
     private FirebaseAuth authProfile;
-    private String Name, email, age, gender, phoneNumber;
+    private String firstName, lastName, email, age;
 
+    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile_page);
 
+        logout= (Button)findViewById(R.id.signout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(userProfile.this, userDetails.class));
+            }
+        });
+
         getSupportActionBar().setTitle("Homepage");
 
         textViewWelcome = findViewById(R.id.textView_show_welcome);
-        textViewName = findViewById(R.id.textView_show_name);
+        textViewFirstName = findViewById(R.id.textView_show_first_name);
+        textViewLastName = findViewById(R.id.textView_show_last_name);
         textViewEmail = findViewById(R.id.textView_show_email);
-        textViewGender = findViewById(R.id.textView_show_gender);
-        textViewPhoneNumber = findViewById(R.id.textView_show_mobile);
         textViewAge = findViewById(R.id.textView_show_age);
-        //progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar);
 
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser user = authProfile.getCurrentUser();
-
         showProfile(user);
 
-//        if(user ==  null) {
-//            Toast.makeText(userProfile.this, "user profile details not found", Toast.LENGTH_LONG).show();
-//        }
-//        else{
-//            progressBar.setVisibility(View.VISIBLE);
-//            showProfile(user);
-//        }
+        if(user == null) {
+            Toast.makeText(userProfile.this, "user profile details not found", Toast.LENGTH_LONG).show();
+        }
+        else{
+            progressBar.setVisibility(View.VISIBLE);
+            showProfile(user);
+        }
     }
 
     private void showProfile(FirebaseUser firebaseUser) {
-        String ID = firebaseUser.getUid();
-        DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("users registered");
+        String ID = firebaseUser.getUid(); //user ID
+        DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
         profile_ref.child(ID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userDetails userDetails = snapshot.getValue(userDetails.class);
                 if(userDetails != null) {
-                    Name = firebaseUser.getDisplayName();
-                    email = firebaseUser.getEmail();
-                    gender = userDetails.gender;
+                    firstName = userDetails.firstName;
+                    lastName = userDetails.lastName;
+                    email = userDetails.email;
                     age = userDetails.age;
-                    phoneNumber = userDetails.phoneNumber;
 
-                    textViewWelcome.setText("Welcome " + Name);
-                    textViewName.setText(Name);
-                    textViewAge.setText(age);
-                    textViewEmail.setText(email);
-                    textViewPhoneNumber.setText(phoneNumber);
-                    textViewGender.setText(gender);
+                    textViewWelcome.setText("Welcome " + firstName +  "!");
+                    textViewFirstName.setText(firstName);
+                    textViewLastName.setText(lastName);
+                    textViewAge.setText(email);
+                    textViewEmail.setText(age);
                 }
-//                progressBar.setVisibility(View.GONE);
             }
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(userProfile.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
-//                progressBar.setVisibility(View.GONE);
             }
         });
     }
