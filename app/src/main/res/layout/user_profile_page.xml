@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width= "wrap_content"
                 android:layout_height= "wrap_content"
-                android:id="@+id/textView_show_name"
+                android:id="@+id/textView_show_first_name"
                 android:layout_alignStart= "@id/imageView"
                 android:hint="..."
                 android:layout_marginStart= "50dp"
@@ -60,16 +60,43 @@
                 android:layout_width= "match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="20dp"
-                android:layout_below="@id/textView_show_name"
+                android:layout_below="@id/textView_show_first_name"
                 android:background="@android:color/black"
-                android:id="@+id/divider_name"/>
+                android:id="@+id/divider_first_name"/>
+
+            <ImageView
+                android:id="@id/imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/divider_last_name"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/lname" />
+
+            <TextView
+                android:id="@+id/textView_show_last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_first_name"
+                android:layout_alignStart="@id/imageView"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="20dp"
+                android:hint="..."
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width= "match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/textView_show_last_name"
+                android:background="@android:color/black"
+                android:id="@+id/divider_last_name"/>
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@id/imageView"
                 android:background="@drawable/email"
-                android:layout_below="@id/divider_name"
+                android:layout_below="@id/divider_last_name"
                 android:layout_marginTop="20dp"/>
 
             <TextView
@@ -80,7 +107,7 @@
                 android:hint="..."
                 android:layout_marginStart= "50dp"
                 android:layout_marginTop="20dp"
-                android:layout_below="@id/divider_name"
+                android:layout_below="@id/divider_last_name"
                 android:textSize="18sp"/>
             <View
                 android:layout_width= "match_parent"
@@ -117,61 +144,71 @@
                 android:background="@android:color/black"
                 android:id="@+id/divider_age"/>
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:id="@+id/gender"
-                android:background="@drawable/gender"
-                android:layout_below="@id/divider_age"
-                android:layout_marginTop="20dp"/>
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:id="@+id/gender"-->
+<!--                android:background="@drawable/gender"-->
+<!--                android:layout_below="@id/divider_age"-->
+<!--                android:layout_marginTop="20dp"/>-->
 
 
-            <TextView
-                android:layout_width= "wrap_content"
-                android:layout_height= "wrap_content"
-                android:id="@+id/textView_show_gender"
-                android:layout_alignStart= "@id/imageView"
-                android:hint="..."
-                android:layout_marginStart= "50dp"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/divider_age"
-                android:textSize="18sp"/>
+<!--            <TextView-->
+<!--                android:layout_width= "wrap_content"-->
+<!--                android:layout_height= "wrap_content"-->
+<!--                android:id="@+id/textView_show_gender"-->
+<!--                android:layout_alignStart= "@id/imageView"-->
+<!--                android:hint="..."-->
+<!--                android:layout_marginStart= "50dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_below="@id/divider_age"-->
+<!--                android:textSize="18sp"/>-->
 
-            <View
-                android:layout_width= "match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/textView_show_gender"
-                android:background="@android:color/black"
-                android:id="@+id/divider_gender"/>
+<!--            <View-->
+<!--                android:layout_width= "match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_below="@id/textView_show_gender"-->
+<!--                android:background="@android:color/black"-->
+<!--                android:id="@+id/divider_gender"/>-->
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:id="@+id/mobile"
-                android:background="@drawable/mobile"
-                android:layout_below="@id/divider_gender"
-                android:layout_marginTop="20dp"/>
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:id="@+id/mobile"-->
+<!--                android:background="@drawable/mobile"-->
+<!--                android:layout_below="@id/divider_gender"-->
+<!--                android:layout_marginTop="20dp"/>-->
 
 
-            <TextView
-                android:id="@+id/textView_show_mobile"
+<!--            <TextView-->
+<!--                android:id="@+id/textView_show_mobile"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/divider_age"-->
+<!--                android:layout_alignStart="@id/imageView"-->
+<!--                android:layout_marginStart="50dp"-->
+<!--                android:layout_marginTop="88dp"-->
+<!--                android:hint="..."-->
+<!--                android:textSize="18sp" />-->
+
+            <ProgressBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/divider_age"
-                android:layout_alignStart="@id/imageView"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="88dp"
-                android:hint="..."
-                android:textSize="18sp" />
+                style="@android:attr/progressBarStyleLarge"
+                android:layout_centerVertical="true"
+                android:id="@+id/progressBar"
+                android:layout_centerHorizontal="true"
+                android:elevation="10dp"
+                android:visibility="gone"/>
 
         </RelativeLayout>
 
         <Button
-            android:id="@+id/back"
+            android:id="@+id/signout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:text="Back to sign-in"/>
+            android:text="Logout"/>
     </LinearLayout>
 </ScrollView>
