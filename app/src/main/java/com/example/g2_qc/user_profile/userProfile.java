@@ -82,6 +82,8 @@ public class userProfile extends AppCompatActivity{
                     textViewLastName.setText(lastName);
                     textViewAge.setText(age);
                     textViewEmail.setText(email);
+
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             }
 
