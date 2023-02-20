@@ -139,10 +139,10 @@
 
     <Button
         android:id="@+id/instructionsButton"
-        android:layout_width="129dp"
-        android:layout_height="38dp"
+        android:layout_width="153dp"
+        android:layout_height="44dp"
         android:text="Instructions"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="556dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
