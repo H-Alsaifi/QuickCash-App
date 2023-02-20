@@ -230,7 +230,7 @@ public class signup extends AppCompatActivity {
      * @param email user's email
      * @return returns a boolean after validating.
      */
-    private boolean isValidEmail(String email) {
+    public boolean isValidEmail(String email) {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         return email.matches(emailRegex);
     }
