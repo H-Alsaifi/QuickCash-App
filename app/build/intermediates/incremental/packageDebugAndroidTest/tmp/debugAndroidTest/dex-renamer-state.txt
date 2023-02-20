@@ -1,0 +1,13 @@
+#Sun Feb 19 03:54:26 AST 2023
+path.3=5/classes.dex
+path.2=2/classes.dex
+path.1=0/classes.dex
+path.0=classes.dex
+base.3=/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/5/classes.dex
+base.2=/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/2/classes.dex
+base.1=/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+base.0=/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex

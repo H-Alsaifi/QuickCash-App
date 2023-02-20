@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.g2_qc.welcomeTest" tests="3" failures="2" errors="0" skipped="0" time="18.825" timestamp="2023-02-20T01:33:54" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_5_API_33(AVD) - 13" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="checkIfSwitchedToLogin" classname="com.example.g2_qc.welcomeTest" time="6.983">
+    <failure>java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToLogin(welcomeTest.java:52)</failure>
+  </testcase>
+  <testcase name="checkIfSwitchedToSignUp" classname="com.example.g2_qc.welcomeTest" time="4.961">
+    <failure>java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToSignUp(welcomeTest.java:61)</failure>
+  </testcase>
+  <testcase name="checkWelcomeMessageDisplay" classname="com.example.g2_qc.welcomeTest" time="2.583" />
+</testsuite>

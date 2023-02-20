@@ -1,0 +1,211 @@
+02-19 21:33:44.098 15843 15872 I TestRunner: started: checkIfSwitchedToSignUp(com.example.g2_qc.welcomeTest)
+02-19 21:33:44.101   407   497 W TransactionTracing: Could not find layer handle 0x72676c54ae30
+02-19 21:33:44.102   407   497 W TransactionTracing: Could not find layer handle 0x72676c54ff30
+02-19 21:33:44.137   407   497 W TransactionTracing: Could not find layer handle 0x72676c553410
+02-19 21:33:44.137   407   497 W TransactionTracing: Could not find layer handle 0x72676c550110
+02-19 21:33:44.178 15843 15872 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+02-19 21:33:44.216   822   960 D SplashScreenView: Build android.window.SplashScreenView{4495642 V.E...... ......ID 0,0-0,0}
+02-19 21:33:44.216   822   960 D SplashScreenView: Icon: view: null drawable: null size: 0
+02-19 21:33:44.216   822   960 D SplashScreenView: Branding: view: android.view.View{48e0653 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+02-19 21:33:44.400 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@309bdf in: PRE_ON_CREATE
+02-19 21:33:44.400 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+02-19 21:33:44.461  1660  1660 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+02-19 21:33:44.477  1660  2546 E HwDetectorWithState: a: 3
+02-19 21:33:44.531   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ec000000 0x3ec9a4000]
+02-19 21:33:44.578   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f09a4000]
+02-19 21:33:44.597   822   989 W Parcel  : Expecting binder but got null!
+02-19 21:33:44.646   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f1348000 0x3f1cec000]
+02-19 21:33:44.690  1201  1888 D EGL_emulation: app_time_stats: avg=73.47ms min=2.99ms max=469.97ms count=18
+02-19 21:33:44.838 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@309bdf in: CREATED
+02-19 21:33:44.839 15843 15843 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.g2_qc.welcome_page.Welcome@309bdf
+02-19 21:33:44.852 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@309bdf in: STARTED
+02-19 21:33:44.853 15843 15843 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.g2_qc.welcome_page.Welcome@309bdf
+02-19 21:33:44.866 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@309bdf in: RESUMED
+02-19 21:33:44.868 15843 15843 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.g2_qc.welcome_page.Welcome@309bdf
+02-19 21:33:44.927   822   989 D EGL_emulation: app_time_stats: avg=33.58ms min=1.83ms max=130.40ms count=25
+02-19 21:33:45.031   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f1cec000 0x3f2690000]
+02-19 21:33:45.094   822   989 D EGL_emulation: app_time_stats: avg=1697.52ms min=1697.52ms max=1697.52ms count=1
+02-19 21:33:45.111   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f2690000 0x3f3034000]
+02-19 21:33:45.113   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f3034000 0x3f39d8000]
+02-19 21:33:45.129   407   497 W TransactionTracing: Could not find layer handle 0x72676c5506b0
+02-19 21:33:45.129   407   497 W TransactionTracing: Could not find layer handle 0x72676c54b910
+02-19 21:33:45.129   407   497 W TransactionTracing: Could not find layer handle 0x72676c54b910
+02-19 21:33:45.129   407   497 W TransactionTracing: Could not find layer handle 0x72676c5506b0
+02-19 21:33:45.129   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:45.203   407   497 W TransactionTracing: Could not find layer handle 0x72676c550050
+02-19 21:33:45.214   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:45.216   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:45.218   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:45.218   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:45.252 15843 15877 W Parcel  : Expecting binder but got null!
+02-19 21:33:45.292   605   636 W ziparchive: Unable to open '/data/app/~~4BgVAnubWR0tqgux1n1yaA==/com.example.g2_qc-e-o5JmMWfpmNOxwKcIuyzQ==/base.dm': No such file or directory
+02-19 21:33:45.297   605   636 I ActivityTaskManager: Displayed com.example.g2_qc/.welcome_page.Welcome: +1s97ms
+02-19 21:33:45.391   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:45.467  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+02-19 21:33:45.468  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+02-19 21:33:45.470  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.g2_qc fieldId=-1 fieldName=null extras=null}, false)
+02-19 21:33:45.471  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+02-19 21:33:45.709 15843 15843 I ViewInteraction: Performing 'single click' action on view with id: com.example.g2_qc:id/button2
+02-19 21:33:45.715  1201  1201 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=537.5, y[0]=1789.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=4485278, downTime=4485278, deviceId=-1, source=0x1002, displayId=0, eventId=-700529365 }
+02-19 21:33:45.731 15843 15843 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+02-19 21:33:45.865   605   626 W system_server: Long monitor contention with owner android.anim (640) at android.window.TaskSnapshot com.android.server.wm.TaskSnapshotCache.getSnapshot(int, int, boolean, boolean)(TaskSnapshotCache.java:68) waiters=0 in void com.android.server.wm.ActivityClientController.activityIdle(android.os.IBinder, android.content.res.Configuration, boolean) for 241ms
+02-19 21:33:45.983   961  1186 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+02-19 21:33:46.002   961  1186 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+02-19 21:33:46.023   822   989 D EGL_emulation: app_time_stats: avg=106.12ms min=10.92ms max=500.94ms count=10
+02-19 21:33:46.078   605  1882 W InputManager-JNI: Input channel object 'c3c2bed Splash Screen com.example.g2_qc (client)' was disposed without first being removed with the input manager!
+02-19 21:33:46.105   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:46.106   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:46.108  1201  1201 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=537.5, y[0]=1789.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=4485625, downTime=4485278, deviceId=-1, source=0x1002, displayId=0, eventId=-54789511 }
+02-19 21:33:46.145   370  5371 E android.hardware.audio@7.1-impl.ranchu: pcmOpen:169 pcm_open failed for nChannels=2 sampleRateHz=48000 period_count=4 period_size=1056 isOut=1 with
+02-19 21:33:46.145   370  5371 E android.hardware.audio@7.1-impl.ranchu: device/generic/goldfish/audio/talsa.cpp:pcmOpen:172 failure: nullptr
+02-19 21:33:46.145   370  5371 E android.hardware.audio@7.1-impl.ranchu: device/generic/goldfish/audio/device_port_sink.cpp:create:228 failure: nullptr
+02-19 21:33:46.153   370  5371 W android.hardware.audio@7.1-impl.ranchu: create:375 failed to create alsa sink for 'AUDIO_DEVICE_OUT_SPEAKER'; creating NullSink instead.
+02-19 21:33:46.198   822   989 D EGL_emulation: app_time_stats: avg=274.60ms min=11.31ms max=748.97ms count=4
+02-19 21:33:46.232 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@309bdf in: PAUSED
+02-19 21:33:46.233 15843 15843 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.g2_qc.welcome_page.Welcome@309bdf
+02-19 21:33:46.236   407   497 W TransactionTracing: Could not find layer handle 0x72676c54f4b0
+02-19 21:33:46.237   407   497 W TransactionTracing: Could not find layer handle 0x72676c552ab0
+02-19 21:33:46.237   407   497 W TransactionTracing: Could not find layer handle 0x72676c553410
+02-19 21:33:46.238   407   497 W TransactionTracing: Could not find layer handle 0x72676c553410
+02-19 21:33:46.252   407   497 W TransactionTracing: Could not find layer handle 0x72676c54f4b0
+02-19 21:33:46.257   407   497 W TransactionTracing: Could not find layer handle 0x72676c552ab0
+02-19 21:33:46.325 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.signup_page.signup@46a797f in: PRE_ON_CREATE
+02-19 21:33:46.333 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.signup_page.signup }, activity=com.example.g2_qc.signup_page.signup@46a797f
+02-19 21:33:46.343   605   621 I system_server: NativeAlloc concurrent copying GC freed 408612(19MB) AllocSpace objects, 21(756KB) LOS objects, 50% free, 22MB/44MB, paused 268us,120us total 1.717s
+02-19 21:33:46.349 15843 15877 D EGL_emulation: app_time_stats: avg=42.45ms min=2.71ms max=169.66ms count=23
+02-19 21:33:46.433 15843 15843 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+02-19 21:33:46.624 15843 15850 I m.example.g2_qc: ThreadFlipBegin blocked for 13.706ms
+02-19 21:33:46.626 15843 15843 I m.example.g2_qc: IncrementDisableThreadFlip blocked for 14.457ms
+02-19 21:33:46.693 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.signup_page.signup@46a797f in: CREATED
+02-19 21:33:46.696 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.signup_page.signup }, activity=com.example.g2_qc.signup_page.signup@46a797f
+02-19 21:33:46.709   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:46.714 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.signup_page.signup@46a797f in: STARTED
+02-19 21:33:46.721 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.signup_page.signup }, activity=com.example.g2_qc.signup_page.signup@46a797f
+02-19 21:33:46.733 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.signup_page.signup@46a797f in: RESUMED
+02-19 21:33:46.736 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.signup_page.signup }, activity=com.example.g2_qc.signup_page.signup@46a797f
+02-19 21:33:46.831 15843 15843 I Choreographer: Skipped 32 frames!  The application may be doing too much work on its main thread.
+02-19 21:33:46.913 15843 15849 I m.example.g2_qc: Compiler allocated 4533KB to compile void android.view.ViewRootImpl.performTraversals()
+02-19 21:33:46.954 15843 15850 I m.example.g2_qc: Background concurrent copying GC freed 43075(3105KB) AllocSpace objects, 6(120KB) LOS objects, 49% free, 4939KB/9878KB, paused 803us,330us total 577.720ms
+02-19 21:33:46.959   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:46.959   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:46.959   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:46.977   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:46.999   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ec000000 0x3ec9a4000]
+02-19 21:33:47.028   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ed5fc000 0x3edfa0000]
+02-19 21:33:47.030   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3edfa0000 0x3ee944000]
+02-19 21:33:47.070   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.071  1606  1606 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+02-19 21:33:47.074   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.098 15843 15843 D AutofillManager: Trigger fill request at view entered
+02-19 21:33:47.101   822   989 D EGL_emulation: app_time_stats: avg=24.01ms min=1.77ms max=156.72ms count=34
+02-19 21:33:47.190 15843 15877 W Parcel  : Expecting binder but got null!
+02-19 21:33:47.212 15843 15876 I OpenGLRenderer: Davey! duration=904ms; Flags=1, FrameTimelineVsyncId=141221, IntendedVsync=4485849948784, Vsync=4486383282096, InputEventId=0, HandleInputStart=4486413930525, AnimationStart=4486413935502, PerformTraversalsStart=4486414989751, DrawStart=4486709148091, FrameDeadline=4485866615450, FrameInterval=4486396672517, FrameStartTime=16666666, SyncQueued=4486731381406, SyncStart=4486731783666, IssueDrawCommandsStart=4486732323275, SwapBuffers=4486744092843, FrameCompleted=4486754719606, DequeueBufferDuration=19953, QueueBufferDuration=4579307, GpuCompleted=4486754546574, SwapBuffersCompleted=4486754719606, DisplayPresentTime=0, CommandSubmissionCompleted=4486744092843,
+02-19 21:33:47.227 15906 15914 W mple.g2_qc.test: Cleared Reference was only reachable from finalizer (only reported once)
+02-19 21:33:47.253   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.257   605   636 I ActivityTaskManager: Displayed com.example.g2_qc/.signup_page.signup: +1s133ms
+02-19 21:33:47.263 15843 15859 I OpenGLRenderer: Davey! duration=966ms; Flags=1, FrameTimelineVsyncId=141221, IntendedVsync=4485849948784, Vsync=4486383282096, InputEventId=0, HandleInputStart=4486413930525, AnimationStart=4486413935502, PerformTraversalsStart=4486414989751, DrawStart=4486781894038, FrameDeadline=4486749948748, FrameInterval=4486396672517, FrameStartTime=16666666, SyncQueued=4486782466303, SyncStart=4486783885403, IssueDrawCommandsStart=4486784097557, SwapBuffers=4486804901804, FrameCompleted=4486818341824, DequeueBufferDuration=8592, QueueBufferDuration=737242, GpuCompleted=4486818341824, SwapBuffersCompleted=4486811298045, DisplayPresentTime=0, CommandSubmissionCompleted=4486804901804,
+02-19 21:33:47.291   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3efefb000 0x3efefe000]
+02-19 21:33:47.308   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3efefe000 0x3eff01000]
+02-19 21:33:47.325   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.331   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.347   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3eff01000 0x3efff8000]
+02-19 21:33:47.358 15843 15843 I AssistStructure: Flattened final assist data: 3212 bytes, containing 1 windows, 16 views
+02-19 21:33:47.383 15843 15877 D EGL_emulation: app_time_stats: avg=20.47ms min=2.58ms max=82.81ms count=39
+02-19 21:33:47.387   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ef2e8000 0x3ef3df000]
+02-19 21:33:47.399   605  1410 W Parcel  : Expecting binder but got null!
+02-19 21:33:47.400   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ef3df000 0x3ef4d6000]
+02-19 21:33:47.484   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ef4d6000 0x3ef5cd000]
+02-19 21:33:47.492   605  1410 W Parcel  : Expecting binder but got null!
+02-19 21:33:47.543 15843 15849 I m.example.g2_qc: Compiler allocated 4160KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+02-19 21:33:47.606  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+02-19 21:33:47.608  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+02-19 21:33:47.608  1444  1444 W KeyboardViewController: KeyboardViewController.show():493 Requesting to show sub view with id 2131428249(#0x7f0b0399) when keyboard HEADER view is not ready to show
+02-19 21:33:47.628  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.g2_qc fieldId=-1 fieldName=null extras=null}, false)
+02-19 21:33:47.641   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.641   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.641   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.641   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.641   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:47.654  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+02-19 21:33:47.701  1322  1322 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+02-19 21:33:47.843  1076  1076 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:1855127149
+02-19 21:33:47.856  1322  2360 I .gms.persistent: oneway function results for code 1 on binder at 0x795921874080 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+02-19 21:33:47.927   822   960 D SplashScreenView: Build android.window.SplashScreenView{c1598c0 V.E...... ......ID 0,0-0,0}
+02-19 21:33:47.927   822   960 D SplashScreenView: Icon: view: null drawable: null size: 0
+02-19 21:33:47.927   822   960 D SplashScreenView: Branding: view: android.view.View{e3cb9f9 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+02-19 21:33:47.933 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.signup_page.signup@46a797f in: PAUSED
+02-19 21:33:47.934 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.signup_page.signup }, activity=com.example.g2_qc.signup_page.signup@46a797f
+02-19 21:33:48.043   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f09a4000]
+02-19 21:33:48.047   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f09a4000 0x3f1348000]
+02-19 21:33:48.054   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f1348000 0x3f1cec000]
+02-19 21:33:48.129   822   989 W Parcel  : Expecting binder but got null!
+02-19 21:33:48.223   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f1cec000 0x3f2318000]
+02-19 21:33:48.409 15843 15877 D EGL_emulation: app_time_stats: avg=152.40ms min=18.30ms max=591.97ms count=8
+02-19 21:33:48.439   407   497 W TransactionTracing: Could not find layer handle 0x72676c550cb0
+02-19 21:33:48.505   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f2318000 0x3f2cbc000]
+02-19 21:33:48.513   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f660a000 0x3f6fae000]
+02-19 21:33:48.516   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f6fae000 0x3f7952000]
+02-19 21:33:48.528   822   989 D EGL_emulation: app_time_stats: avg=2329.56ms min=2329.56ms max=2329.56ms count=1
+02-19 21:33:48.556 15906 15933 W Parcel  : Expecting binder but got null!
+02-19 21:33:48.626   605   636 W ziparchive: Unable to open '/data/app/~~alFr6qPeBLbOEawtcAk8nQ==/com.example.g2_qc.test-PYknm2TKSVYUo7jvjEmNsw==/base.dm': No such file or directory
+02-19 21:33:48.678   822   989 D EGL_emulation: app_time_stats: avg=67.34ms min=1.76ms max=828.49ms count=22
+02-19 21:33:48.681   605   636 I ActivityTaskManager: Displayed com.example.g2_qc.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +710ms
+02-19 21:33:48.692   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f5768000 0x3f5d94000]
+02-19 21:33:48.821   407   497 W TransactionTracing: Could not find layer handle 0x72676c550fb0
+02-19 21:33:48.821   407   497 W TransactionTracing: Could not find layer handle 0x72676c54dcb0
+02-19 21:33:48.821   407   497 W TransactionTracing: Could not find layer handle 0x72676c553410
+02-19 21:33:48.937  1201  1210 I s.nexuslauncher: NativeAlloc concurrent copying GC freed 14072(741KB) AllocSpace objects, 3(396KB) LOS objects, 49% free, 5592KB/10MB, paused 44us,13us total 522.136ms
+02-19 21:33:48.955  1201  1215 W System  : A resource failed to call release.
+02-19 21:33:48.956  1201  1215 W System  : A resource failed to call release.
+02-19 21:33:48.956  1201  1215 W System  : A resource failed to call release.
+02-19 21:33:48.963 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.signup_page.signup@46a797f in: RESUMED
+02-19 21:33:48.963 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.signup_page.signup }, activity=com.example.g2_qc.signup_page.signup@46a797f
+02-19 21:33:48.975 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@309bdf in: STOPPED
+02-19 21:33:48.975 15843 15843 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.g2_qc.welcome_page.Welcome@309bdf
+02-19 21:33:48.978 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@309bdf in: DESTROYED
+02-19 21:33:48.979 15843 15843 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+02-19 21:33:49.026 15843 15872 E TestRunner: failed: checkIfSwitchedToSignUp(com.example.g2_qc.welcomeTest)
+02-19 21:33:49.026 15843 15872 E TestRunner: ----- begin exception -----
+02-19 21:33:49.030   605  2356 W InputManager-JNI: Input channel object '6309ecb Splash Screen com.example.g2_qc.test (client)' was disposed without first being removed with the input manager!
+02-19 21:33:49.044 15843 15872 E TestRunner: java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at com.example.g2_qc.welcomeTest.checkIfSwitchedToSignUp(welcomeTest.java:61)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)
+02-19 21:33:49.044 15843 15872 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2361)
+02-19 21:33:49.044 15843 15872 E TestRunner: ----- end exception -----
+02-19 21:33:49.050 15843 15872 I TestRunner: finished: checkIfSwitchedToSignUp(com.example.g2_qc.welcomeTest)

@@ -1,0 +1,285 @@
+02-19 21:33:35.379 15843 15872 I TestRunner: started: checkIfSwitchedToLogin(com.example.g2_qc.welcomeTest)
+02-19 21:33:35.416 15843 15872 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+02-19 21:33:35.639   822   960 D SplashScreenView: Build android.window.SplashScreenView{e31a971 V.E...... ......ID 0,0-0,0}
+02-19 21:33:35.639   822   960 D SplashScreenView: Icon: view: null drawable: null size: 0
+02-19 21:33:35.639   822   960 D SplashScreenView: Branding: view: android.view.View{b2bc356 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+02-19 21:33:35.708   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ec000000 0x3ec9a4000]
+02-19 21:33:35.776  1201  1888 D EGL_emulation: app_time_stats: avg=2149.15ms min=2149.15ms max=2149.15ms count=1
+02-19 21:33:35.785  1660  1660 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+02-19 21:33:35.793  1660  2499 E HwDetectorWithState: a: 3
+02-19 21:33:35.857   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ee318000 0x3eecbc000]
+02-19 21:33:35.865 15843 15880 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+02-19 21:33:35.885   822   989 W Parcel  : Expecting binder but got null!
+02-19 21:33:35.923 15843 15880 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+02-19 21:33:35.936 15843 15880 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+02-19 21:33:35.990   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3eecbc000 0x3ef660000]
+02-19 21:33:36.168   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ef660000 0x3ef8c9000]
+02-19 21:33:36.181   605  5330 D HostConnection: createUnique: call
+02-19 21:33:36.204   605  5330 D HostConnection: HostConnection::get() New Host Connection established 0x79599183c050, tid 5330
+02-19 21:33:36.243   407   497 W TransactionTracing: Could not find layer handle 0x72676c54fe70
+02-19 21:33:36.266 15843 15843 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+02-19 21:33:36.299   605  5330 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+02-19 21:33:36.324   822   989 D EGL_emulation: app_time_stats: avg=4948.94ms min=37.22ms max=24516.34ms count=5
+02-19 21:33:36.349   605  5330 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+02-19 21:33:36.369   605  5330 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+02-19 21:33:36.382   605  5330 D EGL_emulation: eglCreateContext: 0x7959918283d0: maj 3 min 0 rcv 3
+02-19 21:33:36.415 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@cd454be in: PRE_ON_CREATE
+02-19 21:33:36.417 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+02-19 21:33:36.429   605  5330 D EGL_emulation: eglMakeCurrent: 0x7959918283d0: ver 3 0 (tinfo 0x795b9694c100) (first time)
+02-19 21:33:36.434   605  2369 D HostConnection: createUnique: call
+02-19 21:33:36.436   407   497 W TransactionTracing: Could not find layer handle 0x72676c54fcf0
+02-19 21:33:36.445   605  2369 D HostConnection: HostConnection::get() New Host Connection established 0x79599183ed50, tid 2369
+02-19 21:33:36.480   605  2369 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+02-19 21:33:36.596   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ef8c9000 0x3efef5000]
+02-19 21:33:36.817 15843 15843 W m.example.g2_qc: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+02-19 21:33:36.817 15843 15843 W m.example.g2_qc: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+02-19 21:33:36.843 15843 15843 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10159; state: ENABLED
+02-19 21:33:37.127 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@cd454be in: CREATED
+02-19 21:33:37.127 15843 15843 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.g2_qc.welcome_page.Welcome@cd454be
+02-19 21:33:37.132 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@cd454be in: STARTED
+02-19 21:33:37.137 15843 15843 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.g2_qc.welcome_page.Welcome@cd454be
+02-19 21:33:37.145 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@cd454be in: RESUMED
+02-19 21:33:37.148 15843 15843 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.g2_qc.welcome_page.Welcome@cd454be
+02-19 21:33:37.331 15843 15877 D HostConnection: createUnique: call
+02-19 21:33:37.333 15843 15877 D HostConnection: HostConnection::get() New Host Connection established 0x795991812a10, tid 15877
+02-19 21:33:37.345   407   497 W TransactionTracing: Could not find layer handle 0x72676c54b430
+02-19 21:33:37.345   407   497 W TransactionTracing: Could not find layer handle 0x72676c549d50
+02-19 21:33:37.382 15843 15877 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+02-19 21:33:37.391   822   989 D EGL_emulation: app_time_stats: avg=9586.38ms min=9586.38ms max=9586.38ms count=1
+02-19 21:33:37.396   822   989 D EGL_emulation: app_time_stats: avg=14.73ms min=1.95ms max=56.27ms count=40
+02-19 21:33:37.402 15843 15877 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+02-19 21:33:37.404 15843 15877 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+02-19 21:33:37.410 15843 15877 D EGL_emulation: eglCreateContext: 0x795991812410: maj 3 min 0 rcv 3
+02-19 21:33:37.414 15843 15877 D EGL_emulation: eglMakeCurrent: 0x795991812410: ver 3 0 (tinfo 0x795ba74b0080) (first time)
+02-19 21:33:37.598   216   216 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+02-19 21:33:37.600 15843 15877 I Gralloc4: mapper 4.x is not supported
+02-19 21:33:37.626 15843 15877 D HostConnection: createUnique: call
+02-19 21:33:37.627 15843 15877 D HostConnection: HostConnection::get() New Host Connection established 0x795991813790, tid 15877
+02-19 21:33:37.627 15843 15877 D goldfish-address-space: allocate: Ask for block of size 0x100
+02-19 21:33:37.628 15843 15877 D goldfish-address-space: allocate: ioctl allocate returned offset 0x3ebffe000 size 0x2000
+02-19 21:33:37.638   216   216 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+02-19 21:33:37.645   215   215 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+02-19 21:33:37.645 15843 15877 W Gralloc4: allocator 4.x is not supported
+02-19 21:33:37.650   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ed974000 0x3ee318000]
+02-19 21:33:37.746 15843 15877 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+02-19 21:33:37.918   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f09a4000]
+02-19 21:33:37.946   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f09a4000 0x3f1348000]
+02-19 21:33:38.214 15843 15877 W Parcel  : Expecting binder but got null!
+02-19 21:33:38.224 15843 15876 I OpenGLRenderer: Davey! duration=998ms; Flags=1, FrameTimelineVsyncId=136863, IntendedVsync=4476766615814, Vsync=4476783282480, InputEventId=0, HandleInputStart=4476799081539, AnimationStart=4476799085129, PerformTraversalsStart=4476799087318, DrawStart=4477401744106, FrameDeadline=4476783282480, FrameInterval=4476799027714, FrameStartTime=16666666, SyncQueued=4477562158574, SyncStart=4477581616053, IssueDrawCommandsStart=4477615501301, SwapBuffers=4477748031448, FrameCompleted=4477784144446, DequeueBufferDuration=6437, QueueBufferDuration=464334, GpuCompleted=4477784144446, SwapBuffersCompleted=4477774789448, DisplayPresentTime=0, CommandSubmissionCompleted=4477748031448,
+02-19 21:33:38.240   605   636 W ziparchive: Unable to open '/data/app/~~4BgVAnubWR0tqgux1n1yaA==/com.example.g2_qc-e-o5JmMWfpmNOxwKcIuyzQ==/base.dm': No such file or directory
+02-19 21:33:38.273   605   636 I ActivityTaskManager: Displayed com.example.g2_qc/.welcome_page.Welcome: +2s752ms
+02-19 21:33:38.306 15843 15843 I Choreographer: Skipped 63 frames!  The application may be doing too much work on its main thread.
+02-19 21:33:38.332 15843 15864 I OpenGLRenderer: Davey! duration=1066ms; Flags=0, FrameTimelineVsyncId=136893, IntendedVsync=4476816615812, Vsync=4477866615770, InputEventId=0, HandleInputStart=4477872275553, AnimationStart=4477872278364, PerformTraversalsStart=4477873200983, DrawStart=4477874609197, FrameDeadline=4477816615772, FrameInterval=4477871960934, FrameStartTime=16666666, SyncQueued=4477875641109, SyncStart=4477876303122, IssueDrawCommandsStart=4477876397849, SwapBuffers=4477878395852, FrameCompleted=4477884059502, DequeueBufferDuration=7466, QueueBufferDuration=359231, GpuCompleted=4477884059502, SwapBuffersCompleted=4477880470176, DisplayPresentTime=0, CommandSubmissionCompleted=4477878395852,
+02-19 21:33:38.349  1322  2360 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+02-19 21:33:38.349  1322  2360 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+02-19 21:33:38.359  1322  2360 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+02-19 21:33:38.397  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+02-19 21:33:38.399  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+02-19 21:33:38.399  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.g2_qc fieldId=-1 fieldName=null extras=null}, false)
+02-19 21:33:38.410  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+02-19 21:33:38.415   822   989 D EGL_emulation: app_time_stats: avg=200.90ms min=30.48ms max=759.63ms count=5
+02-19 21:33:38.491  1322  3773 I FontLog : Pulling font file for id = 23, cache size = 4 [CONTEXT service_id=132 ]
+02-19 21:33:38.628  1322  3773 I FontLog : Pulling font file for id = 23, cache size = 4 [CONTEXT service_id=132 ]
+02-19 21:33:38.746   605   686 W InputManager-JNI: Input channel object '36bb3da Splash Screen com.example.g2_qc (client)' was disposed without first being removed with the input manager!
+02-19 21:33:38.845 15843 15872 W FileTestStorage: Output properties is not supported.
+02-19 21:33:38.847 15843 15872 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+02-19 21:33:38.891 15843 15872 D EventInjectionStrategy: Creating injection strategy with input manager.
+02-19 21:33:38.892 15843 15872 W m.example.g2_qc: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+02-19 21:33:38.892 15843 15872 W m.example.g2_qc: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+02-19 21:33:38.895 15843 15872 W m.example.g2_qc: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+02-19 21:33:38.949 15843 15872 W m.example.g2_qc: Accessing hidden method Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I (unsupported, reflection, allowed)
+02-19 21:33:38.968   407   497 W TransactionTracing: Could not find layer handle 0x72676c54c6f0
+02-19 21:33:38.990   407   497 W TransactionTracing: Could not find layer handle 0x72676c552990
+02-19 21:33:38.991   407   497 W TransactionTracing: Could not find layer handle 0x72676c54e730
+02-19 21:33:38.991   407   497 W TransactionTracing: Could not find layer handle 0x72676c54e730
+02-19 21:33:38.991   407   497 W TransactionTracing: Could not find layer handle 0x72676c552990
+02-19 21:33:38.992   407   497 W TransactionTracing: Could not find layer handle 0x72676c552990
+02-19 21:33:39.009 15843 15843 W m.example.g2_qc: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+02-19 21:33:39.010 15843 15843 W m.example.g2_qc: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+02-19 21:33:39.012 15843 15843 W m.example.g2_qc: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+02-19 21:33:39.016 15843 15843 W m.example.g2_qc: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (unsupported, reflection, allowed)
+02-19 21:33:39.017 15843 15843 W m.example.g2_qc: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+02-19 21:33:39.018 15843 15843 W m.example.g2_qc: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+02-19 21:33:39.044 15843 15843 I ViewInteraction: Performing 'single click' action on view with id: com.example.g2_qc:id/button1
+02-19 21:33:39.045   822   989 D EGL_emulation: app_time_stats: avg=95.31ms min=1.64ms max=988.66ms count=16
+02-19 21:33:39.069  1201  1201 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=537.5, y[0]=1498.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=4478617, downTime=4478617, deviceId=-1, source=0x1002, displayId=0, eventId=-590382304 }
+02-19 21:33:39.316 15843 15877 D EGL_emulation: app_time_stats: avg=154.79ms min=7.14ms max=594.37ms count=7
+02-19 21:33:39.363  1201  1201 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=537.5, y[0]=1498.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=4478917, downTime=4478617, deviceId=-1, source=0x1002, displayId=0, eventId=-938067477 }
+02-19 21:33:39.411   370  5371 E android.hardware.audio@7.1-impl.ranchu: pcmOpen:169 pcm_open failed for nChannels=2 sampleRateHz=48000 period_count=4 period_size=1056 isOut=1 with
+02-19 21:33:39.412   370  5371 E android.hardware.audio@7.1-impl.ranchu: device/generic/goldfish/audio/talsa.cpp:pcmOpen:172 failure: nullptr
+02-19 21:33:39.412   370  5371 E android.hardware.audio@7.1-impl.ranchu: device/generic/goldfish/audio/device_port_sink.cpp:create:228 failure: nullptr
+02-19 21:33:39.415 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@cd454be in: PAUSED
+02-19 21:33:39.415 15843 15843 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.g2_qc.welcome_page.Welcome@cd454be
+02-19 21:33:39.416   370  5371 W android.hardware.audio@7.1-impl.ranchu: create:375 failed to create alsa sink for 'AUDIO_DEVICE_OUT_SPEAKER'; creating NullSink instead.
+02-19 21:33:39.481 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.login_page.demo_login_page@8bc9726 in: PRE_ON_CREATE
+02-19 21:33:39.482 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.login_page.demo_login_page }, activity=com.example.g2_qc.login_page.demo_login_page@8bc9726
+02-19 21:33:39.661 15843 15843 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+02-19 21:33:39.711 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.login_page.demo_login_page@8bc9726 in: CREATED
+02-19 21:33:39.714 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.login_page.demo_login_page }, activity=com.example.g2_qc.login_page.demo_login_page@8bc9726
+02-19 21:33:39.723 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.login_page.demo_login_page@8bc9726 in: STARTED
+02-19 21:33:39.724 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.login_page.demo_login_page }, activity=com.example.g2_qc.login_page.demo_login_page@8bc9726
+02-19 21:33:39.727 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.login_page.demo_login_page@8bc9726 in: RESUMED
+02-19 21:33:39.727 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.login_page.demo_login_page }, activity=com.example.g2_qc.login_page.demo_login_page@8bc9726
+02-19 21:33:39.899 15843 15843 D AutofillManager: Trigger fill request at view entered
+02-19 21:33:39.908   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ec000000 0x3ec9a4000]
+02-19 21:33:39.930   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ecfd0000 0x3ed974000]
+02-19 21:33:39.934   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ee318000 0x3eecbc000]
+02-19 21:33:40.047 15843 15877 W Parcel  : Expecting binder but got null!
+02-19 21:33:40.066   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.088   822   989 D EGL_emulation: app_time_stats: avg=10.03ms min=1.39ms max=61.27ms count=44
+02-19 21:33:40.109   605   636 I ActivityTaskManager: Displayed com.example.g2_qc/.login_page.demo_login_page: +711ms
+02-19 21:33:40.147   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3efef5000 0x3efef8000]
+02-19 21:33:40.162   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3efef8000 0x3efefb000]
+02-19 21:33:40.180 15843 15843 D CompatibilityChangeReporter: Compat change id reported: 163400105; UID 10159; state: ENABLED
+02-19 21:33:40.202 15843 15843 I AssistStructure: Flattened final assist data: 2104 bytes, containing 1 windows, 12 views
+02-19 21:33:40.260   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3efefb000 0x3efff2000]
+02-19 21:33:40.273   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.274   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.283   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.396   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3eecbc000 0x3eedb3000]
+02-19 21:33:40.402 15843 15877 D EGL_emulation: app_time_stats: avg=25.72ms min=1.88ms max=203.13ms count=34
+02-19 21:33:40.505   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3eedb3000 0x3eeeaa000]
+02-19 21:33:40.530   605  1410 W Parcel  : Expecting binder but got null!
+02-19 21:33:40.568   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3eeeaa000 0x3eefa1000]
+02-19 21:33:40.577   605  1410 W Parcel  : Expecting binder but got null!
+02-19 21:33:40.610   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.610   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.797  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+02-19 21:33:40.799  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+02-19 21:33:40.800  1444  1444 W KeyboardViewController: KeyboardViewController.show():493 Requesting to show sub view with id 2131428249(#0x7f0b0399) when keyboard HEADER view is not ready to show
+02-19 21:33:40.808  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.g2_qc fieldId=-1 fieldName=null extras=null}, false)
+02-19 21:33:40.813  1444  1444 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+02-19 21:33:40.827 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.login_page.demo_login_page@8bc9726 in: PAUSED
+02-19 21:33:40.827 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.login_page.demo_login_page }, activity=com.example.g2_qc.login_page.demo_login_page@8bc9726
+02-19 21:33:40.834   822   960 D SplashScreenView: Build android.window.SplashScreenView{deed0e1 V.E...... ......ID 0,0-0,0}
+02-19 21:33:40.834   822   960 D SplashScreenView: Icon: view: null drawable: null size: 0
+02-19 21:33:40.834   822   960 D SplashScreenView: Branding: view: android.view.View{159ae06 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+02-19 21:33:40.840   364   364 D Zygote  : Forked child process 15906
+02-19 21:33:40.850   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.878 15906 15906 I mple.g2_qc.test: Late-enabling -Xcheck:jni
+02-19 21:33:40.878   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:40.892  1322  1322 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+02-19 21:33:40.914   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f1348000 0x3f1cec000]
+02-19 21:33:40.925  1606  1606 D BoundBrokerSvc: onBind: Intent { act=com.google.android.mdd.service.START dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+02-19 21:33:40.925  1606  1606 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.mdd.service.START dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+02-19 21:33:40.968   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f1cec000 0x3f2690000]
+02-19 21:33:40.989   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f2690000 0x3f3034000]
+02-19 21:33:41.039   822   989 W Parcel  : Expecting binder but got null!
+02-19 21:33:41.089 15906 15906 W mple.g2_qc.test: Unexpected CPU variant for x86: x86_64.
+02-19 21:33:41.089 15906 15906 W mple.g2_qc.test: Known variants: atom, sandybridge, silvermont, kabylake, default
+02-19 21:33:41.103   407   497 W TransactionTracing: Could not find layer handle 0x72676c54e0d0
+02-19 21:33:41.104   407   497 W TransactionTracing: Could not find layer handle 0x72676c54ee50
+02-19 21:33:41.104   407   497 W TransactionTracing: Could not find layer handle 0x72676c553170
+02-19 21:33:41.104   407   497 W TransactionTracing: Could not find layer handle 0x72676c54f690
+02-19 21:33:41.112  1076  1076 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:1955219780
+02-19 21:33:41.145  1322  4484 I .gms.persistent: oneway function results for code 1 on binder at 0x795921889f50 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+02-19 21:33:41.149   449   460 I adbd    : jdwp connection from 15906
+02-19 21:33:41.158 15843 15877 D EGL_emulation: app_time_stats: avg=222.12ms min=85.13ms max=468.82ms count=5
+02-19 21:33:41.284 15906 15906 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10160; state: ENABLED
+02-19 21:33:41.294   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ec9a4000 0x3ecfd0000]
+02-19 21:33:41.298 15906 15906 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+02-19 21:33:41.336 15906 15906 D nativeloader: Configuring classloader-namespace for other apk /system/framework/android.test.mock.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/data/app/~~alFr6qPeBLbOEawtcAk8nQ==/com.example.g2_qc.test-PYknm2TKSVYUo7jvjEmNsw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.g2_qc.test
+02-19 21:33:41.344 15906 15906 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+02-19 21:33:41.353 15906 15906 W mple.g2_qc.test: ClassLoaderContext shared library size mismatch. Expected=0, found=2 (PCL[] | PCL[]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*849501951]})
+02-19 21:33:41.358 15906 15906 D nativeloader: Configuring classloader-namespace for other apk /system/framework/android.test.runner.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/data/app/~~alFr6qPeBLbOEawtcAk8nQ==/com.example.g2_qc.test-PYknm2TKSVYUo7jvjEmNsw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.g2_qc.test
+02-19 21:33:41.372 15906 15906 W ziparchive: Unable to open '/data/app/~~alFr6qPeBLbOEawtcAk8nQ==/com.example.g2_qc.test-PYknm2TKSVYUo7jvjEmNsw==/base.dm': No such file or directory
+02-19 21:33:41.372 15906 15906 W ziparchive: Unable to open '/data/app/~~alFr6qPeBLbOEawtcAk8nQ==/com.example.g2_qc.test-PYknm2TKSVYUo7jvjEmNsw==/base.dm': No such file or directory
+02-19 21:33:41.384   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:41.412 15906 15906 D nativeloader: Configuring classloader-namespace for other apk /data/app/~~alFr6qPeBLbOEawtcAk8nQ==/com.example.g2_qc.test-PYknm2TKSVYUo7jvjEmNsw==/base.apk. target_sdk_version=33, uses_libraries=, library_path=/data/app/~~alFr6qPeBLbOEawtcAk8nQ==/com.example.g2_qc.test-PYknm2TKSVYUo7jvjEmNsw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.g2_qc.test
+02-19 21:33:41.428 15906 15906 V GraphicsEnvironment: ANGLE Developer option for 'com.example.g2_qc.test' set to: 'default'
+02-19 21:33:41.430 15906 15906 V GraphicsEnvironment: ANGLE GameManagerService for com.example.g2_qc.test: false
+02-19 21:33:41.432 15906 15906 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+02-19 21:33:41.457 15906 15906 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+02-19 21:33:41.460 15906 15906 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+02-19 21:33:41.491 15906 15935 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+02-19 21:33:41.518 15906 15935 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+02-19 21:33:41.520   407   497 W TransactionTracing: Could not find layer handle 0x72676c5530b0
+02-19 21:33:41.537   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:41.539 15906 15935 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+02-19 21:33:41.564   822   989 D EGL_emulation: app_time_stats: avg=184.52ms min=16.40ms max=818.21ms count=8
+02-19 21:33:41.728   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3eecbc000 0x3ef2e8000]
+02-19 21:33:41.843   407   497 W TransactionTracing: Could not find layer handle 0x72676c54f330
+02-19 21:33:41.843   407   497 W TransactionTracing: Could not find layer handle 0x72676c553170
+02-19 21:33:41.844   407   497 W TransactionTracing: Could not find layer handle 0x72676c553170
+02-19 21:33:41.845   407   497 W TransactionTracing: Could not find layer handle 0x72676c54f330
+02-19 21:33:41.889   407   497 W TransactionTracing: Could not find layer handle 0x72676c5535f0
+02-19 21:33:41.899 15906 15933 D HostConnection: createUnique: call
+02-19 21:33:41.906 15906 15933 D HostConnection: HostConnection::get() New Host Connection established 0x795991812a10, tid 15933
+02-19 21:33:41.931 15906 15933 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+02-19 21:33:41.934 15906 15933 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+02-19 21:33:41.936 15906 15933 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+02-19 21:33:41.941 15906 15933 D EGL_emulation: eglCreateContext: 0x795991812410: maj 3 min 0 rcv 3
+02-19 21:33:41.944 15906 15933 D EGL_emulation: eglMakeCurrent: 0x795991812410: ver 3 0 (tinfo 0x795bab67d100) (first time)
+02-19 21:33:41.982   216   216 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+02-19 21:33:41.983 15906 15933 I Gralloc4: mapper 4.x is not supported
+02-19 21:33:41.989 15906 15933 D HostConnection: createUnique: call
+02-19 21:33:41.991 15906 15933 D HostConnection: HostConnection::get() New Host Connection established 0x795991813790, tid 15933
+02-19 21:33:41.992 15906 15933 D goldfish-address-space: allocate: Ask for block of size 0x100
+02-19 21:33:41.992 15906 15933 D goldfish-address-space: allocate: ioctl allocate returned offset 0x3ebffe000 size 0x2000
+02-19 21:33:41.998   216   216 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+02-19 21:33:42.001   215   215 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+02-19 21:33:42.003 15906 15933 W Gralloc4: allocator 4.x is not supported
+02-19 21:33:42.017   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ec000000 0x3ec9a4000]
+02-19 21:33:42.048 15906 15933 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+02-19 21:33:42.051   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3ed974000 0x3ee318000]
+02-19 21:33:42.061   382   382 D goldfish-address-space: claimShared: Ask to claim region [0x3ee318000 0x3eecbc000]
+02-19 21:33:42.161 15906 15933 W Parcel  : Expecting binder but got null!
+02-19 21:33:42.173   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:42.173   407   497 W TransactionTracing: Could not find layer id -1
+02-19 21:33:42.194   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f09a4000]
+02-19 21:33:42.212   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f3034000 0x3f39d8000]
+02-19 21:33:42.214   382   421 D goldfish-address-space: claimShared: Ask to claim region [0x3f660a000 0x3f6fae000]
+02-19 21:33:42.234 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.login_page.demo_login_page@8bc9726 in: RESUMED
+02-19 21:33:42.234 15843 15843 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.g2_qc/.welcome_page.Welcome }, activity.getIntent()=Intent { cmp=com.example.g2_qc/.login_page.demo_login_page }, activity=com.example.g2_qc.login_page.demo_login_page@8bc9726
+02-19 21:33:42.261   822   989 D EGL_emulation: app_time_stats: avg=961.25ms min=22.39ms max=3638.37ms count=4
+02-19 21:33:42.281 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@cd454be in: STOPPED
+02-19 21:33:42.293 15843 15843 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.g2_qc.welcome_page.Welcome@cd454be
+02-19 21:33:42.314 15843 15843 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.welcome_page.Welcome@cd454be in: DESTROYED
+02-19 21:33:42.315 15843 15843 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+02-19 21:33:42.318 15843 15872 E TestRunner: failed: checkIfSwitchedToLogin(com.example.g2_qc.welcomeTest)
+02-19 21:33:42.326 15843 15872 E TestRunner: ----- begin exception -----
+02-19 21:33:42.327   605  2379 W InputManager-JNI: Input channel object '8837d06 com.example.g2_qc/com.example.g2_qc.welcome_page.Welcome (client)' was disposed without first being removed with the input manager!
+02-19 21:33:42.336   407   497 W TransactionTracing: Could not find layer handle 0x72676c552390
+02-19 21:33:42.336   407   497 W TransactionTracing: Could not find layer handle 0x72676c5508f0
+02-19 21:33:42.344 15843 15872 E TestRunner: java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at com.example.g2_qc.welcomeTest.checkIfSwitchedToLogin(welcomeTest.java:52)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)
+02-19 21:33:42.344 15843 15872 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2361)
+02-19 21:33:42.359 15843 15872 E TestRunner: ----- end exception -----
+02-19 21:33:42.384 15843 15872 I TestRunner: finished: checkIfSwitchedToLogin(com.example.g2_qc.welcomeTest)

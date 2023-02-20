@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">667344152068-gd0qb3ki36bof6o03fqgr7sbb1ddmndj.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://quickcash-group2-default-rtdb.firebaseio.com/</string>
+    <string name="gcm_defaultSenderId" translatable="false">667344152068</string>
+    <string name="google_api_key" translatable="false">AIzaSyBt3HyaXW_RyqI28bmrAfHXSFSHHXfJ5Ro</string>
+    <string name="google_app_id" translatable="false">1:667344152068:android:941f3ecb28c8fed2c67751</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBt3HyaXW_RyqI28bmrAfHXSFSHHXfJ5Ro</string>
+    <string name="google_storage_bucket" translatable="false">quickcash-group2.appspot.com</string>
+    <string name="project_id" translatable="false">quickcash-group2</string>
+</resources>

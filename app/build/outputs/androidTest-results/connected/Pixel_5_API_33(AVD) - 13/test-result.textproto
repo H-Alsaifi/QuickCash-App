@@ -1,0 +1,182 @@
+# 2023-02-20T01:33:54.645Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 3
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "welcomeTest"
+    test_package: "com.example.g2_qc"
+    test_method: "checkIfSwitchedToLogin"
+    start_time {
+      seconds: 1676856815
+      nanos: 644000000
+    }
+    end_time {
+      seconds: 1676856822
+      nanos: 643000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.\nat android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:184)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:169)\nat com.example.g2_qc.welcomeTest.checkIfSwitchedToLogin(welcomeTest.java:52)"
+    error_type: "java.lang.IllegalStateException"
+    stack_trace: "java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.\nat android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:184)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:169)\nat com.example.g2_qc.welcomeTest.checkIfSwitchedToLogin(welcomeTest.java:52)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/logcat-com.example.g2_qc.welcomeTest-checkIfSwitchedToLogin.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "welcomeTest"
+    test_package: "com.example.g2_qc"
+    test_method: "checkIfSwitchedToSignUp"
+    start_time {
+      seconds: 1676856824
+      nanos: 367000000
+    }
+    end_time {
+      seconds: 1676856829
+      nanos: 332000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.\nat android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:184)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:169)\nat com.example.g2_qc.welcomeTest.checkIfSwitchedToSignUp(welcomeTest.java:61)"
+    error_type: "java.lang.IllegalStateException"
+    stack_trace: "java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.\nat android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:184)\nat android.support.test.espresso.intent.Intents.intended(Intents.java:169)\nat com.example.g2_qc.welcomeTest.checkIfSwitchedToSignUp(welcomeTest.java:61)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/logcat-com.example.g2_qc.welcomeTest-checkIfSwitchedToSignUp.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "welcomeTest"
+    test_package: "com.example.g2_qc"
+    test_method: "checkWelcomeMessageDisplay"
+    start_time {
+      seconds: 1676856830
+      nanos: 968000000
+    }
+    end_time {
+      seconds: 1676856833
+      nanos: 551000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/logcat-com.example.g2_qc.welcomeTest-checkWelcomeMessageDisplay.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/mohammedabunahia/Desktop/Group2-Quick_Cash/group-2-quick-cash/app/build/outputs/androidTest-results/connected/Pixel_5_API_33(AVD) - 13/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

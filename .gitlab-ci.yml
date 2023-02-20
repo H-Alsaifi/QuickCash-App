@@ -54,4 +54,7 @@ unit_tests:
       - app/build/reports/tests/
   tags:
     - dalfcs_docker_autoscale
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin

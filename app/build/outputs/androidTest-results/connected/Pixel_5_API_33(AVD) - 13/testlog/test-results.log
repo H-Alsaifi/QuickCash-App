@@ -1,0 +1,92 @@
+INSTRUMENTATION_STATUS: class=com.example.g2_qc.welcomeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.example.g2_qc.welcomeTest:
+INSTRUMENTATION_STATUS: test=checkIfSwitchedToLogin
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.g2_qc.welcomeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToLogin(welcomeTest.java:52)
+
+INSTRUMENTATION_STATUS: stream=
+Error in checkIfSwitchedToLogin(com.example.g2_qc.welcomeTest):
+java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToLogin(welcomeTest.java:52)
+
+INSTRUMENTATION_STATUS: test=checkIfSwitchedToLogin
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.g2_qc.welcomeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=checkIfSwitchedToSignUp
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.g2_qc.welcomeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToSignUp(welcomeTest.java:61)
+
+INSTRUMENTATION_STATUS: stream=
+Error in checkIfSwitchedToSignUp(com.example.g2_qc.welcomeTest):
+java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToSignUp(welcomeTest.java:61)
+
+INSTRUMENTATION_STATUS: test=checkIfSwitchedToSignUp
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.g2_qc.welcomeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=checkWelcomeMessageDisplay
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.g2_qc.welcomeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=checkWelcomeMessageDisplay
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 18.257
+There were 2 failures:
+1) checkIfSwitchedToLogin(com.example.g2_qc.welcomeTest)
+java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToLogin(welcomeTest.java:52)
+2) checkIfSwitchedToSignUp(com.example.g2_qc.welcomeTest)
+java.lang.IllegalStateException: No instrumentation registered! Must run under a registering instrumentation.
+at android.support.test.InstrumentationRegistry.getInstrumentation(InstrumentationRegistry.java:44)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:184)
+at android.support.test.espresso.intent.Intents.intended(Intents.java:169)
+at com.example.g2_qc.welcomeTest.checkIfSwitchedToSignUp(welcomeTest.java:61)
+
+FAILURES!!!
+Tests run: 3,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1
+
