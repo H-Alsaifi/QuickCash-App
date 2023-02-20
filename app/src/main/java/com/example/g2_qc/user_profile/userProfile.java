@@ -25,7 +25,6 @@ public class userProfile extends AppCompatActivity{
     private ProgressBar progressBar;
     private FirebaseAuth authProfile;
     private String firstName, lastName, email, age;
-
     private Button logout;
 
     @Override

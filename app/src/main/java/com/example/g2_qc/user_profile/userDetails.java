@@ -6,7 +6,6 @@ public class userDetails {
 
     public  userDetails(){}
 
-
     public userDetails(String firstName, String lastname, String emailAddress, String agePerson){
         this.firstName = firstName;
         this.lastname = lastname;
