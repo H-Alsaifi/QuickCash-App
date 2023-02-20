@@ -73,15 +73,17 @@ public class userProfile extends AppCompatActivity{
                 userDetails userDetails = snapshot.getValue(userDetails.class);
                 if(userDetails != null) {
                     firstName = userDetails.firstName;
-                    lastName = userDetails.lastName;
-                    email = userDetails.email;
-                    age = userDetails.age;
+                    lastName = userDetails.lastname;
+                    email = userDetails.emailAddress;
+                    age = userDetails.agePerson;
 
                     textViewWelcome.setText("Welcome " + firstName +  "!");
                     textViewFirstName.setText(firstName);
                     textViewLastName.setText(lastName);
-                    textViewAge.setText(email);
-                    textViewEmail.setText(age);
+                    textViewAge.setText(age);
+                    textViewEmail.setText(email);
+
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             }
 
