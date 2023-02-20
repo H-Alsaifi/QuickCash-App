@@ -26,7 +26,6 @@ public class demo_login_page extends AppCompatActivity {
     private TextView tvForgotPassword;
     private TextView tvCreateAccount;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,32 +50,31 @@ public class demo_login_page extends AppCompatActivity {
 
                 if (emailAddress.isEmpty()) {
                     etEmail.setError("Email Address is required");
-                } else if (password.isEmpty()) {
+                }
+                else if (password.isEmpty()) {
                     etPassword.setError("Password is required");
-                } else {
+                }
+                else {
                     // Authenticate the user with Firebase
                     mAuth.signInWithEmailAndPassword(emailAddress, password)
                             .addOnCompleteListener(demo_login_page.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        // Sign in success, show a Toast message and go to the next activity
-                                        Toast.makeText(demo_login_page.this, "Login successful", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(demo_login_page.this,com.example.g2_qc.user_profile.userProfile.class);
-                                        startActivity(intent);
-                                    } else {
-                                        // If sign in fails, display a message to the user.
-                                        Toast.makeText(demo_login_page.this, "Incorrect email address or password.\nPlease try again", Toast.LENGTH_SHORT).show();
-                                    }
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, show a Toast message and go to the next activity
+                                    Toast.makeText(demo_login_page.this, "Login successful", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(demo_login_page.this,com.example.g2_qc.user_profile.userProfile.class);
+                                    startActivity(intent);
                                 }
-                            });
+                                else {
+                                    // If sign in fails, display a message to the user.
+                                    Toast.makeText(demo_login_page.this, "Incorrect email address or password.\nPlease try again", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
                 }
             }
         });
-
-
-
-
 
         //This is the forgot password option that should be added to the main login page
         tvForgotPassword.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +85,6 @@ public class demo_login_page extends AppCompatActivity {
             }
         });
 
-
         //To switch to SignUp page
         tvCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +93,6 @@ public class demo_login_page extends AppCompatActivity {
                 startActivity(forgotPasswordIntent);
             }
         });
-
     }
 }
 

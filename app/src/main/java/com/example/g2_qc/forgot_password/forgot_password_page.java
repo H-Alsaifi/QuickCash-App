@@ -18,7 +18,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class forgot_password_page extends AppCompatActivity {
-
     private EditText etEmail;
     private Button btnSubmit;
     private FirebaseAuth mAuth;
@@ -31,27 +30,29 @@ public class forgot_password_page extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btn_submit);
 
         mAuth = FirebaseAuth.getInstance();
-
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = etEmail.getText().toString().trim();
+
                 if (email.isEmpty()) {
                     etEmail.setError("Email is required");
-                } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                }
+                else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     etEmail.setError("Enter a valid email address");
-                }else {
+                }
+                else {
                     // Add code here to send a password reset email to the user
-
                     mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
                                     Toast.makeText(forgot_password_page.this, "Code has been sent to " + email + " successfully", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(forgot_password_page.this, demo_login_page.class);
-                            startActivity(intent);
-                            finish();
-                            }else{
+                                Intent intent = new Intent(forgot_password_page.this, demo_login_page.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                            else {
                                 Toast.makeText(forgot_password_page.this, "Try again! Wrong email was entered!", Toast.LENGTH_LONG).show();
                             }
                         }
