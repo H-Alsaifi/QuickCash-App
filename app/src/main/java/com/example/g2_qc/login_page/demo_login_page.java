@@ -63,7 +63,7 @@ public class demo_login_page extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // Sign in success, show a Toast message and go to the next activity
                                     Toast.makeText(demo_login_page.this, "Login successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(demo_login_page.this,com.example.g2_qc.user_profile.userProfile.class);
+                                    Intent intent = new Intent(demo_login_page.this,com.example.g2_qc.main_page.MainActivity.class);
                                     startActivity(intent);
                                 }
                                 else {

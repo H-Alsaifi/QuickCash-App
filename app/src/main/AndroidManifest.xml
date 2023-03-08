@@ -12,17 +12,9 @@
         android:theme="@style/Theme.G2QC"
         tools:targetApi="33">
         <activity
-            android:name=".welcome_page.Welcome"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+        android:name=".main_page.MainActivity"
+        android:exported="true"
+        android:theme="@style/Theme.G2QC.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,7 +33,9 @@
         <activity
             android:name=".user_profile.userProfile"
             android:exported="true" />
-
+<!--        <activity-->
+<!--            android:name=".main_page.MainActivity"-->
+<!--            android:exported="true" />-->
     </application>
 
 </manifest>
