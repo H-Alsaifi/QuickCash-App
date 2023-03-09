@@ -132,6 +132,11 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
 
                     String postID = root.push().getKey();
 
+                    /*
+                        In -> .child("ROVcyTETgCfkmiU9nOEB7QWiuPh2") the path is just for testing,
+                        after the work is done we can put the following path instead:
+                        (FirebaseAuth.getInstance().getCurrentUser().getUid())
+                     */
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child("ROVcyTETgCfkmiU9nOEB7QWiuPh2")
                             .child("Employer").child("Posts").child(postID)
