@@ -61,7 +61,7 @@
         android:id="@+id/jobImage"
         android:layout_width="180dp"
         android:layout_height="88dp"
-        android:background="@drawable/outline"
+        android:background="#ECECEC"
         app:layout_constraintBottom_toTopOf="@+id/categories_spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
