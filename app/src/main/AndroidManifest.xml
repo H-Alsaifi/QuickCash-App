@@ -41,6 +41,10 @@
         <activity
             android:name=".user_profile.userProfile"
             android:exported="true" />
+        <activity android:name=".submitNewJob.SubmitJobAsEmployer"
+            android:exported="true" />
+        <activity android:name=".submitNewJob.SubmitJobAsEmployee"
+            android:exported="true" />
 
     </application>
 
