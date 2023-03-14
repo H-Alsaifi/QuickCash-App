@@ -89,7 +89,7 @@ public class EmployeeFragment extends Fragment {
         addNewPostEmployee(view);
     }
 
-    private void populateScrollView(DataSnapshot dataSnapshot) {
+    public void populateScrollView(DataSnapshot dataSnapshot) {
         LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
 
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
