@@ -49,5 +49,7 @@
     <string name="search">Search</string>
     <string name="notification">Notification</string>
     <string name="no_posts_message">There are no posts..</string>
+    <string name="employee_fragment_label">Employee Dashboard</string>
+    <string name="employer_fragment_label">Employer Dashboard</string>
 
 </resources>

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -42,6 +43,12 @@
             android:name=".main_page.MainPageActivity"
             android:exported="true"
             android:theme="@style/Theme.G2QC.NoActionBar"/>
+        <activity
+            android:name=".main_page.ui.Employee.EmployeeFragment"
+            android:label="@string/employee_fragment_label" />
+        <activity
+            android:name=".main_page.ui.Employer.EmployerFragment"
+            android:label="@string/employer_fragment_label" />
 
     </application>
 
