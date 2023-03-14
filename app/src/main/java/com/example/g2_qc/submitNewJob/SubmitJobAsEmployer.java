@@ -1,8 +1,15 @@
 package com.example.g2_qc.submitNewJob;
 
+import static android.content.ContentValues.TAG;
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,6 +20,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
 import com.example.g2_qc.R;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.main_page.ui.Employee.EmployeeFragment;
@@ -20,8 +30,11 @@ import com.example.g2_qc.main_page.ui.Employer.EmployerFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -29,6 +42,9 @@ import com.google.firebase.storage.UploadTask;
 
 public class SubmitJobAsEmployer extends AppCompatActivity {
 
+    private static final String CHANNEL_ID = "my_channel";
+    private static final String CHANNEL_NAME = "My Channel";
+    private static NotificationManager notificationManager;
     private EditText jobName;
     private EditText jobDescription;
     private EditText jobPayment;
@@ -50,6 +66,9 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         jobImage = findViewById(R.id.jobImage);
         submitJobButton = findViewById(R.id.submit_job);
 
+        // Create the notification channel and manager
+        createNotificationChannel();
+        notificationManager = getSystemService(NotificationManager.class);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.JobsCategories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -144,7 +163,9 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(SubmitJobAsEmployer.this, EmployerFragment.class);
+                                        showNotification("New Post Added", "A new job has been posted by an employer.");
+                                        Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
+                                        intent.putExtra("fragment", "employer");
                                         startActivity(intent);
                                         finish();
                                     } else {
@@ -158,5 +179,59 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         }
     }
 
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    CHANNEL_ID,
+                    CHANNEL_NAME,
+                    NotificationManager.IMPORTANCE_HIGH);
+            channel.setDescription("My Channel Description");
+            notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+    private void showNotification(String title, String message) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_notifications)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setAutoCancel(true);
+
+        // Check if notifications are enabled
+        if (NotificationManagerCompat.from(this).areNotificationsEnabled()) {
+            Intent intent = new Intent(this, MainPageActivity.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+            builder.setContentIntent(pendingIntent);
+
+            int notificationId = (int) System.currentTimeMillis();
+            notificationManager.notify(notificationId, builder.build());
+        } else {
+            // Notifications are disabled, show a toast message instead
+            Toast.makeText(this, "Notifications are disabled", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void addPostListener() {
+        DatabaseReference postsReference = FirebaseDatabase.getInstance().getReference("posts");
+        postsReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    // Get the post details
+                    String title = postSnapshot.child("title").getValue(String.class);
+                    String message = postSnapshot.child("message").getValue(String.class);
+
+                    // Show the notification
+                    showNotification(title, message);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
+    }
 }
 

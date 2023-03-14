@@ -1,7 +1,5 @@
 //package com.example.g2_qc;
 //
-//import androidx.test.core.app.ActivityScenario;
-//import androidx.test.core.app.ActivityScenario.ActivityAction;
 //import androidx.test.espresso.UiController;
 //import androidx.test.espresso.ViewAction;
 //import androidx.test.espresso.matcher.ViewMatchers;
@@ -19,12 +17,16 @@
 //import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 //import static androidx.test.espresso.matcher.ViewMatchers.withId;
 //
+//import android.view.View;
+//
+//import com.example.g2_qc.main_page.MainPageActivity;
+//
 //@RunWith(AndroidJUnit4.class)
 //public class EmployerFragmentTest {
 //
 //    @Rule
-//    public ActivityScenarioRule<MainActivity> activityRule =
-//            new ActivityScenarioRule<>(MainActivity.class);
+//    public ActivityScenarioRule<MainPageActivity> activityRule =
+//            new ActivityScenarioRule<>(MainPageActivity.class);
 //
 //    @Test
 //    public void testScrollViewPopulated() {

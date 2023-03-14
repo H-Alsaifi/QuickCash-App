@@ -80,54 +80,54 @@
 //        Espresso.onView(ViewMatchers.withId(R.id.linear_layout)).check(ViewAssertions.matches(ViewMatchers.withChild(ViewMatchers.withText(jobDescription3))));
 //    }
 //
-//    @Test
-//    public void testJobNameAndDescriptionDisplayedCorrectly() {
-//        // Create a mock list of Post objects
-//        List<Post> postList = new ArrayList<>();
-//        postList.add(new Post("Job 1", "This is job 1.", "100", "", "Category 1"));
-//        postList.add(new Post("Job 2", "This is job 2.", "200", "", "Category 2"));
-//        postList.add(new Post("Job 3", "This is job 3.", "300", "", "Category 3"));
-//
-//        // Convert the mock list into a HashMap of DataSnapshot objects
-//        HashMap<String, DataSnapshot> dataSnapshotHashMap = new HashMap<>();
-//        for (int i = 0; i < postList.size(); i++) {
-//            Post post = postList.get(i);
-//            DataSnapshot dataSnapshot = Mockito.mock(DataSnapshot.class);
-//            Mockito.when(dataSnapshot.child("jobName").getValue(String.class)).thenReturn(post.getJobName());
-//            Mockito.when(dataSnapshot.child("jobDescription").getValue(String.class)).thenReturn(post.getJobDescription());
-//            dataSnapshotHashMap.put(String.valueOf(i), dataSnapshot);
-//        }
-//
-//        // Create a mock DataSnapshot object with the HashMap of Post objects
-//        DataSnapshot dataSnapshot = Mockito.mock(DataSnapshot.class);
-//        Mockito.when(dataSnapshot.getChildrenCount()).thenReturn((long) postList.size());
-//        Mockito.when(dataSnapshot.getChildren()).thenReturn(dataSnapshotHashMap.values());
-//
-//        // Inflate the layout
-//        LayoutInflater inflater = LayoutInflater.from(ApplicationProvider.getApplicationContext());
-//        LinearLayout linearLayout = new LinearLayout(ApplicationProvider.getApplicationContext());
-//        View view = inflater.inflate(R.layout.box_layout, linearLayout, false);
-//        TextView textViewName = view.findViewById(R.id.box_title);
-//        TextView textViewDescription = view.findViewById(R.id.box_content);
-//
-//        // Call populateScrollView
-//        EmployeeFragment fragment = new EmployeeFragment();
-//        fragment.populateScrollView(dataSnapshot);
-//
-//        // Check that the job name and description are displayed correctly in each box view
-//        assertEquals("Job 1", textViewName.getText().toString());
-//        assertEquals("This is job 1.", textViewDescription.getText().toString());
-//
-//        view = inflater.inflate(R.layout.box_layout, linearLayout, false);
-//        textViewName = view.findViewById(R.id.box_title);
-//        textViewDescription = view.findViewById(R.id.box_content);
-//        assertEquals("Job 2", textViewName.getText().toString());
-//        assertEquals("This is job 2.", textViewDescription.getText().toString());
-//
-//        view = inflater.inflate(R.layout.box_layout, linearLayout, false);
-//        textViewName = view.findViewById(R.id.box_title);
-//        textViewDescription = view.findViewById(R.id.box_content);
-//        assertEquals("Job 3", textViewName.getText().toString());
-//        assertEquals("This is job 3.", textViewDescription.getText().toString());
-//    }
+////    @Test
+////    public void testJobNameAndDescriptionDisplayedCorrectly() {
+////        // Create a mock list of Post objects
+////        List<Post> postList = new ArrayList<>();
+////        postList.add(new Post("Job 1", "This is job 1.", "100", "", "Category 1"));
+////        postList.add(new Post("Job 2", "This is job 2.", "200", "", "Category 2"));
+////        postList.add(new Post("Job 3", "This is job 3.", "300", "", "Category 3"));
+////
+////        // Convert the mock list into a HashMap of DataSnapshot objects
+////        HashMap<String, DataSnapshot> dataSnapshotHashMap = new HashMap<>();
+////        for (int i = 0; i < postList.size(); i++) {
+////            Post post = postList.get(i);
+////            DataSnapshot dataSnapshot = Mockito.mock(DataSnapshot.class);
+////            Mockito.when(dataSnapshot.child("jobName").getValue(String.class)).thenReturn(post.getJobName());
+////            Mockito.when(dataSnapshot.child("jobDescription").getValue(String.class)).thenReturn(post.getJobDescription());
+////            dataSnapshotHashMap.put(String.valueOf(i), dataSnapshot);
+////        }
+////
+////        // Create a mock DataSnapshot object with the HashMap of Post objects
+////        DataSnapshot dataSnapshot = Mockito.mock(DataSnapshot.class);
+////        Mockito.when(dataSnapshot.getChildrenCount()).thenReturn((long) postList.size());
+////        Mockito.when(dataSnapshot.getChildren()).thenReturn(dataSnapshotHashMap.values());
+////
+////        // Inflate the layout
+////        LayoutInflater inflater = LayoutInflater.from(ApplicationProvider.getApplicationContext());
+////        LinearLayout linearLayout = new LinearLayout(ApplicationProvider.getApplicationContext());
+////        View view = inflater.inflate(R.layout.box_layout, linearLayout, false);
+////        TextView textViewName = view.findViewById(R.id.box_title);
+////        TextView textViewDescription = view.findViewById(R.id.box_content);
+////
+////        // Call populateScrollView
+////        EmployeeFragment fragment = new EmployeeFragment();
+////        fragment.populateScrollView(dataSnapshot);
+////
+////        // Check that the job name and description are displayed correctly in each box view
+////        assertEquals("Job 1", textViewName.getText().toString());
+////        assertEquals("This is job 1.", textViewDescription.getText().toString());
+////
+////        view = inflater.inflate(R.layout.box_layout, linearLayout, false);
+////        textViewName = view.findViewById(R.id.box_title);
+////        textViewDescription = view.findViewById(R.id.box_content);
+////        assertEquals("Job 2", textViewName.getText().toString());
+////        assertEquals("This is job 2.", textViewDescription.getText().toString());
+////
+////        view = inflater.inflate(R.layout.box_layout, linearLayout, false);
+////        textViewName = view.findViewById(R.id.box_title);
+////        textViewDescription = view.findViewById(R.id.box_content);
+////        assertEquals("Job 3", textViewName.getText().toString());
+////        assertEquals("This is job 3.", textViewDescription.getText().toString());
+////    }
 //}
