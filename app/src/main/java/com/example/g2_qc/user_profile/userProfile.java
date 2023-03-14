@@ -3,6 +3,7 @@ package com.example.g2_qc.user_profile;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,10 +28,11 @@ public class userProfile extends AppCompatActivity{
     private String firstName, lastName, email, age;
     private Button logout;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_profile_page);
+        setContentView(R.layout.fragment_profile);
 
         logout= (Button)findViewById(R.id.signout);
         logout.setOnClickListener(new View.OnClickListener() {

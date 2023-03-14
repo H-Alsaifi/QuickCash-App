@@ -13,16 +13,8 @@
         tools:targetApi="33">
         <activity
             android:name=".welcome_page.Welcome"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,6 +37,11 @@
             android:exported="true" />
         <activity android:name=".submitNewJob.SubmitJobAsEmployee"
             android:exported="true" />
+
+        <activity
+            android:name=".main_page.MainPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar"/>
 
     </application>
 
