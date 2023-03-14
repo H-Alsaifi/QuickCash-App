@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.g2_qc.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -98,7 +99,7 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
             FirebaseStorage storage = FirebaseStorage.getInstance();
             StorageReference storageRef = storage.getReference();
             StorageReference imagesRef = storageRef.child("images/"
-                    + selectedImageUri.getLastPathSegment());
+                    + selectedImageUri);
 
             jobImage.setImageURI(selectedImageUri);
 
@@ -132,13 +133,8 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
 
                     String postID = root.push().getKey();
 
-                    /*
-                        In -> .child("ROVcyTETgCfkmiU9nOEB7QWiuPh2") the path is just for testing,
-                        after the work is done we can put the following path instead:
-                        (FirebaseAuth.getInstance().getCurrentUser().getUid())
-                     */
                     FirebaseDatabase.getInstance().getReference("Users")
-                            .child("ROVcyTETgCfkmiU9nOEB7QWiuPh2")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .child("Employer").child("Posts").child(postID)
                             .setValue(post).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
