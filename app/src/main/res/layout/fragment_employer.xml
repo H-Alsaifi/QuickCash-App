@@ -44,7 +44,7 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/add_box_button"
+        android:id="@+id/add_new_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"

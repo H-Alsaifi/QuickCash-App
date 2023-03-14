@@ -1,15 +1,15 @@
 package com.example.g2_qc.main_page.ui.Employer;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -20,13 +20,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import androidx.lifecycle.ViewModelProvider;
 
-import com.bumptech.glide.Glide;
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentEmployerBinding;
+import com.example.g2_qc.submitNewJob.SubmitJobAsEmployee;
+import com.example.g2_qc.submitNewJob.SubmitJobAsEmployer;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -90,6 +89,8 @@ public class EmployerFragment extends Fragment {
                 Toast.makeText(getContext(), "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        addNewPostEmployer(view);
     }
 
     private void populateScrollView(DataSnapshot dataSnapshot) {
@@ -130,5 +131,16 @@ public class EmployerFragment extends Fragment {
         // Scroll to the bottom of the scroll view
         ScrollView scrollView = getView().findViewById(R.id.scroll_view);
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
+    }
+
+    public void addNewPostEmployer(View view) {
+        Button addNewPostButton = view.findViewById(R.id.add_new_post);
+        addNewPostButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SubmitJobAsEmployer.class);
+                startActivity(intent);
+            }
+        });
     }
 }

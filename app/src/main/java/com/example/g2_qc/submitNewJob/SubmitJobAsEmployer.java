@@ -14,6 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.g2_qc.R;
+import com.example.g2_qc.main_page.MainPageActivity;
+import com.example.g2_qc.main_page.ui.Employee.EmployeeFragment;
+import com.example.g2_qc.main_page.ui.Employer.EmployerFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -139,7 +142,14 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                             .setValue(post).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(SubmitJobAsEmployer.this, EmployerFragment.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(SubmitJobAsEmployer.this, "Error posting job", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
                     UploadTask uploadTask = imagesRef.putFile(selectedImageUri);

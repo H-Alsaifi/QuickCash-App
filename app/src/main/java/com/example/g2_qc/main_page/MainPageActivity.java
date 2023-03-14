@@ -1,5 +1,6 @@
 package com.example.g2_qc.main_page;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,7 +34,6 @@ public class MainPageActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-    private TextView textViewEmail;
     private Button locationButton;
 
     private FirebaseAuth authProfile;
@@ -67,7 +67,6 @@ public class MainPageActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-//        textViewEmail = findViewById(R.id.nav_header_subtitle);
         locationButton = findViewById(R.id.location_button);
 
         authProfile = FirebaseAuth.getInstance();
