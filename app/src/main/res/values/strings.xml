@@ -12,5 +12,10 @@
     <string name="menu_employee">Employee</string>
     <string name="menu_employer">Employer</string>
     <string name="menu_profile">Profile</string>
+    <string name="action_search">Search</string>
+    <string name="action_status">Status</string>
+    <string name="search">Search</string>
+    <string name="notification">Notification</string>
+    <string name="no_posts_message">There are no posts..</string>
 
 </resources>

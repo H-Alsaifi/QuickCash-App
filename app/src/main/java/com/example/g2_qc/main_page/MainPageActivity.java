@@ -1,14 +1,16 @@
 package com.example.g2_qc.main_page;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.ActivityMainBinding;
-import com.example.g2_qc.user_profile.userDetails;
+import com.example.g2_qc.signup_page.User;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,13 +29,16 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainPageActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private TextView textViewEmail;
+    private Button locationButton;
+
     private FirebaseAuth authProfile;
     private String email;
+    private String location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "There are no notifications", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -62,18 +67,23 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        textViewEmail = findViewById(R.id.nav_header_subtitle);
-        
+//        textViewEmail = findViewById(R.id.nav_header_subtitle);
+        locationButton = findViewById(R.id.location_button);
+
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser user = authProfile.getCurrentUser();
         ExtractInfo(user);
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
+        MenuItem logoutItem = menu.findItem(R.id.action_logout);
+        logoutItem.setOnMenuItemClickListener(item -> onOptionsItemSelected(item));
+
         return true;
     }
 
@@ -85,25 +95,50 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ExtractInfo(FirebaseUser firebaseUser) {
-        String ID = firebaseUser.getUid(); //user ID
+        String myId = firebaseUser.getUid(); //user ID
         DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-        profile_ref.child(ID).addListenerForSingleValueEvent(new ValueEventListener() {
+        profile_ref.child(myId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userDetails userDetails = snapshot.getValue(userDetails.class);
+                User userDetails = snapshot.getValue(User.class);
                 if(userDetails != null) {
+
                     email = userDetails.emailAddress;
+                    location = userDetails.location;
 
-//                    textViewEmail.setText(email);
+                    NavigationView navigationView = findViewById(R.id.nav_view);
+                    View headerView = navigationView.getHeaderView(0);
+                    TextView subtitleTextView = headerView.findViewById(R.id.nav_header_subtitle);
+                    subtitleTextView.setText(email);
 
+                    if (location.isEmpty()){
+                        locationButton.setText("Choose location");
+                    } else {
+                        locationButton.setText(location);
+                    }
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(MainActivity.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainPageActivity.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
             }
         });
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_logout) {
+            FirebaseAuth.getInstance().signOut();
+            Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 }

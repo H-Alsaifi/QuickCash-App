@@ -2,7 +2,7 @@ package com.example.g2_qc.user_profile;
 
 public class userDetails {
 
-    public String firstName, lastname, emailAddress, agePerson;
+    public String firstName, lastname, emailAddress, agePerson, location = "";
 
     public  userDetails(){}
 

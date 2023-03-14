@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +14,7 @@
         android:theme="@style/Theme.G2QC"
         tools:targetApi="33">
         <activity
-        android:name=".main_page.MainActivity"
+        android:name=".welcome_page.Welcome"
         android:exported="true"
         android:theme="@style/Theme.G2QC.NoActionBar">
             <intent-filter>
@@ -33,9 +35,10 @@
         <activity
             android:name=".user_profile.userProfile"
             android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".main_page.MainActivity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".main_page.MainPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar"/>
     </application>
 
 </manifest>
