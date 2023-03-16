@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -59,8 +61,7 @@ public class MainPageActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "There are no notifications", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                showNotification();
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -80,7 +81,7 @@ public class MainPageActivity extends AppCompatActivity {
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser user = authProfile.getCurrentUser();
         ExtractInfo(user);
-
+        enableNotification();
     }
 
 
@@ -147,5 +148,47 @@ public class MainPageActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void enableNotification() {
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && notificationManager != null) {
+            NotificationChannel channel = new NotificationChannel("my_channel", "My Channel", NotificationManager.IMPORTANCE_HIGH);
+            notificationManager.createNotificationChannel(channel);
+
+            if (notificationManager.getNotificationChannel(channel.getId()).getImportance() == NotificationManager.IMPORTANCE_NONE) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Notifications Disabled");
+                builder.setMessage("Please enable notifications to receive job updates");
+                builder.setPositiveButton("ENABLE", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent();
+                        intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+
+                        // For Android 5 and above
+                        intent.putExtra("app_package", getPackageName());
+                        intent.putExtra("app_uid", getApplicationInfo().uid);
+
+                        // For Android 8 and above
+                        intent.putExtra("android.provider.extra.APP_PACKAGE", getPackageName());
+
+                        startActivity(intent);
+                    }
+                });
+                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        }
+    }
+
+    public void showNotification(){
+
+    }
 }
