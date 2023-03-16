@@ -2,9 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<<<<<<< Updated upstream
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+=======
+<<<<<<< HEAD
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+=======
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+>>>>>>> Abdullah
+>>>>>>> Stashed changes
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -44,6 +54,24 @@
         <activity
             android:name=".user_profile.userProfile"
             android:exported="true" />
+<<<<<<< Updated upstream
+=======
+        <activity android:name=".submitNewJob.SubmitJobAsEmployer"
+            android:exported="true" />
+        <activity android:name=".submitNewJob.SubmitJobAsEmployee"
+            android:exported="true" />
+
+        <activity
+            android:name=".main_page.MainPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar"/>
+        <activity
+            android:name=".main_page.ui.Employee.EmployeeFragment"
+            android:label="@string/employee_fragment_label" />
+        <activity
+            android:name=".main_page.ui.Employer.EmployerFragment"
+            android:label="@string/employer_fragment_label" />
+>>>>>>> Stashed changes
 
     </application>
 

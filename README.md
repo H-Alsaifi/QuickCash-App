@@ -1,3 +1,4 @@
+git merge --no-ff 'Abdullah'
 # Group 2 - Quick Cash
 
 

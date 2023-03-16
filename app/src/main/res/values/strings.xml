@@ -1,3 +1,59 @@
 <resources>
     <string name="app_name">G2-QC</string>
+<<<<<<< Updated upstream
 </resources>
+=======
+    <string-array name="JobsCategories">
+        <item>Accounting / Finance</item>
+        <item>Admin / Office</item>
+        <item>Architecture / Engineering</item>
+        <item>Art / Media / Design</item>
+        <item>Biotech / Science</item>
+        <item>Business / Management</item>
+        <item>Customer Service</item>
+        <item>Education</item>
+        <item>Food / Beverages / Hospitality</item>
+        <item>Government</item>
+        <item>Human Resources</item>
+        <item>Legal / Paralegal</item>
+        <item>Manufacturing</item>
+        <item>Marketing / PR / Advertising</item>
+        <item>Medical / Health</item>
+        <item>Real Estate</item>
+        <item>Retail / Wholesale</item>
+        <item>Sales / Business Development</item>
+        <item>Salon / Spa / Fitness</item>
+        <item>Security</item>
+        <item>Skilled Trade / Craft</item>
+        <item>Software / QA / DBA</item>
+        <item>Systems / Network</item>
+        <item>Technical Support</item>
+        <item>Transport</item>
+        <item>Tv / Film / Video</item>
+        <item>Web / Info Design</item>
+        <item>Writing / Editing</item>
+        <item>General Labor</item>
+
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Quick Cash</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="menu_employee">Employee</string>
+    <string name="menu_employer">Employer</string>
+    <string name="menu_profile">Profile</string>
+    <string name="action_search">Search</string>
+    <string name="action_status">Status</string>
+    <string name="search">Search</string>
+    <string name="notification">Notification</string>
+    <string name="no_posts_message">There are no posts..</string>
+    <string name="employee_fragment_label">Employee Dashboard</string>
+    <string name="employer_fragment_label">Employer Dashboard</string>
+
+</resources>
+>>>>>>> Stashed changes
