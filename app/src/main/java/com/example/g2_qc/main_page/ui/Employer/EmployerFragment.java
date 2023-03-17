@@ -24,8 +24,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentEmployerBinding;
-import com.example.g2_qc.main_page.AnotherClass;
-import com.example.g2_qc.submitNewJob.SubmitJobAsEmployee;
+import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.submitNewJob.SubmitJobAsEmployer;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -118,13 +117,11 @@ public class EmployerFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
                     // Retrieve the necessary information from the box view
-                    ImageView imageView = boxView.findViewById(R.id.box_image);
-                    Bitmap imageBitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
+                    String postId = postSnapshot.getKey();
 
-                    // Pass the information to another class
-                    Intent intent = new Intent(getActivity(), AnotherClass.class);
-                    intent.putExtra("dataSnapshot", dataSnapshot.getKey());
-                    intent.putExtra("postSnapshot", postSnapshot.getKey());
+                    // Pass the information to the display_details activity
+                    Intent intent = new Intent(getActivity(), display_details.class);
+                    intent.putExtra("postId", postId);
                     startActivity(intent);
                 }
             });
@@ -150,6 +147,7 @@ public class EmployerFragment extends Fragment {
         ScrollView scrollView = getView().findViewById(R.id.scroll_view);
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
+
 
     public void addNewPostEmployer(View view) {
         Button addNewPostButton = view.findViewById(R.id.add_new_post);

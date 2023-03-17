@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.ActivityMainBinding;
+import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.signup_page.User;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
@@ -61,6 +62,7 @@ public class MainPageActivity extends AppCompatActivity {
     private String location;
     private String category;
     private ArrayList<String> list = new ArrayList<String>();
+    private ArrayList<String> list2 = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -271,6 +273,8 @@ public class MainPageActivity extends AppCompatActivity {
             if (jobCategory.equals(category)) {
                 String currJob = jobName + "\n " + timePosted + "\n";
                 list.add(currJob);
+                String postId = postSnapshot.getKey();
+                list2.add(postId);
             }
         }
     }
@@ -279,7 +283,7 @@ public class MainPageActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainPageActivity.this);
         builder.setTitle("Jobs Notification of Your Category");
         if (list.isEmpty()) {
-            builder.setMessage("No new job postings in your category. \n Please Try Again in moment...");
+            builder.setMessage("No new job postings in your category. \n Please try again later.");
             builder.setCancelable(false);
             AlertDialog dialog = builder.create();
             dialog.show();
@@ -290,10 +294,18 @@ public class MainPageActivity extends AppCompatActivity {
                         dialog.dismiss();
                     }
                 }
-            }, 1000); // 1 seconds delay before auto-closing the dialog
+            }, 1000); // 1 second delay before auto-closing the dialog
         } else {
             String[] jobs = list.toArray(new String[0]);
-            builder.setItems(jobs, null);
+            builder.setItems(jobs, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    String postId = list2.get(which);
+                    Intent intent = new Intent(MainPageActivity.this, display_details.class);
+                    intent.putExtra("postId", postId);
+                    startActivity(intent);
+                }
+            });
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -303,6 +315,9 @@ public class MainPageActivity extends AppCompatActivity {
             AlertDialog dialog = builder.create();
             dialog.show();
             list.clear();
+            list2.clear();
         }
     }
+
+
 }

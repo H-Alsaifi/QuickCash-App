@@ -1,6 +1,5 @@
 package com.example.g2_qc.main_page.ui.Employee;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -24,11 +23,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentEmployeeBinding;
-import com.example.g2_qc.main_page.AnotherClass;
-import com.example.g2_qc.main_page.MainPageActivity;
+import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.submitNewJob.SubmitJobAsEmployee;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -117,13 +114,11 @@ public class EmployeeFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
                     // Retrieve the necessary information from the box view
-                    ImageView imageView = boxView.findViewById(R.id.box_image);
-                    Bitmap imageBitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
+                    String postId = postSnapshot.getKey();
 
-                    // Pass the information to another class
-                    Intent intent = new Intent(getActivity(), AnotherClass.class);
-                    intent.putExtra("dataSnapshot", dataSnapshot.getKey());
-                    intent.putExtra("postSnapshot", postSnapshot.getKey());
+                    // Pass the information to the display_details activity
+                    Intent intent = new Intent(getActivity(), display_details.class);
+                    intent.putExtra("postId", postId);
                     startActivity(intent);
                 }
             });
