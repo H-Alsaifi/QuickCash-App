@@ -1,15 +1,9 @@
 package com.example.g2_qc.submitNewJob;
 
-import static android.content.ContentValues.TAG;
-
-import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,8 +14,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.main_page.MainPageActivity;
@@ -37,6 +29,12 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
 
 
 public class SubmitJobAsEmployee extends AppCompatActivity {
@@ -127,7 +125,7 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
                     String description = jobDescription.getText().toString();
                     String paymentStr = jobPayment.getText().toString();
                     String category = categoriesSpinner.getSelectedItem().toString();
-
+                    String timePosted = timePosted();
                     if (name.isEmpty()) {
                         jobName.setError("Please enter a job name");
                         jobName.requestFocus();
@@ -146,7 +144,9 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
                         return;
                     }
 
-                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category);
+
+
+                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category, timePosted);
 
                     String postID = root.push().getKey();
 
@@ -160,7 +160,6 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(SubmitJobAsEmployee.this, "Job Posted", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(SubmitJobAsEmployee.this, MainPageActivity.class);
-                                        intent.putExtra("fragment", "employee");
                                         startActivity(intent);
                                         finish();
                                     } else {
@@ -174,4 +173,12 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
         }
     }
 
+    public String timePosted() {
+        long currentTime = System.currentTimeMillis();
+        TimeZone timeZone = TimeZone.getTimeZone("Canada/Atlantic");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        dateFormat.setTimeZone(timeZone);
+        String timeString = dateFormat.format(new Date(currentTime));
+        return timeString;
+    }
 }

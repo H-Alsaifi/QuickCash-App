@@ -49,6 +49,9 @@
         <activity
             android:name=".main_page.ui.Employer.EmployerFragment"
             android:label="@string/employer_fragment_label" />
+        <activity
+            android:name=".main_page.AnotherClass"
+            android:label="Another Activity" />
 
     </application>
 

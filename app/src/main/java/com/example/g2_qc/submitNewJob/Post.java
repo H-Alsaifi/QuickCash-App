@@ -1,7 +1,7 @@
 package com.example.g2_qc.submitNewJob;
 
 public class Post {
-    public String jobName, jobDescription, jobPayment, image, jobCategory;
+    public String jobName, jobDescription, jobPayment, image, jobCategory, timePosted;
 
     public  Post(){}
 
@@ -13,12 +13,13 @@ public class Post {
      * @param image a reference of the job image
      * @param jobCategory the category of the job
      */
-    public Post(String jobName, String jobDescription, String jobPayment, String image, String jobCategory) {
+    public Post(String jobName, String jobDescription, String jobPayment, String image, String jobCategory, String timePosted) {
         this.jobName = jobName;
         this.jobDescription = jobDescription;
         this.jobPayment = jobPayment;
         this.image = image;
         this.jobCategory = jobCategory;
+        this.timePosted = timePosted;
     }
 
 

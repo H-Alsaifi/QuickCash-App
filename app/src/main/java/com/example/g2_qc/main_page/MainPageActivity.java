@@ -1,26 +1,32 @@
 package com.example.g2_qc.main_page;
 
-import static android.content.ContentValues.TAG;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
+import android.text.TextPaint;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.ActivityMainBinding;
 import com.example.g2_qc.signup_page.User;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,16 +35,20 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.NotificationCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class MainPageActivity extends AppCompatActivity {
 
@@ -49,6 +59,8 @@ public class MainPageActivity extends AppCompatActivity {
     private FirebaseAuth authProfile;
     private String email;
     private String location;
+    private String category;
+    private ArrayList<String> list = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +74,7 @@ public class MainPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showNotification();
+                showNotificationAlert();
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -109,17 +122,18 @@ public class MainPageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User userDetails = snapshot.getValue(User.class);
-                if(userDetails != null) {
+                if (userDetails != null) {
 
                     email = userDetails.emailAddress;
                     location = userDetails.location;
+                    category = userDetails.category;
 
                     NavigationView navigationView = findViewById(R.id.nav_view);
                     View headerView = navigationView.getHeaderView(0);
                     TextView subtitleTextView = headerView.findViewById(R.id.nav_header_subtitle);
                     subtitleTextView.setText(email);
 
-                    if (location.isEmpty()){
+                    if (location.isEmpty()) {
                         locationButton.setText("Choose location");
                     } else {
                         locationButton.setText(location);
@@ -188,7 +202,107 @@ public class MainPageActivity extends AppCompatActivity {
         }
     }
 
-    public void showNotification(){
+    public void showNotification() {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
 
+        String myId = FirebaseAuth.getInstance().getCurrentUser().getUid(); //user ID
+
+        // Call populateScrollView to populate the scroll view with existing posts
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference()
+                .child("Users");
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
+                    String userId = userSnapshot.getKey();
+
+
+                    DatabaseReference postsReferenceEmployee = userSnapshot.child("Employee").child("Posts").getRef();
+                    postsReferenceEmployee.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            notificationCheck(dataSnapshot);
+                            progressDialog.dismiss(); // dismiss the progress dialog here
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            progressDialog.dismiss();
+                            Toast.makeText(MainPageActivity.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
+                    DatabaseReference postsReferenceEmployer = userSnapshot.child("Employer").child("Posts").getRef();
+                    postsReferenceEmployer.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            notificationCheck(dataSnapshot);
+                            progressDialog.dismiss(); // dismiss the progress dialog here
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            progressDialog.dismiss();
+                            Toast.makeText(MainPageActivity.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                progressDialog.dismiss();
+                Toast.makeText(MainPageActivity.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+    public void notificationCheck(DataSnapshot dataSnapshot) {
+        for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+            String jobName = postSnapshot.child("jobName").getValue(String.class);
+            String timePosted = postSnapshot.child("timePosted").getValue(String.class);
+            String jobCategory = postSnapshot.child("jobCategory").getValue(String.class);
+
+            if (jobCategory.equals(category)) {
+                String currJob = jobName + "\n " + timePosted + "\n";
+                list.add(currJob);
+            }
+        }
+    }
+
+    public void showNotificationAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainPageActivity.this);
+        builder.setTitle("Jobs Notification of Your Category");
+        if (list.isEmpty()) {
+            builder.setMessage("No new job postings in your category. \n Please Try Again in moment...");
+            builder.setCancelable(false);
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (dialog != null && dialog.isShowing()) {
+                        dialog.dismiss();
+                    }
+                }
+            }, 1000); // 1 seconds delay before auto-closing the dialog
+        } else {
+            String[] jobs = list.toArray(new String[0]);
+            builder.setItems(jobs, null);
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            list.clear();
+        }
     }
 }
