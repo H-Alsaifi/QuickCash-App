@@ -2,7 +2,10 @@ package com.example.g2_qc.display_details;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,10 +26,19 @@ public class display_details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_details);
 
-        String myId = FirebaseAuth.getInstance().getCurrentUser().getUid(); //user ID
+        //String myId = FirebaseAuth.getInstance().getCurrentUser().getUid(); //user ID
         extractInfo("-NQckYWwbc3Hg_vjdtQm", "wFZqWpbGHQMoCWNxJala3ibWs523");
 //        FirebaseDatabase db = FirebaseDatabase.getInstance("https://quickcash-group2-default-rtdb.firebaseio.com/");
 //        DatabaseReference ref = db.getReference().child("users");
+
+        Button btn = findViewById(R.id.backButton);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainPageActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
