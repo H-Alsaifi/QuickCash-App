@@ -3,6 +3,7 @@ package com.example.g2_qc.main_page.ui.Employer;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.text.TextUtils;
@@ -23,7 +24,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentEmployerBinding;
-import com.example.g2_qc.submitNewJob.SubmitJobAsEmployee;
+import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.submitNewJob.SubmitJobAsEmployer;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -93,7 +94,7 @@ public class EmployerFragment extends Fragment {
         addNewPostEmployer(view);
     }
 
-    private void populateScrollView(DataSnapshot dataSnapshot) {
+    public void populateScrollView(DataSnapshot dataSnapshot) {
         LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
 
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
@@ -105,9 +106,26 @@ public class EmployerFragment extends Fragment {
             // Create a new box view
             View boxView = LayoutInflater.from(getContext()).inflate(R.layout.box_layout, null);
 
-            // Set the job name as the text of the box view
+            // Set the job name and description as the text of the box view
             TextView textViewName = boxView.findViewById(R.id.box_title);
             TextView textViewDescription = boxView.findViewById(R.id.box_content);
+            textViewName.setText(TextUtils.ellipsize(jobName, (TextPaint) textViewName.getPaint(), 400, TextUtils.TruncateAt.END));
+            textViewDescription.setText(TextUtils.ellipsize(jobDescription, (TextPaint) textViewDescription.getPaint(), 1000, TextUtils.TruncateAt.END));
+
+            // Add an OnClickListener to the whole box view
+            boxView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Retrieve the necessary information from the box view
+                    String postId = postSnapshot.getKey();
+
+                    // Pass the information to the display_details activity
+                    Intent intent = new Intent(getActivity(), display_details.class);
+                    intent.putExtra("postId", postId);
+                    startActivity(intent);
+                }
+            });
+
             ImageView imageView = boxView.findViewById(R.id.box_image);
 
             FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -121,17 +139,15 @@ public class EmployerFragment extends Fragment {
                 }
             });
 
-            textViewName.setText(TextUtils.ellipsize(jobName, (TextPaint) textViewName.getPaint(), 400, TextUtils.TruncateAt.END));
-            textViewDescription.setText(TextUtils.ellipsize(jobDescription, (TextPaint) textViewDescription.getPaint(), 1000, TextUtils.TruncateAt.END));
-
             // Add the box view to the linear layout inside the scroll view
             linearLayout.addView(boxView);
-
         }
+
         // Scroll to the bottom of the scroll view
         ScrollView scrollView = getView().findViewById(R.id.scroll_view);
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
+
 
     public void addNewPostEmployer(View view) {
         Button addNewPostButton = view.findViewById(R.id.add_new_post);

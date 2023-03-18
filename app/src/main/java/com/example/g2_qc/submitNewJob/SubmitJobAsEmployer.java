@@ -39,6 +39,10 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
 
 public class SubmitJobAsEmployer extends AppCompatActivity {
 
@@ -129,6 +133,7 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                     String description = jobDescription.getText().toString();
                     String paymentStr = jobPayment.getText().toString();
                     String category = categoriesSpinner.getSelectedItem().toString();
+                    String timePosted = timePosted();
 
                     if (name.isEmpty()) {
                         jobName.setError("Please enter a job name");
@@ -148,7 +153,7 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                         return;
                     }
 
-                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category);
+                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category, timePosted);
 
                     String postID = root.push().getKey();
 
@@ -161,7 +166,6 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
-                                        intent.putExtra("fragment", "employer");
                                         startActivity(intent);
                                         finish();
                                     } else {
@@ -174,5 +178,14 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
             });
         }
     }
+    public String timePosted() {
+        long currentTime = System.currentTimeMillis();
+        TimeZone timeZone = TimeZone.getTimeZone("Canada/Atlantic");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        dateFormat.setTimeZone(timeZone);
+        String timeString = dateFormat.format(new Date(currentTime));
+        return timeString;
+    }
+
 }
 
