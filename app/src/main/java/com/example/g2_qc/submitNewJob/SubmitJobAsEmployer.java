@@ -66,9 +66,6 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         jobImage = findViewById(R.id.jobImage);
         submitJobButton = findViewById(R.id.submit_job);
 
-        // Create the notification channel and manager
-        createNotificationChannel();
-        notificationManager = getSystemService(NotificationManager.class);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.JobsCategories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -163,7 +160,6 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
-                                        showNotification("New Post Added", "A new job has been posted by an employer.");
                                         Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
                                         intent.putExtra("fragment", "employer");
                                         startActivity(intent);
@@ -177,61 +173,6 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                 }
             });
         }
-    }
-
-    private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    CHANNEL_ID,
-                    CHANNEL_NAME,
-                    NotificationManager.IMPORTANCE_HIGH);
-            channel.setDescription("My Channel Description");
-            notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-        }
-    }
-    private void showNotification(String title, String message) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_notifications)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setAutoCancel(true);
-
-        // Check if notifications are enabled
-        if (NotificationManagerCompat.from(this).areNotificationsEnabled()) {
-            Intent intent = new Intent(this, MainPageActivity.class);
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-            builder.setContentIntent(pendingIntent);
-
-            int notificationId = (int) System.currentTimeMillis();
-            notificationManager.notify(notificationId, builder.build());
-        } else {
-            // Notifications are disabled, show a toast message instead
-            Toast.makeText(this, "Notifications are disabled", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void addPostListener() {
-        DatabaseReference postsReference = FirebaseDatabase.getInstance().getReference("posts");
-        postsReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    // Get the post details
-                    String title = postSnapshot.child("title").getValue(String.class);
-                    String message = postSnapshot.child("message").getValue(String.class);
-
-                    // Show the notification
-                    showNotification(title, message);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e(TAG, "Failed to read value.", databaseError.toException());
-            }
-        });
     }
 }
 

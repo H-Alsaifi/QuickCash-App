@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.G2QC"
         tools:targetApi="33">
+        <activity
+            android:name=".display_details.display_details"
+            android:exported="true" />
         <activity
             android:name=".welcome_page.Welcome"
             android:exported="true"
@@ -34,15 +39,16 @@
         <activity
             android:name=".user_profile.userProfile"
             android:exported="true" />
-        <activity android:name=".submitNewJob.SubmitJobAsEmployer"
+        <activity
+            android:name=".submitNewJob.SubmitJobAsEmployer"
             android:exported="true" />
-        <activity android:name=".submitNewJob.SubmitJobAsEmployee"
+        <activity
+            android:name=".submitNewJob.SubmitJobAsEmployee"
             android:exported="true" />
-
         <activity
             android:name=".main_page.MainPageActivity"
             android:exported="true"
-            android:theme="@style/Theme.G2QC.NoActionBar"/>
+            android:theme="@style/Theme.G2QC.NoActionBar" />
         <activity
             android:name=".main_page.ui.Employee.EmployeeFragment"
             android:label="@string/employee_fragment_label" />
