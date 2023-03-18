@@ -21,12 +21,4 @@ public class Post {
         this.jobCategory = jobCategory;
         this.timePosted = timePosted;
     }
-
-
-    public Post(String jobName, String jobDescription, String jobPayment, String jobCategory) {
-        this.jobName = jobName;
-        this.jobDescription = jobDescription;
-        this.jobPayment = jobPayment;
-        this.jobCategory = jobCategory;
-    }
 }
