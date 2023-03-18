@@ -55,6 +55,10 @@
         <activity
             android:name=".main_page.ui.Employer.EmployerFragment"
             android:label="@string/employer_fragment_label" />
+        <activity
+            android:name=".greeting_page.greetingPage"
+            android:exported="true" />
+
     </application>
 
 </manifest>
