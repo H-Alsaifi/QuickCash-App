@@ -20,12 +20,4 @@ public class Post {
         this.image = image;
         this.jobCategory = jobCategory;
     }
-
-
-    public Post(String jobName, String jobDescription, String jobPayment, String jobCategory) {
-        this.jobName = jobName;
-        this.jobDescription = jobDescription;
-        this.jobPayment = jobPayment;
-        this.jobCategory = jobCategory;
-    }
 }
