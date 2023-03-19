@@ -72,7 +72,7 @@ public class MainPageActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
+        binding.appBarMain.notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showNotification();
@@ -118,6 +118,11 @@ public class MainPageActivity extends AppCompatActivity {
     }
 
     private void ExtractInfo(FirebaseUser firebaseUser) {
+        if (firebaseUser == null) {
+            // Handle the case where the FirebaseUser object is null
+            return;
+        }
+
         String myId = firebaseUser.getUid(); //user ID
         DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
         profile_ref.child(myId).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -157,7 +162,12 @@ public class MainPageActivity extends AppCompatActivity {
         if (id == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
+
+            // navigate back to login activity
+            Intent intent = new Intent(this, com.example.g2_qc.login_page.demo_login_page.class);
+            startActivity(intent);
             finish();
+
             return true;
         }
 
@@ -209,7 +219,7 @@ public class MainPageActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
 
-        String myId = FirebaseAuth.getInstance().getCurrentUser().getUid(); //user ID
+//        String myId = FirebaseAuth.getInstance().getCurrentUser().getUid(); //user ID
 
         // Call populateScrollView to populate the scroll view with existing posts
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference()

@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 public class EmployerFragment extends Fragment {
+    private SearchView searchView;
 
     private FragmentEmployerBinding binding;
     private ViewGroup container;
@@ -88,6 +90,21 @@ public class EmployerFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(getContext(), "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        searchView = getView().findViewById(R.id.search_view);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterPosts(newText.trim());
+                return true;
             }
         });
 
@@ -159,4 +176,25 @@ public class EmployerFragment extends Fragment {
             }
         });
     }
+    public void filterPosts(String query) {
+        LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
+
+        for (int i = 0; i < linearLayout.getChildCount(); i++) {
+            View childView = linearLayout.getChildAt(i);
+
+            if (childView instanceof View) {
+
+                View boxView = (View) childView;
+                TextView textViewName = boxView.findViewById(R.id.box_title);
+
+                if (textViewName.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+                    boxView.setVisibility(View.VISIBLE);
+
+                } else {
+                    boxView.setVisibility(View.GONE);
+                }
+            }
+        }
+    }
+
 }

@@ -48,7 +48,8 @@
         <activity
             android:name=".main_page.MainPageActivity"
             android:exported="true"
-            android:theme="@style/Theme.G2QC.NoActionBar" />
+            android:theme="@style/Theme.G2QC.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".main_page.ui.Employee.EmployeeFragment"
             android:label="@string/employee_fragment_label" />
