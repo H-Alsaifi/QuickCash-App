@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ import androidx.fragment.app.Fragment;
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentEmployeeBinding;
 import com.example.g2_qc.display_details.display_details;
+import com.example.g2_qc.submitNewJob.Post;
 import com.example.g2_qc.submitNewJob.SubmitJobAsEmployee;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -34,7 +36,10 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.List;
+
 public class EmployeeFragment extends Fragment {
+    private SearchView searchView;
 
     private FragmentEmployeeBinding binding;
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -89,6 +94,21 @@ public class EmployeeFragment extends Fragment {
         });
 
         addNewPostEmployee(view);
+
+        searchView = getView().findViewById(R.id.search_view);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterPosts(newText.trim());
+                return true;
+            }
+        });
+
     }
 
     public void populateScrollView(DataSnapshot dataSnapshot) {
@@ -155,4 +175,25 @@ public class EmployeeFragment extends Fragment {
             }
         });
     }
+    public void filterPosts(String query) {
+        LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
+
+        for (int i = 0; i < linearLayout.getChildCount(); i++) {
+            View childView = linearLayout.getChildAt(i);
+
+            if (childView instanceof View) {
+
+                View boxView = (View) childView;
+                TextView textViewName = boxView.findViewById(R.id.box_title);
+
+                if (textViewName.getText().toString().toLowerCase().contains(query.toLowerCase())) {
+                    boxView.setVisibility(View.VISIBLE);
+
+                } else {
+                    boxView.setVisibility(View.GONE);
+                }
+            }
+        }
+    }
+
 }
