@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.g2_qc.R;
+import com.example.g2_qc.forgot_password.forgot_password_page;
+import com.example.g2_qc.login_page.demo_login_page;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,7 +29,9 @@ public class userProfile extends AppCompatActivity{
     private ProgressBar progressBar;
     private FirebaseAuth authProfile;
     private String firstName, lastName, email, age;
-    private Button logout;
+    private TextView job, category, description, time, payment;
+    String jobName, jobCategory, jobDescription, jobPayment, timePosted;
+    private Button logout, my_jobs, my_personal_p, back_to_personal_p;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -34,12 +39,50 @@ public class userProfile extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_profile);
 
-        logout= (Button)findViewById(R.id.signout);
+        logout= findViewById(R.id.signout);
+        my_jobs = findViewById(R.id.jobs);
+        my_personal_p = findViewById(R.id.personal_p);
+        back_to_personal_p= findViewById(R.id.btn_back_to_personal_p);
+
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(userProfile.this, userDetails.class));
+                Intent intent = new Intent(userProfile.this, demo_login_page.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        back_to_personal_p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userProfile.this, userDetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        my_jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userProfile.this, jobDetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        job = findViewById(R.id.textView_show_job_name);
+        category = findViewById(R.id.textView_show_job_category);
+        description = findViewById(R.id.textView_show_job_desc);
+        payment = findViewById(R.id.textView_show_job_payment);
+        time = findViewById(R.id.textView_show_time_posted);
+
+        my_personal_p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userProfile.this, userDetails.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -66,25 +109,49 @@ public class userProfile extends AppCompatActivity{
     }
 
     private void showProfile(FirebaseUser firebaseUser) {
-        String ID = firebaseUser.getUid(); //user ID
+        String ID = firebaseUser.getUid();
         DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
         profile_ref.child(ID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userDetails userDetails = snapshot.getValue(userDetails.class);
-                if(userDetails != null) {
+                if (userDetails != null) {
                     firstName = userDetails.firstName;
                     lastName = userDetails.lastname;
                     email = userDetails.emailAddress;
                     age = userDetails.agePerson;
 
-                    textViewWelcome.setText("Welcome " + firstName +  "!");
+                    textViewWelcome.setText("Welcome " + firstName + "!");
                     textViewFirstName.setText(firstName);
                     textViewLastName.setText(lastName);
                     textViewAge.setText(age);
                     textViewEmail.setText(email);
 
                     progressBar.setVisibility(View.INVISIBLE);
+                }
+
+                jobDetails details = snapshot.getValue(jobDetails.class);
+                if (details != null) {
+                    jobName = details.jobName;
+                    jobCategory = details.jobCategory;
+                    jobDescription = details.jobDescription;
+                    jobPayment = details.jobPayment;
+                    timePosted = details.timePosted;
+
+                    job.setText(jobName);
+                    category.setText(jobCategory);
+                    description.setText(jobDescription);
+                    payment.setText(jobPayment);
+                    time.setText(timePosted);
+                }
+            }
+
+            public void update(View view) {
+                if(first_name_changed() || last_name_changed() || age_changed()) {
+                    Toast.makeText(userProfile.this, "Your data has been updated", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Toast.makeText(userProfile.this, "Your data is already up to date", Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -93,5 +160,38 @@ public class userProfile extends AppCompatActivity{
                 Toast.makeText(userProfile.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    private boolean age_changed() {
+        if(!age.equals(textViewAge.getText().toString())) {
+            DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
+            //profile_ref.child("agePerson").setValue(textViewAge.getEditText().getText().toString());
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean first_name_changed() {
+        if(!firstName.equals(textViewFirstName.getText().toString())) {
+            DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
+           // profile_ref.child("firstName").setValue(textViewFirstName.getEditText().getText().toString());
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean last_name_changed() {
+        if(!lastName.equals(textViewLastName.getText().toString())) {
+            DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
+            //profile_ref.child("lastName").setValue(textViewLastName.getEditText().getText().toString());
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
