@@ -27,9 +27,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDAo-xAoS676VreHt5x60E9n_e7vU3KDL4" />
         <activity
             android:name=".login_page.demo_login_page"
             android:exported="true" />
+        <activity android:name=".main_page.location" />
         <activity
             android:name=".signup_page.signup"
             android:exported="true" />

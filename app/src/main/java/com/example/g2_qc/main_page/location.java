@@ -3,40 +3,44 @@ package com.example.g2_qc.main_page;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.g2_qc.databinding.ActivityLocationBinding;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.example.g2_qc.R;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class location extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private ActivityLocationBinding binding;
     private GoogleMap mMap;
+    private SupportMapFragment mapFragment;
     private FusedLocationProviderClient fusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_employee);
-
+        binding = ActivityLocationBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         // Set up the location button and its click listener
-        Button locationButton = findViewById(R.id.location_button);
-        locationButton.setOnClickListener(this::onLocationButtonClick);
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment);
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         // Check for location permissions, request if necessary
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -48,32 +52,29 @@ public class location extends AppCompatActivity implements OnMapReadyCallback {
 
     // Show the map fragment and initialize the map when the location button is clicked
     public void onLocationButtonClick(View view) {
-        Fragment mapFragment = getSupportFragmentManager().findFragmentById(R.id.map_fragment);
-        if (mapFragment != null && mapFragment.getView() != null) {
-            mapFragment.getView().setVisibility(View.VISIBLE);
-        }
+        setContentView(R.layout.activity_location);
         initMap();
     }
-
-    // Initialize the map fragment and FusedLocationProviderClient
     private void initMap() {
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment);
-        mapFragment.getMapAsync(this);
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        if (mapFragment != null) {
+            mapFragment.getMapAsync(this);
+        } else {
+            Log.e("Location", "Error initializing map fragment.");
+        }
     }
 
-    // Set up the map once it's ready
+    // Set up the map when it's ready
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         // Check for location permissions before enabling the "My Location" button and getting the user's last known location
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         mMap.setMyLocationEnabled(true);
-
-        // Set a listener for map clicks to add a marker at the clicked location
         mMap.setOnMapClickListener(latLng -> mMap.addMarker(new MarkerOptions().position(latLng).title("Clicked location")));
 
         // Move the camera to the user's last known location
@@ -87,7 +88,8 @@ public class location extends AppCompatActivity implements OnMapReadyCallback {
         });
     }
 
-    // Handle the result of the location permission request
+
+    // result of the location permission request
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
