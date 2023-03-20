@@ -46,16 +46,23 @@ import java.util.TimeZone;
 
 public class SubmitJobAsEmployer extends AppCompatActivity {
 
+    // Notification channel ID and name for sending notifications
     private static final String CHANNEL_ID = "my_channel";
     private static final String CHANNEL_NAME = "My Channel";
     private static NotificationManager notificationManager;
+
+    // Declare views
     private EditText jobName;
     private EditText jobDescription;
     private EditText jobPayment;
     private ImageView jobImage;
     private Button submitJobButton;
     private Spinner categoriesSpinner;
+
+    // Declare database reference
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference("Users");
+
+    // Constant for image selection intent
     private static final int REQUEST_CODE_OPEN_DOCUMENT = 1;
 
     @Override
@@ -63,6 +70,7 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_job_as_employer);
 
+        // Find views by ID
         jobName = findViewById(R.id.job_name);
         jobDescription = findViewById(R.id.job_description);
         jobPayment = findViewById(R.id.job_payment);
@@ -70,10 +78,12 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         jobImage = findViewById(R.id.jobImage);
         submitJobButton = findViewById(R.id.submit_job);
 
-
+        // Create and set up the spinner for job categories
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.JobsCategories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categoriesSpinner.setAdapter(adapter);
+
+        // Set up onClickListener for selecting job image
         jobImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,14 +93,18 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
             }
         });
 
+        // Set up onClickListener for submitting job
         submitJobButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Get user input from EditText fields
                 String name = jobName.getText().toString();
                 String description = jobDescription.getText().toString();
                 String paymentStr = jobPayment.getText().toString();
                 String category = categoriesSpinner.getSelectedItem().toString();
 
+
+                // Check if job name, description, and payment have been entered
                 if (name.isEmpty()) {
                     jobName.setError("Please enter a job name");
                     jobName.requestFocus();
@@ -106,6 +120,7 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                     jobPayment.requestFocus();
                 }
 
+                // Show toast message prompting user to select image
                 Toast.makeText(SubmitJobAsEmployer.this, "Please Select Image", Toast.LENGTH_SHORT).show();
 
             }
@@ -135,6 +150,7 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                     String category = categoriesSpinner.getSelectedItem().toString();
                     String timePosted = timePosted();
 
+                    // Validate user input and display error messages if necessary
                     if (name.isEmpty()) {
                         jobName.setError("Please enter a job name");
                         jobName.requestFocus();
@@ -153,8 +169,10 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                         return;
                     }
 
+                    // Create a new Post object with the job information
                     Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category, timePosted);
 
+                    // Push the Post object to the database under the current user's Employer Posts
                     String postID = root.push().getKey();
 
                     FirebaseDatabase.getInstance().getReference("Users")
@@ -163,21 +181,28 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                             .setValue(post).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
+                                    // If successful, display a notification and direct the user back to the main page
                                     if (task.isSuccessful()) {
                                         Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
                                         startActivity(intent);
                                         finish();
                                     } else {
+                                        // If unsuccessful, display an error message
                                         Toast.makeText(SubmitJobAsEmployer.this, "Error posting job", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
+
+                    // Upload the selected image to Firebase Storage
                     UploadTask uploadTask = imagesRef.putFile(selectedImageUri);
                 }
             });
         }
     }
+
+    // This method gets the current time and sets it to the Atlantic Canada time zone
+    // It then formats the time to display as a string in the format "yyyy-MM-dd HH:mm"
     public String timePosted() {
         long currentTime = System.currentTimeMillis();
         TimeZone timeZone = TimeZone.getTimeZone("Canada/Atlantic");

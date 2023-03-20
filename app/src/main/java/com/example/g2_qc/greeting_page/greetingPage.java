@@ -37,27 +37,30 @@ public class greetingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.greeting_page_layout);
 
+        // Initialize UI elements
         greetText = findViewById(R.id.greetingText);
         welcomeUserText = findViewById(R.id.welcomeUser);
         getStarted = findViewById(R.id.getStartedButtom);
         root = FirebaseDatabase.getInstance().getReference("Users");
 
+        // Get user details and set welcome message
         root.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userDetails userDetails = snapshot.getValue(userDetails.class);
-                if(userDetails != null){
+                if (userDetails != null) {
                     String fName = userDetails.firstName;
                     welcomeUserText.setText("Welcome, " + fName + "!");
                 }
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(greetingPage.this, "You are welcome whomever you are!", Toast.LENGTH_LONG).show();
             }
         });
 
-
+        // Set click listener for get started button
         getStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,9 +68,5 @@ public class greetingPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
-
-
-
