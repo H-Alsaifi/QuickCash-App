@@ -42,6 +42,9 @@ public class EmployeeFragment extends Fragment {
     private SearchView searchView;
 
     private FragmentEmployeeBinding binding;
+
+    // Inflate the fragment's layout
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -52,13 +55,14 @@ public class EmployeeFragment extends Fragment {
 
     }
 
+    // Clear the binding when the view is destroyed
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
 
-
+    // Initialize the fragment's UI components and add event listeners
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -93,8 +97,7 @@ public class EmployeeFragment extends Fragment {
             }
         });
 
-        addNewPostEmployee(view);
-
+        // Add a listener for the search view
         searchView = getView().findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -102,6 +105,7 @@ public class EmployeeFragment extends Fragment {
                 return false;
             }
 
+            // Filter the posts in the scroll view based on the search query
             @Override
             public boolean onQueryTextChange(String newText) {
                 filterPosts(newText.trim());
@@ -109,11 +113,15 @@ public class EmployeeFragment extends Fragment {
             }
         });
 
+        // Add a listener for the "Add New Post" button
+        addNewPostEmployee(view);
     }
 
+    // Populate the scroll view with posts retrieved
     public void populateScrollView(DataSnapshot dataSnapshot) {
         LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
 
+        // Iterate over the posts and create a box view for each one
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
             String jobName = postSnapshot.child("jobName").getValue(String.class);
             String jobDescription = postSnapshot.child("jobDescription").getValue(String.class);
@@ -143,6 +151,7 @@ public class EmployeeFragment extends Fragment {
                 }
             });
 
+            // Load the image for the post and set it as the background of the box view
             ImageView imageView = boxView.findViewById(R.id.box_image);
 
             FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -165,6 +174,7 @@ public class EmployeeFragment extends Fragment {
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
 
+    // Add a listener for the "Add New Post" button
     public void addNewPostEmployee(View view) {
         Button addNewPostButton = view.findViewById(R.id.add_new_post);
         addNewPostButton.setOnClickListener(new View.OnClickListener() {
@@ -175,6 +185,8 @@ public class EmployeeFragment extends Fragment {
             }
         });
     }
+
+    // Filter the posts in the scroll view based on a search query
     public void filterPosts(String query) {
         LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
 
