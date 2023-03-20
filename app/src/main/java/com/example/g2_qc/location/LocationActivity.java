@@ -1,15 +1,19 @@
 package com.example.g2_qc.location;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -53,9 +57,26 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         // Set up the save location button and its click listener
         Button saveLocationButton = findViewById(R.id.save_location_button);
         saveLocationButton.setOnClickListener(view -> {
-            saveLocation();
-            Intent intent = new Intent(LocationActivity.this, MainPageActivity.class);
-            startActivity(intent);
+// Show a dialog box to prompt the user for an address or location name
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Enter a location name");
+            EditText input = new EditText(this);
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    String locationName = input.getText().toString();
+                    saveLocation(locationName);
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            builder.show();
         });
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment);
@@ -133,7 +154,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
                 String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location");
                 LocationDetails locationDetails = new LocationDetails(latitude, longitude);
-                databaseReference.setValue(locationDetails).addOnSuccessListener(new OnSuccessListener<Void>() {
+                databaseReference.setValue(address.getAddressLine(0)).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(LocationActivity.this, "Location saved successfully", Toast.LENGTH_SHORT).show();
