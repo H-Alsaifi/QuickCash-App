@@ -27,7 +27,11 @@ import com.google.firebase.storage.StorageReference;
 
 public class display_details extends AppCompatActivity {
 
-    private TextView jobNameTextView, timePostedTextView, jobCategoryTextView, jobDescriptionTextView, jobPaymentTextView;
+    private TextView jobNameTextView;
+    private TextView timePostedTextView;
+    private TextView jobCategoryTextView;
+    private TextView jobDescriptionTextView;
+    private TextView jobPaymentTextView;
     private ImageView jobImageView;
 
     @Override
@@ -132,6 +136,7 @@ public class display_details extends AppCompatActivity {
 
                 FirebaseStorage storage = FirebaseStorage.getInstance();
                 StorageReference storageRef = storage.getReference().child("images").child(imageUrl);
+
 
                 storageRef.getBytes(1024 * 1024).addOnSuccessListener(new OnSuccessListener<byte[]>() {
                     @Override
