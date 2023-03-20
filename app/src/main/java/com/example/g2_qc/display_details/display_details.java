@@ -41,9 +41,6 @@ public class display_details extends AppCompatActivity {
         });
 
 
-
-
-
     }
     public void extractInfo(String postId, String UserUID) {
         DatabaseReference databaseReferenceEmployee = FirebaseDatabase.getInstance().getReference()

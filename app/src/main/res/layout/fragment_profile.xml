@@ -1,21 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main_page.ui.Profile.ProfileFragment">
+    android:background="@color/cardview_light_background"
+    android:onClick="update"
+    android:orientation="vertical"
+    tools:context=".user_profile.userProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="#26B2A5"
+        android:padding="20dp">
 
 
-    <TextView
-        android:id="@+id/text_profile"
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/textView_show_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile"
+            android:hint="..."
+            android:includeFontPadding="false"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="39dp" />
+        android:layout_marginTop="-68dp"
+        android:padding="20dp">
 
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#26B2A5"
+            app:cardElevation="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/personal_p" />
+
+                <Button
+                    android:id="@+id/personal_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="false"
+                    android:text="My Personal Info"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp"
+                android:padding="20dp">
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#26B2A5"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/jobs" />
+
+                <Button
+                    android:id="@+id/jobs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="false"
+                    android:text="My Jobs"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp"
+                android:padding="20dp">
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp"
+        android:layout_marginTop="-25dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/first_name"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/name" />
+
+            <TextView
+                android:id="@+id/textView_show_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageView2"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="-15dp"
+                android:hint="..."
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_show_first_name"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+            <ImageView
+                android:id="@id/imageView3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/divider_last_name"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lname" />
+
+            <TextView
+                android:id="@+id/textView_show_last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_first_name"
+                android:layout_alignStart="@id/imageView3"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="-15dp"
+                android:hint="..."
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_show_last_name"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+            <ImageView
+                android:id="@id/imageView4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/divider_email"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/email" />
+
+            <TextView
+                android:id="@+id/textView_show_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_last_name"
+                android:layout_alignStart="@id/imageView4"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="-18dp"
+                android:hint="..."
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_email"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_show_age"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/age"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/divider_age"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/age" />
+
+            <TextView
+                android:id="@+id/textView_show_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_email"
+                android:layout_alignStart="@id/imageView4"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="-23dp"
+                android:hint="..."
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_age"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_show_age"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/black" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:visibility="gone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="#009688"
+            android:onClick="update"
+            android:text="Update Profile" />
+
+        <Button
+            android:id="@+id/signout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Logout" />
+
+    </LinearLayout>
+</LinearLayout>

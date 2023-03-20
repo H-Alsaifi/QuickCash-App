@@ -31,7 +31,7 @@ public class userProfile extends AppCompatActivity{
     private String firstName, lastName, email, age;
     private TextView job, category, description, time, payment;
     String jobName, jobCategory, jobDescription, jobPayment, timePosted;
-    private Button logout, my_jobs, my_personal_p, back_to_personal_p;
+    private Button logout, my_jobs, my_personal_p, update;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,24 +42,13 @@ public class userProfile extends AppCompatActivity{
         logout= findViewById(R.id.signout);
         my_jobs = findViewById(R.id.jobs);
         my_personal_p = findViewById(R.id.personal_p);
-        back_to_personal_p= findViewById(R.id.btn_back_to_personal_p);
-
+        update = findViewById(R.id.update);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(userProfile.this, demo_login_page.class);
                 startActivity(intent);
-                finish();
-            }
-        });
-
-        back_to_personal_p.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(userProfile.this, userDetails.class);
-                startActivity(intent);
-                finish();
             }
         });
 
@@ -68,7 +57,6 @@ public class userProfile extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(userProfile.this, jobDetails.class);
                 startActivity(intent);
-                finish();
             }
         });
         job = findViewById(R.id.textView_show_job_name);
@@ -82,7 +70,14 @@ public class userProfile extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(userProfile.this, userDetails.class);
                 startActivity(intent);
-                finish();
+            }
+        });
+
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userProfile.this, userDetails.class);
+                startActivity(intent);
             }
         });
 
@@ -154,7 +149,6 @@ public class userProfile extends AppCompatActivity{
                     Toast.makeText(userProfile.this, "Your data is already up to date", Toast.LENGTH_LONG).show();
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(userProfile.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
@@ -165,7 +159,7 @@ public class userProfile extends AppCompatActivity{
     private boolean age_changed() {
         if(!age.equals(textViewAge.getText().toString())) {
             DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-            //profile_ref.child("agePerson").setValue(textViewAge.getEditText().getText().toString());
+            profile_ref.child("agePerson").setValue(textViewAge.getText().toString());
             return true;
         }
         else {
@@ -176,7 +170,7 @@ public class userProfile extends AppCompatActivity{
     private boolean first_name_changed() {
         if(!firstName.equals(textViewFirstName.getText().toString())) {
             DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-           // profile_ref.child("firstName").setValue(textViewFirstName.getEditText().getText().toString());
+           profile_ref.child("firstName").setValue(textViewFirstName.getText().toString());
             return true;
         }
         else {
@@ -187,11 +181,12 @@ public class userProfile extends AppCompatActivity{
     private boolean last_name_changed() {
         if(!lastName.equals(textViewLastName.getText().toString())) {
             DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-            //profile_ref.child("lastName").setValue(textViewLastName.getEditText().getText().toString());
+            profile_ref.child("lastName").setValue(textViewLastName.getText().toString());
             return true;
         }
         else {
             return false;
         }
     }
+
 }
