@@ -7,26 +7,31 @@ import static org.junit.Assert.assertTrue;
 import com.example.g2_qc.signup_page.signup;
 
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
 
 public class signupTest {
 
-    static signup validName;
-    static signup invalidName;
+    static signup user1;
+    static signup user2;
 
     @BeforeClass
     public static void setUp() {
         String vName = "John";
-        validName = Mockito.mock(signup.class);
-        Mockito.when(validName.isValidFirstName(vName)).thenReturn(true);
+        user1 = Mockito.mock(signup.class);
+        Mockito.when(user1.isValidFirstName(vName)).thenReturn(true);
+        Mockito.when(user1.isValidAge("21")).thenReturn(true);
+        Mockito.when(user1.isValidLastName("McCain")).thenReturn(true);
 
         String invName = "Troy12121";
-        invalidName = Mockito.mock(signup.class);
-        Mockito.when(invalidName.isValidFirstName(invName)).thenReturn(false);
+        user2 = Mockito.mock(signup.class);
+        Mockito.when(user2.isValidFirstName(invName)).thenReturn(false);
+        Mockito.when(user2.isValidAge("-21")).thenReturn(false);
+        Mockito.when(user2.isValidLastName("2999")).thenReturn(false);
+
 
     }
 
@@ -39,30 +44,39 @@ public class signupTest {
     @Test
     public void checkValidFirstName(){
         String firstName = "John";
-        assertTrue(validName.isValidFirstName(firstName));
+        assertTrue(user1.isValidFirstName(firstName));
     }
 
     @Test
     public void checkInvalidName(){
         String invName1 = "Troy12121";
-        assertFalse(signup.isValidPassword(invName1));
+        assertFalse(user2.isValidPassword(invName1));
     }
 
     @Test
-    public void isValidFirstName3(){
-        String firstName = "";
-        assertTrue(signup.isValidPassword(firstName));
+    public void checkValidAge(){
+        String age = "21";
+        assertTrue(user1.isValidAge(age));
+
     }
 
     @Test
-    public void isValidFirstName4(){
-        String firstName = "123";
-        assertTrue(signup.isValidPassword(firstName));
+    public void checkInvalidAge(){
+        String age = "-21";
+        assertFalse(user2.isValidAge(age));
     }
 
     @Test
-    public void isValidFirstName5(){
-        String firstName = "&@";
-        assertTrue(signup.isValidPassword(firstName));
+    public void checkValidLN(){
+        String ln = "McCain";
+        assertTrue(user1.isValidLastName(ln));
     }
+
+    @Test
+    public void checkInvalidLN(){
+        String ln = "2999";
+        assertFalse(user2.isValidLastName(ln));
+    }
+
+
 }
