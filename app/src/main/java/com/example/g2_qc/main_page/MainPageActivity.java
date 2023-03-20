@@ -171,8 +171,15 @@ public class MainPageActivity extends AppCompatActivity {
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
+    public void onLocationButtonClick(View view) {
+        // Launch the location activity
+        Intent intent = new Intent(this, location.class);
+        startActivity(intent);
+    }
+
 
     public void enableNotification() {
         NotificationManager notificationManager = getSystemService(NotificationManager.class);
