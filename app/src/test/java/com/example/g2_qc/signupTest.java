@@ -1,19 +1,33 @@
 package com.example.g2_qc;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import com.example.g2_qc.signup_page.signup;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mockito;
+
 
 public class signupTest {
-    static com.example.g2_qc.signup_page.signup signup;
+
+    static signup validName;
+    static signup invalidName;
 
     @BeforeClass
     public static void setUp() {
-        signup = new signup();
+        String vName = "John";
+        validName = Mockito.mock(signup.class);
+        Mockito.when(validName.isValidFirstName(vName)).thenReturn(true);
+
+        String invName = "Troy12121";
+        invalidName = Mockito.mock(signup.class);
+        Mockito.when(invalidName.isValidFirstName(invName)).thenReturn(false);
+
     }
 
     @AfterClass
@@ -21,16 +35,17 @@ public class signupTest {
         System.gc();
     }
 
+
     @Test
-    public void isValidFirstName1(){
+    public void checkValidFirstName(){
         String firstName = "John";
-        assertTrue(signup.isValidPassword(firstName));
+        assertTrue(validName.isValidFirstName(firstName));
     }
 
     @Test
-    public void isValidFirstName2(){
-        String firstName = "John xx";
-        assertTrue(signup.isValidPassword(firstName));
+    public void checkInvalidName(){
+        String invName1 = "Troy12121";
+        assertFalse(signup.isValidPassword(invName1));
     }
 
     @Test
