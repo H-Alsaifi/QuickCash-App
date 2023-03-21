@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,26 +15,26 @@
         android:theme="@style/Theme.G2QC"
         tools:targetApi="33">
         <activity
-            android:name=".welcome_page.Welcome"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".display_details.display_details"
+            android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".welcome_page.Welcome"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDAo-xAoS676VreHt5x60E9n_e7vU3KDL4" />
         <activity
             android:name=".login_page.demo_login_page"
             android:exported="true" />
+        <activity android:name=".location.LocationActivity"
+            android:exported="true"/>
         <activity
             android:name=".signup_page.signup"
             android:exported="true" />
@@ -40,6 +43,26 @@
             android:exported="true" />
         <activity
             android:name=".user_profile.userProfile"
+            android:exported="true" />
+        <activity
+            android:name=".submitNewJob.SubmitJobAsEmployer"
+            android:exported="true" />
+        <activity
+            android:name=".submitNewJob.SubmitJobAsEmployee"
+            android:exported="true" />
+        <activity
+            android:name=".main_page.MainPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".main_page.ui.Employee.EmployeeFragment"
+            android:label="@string/employee_fragment_label" />
+        <activity
+            android:name=".main_page.ui.Employer.EmployerFragment"
+            android:label="@string/employer_fragment_label" />
+        <activity
+            android:name=".greeting_page.greetingPage"
             android:exported="true" />
 
     </application>

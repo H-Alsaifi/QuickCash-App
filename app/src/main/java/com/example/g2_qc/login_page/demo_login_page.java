@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.greeting_page.greetingPage;
 import com.example.g2_qc.forgot_password.forgot_password_page;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -63,7 +64,7 @@ public class demo_login_page extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     // Sign in success, show a Toast message and go to the next activity
                                     Toast.makeText(demo_login_page.this, "Login successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(demo_login_page.this,com.example.g2_qc.user_profile.userProfile.class);
+                                    Intent intent = new Intent(demo_login_page.this, greetingPage.class);
                                     startActivity(intent);
                                 }
                                 else {

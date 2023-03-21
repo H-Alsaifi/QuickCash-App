@@ -34,8 +34,7 @@ public class signup extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private EditText confirmPassword;
-    private Button signUp;
-    private TextView back;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,39 +50,39 @@ public class signup extends AppCompatActivity {
         email = findViewById(R.id.email_address);
         password = findViewById(R.id.setPassword);
         confirmPassword = findViewById(R.id.confirmPassword);
-        signUp = findViewById(R.id.signup_button);
-        back = findViewById(R.id.backToWelcomePage);
+        Button signUpBtn = findViewById(R.id.signup_button);
+        TextView back = findViewById(R.id.backToWelcomePage);
         instructionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new AlertDialog.Builder(signup.this)
-                    .setTitle("How to Join!")
-                    .setMessage("1- Enter your first and last name(just letters). \n\n" +
-                            "2- Enter your Age.\n\n" +
-                            "3- Please enter a valid email address.\n" +
-                            "\t\t\t\t-ex: abc123@gmail.com\n\n" +
-                            "4- Your password must include: \n" +
-                            "\t\t* At least 1 number\n" +
-                            "\t\t* At least 1 special character:\n" +
-                            "\t\t\t\t-ex: (!,@,#,$,%,^,&,*,.)\n" +
-                            "\t\t* 8 characters with at least one:\n"+
-                            "\t\t\t\tA- uppercase letter.\n"+
-                            "\t\t\t\tB- lowercase letter.\n")
-                    .setPositiveButton(android.R.string.ok, null)
-                    .setIcon(android.R.drawable.ic_dialog_info)
-                    .show();
+                        .setTitle("How to Join!")
+                        .setMessage("1- Enter your first and last name(just letters). \n\n" +
+                                "2- Enter your Age.\n\n" +
+                                "3- Please enter a valid email address.\n" +
+                                "\t\t\t\t-ex: abc123@gmail.com\n\n" +
+                                "4- Your password must include: \n" +
+                                "\t\t* At least 1 number\n" +
+                                "\t\t* At least 1 special character:\n" +
+                                "\t\t\t\t-ex: (!,@,#,$,%,^,&,*,.)\n" +
+                                "\t\t* 8 characters with at least one:\n"+
+                                "\t\t\t\tA- uppercase letter.\n"+
+                                "\t\t\t\tB- lowercase letter.\n")
+                        .setPositiveButton(android.R.string.ok, null)
+                        .setIcon(android.R.drawable.ic_dialog_info)
+                        .show();
             }
         });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent back = new Intent(signup.this, Welcome.class);
-                startActivity(back);
+                Intent backToWelcomePage = new Intent(signup.this, Welcome.class);
+                startActivity(backToWelcomePage);
             }
         });
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Get the input values

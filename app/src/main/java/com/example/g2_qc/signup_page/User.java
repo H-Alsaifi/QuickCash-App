@@ -3,7 +3,7 @@ package com.example.g2_qc.signup_page;
 
 public class User {
 
-    public String firstName, lastname, emailAddress, agePerson;
+    public String firstName, lastname, emailAddress, agePerson, location = "", category;
 
     public  User(){}
 
