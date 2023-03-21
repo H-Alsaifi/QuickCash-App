@@ -29,6 +29,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -114,8 +115,11 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         mMap.setOnMapClickListener(latLng -> {
             selectedLocation = latLng;
             mMap.clear();
-            mMap.addMarker(new MarkerOptions().position(latLng).title("Selected Location"));
-            saveLocation(); // Call saveLocation() method to save the location to the database
+            try {
+                saveLocation(mMap.addMarker(new MarkerOptions().position(latLng).title("Selected Location"))); // Call saveLocation() method to save the location to the database
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
 
         // Move the camera to the user's last known location
@@ -176,12 +180,19 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         }
     }
     // Save the selected location to the database
-    private void saveLocation() {
+    private void saveLocation(Marker map) throws IOException {
         if (selectedLocation != null) {
+            double latitude = map.getPosition().latitude;
+            double longitude = map.getPosition().longitude;
+
             String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location");
-            LocationDetails locationDetails = new LocationDetails(selectedLocation.latitude, selectedLocation.longitude);
-            databaseReference.setValue(locationDetails.getLatitude() + ", " + locationDetails.getLongitude()).addOnSuccessListener(new OnSuccessListener<Void>() {
+
+            Geocoder geocoder = new Geocoder(this);
+            List<Address> location = geocoder.getFromLocation(latitude, longitude, 1);
+            String strLocation = location.get(0).getAddressLine(0);
+
+            databaseReference.setValue(strLocation).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
                     Toast.makeText(LocationActivity.this, "Location saved successfully", Toast.LENGTH_SHORT).show();
