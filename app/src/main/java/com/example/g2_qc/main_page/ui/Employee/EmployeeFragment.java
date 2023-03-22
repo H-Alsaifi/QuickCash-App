@@ -285,6 +285,12 @@ public class EmployeeFragment extends Fragment {
             public void onClick(DialogInterface dialog, int which) {
                 double minCost = (double) minCostSeekBar.getProgress();
                 double maxCost = (double) maxCostSeekBar.getProgress();
+
+                if (minCost > maxCost) {
+                    Toast.makeText(getContext(), "Minimum cost cannot be greater than maximum cost", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 filterPostsByCost(minCost, maxCost);
                 dialog.dismiss();
             }
