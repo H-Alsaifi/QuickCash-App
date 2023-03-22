@@ -24,7 +24,7 @@ public class display_details extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_details);
+        setContentView(R.layout.job_page);
 
         //String myId = FirebaseAuth.getInstance().getCurrentUser().getUid(); //user ID
         extractInfo("-NQckYWwbc3Hg_vjdtQm", "wFZqWpbGHQMoCWNxJala3ibWs523");

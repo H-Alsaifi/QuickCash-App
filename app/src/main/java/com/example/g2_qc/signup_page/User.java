@@ -4,6 +4,7 @@ package com.example.g2_qc.signup_page;
 public class User {
 
     public String firstName, lastname, emailAddress, agePerson, location = "";
+    public String jobName, jobCategory, jobDescription, jobPayment, timePosted;
 
     public  User(){}
 

@@ -1,4 +1,4 @@
-package com.example.g2_qc.user_profile;
+package com.example.g2_qc.user_profile.job_details;
 
 public class jobDetails {
 

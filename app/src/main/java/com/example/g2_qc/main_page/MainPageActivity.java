@@ -45,7 +45,6 @@ public class MainPageActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     private Button locationButton;
-
     private FirebaseAuth authProfile;
     private String email;
     private String location;
@@ -83,7 +82,6 @@ public class MainPageActivity extends AppCompatActivity {
         ExtractInfo(user);
         enableNotification();
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -187,7 +185,6 @@ public class MainPageActivity extends AppCompatActivity {
             }
         }
     }
-
     public void showNotification(){
 
     }

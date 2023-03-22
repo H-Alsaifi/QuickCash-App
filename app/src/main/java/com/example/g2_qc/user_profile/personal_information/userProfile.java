@@ -1,4 +1,4 @@
-package com.example.g2_qc.user_profile;
+package com.example.g2_qc.user_profile.personal_information;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +11,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.g2_qc.R;
-import com.example.g2_qc.forgot_password.forgot_password_page;
 import com.example.g2_qc.login_page.demo_login_page;
-import com.google.android.material.textfield.TextInputLayout;
+import com.example.g2_qc.user_profile.job_details.jobDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,11 +26,9 @@ public class userProfile extends AppCompatActivity{
 
     private TextView textViewWelcome, textViewFirstName, textViewLastName, textViewEmail, textViewAge;
     private ProgressBar progressBar;
+    private Button my_jobs, my_personal_p, update;
     private FirebaseAuth authProfile;
     private String firstName, lastName, email, age;
-    private TextView job, category, description, time, payment;
-    String jobName, jobCategory, jobDescription, jobPayment, timePosted;
-    private Button logout, my_jobs, my_personal_p, update;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,18 +36,9 @@ public class userProfile extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_profile);
 
-        logout= findViewById(R.id.signout);
         my_jobs = findViewById(R.id.jobs);
         my_personal_p = findViewById(R.id.personal_p);
         update = findViewById(R.id.update);
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(userProfile.this, demo_login_page.class);
-                startActivity(intent);
-            }
-        });
 
         my_jobs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,17 +47,11 @@ public class userProfile extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-        job = findViewById(R.id.textView_show_job_name);
-        category = findViewById(R.id.textView_show_job_category);
-        description = findViewById(R.id.textView_show_job_desc);
-        payment = findViewById(R.id.textView_show_job_payment);
-        time = findViewById(R.id.textView_show_time_posted);
+
 
         my_personal_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(userProfile.this, userDetails.class);
-                startActivity(intent);
             }
         });
 
@@ -92,7 +74,7 @@ public class userProfile extends AppCompatActivity{
 
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser user = authProfile.getCurrentUser();
-        showProfile(user);
+
 
         if(user == null) {
             Toast.makeText(userProfile.this, "user profile details not found", Toast.LENGTH_LONG).show();
@@ -124,69 +106,12 @@ public class userProfile extends AppCompatActivity{
 
                     progressBar.setVisibility(View.INVISIBLE);
                 }
-
-                jobDetails details = snapshot.getValue(jobDetails.class);
-                if (details != null) {
-                    jobName = details.jobName;
-                    jobCategory = details.jobCategory;
-                    jobDescription = details.jobDescription;
-                    jobPayment = details.jobPayment;
-                    timePosted = details.timePosted;
-
-                    job.setText(jobName);
-                    category.setText(jobCategory);
-                    description.setText(jobDescription);
-                    payment.setText(jobPayment);
-                    time.setText(timePosted);
-                }
             }
 
-            public void update(View view) {
-                if(first_name_changed() || last_name_changed() || age_changed()) {
-                    Toast.makeText(userProfile.this, "Your data has been updated", Toast.LENGTH_LONG).show();
-                }
-                else {
-                    Toast.makeText(userProfile.this, "Your data is already up to date", Toast.LENGTH_LONG).show();
-                }
-            }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(userProfile.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
             }
         });
     }
-
-    private boolean age_changed() {
-        if(!age.equals(textViewAge.getText().toString())) {
-            DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-            profile_ref.child("agePerson").setValue(textViewAge.getText().toString());
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    private boolean first_name_changed() {
-        if(!firstName.equals(textViewFirstName.getText().toString())) {
-            DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-           profile_ref.child("firstName").setValue(textViewFirstName.getText().toString());
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    private boolean last_name_changed() {
-        if(!lastName.equals(textViewLastName.getText().toString())) {
-            DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-            profile_ref.child("lastName").setValue(textViewLastName.getText().toString());
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
 }

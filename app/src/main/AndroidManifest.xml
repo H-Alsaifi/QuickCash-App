@@ -36,7 +36,7 @@
             android:name=".forgot_password.forgot_password_page"
             android:exported="true" />
         <activity
-            android:name=".user_profile.userProfile"
+            android:name=".user_profile.personal_information.userProfile"
             android:exported="true" />
         <activity
             android:name=".submitNewJob.SubmitJobAsEmployer"
@@ -54,6 +54,9 @@
         <activity
             android:name=".main_page.ui.Employer.EmployerFragment"
             android:label="@string/employer_fragment_label" />
+
+        <activity android:name=".user_profile.job_details.MyJobActivity" />
+
     </application>
 
 </manifest>

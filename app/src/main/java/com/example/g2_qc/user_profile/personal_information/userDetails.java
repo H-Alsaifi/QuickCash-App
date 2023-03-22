@@ -1,8 +1,8 @@
-package com.example.g2_qc.user_profile;
+package com.example.g2_qc.user_profile.personal_information;
 
-public class userDetails {
+import com.example.g2_qc.signup_page.User;
 
-    public String firstName, lastname, emailAddress, agePerson;
+public class userDetails extends User {
 
     public  userDetails(){}
 
