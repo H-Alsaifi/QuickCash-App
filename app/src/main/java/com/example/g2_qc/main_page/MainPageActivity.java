@@ -150,7 +150,7 @@ public class MainPageActivity extends AppCompatActivity {
                 if (userDetails != null) {
                     email = userDetails.emailAddress;
                     location = userDetails.location;
-                    category = userDetails.category;
+                    //category = userDetails.category;
 
                     // Set the email as the subtitle of the navigation view header
                     NavigationView navigationView = findViewById(R.id.nav_view);
@@ -249,9 +249,8 @@ public class MainPageActivity extends AppCompatActivity {
             }
         }
     }
-
+    public void showNotification(){
     // showNotification method - displays a notification alert for new job postings
-    public void showNotification() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         progressDialog.show();
