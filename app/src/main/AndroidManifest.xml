@@ -33,7 +33,8 @@
         <activity
             android:name=".login_page.demo_login_page"
             android:exported="true" />
-        <activity android:name=".location.LocationActivity" />
+        <activity android:name=".location.LocationActivity"
+            android:exported="true"/>
         <activity
             android:name=".signup_page.signup"
             android:exported="true" />
