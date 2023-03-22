@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.text.TextUtils;
@@ -12,12 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.SearchView;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +29,6 @@ import androidx.fragment.app.Fragment;
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentEmployeeBinding;
 import com.example.g2_qc.display_details.display_details;
-import com.example.g2_qc.submitNewJob.Post;
 import com.example.g2_qc.submitNewJob.SubmitJobAsEmployee;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -40,12 +39,15 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class EmployeeFragment extends Fragment {
     private SearchView searchView;
 
     private FragmentEmployeeBinding binding;
+    private boolean isDescendingOrder;
 
     // Inflate the fragment's layout
     @Override
@@ -291,7 +293,16 @@ public class EmployeeFragment extends Fragment {
                     return;
                 }
 
-                filterPostsByCost(minCost, maxCost);
+                if (isDescendingOrder) {
+                    filterPostsByCost(minCost, maxCost);
+                    filterPostsByCostDescending();
+
+                } else {
+                    filterPostsByCost(minCost, maxCost);
+                    filterPostsByCostAscending();
+
+                }
+
                 dialog.dismiss();
             }
         });
@@ -309,46 +320,108 @@ public class EmployeeFragment extends Fragment {
             }
         });
 
-        AlertDialog filterDialog = builder.create();
-        filterDialog.show();
+        Switch costSwitch = filterView.findViewById(R.id.filter_by_cost_switch);
+        isDescendingOrder = costSwitch.isChecked(); // save initial state of switch
+        costSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                isDescendingOrder = isChecked; // save current state of switch
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
     }
 
 
 
-
-    public void filterPostsByCost(double minCost, double maxCost) {
+    private void filterPostsByCost(double minCost, double maxCost) {
         LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
-
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             View childView = linearLayout.getChildAt(i);
+            TextView costTextView = childView.findViewById(R.id.box_wage);
+            String costString = costTextView.getText().toString().replaceAll("\\$", "");
+            double cost = Double.parseDouble(costString);
 
-            if (childView instanceof View) {
-
-                View boxView = (View) childView;
-                TextView textViewName = boxView.findViewById(R.id.box_title);
-                TextView textViewCost = boxView.findViewById(R.id.box_wage);
-
-                if (Double.compare(minCost, 0) == 0 && Double.compare(maxCost, 100) == 0) {
-                    // No filtering required
-                    boxView.setVisibility(View.VISIBLE);
-                } else {
-                    String costString = textViewCost.getText().toString().trim();
-                    costString = costString.replace("$", "");
-                    double cost = 0.0;
-                    try {
-                        cost = Double.parseDouble(costString);
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
-                        continue; // Skip this box view if costString is not a valid number
-                    }
-
-                    if (cost >= minCost && cost <= maxCost) {
-                        boxView.setVisibility(View.VISIBLE);
-                    } else {
-                        boxView.setVisibility(View.GONE);
-                    }
-                }
+            if (cost < minCost || cost > maxCost) {
+                childView.setVisibility(View.GONE);
+            } else {
+                childView.setVisibility(View.VISIBLE);
             }
         }
     }
+
+    private void filterPostsByCostAscending() {
+        LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
+        ArrayList<View> childViews = new ArrayList<>();
+
+        for (int i = 0; i < linearLayout.getChildCount(); i++) {
+            View childView = linearLayout.getChildAt(i);
+            childViews.add(childView);
+        }
+
+        Collections.sort(childViews, new Comparator<View>() {
+            @Override
+            public int compare(View o1, View o2) {
+                TextView costTextView1 = o1.findViewById(R.id.box_wage);
+                String costString1 = costTextView1.getText().toString();
+                costString1 = costString1.replace("$","");
+
+                TextView costTextView2 = o2.findViewById(R.id.box_wage);
+                String costString2 = costTextView2.getText().toString();
+                costString2 = costString2.replace("$","");
+                // Check if the cost strings are valid number format before parsing
+                    double cost1 = Double.parseDouble(costString1);
+                    double cost2 = Double.parseDouble(costString2);
+                    return Double.compare(cost1, cost2);
+
+            }
+        });
+
+        for (View childView : childViews) {
+            linearLayout.removeView(childView);
+        }
+
+        for (View childView : childViews) {
+            linearLayout.addView(childView);
+        }
+    }
+    private void filterPostsByCostDescending() {
+        LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
+        ArrayList<View> childViews = new ArrayList<>();
+
+        for (int i = 0; i < linearLayout.getChildCount(); i++) {
+            View childView = linearLayout.getChildAt(i);
+            childViews.add(childView);
+        }
+
+        Collections.sort(childViews, new Comparator<View>() {
+            @Override
+            public int compare(View o1, View o2) {
+                TextView costTextView1 = o1.findViewById(R.id.box_wage);
+                String costString1 = costTextView1.getText().toString();
+                costString1 = costString1.replace("$","");
+                double cost1 = Double.parseDouble(costString1);
+
+                TextView costTextView2 = o2.findViewById(R.id.box_wage);
+                String costString2 = costTextView2.getText().toString();
+                costString2 = costString2.replace("$","");
+                double cost2 = Double.parseDouble(costString2);
+
+                return Double.compare(cost2, cost1);
+            }
+        });
+
+        for (View childView : childViews) {
+            linearLayout.removeView(childView);
+        }
+
+        for (View childView : childViews) {
+            linearLayout.addView(childView);
+        }
+    }
+
+
+
 }
