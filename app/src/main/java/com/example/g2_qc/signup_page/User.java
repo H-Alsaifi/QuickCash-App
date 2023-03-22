@@ -6,6 +6,7 @@ public class User {
     public String firstName, lastname, emailAddress, agePerson, location = "";
     public String jobName, jobCategory, jobDescription, jobPayment, timePosted;
 
+
     public  User(){}
 
     /**

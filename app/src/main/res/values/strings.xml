@@ -51,5 +51,7 @@
     <string name="no_posts_message">There are no posts..</string>
     <string name="employee_fragment_label">Employee Dashboard</string>
     <string name="employer_fragment_label">Employer Dashboard</string>
+    <string name="search_hint">search</string>
+    <string name="save_location_button_text">Save Location</string>
 
 </resources>

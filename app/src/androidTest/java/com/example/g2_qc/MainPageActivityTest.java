@@ -1,67 +1,38 @@
-//package com.example.g2_qc;
-//
-//import androidx.test.espresso.Espresso;
-//import androidx.test.espresso.IdlingRegistry;
-//import androidx.test.espresso.IdlingResource;
-//import androidx.test.espresso.action.ViewActions;
-//import androidx.test.espresso.assertion.ViewAssertions;
-//import androidx.test.espresso.matcher.ViewMatchers;
-//import androidx.test.ext.junit.rules.ActivityScenarioRule;
-//
-//import com.example.g2_qc.main_page.MainPageActivity;
-//
-//import org.junit.After;
-//import org.junit.Before;
-//import org.junit.Rule;
-//import org.junit.Test;
-//
-//public class MainPageActivityTest {
-//
-//    @Rule
-//    public ActivityScenarioRule<MainPageActivity> activityScenarioRule =
-//            new ActivityScenarioRule<>(MainPageActivity.class);
-//
-//    private IdlingResource idlingResource;
-//
-//    @Before
-//    public void registerIdlingResource() {
-//        idlingResource = activityScenarioRule.getScenario().getIdlingRegistry().get("FIREBASE_USER_EXTRACTION");
-//        IdlingRegistry.getInstance().register(idlingResource);
-//    }
-//
-//    @After
-//    public void unregisterIdlingResource() {
-//        if (idlingResource != null) {
-//            IdlingRegistry.getInstance().unregister(idlingResource);
-//        }
-//    }
-//
-//    @Test
-//    public void testEmailIsDisplayed() {
-//        Espresso.onView(ViewMatchers.withId(R.id.nav_header_subtitle))
-//                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-//    }
-//
-//    @Test
-//    public void testLocationButtonShowsText() {
-//        Espresso.onView(ViewMatchers.withId(R.id.location_button))
-//                .check(ViewAssertions.matches(ViewMatchers.withText("Choose location")));
-//    }
-//
-//    @Test
-//    public void testLocationButtonCanClick() {
-//        Espresso.onView(ViewMatchers.withId(R.id.location_button))
-//                .perform(ViewActions.click());
-//        Espresso.onView(ViewMatchers.withId(R.id.map))
-//                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-//    }
-//
-//    @Test
-//    public void testLogoutMenuClick() {
-//        Espresso.openActionBarOverflowOrOptionsMenu(activityScenarioRule.getActivity());
-//        Espresso.onView(ViewMatchers.withText("Logout"))
-//                .perform(ViewActions.click());
-//        Espresso.onView(ViewMatchers.withText("Logged out"))
-//                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-//    }
-//}
+package com.example.g2_qc;
+
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
+
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import com.example.g2_qc.R;
+import com.example.g2_qc.main_page.MainPageActivity;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+@RunWith(AndroidJUnit4.class)
+public class MainPageActivityTest {
+
+    @Rule
+    public ActivityScenarioRule<MainPageActivity> activityRule = new ActivityScenarioRule<>(MainPageActivity.class);
+
+    @Test
+    public void checkLogout() {
+        // Open the overflow menu
+        openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
+
+        // Click the "Logout" menu item
+        onView(withText(R.string.action_logout))
+                .perform(click());
+
+    }
+}
