@@ -109,10 +109,7 @@ public class MainPageActivity extends AppCompatActivity {
         enableNotification();
     }
 
-<<<<<<< HEAD
-=======
     // onCreateOptionsMenu method - called when the options menu is created
->>>>>>> a2d00b0585e3a3a91df205ac2312c78637be3361
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu with the options menu layout
@@ -153,7 +150,7 @@ public class MainPageActivity extends AppCompatActivity {
                 if (userDetails != null) {
                     email = userDetails.emailAddress;
                     location = userDetails.location;
-                    category = userDetails.category;
+                    //category = userDetails.category;
 
                     // Set the email as the subtitle of the navigation view header
                     NavigationView navigationView = findViewById(R.id.nav_view);
@@ -252,12 +249,8 @@ public class MainPageActivity extends AppCompatActivity {
             }
         }
     }
-<<<<<<< HEAD
     public void showNotification(){
-=======
-
     // showNotification method - displays a notification alert for new job postings
-    public void showNotification() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         progressDialog.show();
@@ -382,7 +375,6 @@ public class MainPageActivity extends AppCompatActivity {
                     dialog.dismiss();
                 }
             });
->>>>>>> a2d00b0585e3a3a91df205ac2312c78637be3361
 
             // Display the alert dialog
             AlertDialog dialog = builder.create();
