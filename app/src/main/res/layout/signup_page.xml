@@ -27,7 +27,7 @@
         android:id="@+id/firstName"
         style="@android:style/Widget.DeviceDefault.EditText"
         android:layout_width="129dp"
-        android:layout_height="39dp"
+        android:layout_height="50dp"
         android:layout_marginTop="105dp"
         android:ems="10"
         android:hint="First Name"
@@ -42,7 +42,7 @@
         android:id="@+id/lastName"
         style="@android:style/Widget.DeviceDefault.EditText"
         android:layout_width="129dp"
-        android:layout_height="39dp"
+        android:layout_height="50dp"
         android:layout_marginTop="105dp"
         android:ems="10"
         android:hint="Last Name"
@@ -57,7 +57,7 @@
     <EditText
         android:id="@+id/age"
         android:layout_width="121dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Your Age"
         android:inputType="textPersonName"
@@ -71,7 +71,7 @@
     <EditText
         android:id="@+id/email_address"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
@@ -85,7 +85,7 @@
     <EditText
         android:id="@+id/setPassword"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Set Password"
         android:inputType="textPassword"
@@ -99,7 +99,7 @@
     <EditText
         android:id="@+id/confirmPassword"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="Confirm Password"
