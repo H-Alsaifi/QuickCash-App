@@ -47,7 +47,7 @@
     <EditText
         android:id="@+id/job_payment"
         android:layout_width="313dp"
-        android:layout_height="41dp"
+        android:layout_height="50dp"
         android:hint="Payment"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/jobImage"
@@ -92,7 +92,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jobImage"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        android:contentDescription="spinner widget for selecting categories"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
