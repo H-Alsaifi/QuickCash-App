@@ -36,8 +36,8 @@ public class demo_login_page extends AppCompatActivity {
         etPassword = findViewById(R.id.et_password);
 
         // for debug mode
-        etEmail.setText("uhruvb@gmail.com");
-        etPassword.setText("Adjita97!");
+//        etEmail.setText("uhruvb@gmail.com");
+//        etPassword.setText("Adjita97!");
 
 
         btnLogin = findViewById(R.id.btn_login);
