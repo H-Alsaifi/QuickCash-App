@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.g2_qc.main_page.ui.Profile.ProfileFragment"
+        android:name="com.example.g2_qc.user_profile.personal_information.ProfileFragment"
         android:label="@string/menu_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

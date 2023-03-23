@@ -34,8 +34,8 @@
 
     <Button
         android:id="@+id/location_button"
-        android:layout_width="230dp"
-        android:layout_height="47dp"
+        android:layout_width="313dp"
+        android:layout_height="50dp"
         android:layout_marginStart="22dp"
         android:layout_marginBottom="72dp"
         android:layout_marginTop="66dp"
@@ -47,6 +47,8 @@
         android:paddingBottom="8dp"
         android:text="Choose Location"
         android:textColor="@android:color/white"
+        android:singleLine="true"
+        android:ellipsize="end"
         app:layout_constraintBottom_toTopOf="@+id/empty_box"
         app:layout_constraintStart_toStartOf="parent" />
 

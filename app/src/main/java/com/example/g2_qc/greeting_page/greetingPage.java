@@ -15,8 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.g2_qc.R;
 import com.example.g2_qc.main_page.MainPageActivity;
 
-import com.example.g2_qc.user_profile.userDetails;
-import com.example.g2_qc.user_profile.userProfile;
+import com.example.g2_qc.signup_page.User;
+import com.example.g2_qc.user_profile.personal_information.userDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -47,7 +47,7 @@ public class greetingPage extends AppCompatActivity {
         root.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userDetails userDetails = snapshot.getValue(userDetails.class);
+                User userDetails = snapshot.getValue(User.class);
                 if (userDetails != null) {
                     String fName = userDetails.firstName;
                     welcomeUserText.setText("Welcome, " + fName + "!");
