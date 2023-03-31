@@ -58,7 +58,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         // Set up the save location button and its click listener
         Button saveLocationButton = findViewById(R.id.save_location_button);
         saveLocationButton.setOnClickListener(view -> {
-// Show a dialog box to prompt the user for an address or location name
+            // Show a dialog box to prompt the user for an address or location name
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Enter a location name");
             EditText input = new EditText(this);
@@ -158,6 +158,8 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
                 String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location");
                 LocationDetails locationDetails = new LocationDetails(latitude, longitude);
+                FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location coordinates").setValue(locationDetails);
+
                 databaseReference.setValue(address.getAddressLine(0)).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
@@ -187,6 +189,9 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
 
             String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location");
+
+            LocationDetails locationDetails = new LocationDetails(latitude, longitude);
+            FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location coordinates").setValue(locationDetails);
 
             Geocoder geocoder = new Geocoder(this);
             List<Address> location = geocoder.getFromLocation(latitude, longitude, 1);
