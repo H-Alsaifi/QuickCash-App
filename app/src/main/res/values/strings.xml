@@ -53,7 +53,13 @@
     <string name="employer_fragment_label">Employer Dashboard</string>
     <string name="search_hint">search</string>
     <string name="save_location_button_text">Save Location</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filter_icon_description">Filter for the search bar</string>
+    <string name="filter_dialog_cancel_button">Clear filter</string>
+    <string name="filter_dialog_apply_button">Apply filter</string>
+    <string name="filter_dialog_title">Filter</string>
+    <string name="filter_dialog_clear_button">Clear Filter</string>
 
 </resources>

@@ -30,8 +30,9 @@
         android:id="@+id/job_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/job_name"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/job_name"/>
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/job_name"
@@ -82,27 +83,46 @@
         android:id="@+id/time_posted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:padding="8dp"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/job_payment" />
 
     <Button
         android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
         android:background="@color/purple_500"
         android:padding="8dp"
         android:text="Main Page"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time_posted"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintVertical_bias="0.26" />
+
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="52dp"
+        android:background="@color/purple_500"
+        android:text="Contact info"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/job_description_employee2"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

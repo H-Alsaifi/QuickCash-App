@@ -47,6 +47,8 @@
         android:paddingBottom="8dp"
         android:text="Choose Location"
         android:textColor="@android:color/white"
+        android:singleLine="true"
+        android:ellipsize="end"
         app:layout_constraintBottom_toTopOf="@+id/empty_box"
         app:layout_constraintStart_toStartOf="parent" />
 

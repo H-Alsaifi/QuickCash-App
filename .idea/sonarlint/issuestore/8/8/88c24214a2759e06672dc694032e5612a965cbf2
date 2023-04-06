@@ -1,0 +1,26 @@
+
+K
+java:S1604"(Make this anonymous inner class a lambda(†‘£ıÿÿÿÿ8‰£¸æï0
+K
+java:S1604 "(Make this anonymous inner class a lambda(àˆ’ÿÿÿÿÿ8‰£¸æï0
+E
+java:S1604´"(Make this anonymous inner class a lambda(ØíM8‰£¸æï0
+~
+java:S14884"\Immediately return this expression instead of assigning it to the temporary variable "root".(ö±îúÿÿÿÿ8‰£¸æï0
+i
+java:S2184 "FCast one of the operands of this multiplication operation to a "long".(àˆ’ÿÿÿÿÿ8Š£¸æï0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ë•…Ğúÿÿÿÿ
+v
+java:S1450*"YRemove the "searchView" field and declare it as a local variable in the relevant methods.(‰Ôô¦8®£¸æï0
+\
+java:S1854N":Remove this useless assignment to local variable "userId".(¼Ì»–ùÿÿÿÿ8²£¸æï0
+M
+java:S1481N"+Remove this unused "userId" local variable.(¼Ì»–ùÿÿÿÿ8³£¸æï0
+I
+java:S2201"+The return value of "replace" must be used.(—·±¨8¶£¸æï0
+J
+java:S1905‰",Remove this unnecessary cast to "TextPaint".(æ“Ôğ8¶£¸æï0
+J
+java:S1905Š",Remove this unnecessary cast to "TextPaint".(ßİƒ“8·£¸æï0
+J
+java:S1905Æ"'Remove this unnecessary cast to "View".(îí–øşÿÿÿÿ8¿£¸æï0
