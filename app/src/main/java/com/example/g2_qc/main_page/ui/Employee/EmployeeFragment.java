@@ -171,8 +171,8 @@ public class EmployeeFragment extends Fragment {
                 }
             });
 
-            // Load the image for the post and set it as the background of the box view
-            ImageView imageView = boxView.findViewById(R.id.box_image);
+                // Load the image for the post and set it as the background of the box view
+                ImageView imageView = boxView.findViewById(R.id.box_image);
 
             FirebaseStorage storage = FirebaseStorage.getInstance();
             StorageReference storageRef = storage.getReference().child("images").child(imageUrl);

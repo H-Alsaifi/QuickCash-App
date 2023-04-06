@@ -1,0 +1,16 @@
+
+n
+java:S1104"SMake jobName a static final constant or non-public and provide accessors if needed.(ׂµ–Êתÿÿÿÿ
+u
+java:S1104"ZMake jobDescription a static final constant or non-public and provide accessors if needed.(ׂµ–Êתÿÿÿÿ
+q
+java:S1104"VMake jobPayment a static final constant or non-public and provide accessors if needed.(ׂµ–Êתÿÿÿÿ
+l
+java:S1104"QMake image a static final constant or non-public and provide accessors if needed.(ׂµ–Êתÿÿÿÿ
+r
+java:S1104"WMake jobCategory a static final constant or non-public and provide accessors if needed.(ׂµ–Êתÿÿÿÿ
+q
+java:S1104"VMake timePosted a static final constant or non-public and provide accessors if needed.(ׂµ–Êתÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Úול®תÿÿÿÿ
+f
+java:S1659"KDeclare "jobDescription" and all following declarations on a separate line.(ׂµ–Êתÿÿÿÿ

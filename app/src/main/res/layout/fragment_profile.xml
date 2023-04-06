@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:includeFontPadding="false"
-                    android:text="My Jobs"
+                    android:text="My History"
                     android:textSize="14sp" />
             </RelativeLayout>
 
