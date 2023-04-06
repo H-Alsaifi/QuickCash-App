@@ -192,7 +192,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
 
             LocationDetails locationDetails = new LocationDetails(latitude, longitude);
             FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location coordinates").setValue(locationDetails);
-
+//test
             Geocoder geocoder = new Geocoder(this);
             List<Address> location = geocoder.getFromLocation(latitude, longitude, 1);
             String strLocation = location.get(0).getAddressLine(0);
