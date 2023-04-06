@@ -1,0 +1,16 @@
+
+>
+java:S16047"(Make this anonymous inner class a lambda(±Β«ύ
+J
+java:S1604M"(Make this anonymous inner class a lambda(ΰΑ§ωÿÿÿÿ8Ò–βο0
+?
+java:S1604“"(Make this anonymous inner class a lambda(£‰ψΎ
+D
+java:S1604"(Make this anonymous inner class a lambda(ίΞ§Υÿÿÿÿÿ
+J
+java:S1604U"(Make this anonymous inner class a lambda(Ω‡ΆΣόÿÿÿÿ8Σ–βο0
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ΚΏάψÿÿÿÿ
+t
+java:S3776("RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Ϋ½Κ€ώÿÿÿÿ8€–βο0
+]
+java:S1126ύ"AReplace this if-then-else statement by a single return statement.(‹ιό³ωÿÿÿÿ
