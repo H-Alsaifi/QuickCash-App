@@ -23,6 +23,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
 
     buildFeatures {
         viewBinding true
@@ -82,5 +86,8 @@ dependencies {
     testImplementation "org.mockito:mockito-inline:3.4.0"
     androidTestImplementation project(path: ':app')
 
+    //Paypal
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
 
 }

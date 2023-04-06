@@ -34,12 +34,6 @@ public class demo_login_page extends AppCompatActivity {
 
         etEmail = findViewById(R.id.et_email_address);
         etPassword = findViewById(R.id.et_password);
-
-        // for debug mode
-        etEmail.setText("uhruvb@gmail.com");
-        etPassword.setText("Adjita97!");
-
-
         btnLogin = findViewById(R.id.btn_login);
         tvForgotPassword = findViewById(R.id.tv_forgot_password);
         tvForgotPassword.setPaintFlags(tvForgotPassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
