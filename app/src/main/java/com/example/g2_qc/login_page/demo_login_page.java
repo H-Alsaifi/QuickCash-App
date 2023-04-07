@@ -44,6 +44,9 @@ public class demo_login_page extends AppCompatActivity {
         // Initialize Firebase authentication
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+        etEmail.setText("Yahya@dal.ca");
+        etPassword.setText("Testing123@");
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
