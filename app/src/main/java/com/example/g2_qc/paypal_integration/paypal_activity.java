@@ -36,7 +36,7 @@ public class paypal_activity  extends AppCompatActivity{
     private PayPalConfiguration payPalConfig;
     //UI Elements
     private EditText enter_amount;
-    private Button payNowBtn;
+    private Button complete_payment;
     private TextView paymentStatus;
 
     @Override
@@ -53,7 +53,7 @@ public class paypal_activity  extends AppCompatActivity{
     private void init() {
         // ui elements
         enter_amount = findViewById(R.id.enterAmtET);
-        payNowBtn = findViewById(R.id.payNowBtn);
+        complete_payment = findViewById(R.id.payNowBtn);
         paymentStatus = findViewById(R.id.paymentStatusTV);
     }
 
@@ -105,7 +105,7 @@ public class paypal_activity  extends AppCompatActivity{
 
     private void setListeners() {
         //event listeners for the pay button
-        payNowBtn.setOnClickListener(v -> processPayment());
+        complete_payment.setOnClickListener(v -> processPayment());
     }
 
     private void processPayment() {

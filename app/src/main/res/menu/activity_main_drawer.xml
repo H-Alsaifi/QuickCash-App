@@ -20,6 +20,6 @@
         <item
             android:id="@+id/paypal"
             android:icon="@drawable/payment"
-            android:title="Paypal" />
+            android:title="PayPal" />
     </group>
 </menu>
