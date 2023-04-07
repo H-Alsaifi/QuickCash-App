@@ -202,6 +202,8 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                             String postId = userRef.child("Employer").child("Posts").push().getKey();
                             userRef.child("Employer").child("Posts").child(postId).setValue(post).addOnCompleteListener(task -> {
                                 if (task.isSuccessful()) {
+                                    HistoryDetails historyDetails = new HistoryDetails();
+                                    historyDetails.addPostToHistory( profileRef , authProfile,  "postsAsEmployer");
                                     Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
                                     startActivity(intent);
