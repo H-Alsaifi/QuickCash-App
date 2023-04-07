@@ -1,0 +1,60 @@
+
+C
+java:S1604n"(Make this anonymous inner class a lambda(íÒ¯ˆıÿÿÿÿ
+D
+java:S1604¡"(Make this anonymous inner class a lambda(†‘£ıÿÿÿÿ
+D
+java:S1604´"(Make this anonymous inner class a lambda(àˆ’ÿÿÿÿÿ
+>
+java:S1604È"(Make this anonymous inner class a lambda(ØíM
+?
+java:S1604"(Make this anonymous inner class a lambda( ³©Æ
+D
+java:S1604¶"(Make this anonymous inner class a lambda(öŠãÌúÿÿÿÿ
+D
+java:S1604Å"(Make this anonymous inner class a lambda(îŸ…ùÿÿÿÿ
+?
+java:S1604ì"(Make this anonymous inner class a lambda(üšö
+?
+java:S1604"(Make this anonymous inner class a lambda(üšö
+w
+java:S1488:"\Immediately return this expression instead of assigning it to the temporary variable "root".(ö±îúÿÿÿÿ
+b
+java:S2184´"FCast one of the operands of this multiplication operation to a "long".(àˆ’ÿÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÿÉÛ
+o
+java:S1450/"YRemove the "searchView" field and declare it as a local variable in the relevant methods.(‰Ôô¦
+U
+java:S1854T":Remove this useless assignment to local variable "userId".(¼Ì»–ùÿÿÿÿ
+F
+java:S1481T"+Remove this unused "userId" local variable.(¼Ì»–ùÿÿÿÿ
+B
+java:S2201’"+The return value of "replace" must be used.(—·±¨
+C
+java:S1905œ",Remove this unnecessary cast to "TextPaint".(æ“Ôğ
+C
+java:S1905",Remove this unnecessary cast to "TextPaint".(ßİƒ“
+C
+java:S1905Ú"'Remove this unnecessary cast to "View".(îí–øşÿÿÿÿ
+?
+java:S1905ô")Remove this unnecessary cast to "double".(¥ ‡
+
+java:S1186€"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥–‚Ãüÿÿÿÿ
+˜
+java:S1186ƒ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç¦û
+E
+java:S1905û")Remove this unnecessary cast to "double".(Ú—¢òüÿÿÿÿ
+E
+java:S1905‹")Remove this unnecessary cast to "double".(§³«Åüÿÿÿÿ
+
+java:S1186—"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥–‚Ãüÿÿÿÿ
+˜
+java:S1186š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç¦û
+E
+java:S1905’")Remove this unnecessary cast to "double".(š°ØÊşÿÿÿÿ
+@
+java:S1905 ")Remove this unnecessary cast to "double".(éâ÷
+E
+java:S1905¡")Remove this unnecessary cast to "double".(‰øı­ÿÿÿÿÿ
+d
+java:S5361Ø"HReplace this call to "replaceAll()" by a call to the "replace()" method.(’Ì™Èüÿÿÿÿ

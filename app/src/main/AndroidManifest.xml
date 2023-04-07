@@ -67,8 +67,10 @@
             android:name=".greeting_page.greetingPage"
             android:exported="true" />
         <activity
-            android:name=".user_profile.history.MyHistoryActivity"
+            android:name=".user_profile.History.MyHistoryActivity"
             android:exported="true" />
+        <activity android:name=".paypal_integration.ApplyActivity"
+            android:exported="true"/>
 
     </application>
 

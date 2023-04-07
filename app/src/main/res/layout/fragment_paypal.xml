@@ -5,12 +5,48 @@
     android:layout_height="match_parent"
     tools:context=".paypal_integration.paypal">
 
+    <TextView
+        android:id="@+id/wageLblTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="You have to pay" />
+
+    <TextView
+        android:id="@+id/wageTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/wageLblTV"
+        android:layout_alignTop="@id/wageLblTV"
+        android:text="0.00" />
+
+    <TextView
+        android:id="@+id/currencyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/wageTV"
+        android:layout_alignTop="@id/wageLblTV"
+        android:text="$" />
+
+    <TextView
+        android:id="@+id/tipsLblTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wageTV"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Add tips: " />
+
     <EditText
         android:id="@+id/enterAmtET"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_below="@id/tipsLblTV"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:hint="Enter Amount Here"
         android:inputType="numberDecimal"
