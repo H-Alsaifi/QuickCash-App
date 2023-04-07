@@ -75,12 +75,27 @@
         android:ems="10"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/setPassword"
+        app:layout_constraintBottom_toTopOf="@+id/experience"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age"
         app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/experience"
+        android:hint="Years of experience"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toTopOf="@+id/setPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_address"
+        app:layout_constraintVertical_bias="0.5"/>
+
 
     <EditText
         android:id="@+id/setPassword"
@@ -93,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_address"
+        app:layout_constraintTop_toBottomOf="@+id/experience"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
