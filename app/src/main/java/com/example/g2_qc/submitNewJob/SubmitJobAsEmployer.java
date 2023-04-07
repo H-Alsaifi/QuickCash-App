@@ -24,6 +24,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.location.LocationDetails;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.main_page.ui.Employee.EmployeeFragment;
 import com.example.g2_qc.main_page.ui.Employer.EmployerFragment;
@@ -50,6 +51,8 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
     private static final String CHANNEL_ID = "my_channel";
     private static final String CHANNEL_NAME = "My Channel";
     private static NotificationManager notificationManager;
+
+    LocationDetails location;
 
     // Declare views
     private EditText jobName;
@@ -87,9 +90,7 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         jobImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-                intent.setType("image/*");
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE_OPEN_DOCUMENT);
+                openFilePicker();
             }
         });
 
@@ -97,34 +98,45 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         submitJobButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get user input from EditText fields
-                String name = jobName.getText().toString();
-                String description = jobDescription.getText().toString();
-                String paymentStr = jobPayment.getText().toString();
-                String category = categoriesSpinner.getSelectedItem().toString();
-
-
-                // Check if job name, description, and payment have been entered
-                if (name.isEmpty()) {
-                    jobName.setError("Please enter a job name");
-                    jobName.requestFocus();
-                }
-
-                if (description.isEmpty()) {
-                    jobDescription.setError("Please enter a job description");
-                    jobDescription.requestFocus();
-                }
-
-                if (paymentStr.isEmpty()) {
-                    jobPayment.setError("Please enter a job payment");
-                    jobPayment.requestFocus();
-                }
-
-                // Show toast message prompting user to select image
-                Toast.makeText(SubmitJobAsEmployer.this, "Please Select Image", Toast.LENGTH_SHORT).show();
-
+                submitJob();
             }
         });
+    }
+
+    // Open file picker for images
+    private void openFilePicker() {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE_OPEN_DOCUMENT);
+    }
+
+    private void submitJob() {
+        // Get the input values entered by the user
+        String name = jobName.getText().toString();
+        String description = jobDescription.getText().toString();
+        String paymentStr = jobPayment.getText().toString();
+        String category = categoriesSpinner.getSelectedItem().toString();
+
+        // Check if any of the fields are empty and display an error message if they are
+        if (name.isEmpty()) {
+            jobName.setError("Please enter a job name");
+            jobName.requestFocus();
+        }
+
+        if (description.isEmpty()) {
+            jobDescription.setError("Please enter a job description");
+            jobDescription.requestFocus();
+        }
+
+        if (paymentStr.isEmpty()) {
+            jobPayment.setError("Please enter a job payment");
+            jobPayment.requestFocus();
+        }
+
+        // Display a toast message prompting the user to select an image
+        if (jobImage.getDrawable() == null) {
+            Toast.makeText(SubmitJobAsEmployer.this, "Please Select Image", Toast.LENGTH_SHORT);
+        }
     }
 
     @Override
@@ -170,32 +182,40 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                     }
 
                     // Create a new Post object with the job information
-                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category, timePosted);
+                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category, timePosted, location);
 
-                    // Push the Post object to the database under the current user's Employer Posts
-                    String postID = root.push().getKey();
+                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("Users")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    userRef.child("location coordinates").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()) {
+                                LocationDetails locationDetails = snapshot.getValue(LocationDetails.class);
+                                if (locationDetails != null) {
+                                    post.setLocation(locationDetails);
+                                }
+                            }
 
-                    FirebaseDatabase.getInstance().getReference("Users")
-                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .child("Employer").child("Posts").child(postID)
-                            .setValue(post).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    // If successful, display a notification and direct the user back to the main page
-                                    if (task.isSuccessful()) {
-                                        Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    } else {
-                                        // If unsuccessful, display an error message
-                                        Toast.makeText(SubmitJobAsEmployer.this, "Error posting job", Toast.LENGTH_SHORT).show();
-                                    }
+                            String postId = userRef.child("Employer").child("Posts").push().getKey();
+                            userRef.child("Employer").child("Posts").child(postId).setValue(post).addOnCompleteListener(task -> {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Toast.makeText(SubmitJobAsEmployer.this, "Error posting job", Toast.LENGTH_SHORT).show();
                                 }
                             });
 
-                    // Upload the selected image to Firebase Storage
-                    UploadTask uploadTask = imagesRef.putFile(selectedImageUri);
+                            UploadTask uploadTask = imagesRef.putFile(selectedImageUri);
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(SubmitJobAsEmployer.this, "Error uploading location", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             });
         }
