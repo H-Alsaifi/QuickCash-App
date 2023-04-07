@@ -28,6 +28,7 @@ import com.example.g2_qc.location.LocationDetails;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.main_page.ui.Employee.EmployeeFragment;
 import com.example.g2_qc.main_page.ui.Employer.EmployerFragment;
+import com.example.g2_qc.user_profile.History.HistoryDetails;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -61,6 +62,8 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
     private ImageView jobImage;
     private Button submitJobButton;
     private Spinner categoriesSpinner;
+    private FirebaseAuth authProfile = FirebaseAuth.getInstance();
+    private DatabaseReference profileRef = FirebaseDatabase.getInstance().getReference();
 
     // Declare database reference
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference("Users");
@@ -199,6 +202,8 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
                             String postId = userRef.child("Employer").child("Posts").push().getKey();
                             userRef.child("Employer").child("Posts").child(postId).setValue(post).addOnCompleteListener(task -> {
                                 if (task.isSuccessful()) {
+                                    HistoryDetails historyDetails = new HistoryDetails();
+                                    historyDetails.addPostToHistory( profileRef , authProfile,  "postsAsEmployer");
                                     Toast.makeText(SubmitJobAsEmployer.this, "Job Posted", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(SubmitJobAsEmployer.this, MainPageActivity.class);
                                     startActivity(intent);
