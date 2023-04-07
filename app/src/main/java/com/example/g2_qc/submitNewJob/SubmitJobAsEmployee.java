@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.location.LocationDetails;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.main_page.ui.Employee.EmployeeFragment;
 import com.example.g2_qc.user_profile.History.HistoryDetails;
@@ -44,6 +45,8 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
     private static final String CHANNEL_ID = "my_channel";
     private static final String CHANNEL_NAME = "My Channel";
     private static NotificationManager notificationManager;
+
+    LocationDetails location;
 
     // UI elements
     private EditText jobName;
@@ -76,46 +79,55 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.JobsCategories, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categoriesSpinner.setAdapter(adapter);
+
         jobImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create an intent to open a file picker for images
-                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-                intent.setType("image/*");
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE_OPEN_DOCUMENT);
+                openFilePicker();
             }
         });
 
         submitJobButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // Get the input values entered by the user
-                String name = jobName.getText().toString();
-                String description = jobDescription.getText().toString();
-                String paymentStr = jobPayment.getText().toString();
-                String category = categoriesSpinner.getSelectedItem().toString();
-
-                // Check if any of the fields are empty and display an error message if they are
-                if (name.isEmpty()) {
-                    jobName.setError("Please enter a job name");
-                    jobName.requestFocus();
-                }
-
-                if (description.isEmpty()) {
-                    jobDescription.setError("Please enter a job description");
-                    jobDescription.requestFocus();
-                }
-
-                if (paymentStr.isEmpty()) {
-                    jobPayment.setError("Please enter a job payment");
-                    jobPayment.requestFocus();
-                }
-
-                // Display a toast message prompting the user to select an image
-                Toast.makeText(SubmitJobAsEmployee.this, "Please Select Image", Toast.LENGTH_SHORT).show();
+                submitJob();
             }
         });
+    }
+
+    private void openFilePicker() {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE_OPEN_DOCUMENT);
+    }
+
+    private void submitJob() {
+        // Get the input values entered by the user
+        String name = jobName.getText().toString();
+        String description = jobDescription.getText().toString();
+        String paymentStr = jobPayment.getText().toString();
+        String category = categoriesSpinner.getSelectedItem().toString();
+
+        // Check if any of the fields are empty and display an error message if they are
+        if (name.isEmpty()) {
+            jobName.setError("Please enter a job name");
+            jobName.requestFocus();
+        }
+
+        if (description.isEmpty()) {
+            jobDescription.setError("Please enter a job description");
+            jobDescription.requestFocus();
+        }
+
+        if (paymentStr.isEmpty()) {
+            jobPayment.setError("Please enter a job payment");
+            jobPayment.requestFocus();
+        }
+
+        // Display a toast message prompting the user to select an image
+        if (jobImage.getDrawable() == null) {
+            Toast.makeText(SubmitJobAsEmployee.this, "Please Select Image", Toast.LENGTH_SHORT);
+        }
     }
 
     // This method is called when the user has selected an image from their device's storage
@@ -167,33 +179,39 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
                     }
 
                     // Create a new Post object with the input values and the selected image URI
-                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category, timePosted);
+                    Post post = new Post(name, description, paymentStr, selectedImageUri.toString(), category, timePosted, location);
 
-                    // Generate a unique ID for the post and save it to the database
-                    String postID = root.push().getKey();
+                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    userRef.child("location coordinates").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()) {
+                                LocationDetails locationDetails = snapshot.getValue(LocationDetails.class);
+                                if (locationDetails != null) {
+                                    post.setLocation(locationDetails);
+                                }
+                            }
 
-                    // Set a listener for when the post has been saved to the database
-                    FirebaseDatabase.getInstance().getReference("Users")
-                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .child("Employee").child("Posts").child(postID)
-                            .setValue(post).addOnCompleteListener(new OnCompleteListener<Void>() {
-
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
-                                        HistoryDetails historyDetails = new HistoryDetails();
-                                        historyDetails.addPostToHistory( profileRef , authProfile,  "postsAsEmployee");
-                                        Toast.makeText(SubmitJobAsEmployee.this, "Job Posted", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(SubmitJobAsEmployee.this, MainPageActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    } else {
-                                        Toast.makeText(SubmitJobAsEmployee.this, "Error posting job", Toast.LENGTH_SHORT).show();
-                                    }
+                            String postId = userRef.child("Employee").child("Posts").push().getKey();
+                            userRef.child("Employee").child("Posts").child(postId).setValue(post).addOnCompleteListener(task -> {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(SubmitJobAsEmployee.this, "Job Posted", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(SubmitJobAsEmployee.this, MainPageActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Toast.makeText(SubmitJobAsEmployee.this, "Error posting job", Toast.LENGTH_SHORT).show();
                                 }
                             });
-                    // Upload the selected image to Firebase Storage
-                    UploadTask uploadTask = imagesRef.putFile(selectedImageUri);
+
+                            UploadTask uploadTask = imagesRef.putFile(selectedImageUri);
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(SubmitJobAsEmployee.this, "Error uploading location", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             });
         }

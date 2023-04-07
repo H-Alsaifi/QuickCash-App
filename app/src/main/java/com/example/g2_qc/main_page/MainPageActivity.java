@@ -6,20 +6,22 @@ import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.ActivityMainBinding;
 import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.location.LocationActivity;
+import com.example.g2_qc.location.LocationDetails;
 import com.example.g2_qc.signup_page.User;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -270,7 +272,7 @@ public class MainPageActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             // Check each job posting for a matching job category and add it to the list of jobs if it matches
-                            notificationCheck(dataSnapshot);
+                            notificationCheck(dataSnapshot, userSnapshot.child("location coordinates").getValue(LocationDetails.class));
 
                             // Dismiss the progress dialog when all job postings have been checked
                             progressDialog.dismiss();
@@ -290,7 +292,7 @@ public class MainPageActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             // Check each job posting for a matching job category and add it to the list of jobs if it matches
-                            notificationCheck(dataSnapshot);
+                            notificationCheck(dataSnapshot, userSnapshot.child("location coordinates").getValue(LocationDetails.class));
 
                             // Dismiss the progress dialog when all job postings have been checked
                             progressDialog.dismiss();
@@ -317,18 +319,39 @@ public class MainPageActivity extends AppCompatActivity {
     }
 
     // notificationCheck method - checks if a job posting matches the user's job category and adds it to the list of jobs if it does
-    public void notificationCheck(DataSnapshot dataSnapshot) {
+    public void notificationCheck(DataSnapshot dataSnapshot, LocationDetails userLocation) {
+
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+
             String jobName = postSnapshot.child("jobName").getValue(String.class);
             String timePosted = postSnapshot.child("timePosted").getValue(String.class);
             String jobCategory = postSnapshot.child("jobCategory").getValue(String.class);
 
-//            if (jobCategory.equals(category)) {
+            Double jobLatitude = postSnapshot.child("location").child("latitude").getValue(Double.class);
+            Double jobLongitude = postSnapshot.child("location").child("longitude").getValue(Double.class);
+
+            if (jobLatitude != null && jobLongitude != null){
+
+                // Calculate the distance between the job's location and the user's location
+                float[] results = new float[1];
+                Location.distanceBetween(jobLatitude, jobLongitude, userLocation.getLatitude(), userLocation.getLongitude(), results);
+                float distanceInMeters = results[0];
+
+                // Add the job to the list if it's within 10KM of the user's location
+                if (distanceInMeters <= 10000) {
+                    String currJob = jobName + " (near you)\n " + timePosted + "\n";
+                    list.add(currJob);
+                    String postId = postSnapshot.getKey();
+                    list2.add(postId);
+                }
+
+            } else {
                 String currJob = jobName + "\n " + timePosted + "\n";
                 list.add(currJob);
                 String postId = postSnapshot.getKey();
                 list2.add(postId);
-//            }
+            }
+
         }
     }
 
@@ -353,7 +376,7 @@ public class MainPageActivity extends AppCompatActivity {
                         dialog.dismiss();
                     }
                 }
-            }, 1000);
+            }, 2000);
         } else {
             // Convert the list of jobs to an array and display them in the alert dialog
             String[] jobs = list.toArray(new String[0]);
