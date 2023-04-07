@@ -1,0 +1,28 @@
+
+k	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú¼Ù£üÿÿÿÿ
+k	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êû˜ÿÿÿÿÿ
+>
+java:S1604+"(Make this anonymous inner class a lambda(íó‘˜
+>
+java:S16044"(Make this anonymous inner class a lambda(âÅ¾ï
+=
+java:S1604:"(Make this anonymous inner class a lambda(ÒØÿu
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(èĞ›ªøÿÿÿÿ
+l	java:S116"RRename this field "my_jobs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ğµµÿÿÿÿÿ
+r	java:S116"XRename this field "my_personal_p" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ğµµÿÿÿÿÿ
+d
+java:S1659"NDeclare "textViewFirstName" and all following declarations on a separate line.(™Š‡
+e
+java:S1659"JDeclare "my_personal_p" and all following declarations on a separate line.(¾Ğµµÿÿÿÿÿ
+`
+java:S1659"EDeclare "lastName" and all following declarations on a separate line.(Øë·¶ÿÿÿÿÿ
+u
+java:S1450"ZRemove the "authProfile" field and declare it as a local variable in the relevant methods.(âõ®Åüÿÿÿÿ
+q
+java:S1450"VRemove the "my_jobs" field and declare it as a local variable in the relevant methods.(¾Ğµµÿÿÿÿÿ
+w
+java:S1450"\Remove the "my_personal_p" field and declare it as a local variable in the relevant methods.(¾Ğµµÿÿÿÿÿ
+p
+java:S1450"URemove the "update" field and declare it as a local variable in the relevant methods.(¾Ğµµÿÿÿÿÿ
+—
+java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡é††
