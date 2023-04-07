@@ -3,8 +3,8 @@ package com.example.g2_qc.signup_page;
 
 public class User {
 
-    public String firstName, lastname, emailAddress, agePerson, location = "";
-    public String jobName, jobCategory, jobDescription, jobPayment, timePosted;
+    public String firstName, lastname, emailAddress, agePerson, location = "", experience;
+    public String jobName, jobCategory, jobDescription, jobPayment, timePosted, preferredExperience;
 
 
     public  User(){}
@@ -15,11 +15,13 @@ public class User {
      * @param lastname user's last name
      * @param emailAddress user's email address
      * @param agePerson user's age
+     *
      */
-    public User(String firstName, String lastname, String emailAddress, String agePerson){
+    public User(String firstName, String lastname, String emailAddress, String agePerson, String experience){
         this.firstName = firstName;
         this.lastname = lastname;
         this.emailAddress = emailAddress;
         this.agePerson = agePerson;
+        this.experience = experience;
     }
 }
