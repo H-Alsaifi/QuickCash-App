@@ -84,7 +84,11 @@ dependencies {
     androidTestImplementation project(path: ':app')
 
     //Paypal
-    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation ('com.paypal.sdk:paypal-android-sdk:2.16.0') {
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
     implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
 
 }

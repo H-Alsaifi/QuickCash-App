@@ -69,6 +69,8 @@
         <activity
             android:name=".user_profile.History.MyHistoryActivity"
             android:exported="true" />
+        <activity android:name=".paypal_integration.ApplyActivity"
+            android:exported="true"/>
 
     </application>
 
