@@ -162,7 +162,7 @@ public class MainPageActivity extends AppCompatActivity {
                     if (location.isEmpty()) {
                         locationButton.setText("Choose location");
                     } else {
-                        locationButton.setText(location);
+                        locationButton.setText(" "+location);
                     }
                 }
             }

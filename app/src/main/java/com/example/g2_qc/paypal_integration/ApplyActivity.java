@@ -36,11 +36,12 @@ public class ApplyActivity extends AppCompatActivity {
     private ActivityResultLauncher<Intent> activityResultLauncher;
     private PayPalConfiguration payPalConfig;
     //UI Elements
-    private EditText enter_amount;
+    public EditText enter_amount;
     private Button payNowBtn;
     private TextView paymentStatus;
     private String wage;
     private TextView wageTV;
+
     private double wageDouble;
 
     @Override
@@ -149,7 +150,7 @@ public class ApplyActivity extends AppCompatActivity {
         payNowBtn.setOnClickListener(v -> processPayment());
     }
 
-    private void processPayment() {
+    public void processPayment() {
 
         // Get the tip amount entered by the user
         final String tipAmountStr = enter_amount.getText().toString();
@@ -196,5 +197,13 @@ public class ApplyActivity extends AppCompatActivity {
     private void updatePaymentStatus(String status, String paymentId) {
         final String message = String.format("Payment %s with payment id %s", status, paymentId);
         paymentStatus.setText(message);
+    }
+
+    public void setWageDouble(double wageDouble) {
+        this.wageDouble = wageDouble;
+    }
+
+    public double getWageDouble() {
+        return wageDouble;
     }
 }
