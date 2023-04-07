@@ -44,6 +44,7 @@ public class demo_login_page extends AppCompatActivity {
         // Initialize Firebase authentication
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
