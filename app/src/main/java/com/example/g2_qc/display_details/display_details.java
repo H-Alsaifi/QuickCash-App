@@ -35,14 +35,16 @@ import com.google.firebase.storage.StorageReference;
 public class display_details extends AppCompatActivity {
 
     // Declare private variables to hold UI elements
-    private TextView jobNameTextView;
+    public TextView jobNameTextView;
     private TextView timePostedTextView;
     private TextView jobCategoryTextView;
-    private TextView jobDescriptionTextView;
+    public TextView jobDescriptionTextView;
     private TextView jobPaymentTextView;
     private ImageView jobImageView;
     private String userId;
-    String firstName, lastName, email;
+    public String firstName;
+    public String lastName;
+    public String email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,30 +79,12 @@ public class display_details extends AppCompatActivity {
             }
         });
 
+        // Info Button click listener
         Button infoButton = findViewById(R.id.infoButton);
         infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Extract the job name and description
-                String jobName = jobNameTextView.getText().toString();
-                String jobDescription = jobDescriptionTextView.getText().toString();
-
-                // Build the alert message
-                StringBuilder alertMessage = new StringBuilder();
-                alertMessage.append("Name: ").append(firstName +" "+lastName).append("\n\n");
-                alertMessage.append("Email: ").append(email);
-
-                // Show the alert
-                AlertDialog.Builder builder = new AlertDialog.Builder(display_details.this);
-                builder.setMessage(alertMessage.toString())
-                        .setTitle("Job Information")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                // User clicked OK button
-                            }
-                        });
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                showJobInfo();
             }
         });
 
@@ -235,5 +219,26 @@ public class display_details extends AppCompatActivity {
             }
         });
     }
+    public void showJobInfo() {
+        // Extract the job name and description
+        String jobName = jobNameTextView.getText().toString();
+        String jobDescription = jobDescriptionTextView.getText().toString();
 
+        // Build the alert message
+        StringBuilder alertMessage = new StringBuilder();
+        alertMessage.append("Name: ").append(firstName +" "+lastName).append("\n\n");
+        alertMessage.append("Email: ").append(email);
+
+        // Show the alert
+        AlertDialog.Builder builder = new AlertDialog.Builder(display_details.this);
+        builder.setMessage(alertMessage.toString())
+                .setTitle("Contact Info")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User clicked OK button
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }
