@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.greeting_page.greetingPage;
 import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.welcome_page.Welcome;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -175,7 +176,7 @@ public class signup extends AppCompatActivity {
                 });
 
                 //go back to to login data base
-                Intent loginIntent = new Intent(signup.this, demo_login_page.class);
+                Intent loginIntent = new Intent(signup.this, greetingPage.class);
                 startActivity(loginIntent);
                 finish(); // Remove the sign-up activity from the back stack
             }
