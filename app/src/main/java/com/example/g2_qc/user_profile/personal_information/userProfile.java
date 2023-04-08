@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.g2_qc.R;
+import com.example.g2_qc.employeePreferences.employeePrefDetails;
 import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.user_profile.job_details.jobDetails;
 import com.google.firebase.auth.FirebaseAuth;
@@ -52,8 +53,12 @@ public class userProfile extends AppCompatActivity{
         my_personal_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
             }
         });
+
+
+
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
