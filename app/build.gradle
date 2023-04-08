@@ -86,5 +86,6 @@ dependencies {
     //Paypal
     implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
     implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
 
 }
