@@ -1,8 +1,10 @@
 package com.example.g2_qc.display_details;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,7 +18,11 @@ import android.widget.Toast;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.main_page.MainPageActivity;
+import com.example.g2_qc.paypal_integration.ApplyActivity;
+import com.example.g2_qc.signup_page.User;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +40,8 @@ public class display_details extends AppCompatActivity {
     private TextView jobDescriptionTextView;
     private TextView jobPaymentTextView;
     private ImageView jobImageView;
-
+    private String userId;
+    String firstName, lastName, email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +56,8 @@ public class display_details extends AppCompatActivity {
 
         // Initialize the ImageView
         jobImageView = findViewById(R.id.job_image);
+
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Get the post ID from the previous activity
         Intent intent = getIntent();
@@ -66,6 +75,52 @@ public class display_details extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button infoButton = findViewById(R.id.infoButton);
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Extract the job name and description
+                String jobName = jobNameTextView.getText().toString();
+                String jobDescription = jobDescriptionTextView.getText().toString();
+
+                // Build the alert message
+                StringBuilder alertMessage = new StringBuilder();
+                alertMessage.append("Name: ").append(firstName +" "+lastName).append("\n\n");
+                alertMessage.append("Email: ").append(email);
+
+                // Show the alert
+                AlertDialog.Builder builder = new AlertDialog.Builder(display_details.this);
+                builder.setMessage(alertMessage.toString())
+                        .setTitle("Job Information")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // User clicked OK button
+                            }
+                        });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        Button applyButton = findViewById(R.id.applyButton);
+        applyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Get the wage from the TextView
+                String wage = jobPaymentTextView.getText().toString();
+
+                // Create a new Intent to navigate to ApplyActivity
+                Intent intent = new Intent(getApplicationContext(), ApplyActivity.class);
+
+                // Add the wage as an extra to the Intent
+                intent.putExtra("wage", wage);
+
+                // Start the ApplyActivity with the Intent
+                startActivity(intent);
+            }
+        });
+
     }
 
     // Method to extract post information from Firebase database
@@ -122,6 +177,9 @@ public class display_details extends AppCompatActivity {
             // Check if the current post has the given ID
             String snapshotKey = postSnapshot.getKey();
             if (snapshotKey != null && snapshotKey.equals(postId)) {
+                String currUserId = postSnapshot.getRef().getParent().getParent().getParent().toString().replace("https://quickcash-group2-default-rtdb.firebaseio.com/Users/" ,"");
+                userId = currUserId;
+                ExtractUserInfo(currUserId);
                 // Extract post information
                 String jobName = postSnapshot.child("jobName").getValue(String.class);
                 String timePosted = "Time posted: " + postSnapshot.child("timePosted").getValue(String.class);
@@ -151,4 +209,30 @@ public class display_details extends AppCompatActivity {
             }
         }
     }
+
+    private void ExtractUserInfo( String Id) {
+        // Get the user's ID and a reference to their profile info in the database
+        DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
+
+        // Add a listener to the profile info reference to get the user's email, location, and category
+        profile_ref.child(Id).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userDetails = snapshot.getValue(User.class);
+                if (userDetails != null) {
+                    firstName = userDetails.firstName;
+                    lastName = userDetails.lastname;
+                    email = userDetails.emailAddress;
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Display an error message if the database read was cancelled
+                Toast.makeText(display_details.this, "Error: we could not complete your request", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
 }
