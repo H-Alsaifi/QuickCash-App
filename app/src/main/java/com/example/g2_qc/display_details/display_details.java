@@ -21,7 +21,6 @@ import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.paypal_integration.ApplyActivity;
 import com.example.g2_qc.signup_page.User;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

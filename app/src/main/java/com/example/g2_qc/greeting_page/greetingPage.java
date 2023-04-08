@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.main_page.MainPageActivity;
 
 import com.example.g2_qc.signup_page.User;
@@ -64,7 +65,7 @@ public class greetingPage extends AppCompatActivity {
         getStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(greetingPage.this, MainPageActivity.class);
+                Intent intent = new Intent(greetingPage.this, demo_login_page.class);
                 startActivity(intent);
             }
         });

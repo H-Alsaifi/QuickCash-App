@@ -4,11 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -47,7 +45,7 @@ public class ApplyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_paypal);
+        setContentView(R.layout.paypal_layout);
 
         init();
         configPayPal();
@@ -83,7 +81,7 @@ public class ApplyActivity extends AppCompatActivity {
         //defining we're using SANDBOX Environment and setting the paypal client id
         payPalConfig = new PayPalConfiguration()
                 .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
-                .clientId(client_IDs.PAYPAL_CLIENT_ID);
+                .clientId(client_ID.PAYPAL_CLIENT_ID);
     }
 
     private void initActivityLauncher() {

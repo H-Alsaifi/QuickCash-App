@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentProfileBinding;
 import com.example.g2_qc.user_profile.History.MyHistoryActivity;
+import com.example.g2_qc.user_profile.employeePreferences.employeePrefDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -55,6 +56,8 @@ public class ProfileFragment extends Fragment {
         my_personal_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), employeePrefDetails.class);
+                startActivity(intent);
             }
         });
 

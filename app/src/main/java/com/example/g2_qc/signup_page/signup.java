@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.greeting_page.greetingPage;
 import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.welcome_page.Welcome;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,6 +36,8 @@ public class signup extends AppCompatActivity {
     private EditText password;
     private EditText confirmPassword;
 
+    private EditText experience;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,10 +51,12 @@ public class signup extends AppCompatActivity {
         lName = findViewById(R.id.lastName);
         age = findViewById(R.id.age);
         email = findViewById(R.id.email_address);
+        experience = findViewById(R.id.experience);
         password = findViewById(R.id.setPassword);
         confirmPassword = findViewById(R.id.confirmPassword);
         Button signUpBtn = findViewById(R.id.signup_button);
         TextView back = findViewById(R.id.backToWelcomePage);
+
         instructionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,10 +97,11 @@ public class signup extends AppCompatActivity {
                 String userEmail = email.getText().toString();
                 String userPassword = password.getText().toString();
                 String userConfirmPassword = confirmPassword.getText().toString();
+                String userExp = experience.getText().toString();
 
                 // Check if any fields are empty
                 if (TextUtils.isEmpty(firstName) || TextUtils.isEmpty(lastName) ||
-                        TextUtils.isEmpty(userAge) || TextUtils.isEmpty(userEmail) ||
+                        TextUtils.isEmpty(userAge) || TextUtils.isEmpty(userEmail) ||TextUtils.isEmpty(userExp)||
                         TextUtils.isEmpty(userPassword) || TextUtils.isEmpty(userConfirmPassword)) {
                     Toast.makeText(signup.this, "Please fill all fields.", Toast.LENGTH_SHORT).show();
                     return;
@@ -125,6 +131,12 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
+                //Check if the User Experience is valid.
+                if (!isValidExperience(userExp,userAge)) {
+                    Toast.makeText(signup.this, "Please enter a valid user experience.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 // Check if password is valid
                 if (!isValidPassword(userPassword)) {
                     Toast.makeText(signup.this, "Invalid password!", Toast.LENGTH_SHORT).show();
@@ -137,13 +149,14 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
+
                 // All input values are valid, create new account and go to login page
                 // add data to firebase (email and password to auth database And the other data to realtime database)
                 mAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(firstName, lastName, userEmail, userAge);
+                            User user = new User(firstName, lastName, userEmail, userAge, userExp);
                             FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
@@ -163,7 +176,7 @@ public class signup extends AppCompatActivity {
                 });
 
                 //go back to to login data base
-                Intent loginIntent = new Intent(signup.this, demo_login_page.class);
+                Intent loginIntent = new Intent(signup.this, greetingPage.class);
                 startActivity(loginIntent);
                 finish(); // Remove the sign-up activity from the back stack
             }
@@ -218,6 +231,25 @@ public class signup extends AppCompatActivity {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         return email.matches(emailRegex);
     }
+
+    public boolean isValidExperience(String experience, String age) {
+        try {
+            int exp = Integer.parseInt(experience);
+            int userAge = Integer.parseInt(age);
+
+
+            if (exp > userAge ) {
+                return false;
+            }
+        }
+        catch (NumberFormatException e) {
+            Toast.makeText(signup.this, "Please enter a valid experience.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
+
 
     /**
      * Checks if the  password is actually a valid one.
