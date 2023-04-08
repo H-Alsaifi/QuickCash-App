@@ -1,12 +1,0 @@
-
->
-java:S1604@"(Make this anonymous inner class a lambda(«Íñ´
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ç…è–
-t
-java:S1450 "YRemove the "getStarted" field and declare it as a local variable in the relevant methods.(Ğò„úÿÿÿÿ
-s
-java:S1450"XRemove the "greetText" field and declare it as a local variable in the relevant methods.(ˆ‚œÂÿÿÿÿÿ
-i
-java:S1450!"SRemove the "root" field and declare it as a local variable in the relevant methods.(¸ÕîÆ
-H
-java:S1068"-Remove this unused "greetText" private field.(ˆ‚œÂÿÿÿÿÿ

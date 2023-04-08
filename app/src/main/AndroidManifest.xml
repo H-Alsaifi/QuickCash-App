@@ -71,6 +71,8 @@
             android:exported="true" />
         <activity android:name=".paypal_integration.ApplyActivity"
             android:exported="true"/>
+        <activity android:name=".employeePreferences.employeePrefDetails"
+            android:exported="true"/>
 
     </application>
 
