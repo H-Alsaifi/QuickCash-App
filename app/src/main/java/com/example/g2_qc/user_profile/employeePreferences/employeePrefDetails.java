@@ -1,13 +1,20 @@
-package com.example.g2_qc.employeePreferences;
+package com.example.g2_qc.user_profile.employeePreferences;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.greeting_page.greetingPage;
+import com.example.g2_qc.login_page.demo_login_page;
+import com.example.g2_qc.main_page.MainPageActivity;
+import com.example.g2_qc.user_profile.personal_information.userDetails;
+import com.example.g2_qc.user_profile.personal_information.userProfile;
 
 public class employeePrefDetails extends AppCompatActivity {
 
@@ -26,6 +33,13 @@ public class employeePrefDetails extends AppCompatActivity {
         complete = findViewById(R.id.doneBtn);
 
 
+        complete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(employeePrefDetails.this, MainPageActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
