@@ -32,7 +32,6 @@ public class employeePrefDetails extends AppCompatActivity {
         primaryLocation = findViewById(R.id.primLocation);
         complete = findViewById(R.id.doneBtn);
 
-
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
