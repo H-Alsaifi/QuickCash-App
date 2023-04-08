@@ -250,7 +250,7 @@
             android:id="@+id/update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="3dp"
             android:background="#009688"
             android:text="Update Profile" />
 

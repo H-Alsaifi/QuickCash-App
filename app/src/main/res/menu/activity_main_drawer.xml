@@ -17,5 +17,12 @@
             android:icon="@drawable/ic_menu_profile"
             android:title="@string/menu_profile" />
 
+<<<<<<< HEAD
+        <item
+            android:id="@+id/paypal"
+            android:icon="@drawable/payment"
+            android:title="PayPal" />
+=======
+>>>>>>> bcdd6bb2789728edcfc95d31add7f5a1b4314535
     </group>
 </menu>
