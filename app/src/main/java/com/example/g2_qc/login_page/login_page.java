@@ -39,8 +39,6 @@ public class login_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page_layout);
 
-        setContentView(R.layout.login_page_layout);
-
         // Initialize views
         initializeViews();
 
@@ -55,6 +53,20 @@ public class login_page extends AppCompatActivity {
                 String password = etPassword.getText().toString();
                 // Validate inputs
                 validateInputs(emailAddress, password);
+            }
+        });
+
+        tvForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToForgotPass();
+            }
+        });
+
+        tvCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToSignUp();
             }
         });
     }
@@ -116,6 +128,22 @@ public class login_page extends AppCompatActivity {
      Go to the greeting page activity.
      */
     private void goToGreetingPage() {
+        Intent intent = new Intent(login_page.this, greetingPage.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Go to Forgot Pass page.
+     */
+    private void goToForgotPass() {
+        Intent intent = new Intent(login_page.this, greetingPage.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Go to sign up page.
+     */
+    private void goToSignUp() {
         Intent intent = new Intent(login_page.this, greetingPage.class);
         startActivity(intent);
     }
