@@ -40,20 +40,25 @@ public class HistoryDetails {
             profileRef.child(ID).child("History").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    HistoryDetails details = snapshot.getValue(HistoryDetails.class);
-                    if (details != null) {
-                        long totalPosts = details.getTotalPosts();
-                        String CurrPostsAsEmployer = String.valueOf(details.getPostsAsEmployer());
-                        String CurrPostsAsEmployee = String.valueOf(details.getPostsAsEmployee());
-                        long totalIncome = details.getTotalIncome();
-                        long appliedJobs = details.getAppliedJobs();
+                    if (snapshot.exists()) {
+                        HistoryDetails details = snapshot.getValue(HistoryDetails.class);
+                        if (details != null) {
+                            long totalPosts = details.getTotalPosts();
+                            String CurrPostsAsEmployer = String.valueOf(details.getPostsAsEmployer());
+                            String CurrPostsAsEmployee = String.valueOf(details.getPostsAsEmployee());
+                            long totalIncome = details.getTotalIncome();
+                            long appliedJobs = details.getAppliedJobs();
 
-                        totalPostsTextView.setText(String.valueOf(totalPosts));
-                        PostsAsEmployerTextView.setText(CurrPostsAsEmployer);
-                        PostsAsEmployeeTextView.setText(CurrPostsAsEmployee);
-                        totalIncomeTextView.setText(String.valueOf(totalIncome));
-                        appliedJobsTextView.setText(String.valueOf(appliedJobs));
+                            totalPostsTextView.setText(String.valueOf(totalPosts));
+                            PostsAsEmployerTextView.setText(CurrPostsAsEmployer);
+                            PostsAsEmployeeTextView.setText(CurrPostsAsEmployee);
+                            totalIncomeTextView.setText(String.valueOf(totalIncome));
+                            appliedJobsTextView.setText(String.valueOf(appliedJobs));
+                        }
+                    } else {
+                        // "History" node does not exist in database
                     }
+
                 }
 
                 @Override
@@ -129,6 +134,13 @@ public class HistoryDetails {
                         postsAsEmployee = details.getPostsAsEmployee();
                         totalIncome = details.getTotalIncome();
                         appliedJobs = details.getAppliedJobs();
+                    } else {
+                        // If the History node does not exist, initialize it with default values
+                        historyRef.child("totalPosts").setValue(totalPosts);
+                        historyRef.child("postsAsEmployer").setValue(postsAsEmployer);
+                        historyRef.child("postsAsEmployee").setValue(postsAsEmployee);
+                        historyRef.child("totalIncome").setValue(totalIncome);
+                        historyRef.child("appliedJobs").setValue(appliedJobs);
                     }
 
                     if (type.equals("postsAsEmployer")) {
@@ -141,8 +153,8 @@ public class HistoryDetails {
 
                     // Update the values in the database
                     historyRef.child("totalPosts").setValue(totalPosts);
-                    historyRef.child("postsAsEmployer").setValue(postsAsEmployer);
-                    historyRef.child("postsAsEmployee").setValue(postsAsEmployee);
+                    historyRef.child("").setValue(postsAsEmployer);
+                    historyRef.child("postpostsAsEmployersAsEmployee").setValue(postsAsEmployee);
                     historyRef.child("totalIncome").setValue(totalIncome);
                     historyRef.child("appliedJobs").setValue(appliedJobs);
                 }

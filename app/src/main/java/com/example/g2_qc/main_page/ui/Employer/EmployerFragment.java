@@ -125,6 +125,7 @@ public class EmployerFragment extends Fragment {
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
             String jobName = postSnapshot.child("jobName").getValue(String.class);
             String jobDescription = postSnapshot.child("jobDescription").getValue(String.class);
+            String wage = postSnapshot.child("jobPayment").getValue(String.class);
             String imageUrl = postSnapshot.child("image").getValue(String.class);
             imageUrl.replace("content://com.android.providers.downloads.documents/document/", "");
 
@@ -134,9 +135,11 @@ public class EmployerFragment extends Fragment {
             // Set the job name and description as the text of the box view
             TextView textViewName = boxView.findViewById(R.id.box_title);
             TextView textViewDescription = boxView.findViewById(R.id.box_content);
+            TextView textViewWage = boxView.findViewById(R.id.box_wage);
+
             textViewName.setText(TextUtils.ellipsize(jobName, (TextPaint) textViewName.getPaint(), 400, TextUtils.TruncateAt.END));
             textViewDescription.setText(TextUtils.ellipsize(jobDescription, (TextPaint) textViewDescription.getPaint(), 1000, TextUtils.TruncateAt.END));
-
+            textViewWage.setText(wage+"$");
             // Add an OnClickListener to the whole box view
             boxView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -147,6 +150,8 @@ public class EmployerFragment extends Fragment {
                     // Pass the information to the display_details activity
                     Intent intent = new Intent(getActivity(), display_details.class);
                     intent.putExtra("postId", postId);
+                    String className = "EmployerFragment";
+                    intent.putExtra("class", className);
                     startActivity(intent);
                 }
             });

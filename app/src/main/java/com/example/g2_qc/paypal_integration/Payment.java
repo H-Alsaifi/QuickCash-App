@@ -1,18 +1,19 @@
 package com.example.g2_qc.paypal_integration;
 
 public class Payment {
-    private String userId;
+    private String userId, postUserId;
     private String paymentId;
     private String state;
     private double amount;
 
     public Payment() {}
 
-    public Payment(String userId, String paymentId, String state, double amount) {
+    public Payment(String userId, String paymentId, String state, double amount, String postUserId) {
         this.userId = userId;
         this.paymentId = paymentId;
         this.state = state;
         this.amount = amount;
+        this.postUserId = postUserId;
     }
 
     public String getUserId() {
@@ -21,6 +22,14 @@ public class Payment {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getPostUserId() {
+        return postUserId;
+    }
+
+    public void setPostUserId(String userId) {
+        this.postUserId = postUserId;
     }
 
     public String getPaymentId() {

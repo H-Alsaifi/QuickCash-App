@@ -1,16 +1,0 @@
-
->
-java:S1604@"(Make this anonymous inner class a lambda(¯’„Ÿ
->
-java:S16041"(Make this anonymous inner class a lambda(Î§£¿
->
-java:S1604T"(Make this anonymous inner class a lambda(ò³¯Î
-C
-java:S1604]"(Make this anonymous inner class a lambda(¯§ÌÄúÿÿÿÿ
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ã…Ò
-m
-java:S1450"WRemove the "btnLogin" field and declare it as a local variable in the relevant methods.(ææ™Æ
-y
-java:S1450"^Remove the "tvCreateAccount" field and declare it as a local variable in the relevant methods.(ó‡†¢üÿÿÿÿ
-z
-java:S1450"_Remove the "tvForgotPassword" field and declare it as a local variable in the relevant methods.(èĞÁæùÿÿÿÿ

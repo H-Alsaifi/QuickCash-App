@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.example.g2_qc.R;
 import java.util.ArrayList;
 
-public class Rating extends AppCompatActivity {
+public class RatingExperience extends AppCompatActivity {
 
     private Spinner roleSpinner;
     private ListView previousRatingsList;
