@@ -13,7 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
+import com.example.g2_qc.forgot_password.forgot_password_page;
 import com.example.g2_qc.greeting_page.greetingPage;
+import com.example.g2_qc.signup_page.signup;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -77,6 +79,8 @@ public class login_page extends AppCompatActivity {
     private void initializeViews() {
         etEmail = findViewById(R.id.et_email_address);
         etPassword = findViewById(R.id.et_password);
+        etPassword.setText("Mo@12345");
+        etEmail.setText("m@dal.ca");
         btnLogin = findViewById(R.id.btn_login);
         tvForgotPassword = findViewById(R.id.tv_forgot_password);
         tvForgotPassword.setPaintFlags(tvForgotPassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
@@ -136,7 +140,7 @@ public class login_page extends AppCompatActivity {
      * Go to Forgot Pass page.
      */
     private void goToForgotPass() {
-        Intent intent = new Intent(login_page.this, greetingPage.class);
+        Intent intent = new Intent(login_page.this, forgot_password_page.class);
         startActivity(intent);
     }
 
@@ -144,7 +148,7 @@ public class login_page extends AppCompatActivity {
      * Go to sign up page.
      */
     private void goToSignUp() {
-        Intent intent = new Intent(login_page.this, greetingPage.class);
+        Intent intent = new Intent(login_page.this, signup.class);
         startActivity(intent);
     }
 }

@@ -93,6 +93,9 @@ public class display_details extends AppCompatActivity {
 
 
         Button applyButton = findViewById(R.id.applyButton);
+        if (className != null && className.equals("EmployeeFragment")){
+            applyButton.setText("HIRE");
+        }
         applyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

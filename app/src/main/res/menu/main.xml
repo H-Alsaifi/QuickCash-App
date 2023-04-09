@@ -13,5 +13,9 @@
         android:title="@string/action_logout"
         app:showAsAction="never" />
 
-
+    <item
+        android:id="@+id/action_Refresh"
+        android:orderInCategory="100"
+        android:title="Refresh"
+        app:showAsAction="never" />
 </menu>
