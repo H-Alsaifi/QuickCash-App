@@ -83,6 +83,14 @@ public class userProfile extends AppCompatActivity{
             progressBar.setVisibility(View.VISIBLE);
             showProfile(user);
         }
+        Button rateYourExperienceButton = findViewById(R.id.rate);
+        rateYourExperienceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userProfile.this, Rating.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void showProfile(FirebaseUser firebaseUser) {
@@ -107,6 +115,7 @@ public class userProfile extends AppCompatActivity{
                     progressBar.setVisibility(View.INVISIBLE);
                 }
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
