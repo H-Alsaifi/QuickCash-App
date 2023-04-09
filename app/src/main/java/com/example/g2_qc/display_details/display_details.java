@@ -203,7 +203,7 @@ public class display_details extends AppCompatActivity {
             // Check if the current post has the given ID
             String snapshotKey = postSnapshot.getKey();
             if (snapshotKey != null && snapshotKey.equals(postId)) {
-                String currUserId = postSnapshot.getRef().getParent().getParent().getParent().toString().replace("https://quickcash-group2-default-rtdb.firebaseio.com/Users/" ,"");
+                String currUserId = postSnapshot.getRef().getParent().getParent().getParent().toString().replace("https://quickcash-group2-1d321-default-rtdb.firebaseio.com/Users/" ,"");
                 userId = currUserId;
 
                 ExtractUserInfo(currUserId);

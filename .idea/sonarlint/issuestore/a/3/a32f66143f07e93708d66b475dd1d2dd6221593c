@@ -1,0 +1,31 @@
+
+r	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì©¸™ıÿÿÿÿ8½µá¤ö0
+r	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êû˜ÿÿÿÿÿ8½µá¤ö0
+r	java:S117r"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú¼Ù£üÿÿÿÿ8ÏĞç¤ö0
+r	java:S117s"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êû˜ÿÿÿÿÿ8ÏĞç¤ö0
+E
+java:S16040"(Make this anonymous inner class a lambda(Êæ–³8½µá¤ö0
+J
+java:S16047"(Make this anonymous inner class a lambda(ÂüÙşÿÿÿÿ8½µá¤ö0
+E
+java:S1604?"(Make this anonymous inner class a lambda(âÅ¾ï8ÏĞç¤ö0
+D
+java:S1604Z"(Make this anonymous inner class a lambda(ÒØÿu8ü€ë¤ö0
+q	java:S116#"URename this field "my_history" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑËÓÑ8áµá¤ö0
+t	java:S116#"XRename this field "my_personal_p" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑËÓÑ8áµá¤ö0
+H
+java:S1659 "+Declare "textViewEmail" on a separate line.(«ô­8ãµá¤ö0
+j
+java:S1659!"MDeclare "textViewLastName" and all following declarations on a separate line.(àÎŸ²8ãµá¤ö0
+g
+java:S1659#"JDeclare "my_personal_p" and all following declarations on a separate line.(ÑËÓÑ8ãµá¤ö0
+v
+java:S1450#"YRemove the "my_history" field and declare it as a local variable in the relevant methods.(ÑËÓÑ8ãµá¤ö0
+y
+java:S1450#"\Remove the "my_personal_p" field and declare it as a local variable in the relevant methods.(ÑËÓÑ8åµá¤ö0
+„
+java:S1450#"gRemove the "rateYourExperienceButton" field and declare it as a local variable in the relevant methods.(ÑËÓÑ8åµá¤ö0
+r
+java:S1450#"URemove the "update" field and declare it as a local variable in the relevant methods.(ÑËÓÑ8åµá¤ö0
+\
+java:S1161&":Add the "@Override" annotation above this method signature(î•Éğûÿÿÿÿ8èµá¤ö0
