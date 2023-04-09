@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.g2_qc.R;
-import com.example.g2_qc.login_page.demo_login_page;
+import com.example.g2_qc.login_page.login_page;
 import com.example.g2_qc.signup_page.signup;
 
 public class Welcome extends AppCompatActivity {
@@ -29,7 +29,7 @@ public class Welcome extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Welcome.this, demo_login_page.class);
+                Intent intent = new Intent(Welcome.this, login_page.class);
                 startActivity(intent);
             }
         });
