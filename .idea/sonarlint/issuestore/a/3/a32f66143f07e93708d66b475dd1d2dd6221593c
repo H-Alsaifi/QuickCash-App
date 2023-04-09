@@ -1,27 +1,7 @@
 
-r	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì©¸™ıÿÿÿÿ8¸ˆ¾øõ0
-r	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êû˜ÿÿÿÿÿ8¹ˆ¾øõ0
-r	java:S117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú¼Ù£üÿÿÿÿ8ºˆ¾øõ0
-r	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êû˜ÿÿÿÿÿ8ºˆ¾øõ0
-E
-java:S16040"(Make this anonymous inner class a lambda(Êæ–³8¾ˆ¾øõ0
-E
-java:S16048"(Make this anonymous inner class a lambda(âÅ¾ï8¿ˆ¾øõ0
+r	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì©¸™ıÿÿÿÿ8Åö“¸õ0
+r	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êû˜ÿÿÿÿÿ8Åö“¸õ0
+r	java:S117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú¼Ù£üÿÿÿÿ8Åö“¸õ0
+r	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êû˜ÿÿÿÿÿ8Åö“¸õ0
 D
-java:S1604S"(Make this anonymous inner class a lambda(ÒØÿu8Àˆ¾øõ0
-q	java:S116#"URename this field "my_history" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÒ§¨8Ä‰¾øõ0
-t	java:S116#"XRename this field "my_personal_p" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÒ§¨8Ä‰¾øõ0
-H
-java:S1659 "+Declare "textViewEmail" on a separate line.(«ô­8è‰¾øõ0
-j
-java:S1659!"MDeclare "textViewLastName" and all following declarations on a separate line.(àÎŸ²8é‰¾øõ0
-g
-java:S1659#"JDeclare "my_personal_p" and all following declarations on a separate line.(µÒ§¨8ê‰¾øõ0
-v
-java:S1450#"YRemove the "my_history" field and declare it as a local variable in the relevant methods.(µÒ§¨8ë‰¾øõ0
-y
-java:S1450#"\Remove the "my_personal_p" field and declare it as a local variable in the relevant methods.(µÒ§¨8ì‰¾øõ0
-r
-java:S1450#"URemove the "update" field and declare it as a local variable in the relevant methods.(µÒ§¨8í‰¾øõ0
-\
-java:S1161&":Add the "@Override" annotation above this method signature(î•Éğûÿÿÿÿ8ò‰¾øõ0
+java:S1604S"(Make this anonymous inner class a lambda(ÒØÿu8Æö“¸õ0
