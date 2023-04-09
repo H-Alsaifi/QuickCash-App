@@ -115,8 +115,7 @@ public class display_details extends AppCompatActivity {
                     // Create and show the dialog
                     AlertDialog dialog = builder.create();
                     dialog.show();
-                }
-                else {
+                } else {
                     // Get the wage from the TextView
                     String wage = jobPaymentTextView.getText().toString();
 
@@ -138,7 +137,11 @@ public class display_details extends AppCompatActivity {
 
     }
 
-    // Method to extract post information from Firebase database
+    /**
+     This method extracts the job post information from the Firebase database and populates the
+     UI elements with the appropriate values.
+     @param postId the ID of the job post to display
+     */
     public void extractInfo(String postId) {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference()
                 .child("Users");
@@ -185,7 +188,15 @@ public class display_details extends AppCompatActivity {
         });
     }
 
-    // Method to extract post information from a given DataSnapshot
+    /**
+     This method is used to extract information about a post with a given ID from a DataSnapshot.
+     It loops through all posts in the DataSnapshot, checks if the current post has the given ID,
+     and if it does, extracts information about the post such as job name, time posted, job category,
+     job description, payment, and image. It then sets the UI elements with this information and
+     loads the image from Firebase storage and displays it in the ImageView.
+     @param dataSnapshot A DataSnapshot containing all posts.
+     @param postId The ID of the post to extract information about.
+     */
     public void extractPostInfo(DataSnapshot dataSnapshot, String postId) {
         // Loop through all posts under the given DataSnapshot
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
@@ -226,12 +237,20 @@ public class display_details extends AppCompatActivity {
         }
     }
 
+    /**
+     Extracts user information from a Firebase database based on their ID.
+     @param Id The ID of the user whose information is to be extracted.
+     */
     private void ExtractUserInfo( String Id) {
         // Get the user's ID and a reference to their profile info in the database
         DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
 
         // Add a listener to the profile info reference to get the user's email, location, and category
         profile_ref.child(Id).addListenerForSingleValueEvent(new ValueEventListener() {
+            /**
+             * This method is called when the database returns data.
+             * @param snapshot The data snapshot returned by the database.
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User userDetails = snapshot.getValue(User.class);
@@ -242,7 +261,10 @@ public class display_details extends AppCompatActivity {
 
                 }
             }
-
+            /**
+             * This method is called if the database read operation is cancelled.
+             * @param error The error that caused the cancellation.
+             */
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // Display an error message if the database read was cancelled
@@ -250,7 +272,13 @@ public class display_details extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     This method extracts the job name and description from their respective TextViews and
+     shows a dialog displaying the user's name and email.
+     */
     public void showJobInfo() {
+
         // Extract the job name and description
         String jobName = jobNameTextView.getText().toString();
         String jobDescription = jobDescriptionTextView.getText().toString();
