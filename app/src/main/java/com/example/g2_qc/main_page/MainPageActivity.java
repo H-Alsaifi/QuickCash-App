@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.g2_qc.R;
+import com.example.g2_qc.databinding.ActivityMainBinding;
 import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.location.LocationActivity;
 import com.example.g2_qc.location.LocationDetails;
