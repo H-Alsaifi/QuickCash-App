@@ -61,5 +61,8 @@
     <string name="filter_dialog_apply_button">Apply filter</string>
     <string name="filter_dialog_title">Filter</string>
     <string name="filter_dialog_clear_button">Clear Filter</string>
-
+    <string-array name="role_array">
+        <item>Employee</item>
+        <item>Employer</item>
+    </string-array>
 </resources>

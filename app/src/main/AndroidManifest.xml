@@ -21,6 +21,7 @@
             android:name=".welcome_page.Welcome"
             android:exported="true"
             android:theme="@style/Theme.G2QC.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,6 +42,7 @@
         <activity
             android:name=".forgot_password.forgot_password_page"
             android:exported="true" />
+        <activity android:name=".user_profile.personal_information.Rating" />
         <activity
             android:name=".user_profile.personal_information.userProfile"
             android:exported="true" />
