@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
-import com.example.g2_qc.login_page.demo_login_page;
+import com.example.g2_qc.login_page.login_page;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -90,7 +90,7 @@ public class forgot_password_page extends AppCompatActivity {
      Navigates the user back to the login page.
      */
     private void navigateToLoginPage() {
-        Intent intent = new Intent(this, demo_login_page.class);
+        Intent intent = new Intent(this, login_page.class);
         startActivity(intent);
         finish();
     }

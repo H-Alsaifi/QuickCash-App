@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    tools:context=".login_page.demo_login_page">
+    tools:context=".login_page.login_page">
 
 
     <!--        Forgot password Option-->
