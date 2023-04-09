@@ -38,7 +38,7 @@
         android:layout_below="@+id/wageTV"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Add tips: " />
+        android:text="Add a tip: " />
 
     <EditText
         android:id="@+id/enterAmtET"
