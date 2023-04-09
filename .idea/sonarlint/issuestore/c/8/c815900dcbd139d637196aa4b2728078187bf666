@@ -1,6 +1,0 @@
-
-…
-java:S1488ì"bImmediately return this expression instead of assigning it to the temporary variable "timeString".(¦¸Ã™ıÿÿÿÿ8½àÓÀõ0
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Úåì®úÿÿÿÿ8¾àÓÀõ0
-\
-java:S1854ß">Remove this useless assignment to local variable "uploadTask".(–âù’8ìàÓÀõ0

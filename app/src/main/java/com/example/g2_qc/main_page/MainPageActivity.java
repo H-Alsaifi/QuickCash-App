@@ -23,6 +23,7 @@ import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.location.LocationActivity;
 import com.example.g2_qc.location.LocationDetails;
 import com.example.g2_qc.signup_page.User;
+import com.example.g2_qc.user_profile.History.HistoryDetails;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -75,6 +76,27 @@ public class MainPageActivity extends AppCompatActivity {
                 // Call methods to show the notification and an alert dialog
                 showNotification();
                 showNotificationAlert();
+            }
+        });
+
+        // Get a reference to the user's history node in the database
+        DatabaseReference historyRef = FirebaseDatabase.getInstance().getReference("Users")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .child("History");
+
+        // Check if the "History" node is null
+        historyRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (!dataSnapshot.exists()) { // If the node doesn't exist, initialize it
+                    HistoryDetails history = new HistoryDetails();
+                    historyRef.setValue(history);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Handle any errors here
             }
         });
 
@@ -359,7 +381,7 @@ public class MainPageActivity extends AppCompatActivity {
     public void showNotificationAlert() {
         // Create an alert dialog builder
         AlertDialog.Builder builder = new AlertDialog.Builder(MainPageActivity.this);
-        builder.setTitle("Jobs Notification of Your Category");
+        builder.setTitle("Jobs Notification");
 
         if (list.isEmpty()) {
             // Display a message indicating that there are no new job postings in the user's job category

@@ -2,7 +2,7 @@ package com.example.g2_qc;
 import androidx.test.espresso.Espresso;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import com.example.g2_qc.user_profile.personal_information.Rating;
+import com.example.g2_qc.user_profile.personal_information.RatingExperience;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 public class RatingTest {
 
     @Rule
-    public ActivityScenarioRule<Rating> activityScenarioRule = new ActivityScenarioRule<>(Rating.class);
+    public ActivityScenarioRule<RatingExperience> activityScenarioRule = new ActivityScenarioRule<>(RatingExperience.class);
 
     @Test
     public void testRoleSpinnerDisplayed() {

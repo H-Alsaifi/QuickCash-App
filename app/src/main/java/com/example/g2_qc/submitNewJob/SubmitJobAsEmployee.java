@@ -19,6 +19,7 @@ import com.example.g2_qc.R;
 import com.example.g2_qc.location.LocationDetails;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.main_page.ui.Employee.EmployeeFragment;
+import com.example.g2_qc.paypal_integration.ApplyActivity;
 import com.example.g2_qc.user_profile.History.HistoryDetails;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -124,6 +125,22 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
             jobPayment.requestFocus();
         }
 
+
+        // Check if payment amount is valid
+        double paymentAmount = 0.0;
+        try {
+            paymentAmount = Double.parseDouble(paymentStr);
+            if (paymentAmount <= 0) {
+                jobPayment.setError("Please enter a valid job payment");
+                jobPayment.requestFocus();
+                return;
+            }
+        } catch (NumberFormatException e) {
+            jobPayment.setError("Please enter a valid job payment");
+            jobPayment.requestFocus();
+            return;
+        }
+
         // Display a toast message prompting the user to select an image
         if (jobImage.getDrawable() == null) {
             Toast.makeText(SubmitJobAsEmployee.this, "Please Select Image", Toast.LENGTH_SHORT);
@@ -198,8 +215,8 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
                                     HistoryDetails historyDetails = new HistoryDetails();
                                     historyDetails.addPostToHistory( profileRef , authProfile,  "postsAsEmployee");
                                     Toast.makeText(SubmitJobAsEmployee.this, "Job Posted", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(SubmitJobAsEmployee.this, MainPageActivity.class);
-                                    startActivity(intent);
+                                    Intent intent = new Intent(SubmitJobAsEmployee.this, ApplyActivity.class);
+                                    intent.putExtra("wage",paymentStr);
                                     finish();
                                 } else {
                                     Toast.makeText(SubmitJobAsEmployee.this, "Error posting job", Toast.LENGTH_SHORT).show();

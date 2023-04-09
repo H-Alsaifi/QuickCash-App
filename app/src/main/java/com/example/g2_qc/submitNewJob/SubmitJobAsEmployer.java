@@ -28,6 +28,7 @@ import com.example.g2_qc.location.LocationDetails;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.main_page.ui.Employee.EmployeeFragment;
 import com.example.g2_qc.main_page.ui.Employer.EmployerFragment;
+import com.example.g2_qc.paypal_integration.ApplyActivity;
 import com.example.g2_qc.user_profile.History.HistoryDetails;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

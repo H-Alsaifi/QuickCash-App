@@ -136,7 +136,6 @@ public class EmployeeFragment extends Fragment {
     // Populate the scroll view with posts retrieved
     public void populateScrollView(DataSnapshot dataSnapshot) {
         LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
-
         // Iterate over the posts and create a box view for each one
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
             String jobName = postSnapshot.child("jobName").getValue(String.class);
@@ -156,7 +155,6 @@ public class EmployeeFragment extends Fragment {
             textViewName.setText(TextUtils.ellipsize(jobName, (TextPaint) textViewName.getPaint(), 400, TextUtils.TruncateAt.END));
             textViewDescription.setText(TextUtils.ellipsize(jobDescription, (TextPaint) textViewDescription.getPaint(), 1000, TextUtils.TruncateAt.END));
             textViewWage.setText(wage+"$");
-
             // Add an OnClickListener to the whole box view
             boxView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -167,6 +165,9 @@ public class EmployeeFragment extends Fragment {
                     // Pass the information to the display_details activity
                     Intent intent = new Intent(getActivity(), display_details.class);
                     intent.putExtra("postId", postId);
+                    String className = "EmployeeFragment";
+                    intent.putExtra("class", className);
+
                     startActivity(intent);
                 }
             });

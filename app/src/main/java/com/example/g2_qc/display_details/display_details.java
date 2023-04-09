@@ -20,6 +20,9 @@ import com.example.g2_qc.R;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.paypal_integration.ApplyActivity;
 import com.example.g2_qc.signup_page.User;
+import com.example.g2_qc.submitNewJob.SubmitJobAsEmployer;
+import com.example.g2_qc.user_profile.History.HistoryDetails;
+import com.example.g2_qc.user_profile.History.MyHistoryActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -64,6 +67,7 @@ public class display_details extends AppCompatActivity {
         // Get the post ID from the previous activity
         Intent intent = getIntent();
         String postKey = intent.getStringExtra("postId");
+        String className = intent.getStringExtra("class");
 
         // Extract post information from Firebase database
         extractInfo(postKey);
@@ -87,21 +91,48 @@ public class display_details extends AppCompatActivity {
             }
         });
 
+
         Button applyButton = findViewById(R.id.applyButton);
         applyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Get the wage from the TextView
-                String wage = jobPaymentTextView.getText().toString();
+                if (className != null && className.equals("EmployerFragment")) {
+                    // Create a new AlertDialog builder
+                    AlertDialog.Builder builder = new AlertDialog.Builder(display_details.this);
 
-                // Create a new Intent to navigate to ApplyActivity
-                Intent intent = new Intent(getApplicationContext(), ApplyActivity.class);
+                    // Set the message to display in the dialog
+                    builder.setMessage("Please contact the employer directly if you are interested in this job.\nWe will directly transfer the money from our account to you once you have completed the task and the employer has approved it. ");
 
-                // Add the wage as an extra to the Intent
-                intent.putExtra("wage", wage);
+                    // Set up the "OK" button for the dialog
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Close the dialog when the button is clicked
+                            dialog.dismiss();
+                        }
+                    });
 
-                // Start the ApplyActivity with the Intent
-                startActivity(intent);
+                    // Create and show the dialog
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+                else {
+                    // Get the wage from the TextView
+                    String wage = jobPaymentTextView.getText().toString();
+
+                    // Create a new Intent to navigate to ApplyActivity
+                    Intent intent = new Intent(getApplicationContext(), ApplyActivity.class);
+
+                    // Add the wage as an extra to the Intent
+                    intent.putExtra("wage", wage);
+                    intent.putExtra("userId", userId);
+                    intent.putExtra("postId", postKey);
+                    intent.putExtra("email", email);
+
+                    // Start the ApplyActivity with the Intent
+                    startActivity(intent);
+
+                }
             }
         });
 
@@ -163,6 +194,7 @@ public class display_details extends AppCompatActivity {
             if (snapshotKey != null && snapshotKey.equals(postId)) {
                 String currUserId = postSnapshot.getRef().getParent().getParent().getParent().toString().replace("https://quickcash-group2-default-rtdb.firebaseio.com/Users/" ,"");
                 userId = currUserId;
+
                 ExtractUserInfo(currUserId);
                 // Extract post information
                 String jobName = postSnapshot.child("jobName").getValue(String.class);

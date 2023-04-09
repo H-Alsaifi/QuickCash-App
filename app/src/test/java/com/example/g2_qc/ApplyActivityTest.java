@@ -11,7 +11,7 @@ public class ApplyActivityTest {
 
     @Test
     public void testPaymentConstructor() {
-        Payment payment = new Payment("user123", "pay456", "completed", 10.0);
+        Payment payment = new Payment("user123", "pay456", "completed", 10.0, "user321");
         assertEquals("user123", payment.getUserId());
         assertEquals("pay456", payment.getPaymentId());
         assertEquals("completed", payment.getState());

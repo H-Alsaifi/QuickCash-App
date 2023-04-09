@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".user_profile.personal_information.Rating">
+    tools:context=".user_profile.personal_information.RatingExperience">
 
     <Spinner
         android:id="@+id/role_spinner"
