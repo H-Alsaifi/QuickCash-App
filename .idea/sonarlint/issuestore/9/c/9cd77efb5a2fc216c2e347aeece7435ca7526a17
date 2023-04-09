@@ -1,0 +1,19 @@
+
+J
+java:S1604"(Make this anonymous inner class a lambda( ş¨ºşÿÿÿÿ8ú»ùõ0
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(°›Öç8ÿ»ùõ0
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…²¼‘üÿÿÿÿ8¼ùõ0
+t
+java:S1450"WRemove the "complete" field and declare it as a local variable in the relevant methods.(ƒ´Å•8®½ùõ0
+|
+java:S1450"ZRemove the "fieldOfWork" field and declare it as a local variable in the relevant methods.(ŞªØ¶øÿÿÿÿ8°½ùõ0
+€
+java:S1450"^Remove the "primaryLocation" field and declare it as a local variable in the relevant methods.(ì·Ú–ûÿÿÿÿ8±½ùõ0
+r
+java:S1450"URemove the "yrsExp" field and declare it as a local variable in the relevant methods.(ÔÅÉ8±½ùõ0
+G
+java:S1068"*Remove this unused "yrsExp" private field.(ÔÅÉ8Ò½ùõ0
+Q
+java:S1068"/Remove this unused "fieldOfWork" private field.(ŞªØ¶øÿÿÿÿ8Ó½ùõ0
+U
+java:S1068"3Remove this unused "primaryLocation" private field.(ì·Ú–ûÿÿÿÿ8Ó½ùõ0
