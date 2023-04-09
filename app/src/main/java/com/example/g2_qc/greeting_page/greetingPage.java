@@ -26,6 +26,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ The greetingPage class represents the activity that displays a greeting message to the user
+ and allows the user to get started with the application.
+ */
 public class greetingPage extends AppCompatActivity {
 
     private TextView welcomeUserText;
@@ -33,41 +37,68 @@ public class greetingPage extends AppCompatActivity {
     private Button getStarted;
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference("Users");
 
+    /**
+     * Initializes UI elements and sets click listeners.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.greeting_page_layout);
+        initUI();
+        setUserWelcomeMessage();
+        setClickListener();
+    }
 
-        // Initialize UI elements
+    /**
+     * Initializes UI elements.
+     */
+    private void initUI() {
         greetText = findViewById(R.id.greetingText);
         welcomeUserText = findViewById(R.id.welcomeUser);
         getStarted = findViewById(R.id.getStartedButtom);
         root = FirebaseDatabase.getInstance().getReference("Users");
+    }
 
-        // Get user details and set welcome message
-        root.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User userDetails = snapshot.getValue(User.class);
-                if (userDetails != null) {
-                    String fName = userDetails.firstName;
-                    welcomeUserText.setText("Welcome, " + fName + "!");
-                }
-            }
+    /**
+     * Sets the welcome message for the user.
+     */
+    private void setUserWelcomeMessage() {
+        root.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        User userDetails = snapshot.getValue(User.class);
+                        if (userDetails != null) {
+                            String fName = userDetails.firstName;
+                            welcomeUserText.setText("Welcome, " + fName + "!");
+                        }
+                    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(greetingPage.this, "You are welcome whomever you are!", Toast.LENGTH_LONG).show();
-            }
-        });
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(greetingPage.this,
+                                "You are welcome whomever you are!", Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
 
-        // Set click listener for get started button
+    /**
+     * Sets click listener for get started button.
+     */
+    private void setClickListener() {
         getStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(greetingPage.this, demo_login_page.class);
-                startActivity(intent);
+                startDemoLoginPage();
             }
         });
+    }
+
+    /**
+     * Starts the demo login page.
+     */
+    private void startDemoLoginPage() {
+        Intent intent = new Intent(greetingPage.this, demo_login_page.class);
+        startActivity(intent);
     }
 }

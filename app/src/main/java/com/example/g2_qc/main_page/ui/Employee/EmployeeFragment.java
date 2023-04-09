@@ -44,39 +44,53 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class EmployeeFragment extends Fragment {
+    // UI components
     private SearchView searchView;
-
     private FragmentEmployeeBinding binding;
+
+    // State variables
     private boolean isDescendingOrder;
 
-    // Inflate the fragment's layout
+    /**
+     * Called to create the fragment's view hierarchy.
+     * Inflates the fragment's layout and returns the root view.
+     *
+     * @param inflater           The LayoutInflater object that can be used to inflate any views in the fragment.
+     * @param container          The parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState This fragment is being re-constructed from a previous saved state as given here.
+     * @return The inflated view hierarchy or null.
+     */
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentEmployeeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        return root;
-
+        View rootView = binding.getRoot();
+        return rootView;
     }
 
-    // Clear the binding when the view is destroyed
+    /**
+     * Called when the view previously created by onCreateView() has been detached from the fragment.
+     * Sets the binding object to null to prevent memory leaks.
+     */
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
 
-    // Initialize the fragment's UI components and add event listeners
+    /**
+     * Called immediately after onCreateView() has returned, and is used to set up the UI components and add event listeners.
+     * Populates the scroll view with existing posts from Firebase Realtime Database.
+     * Adds listeners for the search view, filter icon, and "Add New Post" button.
+     *
+     * @param view               The View returned by onCreateView().
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here.
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Call populateScrollView to populate the scroll view with existing posts
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference()
-                .child("Users");
-
+        // Populate the scroll view with existing posts from Firebase Realtime Database
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -103,24 +117,14 @@ public class EmployeeFragment extends Fragment {
             }
         });
 
-        // Add a listener for the search view
+        // Set up the search view and add a listener for it
         searchView = getView().findViewById(R.id.search_view);
-        ImageView filterIcon = getView().findViewById(R.id.filter_icon);
-
-        filterIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showFilterDialog();
-            }
-        });
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
 
-            // Filter the posts in the scroll view based on the search query
             @Override
             public boolean onQueryTextChange(String newText) {
                 String query = newText.trim().toLowerCase();
@@ -129,11 +133,28 @@ public class EmployeeFragment extends Fragment {
             }
         });
 
+        // Set up the filter icon and add a listener for it
+        ImageView filterIcon = getView().findViewById(R.id.filter_icon);
+        filterIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showFilterDialog();
+            }
+        });
+
         // Add a listener for the "Add New Post" button
         addNewPostEmployee(view);
     }
 
-    // Populate the scroll view with posts retrieved
+    /**
+     This method populates the scroll view with posts retrieved from Firebase Realtime Database.
+     It iterates over the posts and creates a box view for each one, setting the job name and description
+     as the text of the box view. An OnClickListener is added to the whole box view to pass the necessary
+     information to the display_details activity. The method loads the image for the post and sets it as the
+     background of the box view. Finally, it adds the box view to the linear layout inside the scroll view and
+     scrolls to the bottom of the scroll view.
+     @param dataSnapshot The DataSnapshot object containing the posts retrieved from Firebase Realtime Database
+     */
     public void populateScrollView(DataSnapshot dataSnapshot) {
         LinearLayout linearLayout = getView().findViewById(R.id.linear_layout);
         // Iterate over the posts and create a box view for each one
@@ -147,14 +168,16 @@ public class EmployeeFragment extends Fragment {
             // Create a new box view
             View boxView = LayoutInflater.from(getContext()).inflate(R.layout.box_layout, null);
 
-            // Set the job name and description as the text of the box view
+            // Set the job name, description, and wage as the text of the box view
             TextView textViewName = boxView.findViewById(R.id.box_title);
             TextView textViewDescription = boxView.findViewById(R.id.box_content);
             TextView textViewWage = boxView.findViewById(R.id.box_wage);
 
+            // Use ellipsize method to limit the length of text in box view
             textViewName.setText(TextUtils.ellipsize(jobName, (TextPaint) textViewName.getPaint(), 400, TextUtils.TruncateAt.END));
             textViewDescription.setText(TextUtils.ellipsize(jobDescription, (TextPaint) textViewDescription.getPaint(), 1000, TextUtils.TruncateAt.END));
             textViewWage.setText(wage+"$");
+
             // Add an OnClickListener to the whole box view
             boxView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -172,8 +195,8 @@ public class EmployeeFragment extends Fragment {
                 }
             });
 
-                // Load the image for the post and set it as the background of the box view
-                ImageView imageView = boxView.findViewById(R.id.box_image);
+            // Load the image for the post and set it as the background of the box view
+            ImageView imageView = boxView.findViewById(R.id.box_image);
 
             FirebaseStorage storage = FirebaseStorage.getInstance();
             StorageReference storageRef = storage.getReference().child("images").child(imageUrl);
@@ -195,7 +218,10 @@ public class EmployeeFragment extends Fragment {
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
 
-    // Add a listener for the "Add New Post" button
+    /**
+     Adds a listener for the "Add New Post" button that launches the SubmitJobAsEmployee activity
+     @param view the parent view that contains the "Add New Post" button
+     */
     public void addNewPostEmployee(View view) {
         Button addNewPostButton = view.findViewById(R.id.add_new_post);
         addNewPostButton.setOnClickListener(new View.OnClickListener() {
