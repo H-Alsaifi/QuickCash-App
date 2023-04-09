@@ -40,10 +40,16 @@ import java.util.List;
 
 public class EmployerFragment extends Fragment {
     private SearchView searchView;
-
     private FragmentEmployerBinding binding;
 
-    // Inflate the fragment's layout
+
+    /**
+     Inflate the fragment's layout and return the inflated view.
+     @param inflater The LayoutInflater object that can be used to inflate any views in the fragment.
+     @param container If non-null, this is the parent view that the fragment's UI should be attached to.
+     @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here.
+     @return The View for the fragment's UI, or null.
+     */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

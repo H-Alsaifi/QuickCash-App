@@ -40,6 +40,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ This activity displays a Google Map and allows the user to save a selected location
+ with a custom name and coordinates.
+ */
 public class LocationActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
@@ -49,6 +53,10 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
     private FusedLocationProviderClient fusedLocationClient;
     private LatLng selectedLocation;
 
+
+    /**
+     Sets up the activity layout and click listener for the save location button.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,16 +99,26 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         }
     }
 
-    // Show the map fragment and initialize the map when the location button is clicked
+    /**
+     Initializes the map when the location button is clicked and shows the map fragment.
+     */
     private void initMap() {
         if (mapFragment != null) {
+            // Get a reference to the GoogleMap object and asynchronously load the map.
             mapFragment.getMapAsync(this);
         } else {
+            // Log an error if the map fragment cannot be initialized.
             Log.e("Location", "Error initializing map fragment.");
         }
     }
 
-    // Set up the map when it's ready
+    /**
+     Sets up the GoogleMap when it's ready.
+     Enables "My Location" button and gets the user's last known location.
+     Adds a click listener to the map to allow the user to select a location.
+     Saves the selected location to the database by calling the saveLocation() method.
+     @param googleMap the GoogleMap instance
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -133,7 +151,12 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         });
     }
 
-    // Result of the location permission request
+    /**
+     Called when the result of a location permission request is received.
+     @param requestCode The code that was used to request the permission.
+     @param permissions The permissions that were requested.
+     @param grantResults The results of the permission request.
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -146,15 +169,21 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
         }
     }
 
-    // Save the selected location to the database
+    /**
+     Saves the selected location to the database.
+     @param locationAddress The address of the location to save.
+     */
     private void saveLocation(String locationAddress) {
         Geocoder geocoder = new Geocoder(this);
         try {
+            // Get the address from the location name.
             List<Address> addresses = geocoder.getFromLocationName(locationAddress, 1);
             if (addresses != null && !addresses.isEmpty()) {
                 Address address = addresses.get(0);
                 double latitude = address.getLatitude();
                 double longitude = address.getLongitude();
+
+                // Save the location coordinates to the database.
                 String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location");
                 LocationDetails locationDetails = new LocationDetails(latitude, longitude);
@@ -181,37 +210,67 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
             Toast.makeText(LocationActivity.this, "Error saving location: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    // Save the selected location to the database
+
+    /**
+     Saves the selected location to the Firebase database and displays a success/failure message.
+     @param map the Marker representing the selected location on the map
+     @throws IOException if the Geocoder cannot retrieve the location information
+     */
     private void saveLocation(Marker map) throws IOException {
         if (selectedLocation != null) {
+
+            // Get the latitude and longitude coordinates of the selected location
             double latitude = map.getPosition().latitude;
             double longitude = map.getPosition().longitude;
 
             String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location");
 
-            LocationDetails locationDetails = new LocationDetails(latitude, longitude);
-            FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location coordinates").setValue(locationDetails);
 
+            // Save the location coordinates to the database
+            saveLocationCoordinatesToDatabase(uid, latitude, longitude);
+
+            // Get the location information using the Geocoder
             Geocoder geocoder = new Geocoder(this);
             List<Address> location = geocoder.getFromLocation(latitude, longitude, 1);
             String strLocation = location.get(0).getAddressLine(0);
 
-            databaseReference.setValue(strLocation).addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void aVoid) {
-                    Toast.makeText(LocationActivity.this, "Location saved successfully", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LocationActivity.this, MainPageActivity.class);
-                    startActivity(intent);
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(LocationActivity.this, "Error saving location: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
+            // Save the location string to the database and display a success/failure message
+            saveLocationStringToDatabase(databaseReference, strLocation);
         } else {
             Toast.makeText(LocationActivity.this, "Please select a location", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    /**
+     Saves the location coordinates to the Firebase database.
+     @param uid the user ID
+     @param latitude the latitude coordinate of the selected location
+     @param longitude the longitude coordinate of the selected location
+     */
+    private void saveLocationCoordinatesToDatabase(String uid, double latitude, double longitude) {
+        LocationDetails locationDetails = new LocationDetails(latitude, longitude);
+        FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("location coordinates").setValue(locationDetails);
+    }
+
+    /**
+     Saves the location string to the Firebase database and displays a success/failure message.
+     @param databaseReference the reference to the database location where the location string will be saved
+     @param strLocation the location string to be saved
+     */
+    private void saveLocationStringToDatabase(DatabaseReference databaseReference, String strLocation) {
+        databaseReference.setValue(strLocation).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Toast.makeText(LocationActivity.this, "Location saved successfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LocationActivity.this, MainPageActivity.class);
+                startActivity(intent);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(LocationActivity.this, "Error saving location: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

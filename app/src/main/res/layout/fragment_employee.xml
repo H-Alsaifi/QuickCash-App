@@ -26,8 +26,8 @@
             android:id="@+id/scroll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp"
-            android:contentDescription="Scroll view of the posted jobs">
+            android:contentDescription="Scroll view of the posted jobs"
+            android:padding="8dp">
 
             <LinearLayout
                 android:id="@+id/linear_layout"
@@ -91,36 +91,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/search_view"
-        android:layout_width="341dp"
-        android:layout_height="43dp"
+    <RelativeLayout
+        android:id="@+id/search_container"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginBottom="10dp"
-        android:iconifiedByDefault="false"
-        android:queryHint="@string/search_hint"
         app:layout_constraintBottom_toTopOf="@+id/empty_box"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.891">
 
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-13dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="2dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Browse talented candidates" />
 
-    </SearchView>
+        <ImageView
+            android:id="@+id/filter_icon"
+            android:layout_width="46dp"
+            android:layout_height="43dp"
+            android:layout_alignParentEnd="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_filter" />
 
-    <ImageView
-        android:id="@+id/filter_icon"
-        android:layout_width="46dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="96dp"
-        android:contentDescription="@string/filter_icon_description"
-        android:padding="8dp"
-        android:src="@drawable/ic_filter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/search_view"
-        app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
