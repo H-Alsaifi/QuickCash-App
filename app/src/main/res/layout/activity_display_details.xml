@@ -110,7 +110,6 @@
         android:id="@+id/infoButton"
         android:layout_width="145dp"
         android:layout_height="50dp"
-
         android:layout_marginStart="102dp"
         android:layout_marginTop="59dp"
         android:layout_marginEnd="72dp"
