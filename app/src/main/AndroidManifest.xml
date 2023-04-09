@@ -18,15 +18,20 @@
             android:name=".display_details.display_details"
             android:exported="true" />
         <activity
-            android:name=".welcome_page.Welcome"
+            android:name=".welcome_page.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.G2QC.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".welcome_page.Welcome"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar">
         </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
