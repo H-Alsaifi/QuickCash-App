@@ -21,6 +21,7 @@
             android:name=".welcome_page.Welcome"
             android:exported="true"
             android:theme="@style/Theme.G2QC.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +32,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDAo-xAoS676VreHt5x60E9n_e7vU3KDL4" />
         <activity
-            android:name=".login_page.demo_login_page"
+            android:name=".login_page.login_page"
             android:exported="true" />
         <activity android:name=".location.LocationActivity"
             android:exported="true"/>
@@ -40,6 +41,9 @@
             android:exported="true" />
         <activity
             android:name=".forgot_password.forgot_password_page"
+            android:exported="true" />
+        <activity
+            android:name=".user_profile.personal_information.RatingExperience"
             android:exported="true" />
         <activity
             android:name=".user_profile.personal_information.userProfile"
@@ -67,8 +71,12 @@
             android:name=".greeting_page.greetingPage"
             android:exported="true" />
         <activity
-            android:name=".user_profile.history.MyHistoryActivity"
+            android:name=".user_profile.History.MyHistoryActivity"
             android:exported="true" />
+        <activity android:name=".paypal_integration.ApplyActivity"
+            android:exported="true"/>
+        <activity android:name=".user_profile.employeePreferences.employeePrefDetails"
+            android:exported="true"/>
 
     </application>
 

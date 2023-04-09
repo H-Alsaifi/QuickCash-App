@@ -101,8 +101,8 @@
 
         <Switch
             android:id="@+id/filter_by_cost_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:checked="false"
             android:textOff="Less to More"
             android:textOn="More to Less" />
@@ -110,7 +110,7 @@
             android:id="@+id/sort_order_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descending"
+            android:text="@string/descending"
             android:textSize="16sp" />
 
     </LinearLayout>

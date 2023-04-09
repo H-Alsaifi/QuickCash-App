@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login_page.demo_login_page">
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    tools:context=".login_page.login_page">
 
 
     <!--        Forgot password Option-->

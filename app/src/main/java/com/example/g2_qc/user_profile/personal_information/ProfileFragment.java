@@ -16,6 +16,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.g2_qc.R;
 import com.example.g2_qc.databinding.FragmentProfileBinding;
+import com.example.g2_qc.user_profile.History.MyHistoryActivity;
+import com.example.g2_qc.user_profile.employeePreferences.employeePrefDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +32,7 @@ public class ProfileFragment extends Fragment {
     private TextView textViewWelcome, textViewEmail ;
     private EditText textViewFirstName, textViewLastName, textViewAge;
     private ProgressBar progressBar;
-    private Button my_history, my_personal_p, update;
+    private Button my_history, my_personal_p, update, rateYourExperienceButton;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -42,18 +44,27 @@ public class ProfileFragment extends Fragment {
         my_history = root.findViewById(R.id.jobs);
         my_personal_p = root.findViewById(R.id.personal_p);
         update = root.findViewById(R.id.update);
-
-//        my_history.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), MyHistoryActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        rateYourExperienceButton = root.findViewById(R.id.rate);
+        my_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MyHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+        rateYourExperienceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), RatingExperience.class);
+                startActivity(intent);
+            }
+        });
 
         my_personal_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), employeePrefDetails.class);
+                startActivity(intent);
             }
         });
 
@@ -85,6 +96,9 @@ public class ProfileFragment extends Fragment {
                 profile_ref.child(ID).child("agePerson").setValue(textViewAge.getText().toString());
                 profile_ref.child(ID).child("firstName").setValue(textViewFirstName.getText().toString());
                 profile_ref.child(ID).child("lastname").setValue(textViewLastName.getText().toString());
+
+                // Show a toast message to confirm that the update was successful
+                Toast.makeText(getContext(), "Profile information updated successfully!", Toast.LENGTH_SHORT).show();
             }
         });
         return root;

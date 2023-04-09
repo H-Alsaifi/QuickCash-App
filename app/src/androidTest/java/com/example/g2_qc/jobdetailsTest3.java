@@ -8,7 +8,6 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 
-import com.example.g2_qc.R;
 import com.example.g2_qc.display_details.display_details;
 
 import org.junit.Rule;
@@ -16,7 +15,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class jobdetailsTest {
+public class jobdetailsTest3 {
 
     @Rule
     public ActivityScenarioRule<display_details> activityScenarioRule

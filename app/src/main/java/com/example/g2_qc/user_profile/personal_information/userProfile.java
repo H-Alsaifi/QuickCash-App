@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.g2_qc.R;
-import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.user_profile.job_details.jobDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import android.widget.Toast;
@@ -26,7 +25,7 @@ public class userProfile extends AppCompatActivity{
 
     private TextView textViewWelcome, textViewFirstName, textViewLastName, textViewEmail, textViewAge;
     private ProgressBar progressBar;
-    private Button my_jobs, my_personal_p, update;
+    private Button my_jobs, my_personal_p, update, rateYourExperienceButton;
     private FirebaseAuth authProfile;
     private String firstName, lastName, email, age;
 
@@ -39,6 +38,7 @@ public class userProfile extends AppCompatActivity{
         my_jobs = findViewById(R.id.jobs);
         my_personal_p = findViewById(R.id.personal_p);
         update = findViewById(R.id.update);
+        rateYourExperienceButton = findViewById(R.id.rate);
 
         my_jobs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +52,13 @@ public class userProfile extends AppCompatActivity{
         my_personal_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            }
+        });
+        rateYourExperienceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(userProfile.this, RatingExperience.class);
+                startActivity(intent);
             }
         });
 
@@ -107,6 +114,7 @@ public class userProfile extends AppCompatActivity{
                     progressBar.setVisibility(View.INVISIBLE);
                 }
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

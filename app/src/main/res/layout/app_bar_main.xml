@@ -34,22 +34,23 @@
 
     <Button
         android:id="@+id/location_button"
-        android:layout_width="313dp"
+        android:layout_width="340dp"
         android:layout_height="50dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginBottom="72dp"
         android:layout_marginTop="66dp"
+        android:layout_marginBottom="72dp"
         android:drawableLeft="@drawable/location_icon"
+        android:ellipsize="end"
         android:onClick="onLocationButtonClick"
         android:paddingLeft="16dp"
         android:paddingTop="8dp"
         android:paddingRight="16dp"
         android:paddingBottom="8dp"
+        android:singleLine="true"
         android:text="Choose Location"
         android:textColor="@android:color/white"
-        android:singleLine="true"
-        android:ellipsize="end"
-        app:layout_constraintBottom_toTopOf="@+id/empty_box"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/empty_box" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
