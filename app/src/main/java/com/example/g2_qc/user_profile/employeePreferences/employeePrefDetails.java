@@ -10,11 +10,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.g2_qc.R;
-import com.example.g2_qc.greeting_page.greetingPage;
-import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.main_page.MainPageActivity;
-import com.example.g2_qc.user_profile.personal_information.userDetails;
-import com.example.g2_qc.user_profile.personal_information.userProfile;
 
 public class employeePrefDetails extends AppCompatActivity {
 

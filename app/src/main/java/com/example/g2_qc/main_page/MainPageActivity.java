@@ -10,7 +10,6 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -18,10 +17,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.g2_qc.R;
-import com.example.g2_qc.databinding.ActivityMainBinding;
 import com.example.g2_qc.display_details.display_details;
 import com.example.g2_qc.location.LocationActivity;
 import com.example.g2_qc.location.LocationDetails;
+import com.example.g2_qc.login_page.login_page;
 import com.example.g2_qc.signup_page.User;
 import com.example.g2_qc.user_profile.History.HistoryDetails;
 import com.google.android.material.navigation.NavigationView;
@@ -210,7 +209,7 @@ public class MainPageActivity extends AppCompatActivity {
             Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
 
             // Navigate back to the login activity
-            Intent intent = new Intent(this, com.example.g2_qc.login_page.demo_login_page.class);
+            Intent intent = new Intent(this, login_page.class);
             startActivity(intent);
             finish();
 

@@ -32,7 +32,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDAo-xAoS676VreHt5x60E9n_e7vU3KDL4" />
         <activity
-            android:name=".login_page.demo_login_page"
+            android:name=".login_page.login_page"
             android:exported="true" />
         <activity android:name=".location.LocationActivity"
             android:exported="true"/>
