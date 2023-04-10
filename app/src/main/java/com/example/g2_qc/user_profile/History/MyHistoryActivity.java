@@ -25,9 +25,7 @@ public class MyHistoryActivity extends AppCompatActivity {
 
     private HistoryDetails historyDetails;
     private FirebaseAuth authProfile;
-    public MyHistoryActivity(HistoryDetails historyDetails) {
-        this.historyDetails = historyDetails;
-    }
+
     /**
      * Initializes the MyHistoryActivity and sets the layout to be displayed.
      * Also sets a click listener on the back button to go back to previous screen.
