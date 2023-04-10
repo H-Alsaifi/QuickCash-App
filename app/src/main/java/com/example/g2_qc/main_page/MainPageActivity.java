@@ -35,6 +35,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -317,6 +318,8 @@ public class MainPageActivity extends AppCompatActivity {
             }
         }
     }
+
+
 
 
     /**
