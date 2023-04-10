@@ -7,8 +7,6 @@ A
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 c
 3app/src/test/java/com/example/g2_qc/signupTest.java,d\3\d370e92e4169fc56ad44ce09f2f42dc0df5d7f96
-ç
-]app/src/main/java/com/example/g2_qc/user_profile/employeePreferences/employeePrefDetails.java,9\c\9cd77efb5a2fc216c2e347aeece7435ca7526a17
 j
 :app/src/main/java/com/example/g2_qc/submitNewJob/Post.java,8\a\8ab73e196e617a85e29a01c45cc95ef4599a50ae
 
@@ -29,17 +27,11 @@ q
 Aapp/src/main/java/com/example/g2_qc/location/LocationDetails.java,e\6\e6b5eb3afdb73217ec1b2480641224c5b430c4cc
 d
 4app/src/test/java/com/example/g2_qc/HistoryTest.java,f\1\f157c37b7b9ef463bf77a6a1e323d7bb7d9c0127
-
-Oapp/src/main/java/com/example/g2_qc/user_profile/History/MyHistoryActivity.java,a\b\ab4729541c039532d3c7a079b56165ded94f4e75
 i
 9app/src/main/java/com/example/g2_qc/signup_page/User.java,c\b\cb544baa5aa65eb859933674cfa582143504a8a5
 r
 Bapp/src/main/java/com/example/g2_qc/location/LocationActivity.java,3\b\3b491acc464478b6b8e15cd7b8b4558b86ac934d
 }
 Mapp/src/main/java/com/example/g2_qc/forgot_password/forgot_password_page.java,e\6\e6b3f5b5565edf7eae3404eeba3ced20a4e26f0f
-
-Oapp/src/main/java/com/example/g2_qc/main_page/ui/Employee/EmployeeFragment.java,b\8\b8dc35d6e768368e46646fec6f6e9d4c4f6384d0
-
-Oapp/src/main/java/com/example/g2_qc/main_page/ui/Employer/EmployerFragment.java,8\8\88c24214a2759e06672dc694032e5612a965cbf2
 y
 Iapp/src/main/java/com/example/g2_qc/paypal_integration/ApplyActivity.java,4\3\438a801c66829c18eacbdd21e36ca05fd96f0340
