@@ -46,7 +46,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-
+/**
+ *  SubmitJobAsEmployer is an activity that allows employers to submit a new job.
+ *  It consists of a form where the employer can enter the job details, select a job category, and upload an image.
+ *  The activity also validates the input values entered by the user and displays error messages if necessary.
+ *  When the employer submits the job, the activity sends a notification to all employees.
+ */
 public class SubmitJobAsEmployer extends AppCompatActivity {
 
     // Notification channel ID and name for sending notifications
@@ -72,6 +77,12 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
     // Constant for image selection intent
     private static final int REQUEST_CODE_OPEN_DOCUMENT = 1;
 
+    /**
+     * This method creates the SubmitJobAsEmployer activity and sets up the views and listeners.
+     * It creates and sets up the spinner for job categories, sets up onClickListener for selecting job image
+     * and onClickListener for submitting job.
+     * @param savedInstanceState A Bundle object containing the activity's previously saved state.
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,13 +118,22 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         });
     }
 
-    // Open file picker for images
+    /**
+     * This method opens a file picker to select an image.
+     *  It sets the type of the intent to image/* to only show image files.
+     *  The selected image is then displayed in the ImageView on the screen.
+     */
     private void openFilePicker() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE_OPEN_DOCUMENT);
     }
 
+    /**
+     * This method is called when the submit job button is clicked.
+     * It retrieves the input values entered by the user, validates them, and displays error messages if necessary.
+     * If all fields are filled in, it creates a new Post object with the job information and adds it to the employer's post list in the Firebase database.
+     */
     private void submitJob() {
         // Get the input values entered by the user
         String name = jobName.getText().toString();
@@ -143,6 +163,19 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         }
     }
 
+    /**
+     * Called when an activity launched for result returns, with the requestCode,
+     * resultCode, and Intent data of the activity. This method handles the result of
+     * opening a document and uploading an image to FirebaseStorage. It also creates
+     * a new post object and adds it to the employer's posts in the Firebase Database.
+     * @param requestCode The integer request code originally supplied to
+     *                    startActivityForResult(), allowing you to identify who this
+     *                    result came from.
+     * @param resultCode The integer result code returned by the child activity
+     *                   through its setResult().
+     * @param data An Intent, which can return result data to the caller
+     *               (various data can be attached to Intent "extras").
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -227,8 +260,11 @@ public class SubmitJobAsEmployer extends AppCompatActivity {
         }
     }
 
-    // This method gets the current time and sets it to the Atlantic Canada time zone
-    // It then formats the time to display as a string in the format "yyyy-MM-dd HH:mm"
+    /**
+     * This method retrieves the current time and sets it to the Atlantic Canada time zone.
+     * It then formats the time to display as a string in the format "yyyy-MM-dd HH:mm".
+     * @return a string representing the current time in the Atlantic Canada time zone in the format "yyyy-MM-dd HH:mm"
+     */
     public String timePosted() {
         long currentTime = System.currentTimeMillis();
         TimeZone timeZone = TimeZone.getTimeZone("Canada/Atlantic");
