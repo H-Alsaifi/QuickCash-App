@@ -64,13 +64,7 @@
             android:exported="true"
             android:theme="@style/Theme.G2QC.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".main_page.ui.Employee.EmployeeFragment"
-            android:label="@string/employee_fragment_label" />
-        <activity
-            android:name=".main_page.ui.Employer.EmployerFragment"
-            android:label="@string/employer_fragment_label" />
-
+            
         <activity android:name=".user_profile.job_details.MyJobActivity" />
         <activity
             android:name=".greeting_page.greetingPage"
