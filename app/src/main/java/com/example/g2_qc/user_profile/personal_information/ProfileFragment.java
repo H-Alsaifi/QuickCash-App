@@ -26,25 +26,29 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 public class ProfileFragment extends Fragment {
 
     private FragmentProfileBinding binding;
-    private TextView textViewWelcome, textViewEmail ;
-    private EditText textViewFirstName, textViewLastName, textViewAge;
+    private TextView textViewWelcome;
+    private TextView textViewEmail;
+    private EditText textViewFirstName;
+    private EditText textViewLastName;
+    private EditText textViewAge;
     private ProgressBar progressBar;
-    private Button my_history, my_personal_p, update, rateYourExperienceButton;
 
-
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        my_history = root.findViewById(R.id.jobs);
-        my_personal_p = root.findViewById(R.id.personal_p);
-        update = root.findViewById(R.id.update);
-        rateYourExperienceButton = root.findViewById(R.id.rate);
+        Button my_history = root.findViewById(R.id.jobs);
+        Button my_personal_p = root.findViewById(R.id.personal_p);
+        Button update;
+        Button rateYourExperienceButton = root.findViewById(R.id.rate);
         my_history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

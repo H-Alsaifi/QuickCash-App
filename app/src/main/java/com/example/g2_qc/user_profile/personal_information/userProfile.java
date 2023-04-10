@@ -23,11 +23,21 @@ import com.google.firebase.database.ValueEventListener;
 
 public class userProfile extends AppCompatActivity{
 
-    private TextView textViewWelcome, textViewFirstName, textViewLastName, textViewEmail, textViewAge;
+    private TextView textViewWelcome;
+    private TextView textViewFirstName;
+    private TextView textViewLastName;
+    private TextView textViewEmail;
+    private TextView textViewAge;
     private ProgressBar progressBar;
-    private Button my_jobs, my_personal_p, update, rateYourExperienceButton;
+    private Button my_jobs;
+
+    private Button update;
+    private Button rateYourExperienceButton;
     private FirebaseAuth authProfile;
-    private String firstName, lastName, email, age;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String age;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -36,7 +46,6 @@ public class userProfile extends AppCompatActivity{
         setContentView(R.layout.fragment_profile);
 
         my_jobs = findViewById(R.id.jobs);
-        my_personal_p = findViewById(R.id.personal_p);
         update = findViewById(R.id.update);
         rateYourExperienceButton = findViewById(R.id.rate);
 
@@ -49,11 +58,7 @@ public class userProfile extends AppCompatActivity{
         });
 
 
-        my_personal_p.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
+
         rateYourExperienceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

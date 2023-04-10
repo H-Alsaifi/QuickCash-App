@@ -1,7 +1,0 @@
-
->
-java:S1604*"(Make this anonymous inner class a lambda(Ç€ç×
-s
-java:S1450"XRemove the "addRating" field and declare it as a local variable in the relevant methods.(ÑË×£üÿÿÿÿ
-œ
-java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×þÿÿÿÿ

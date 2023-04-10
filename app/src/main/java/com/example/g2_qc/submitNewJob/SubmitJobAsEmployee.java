@@ -42,11 +42,6 @@ import java.util.TimeZone;
 
 public class SubmitJobAsEmployee extends AppCompatActivity {
 
-    // Notification channel constants
-    private static final String CHANNEL_ID = "my_channel";
-    private static final String CHANNEL_NAME = "My Channel";
-    private static NotificationManager notificationManager;
-
     LocationDetails location;
 
     // UI elements
@@ -107,7 +102,6 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
         String name = jobName.getText().toString();
         String description = jobDescription.getText().toString();
         String paymentStr = jobPayment.getText().toString();
-        String category = categoriesSpinner.getSelectedItem().toString();
 
         // Check if any of the fields are empty and display an error message if they are
         if (name.isEmpty()) {
