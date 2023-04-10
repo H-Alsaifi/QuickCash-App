@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.g2_qc'
-    compileSdk 33
+    compileSdk 19
 
     defaultConfig {
         applicationId "com.example.g2_qc"
