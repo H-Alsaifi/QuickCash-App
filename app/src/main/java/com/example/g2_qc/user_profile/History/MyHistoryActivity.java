@@ -22,7 +22,9 @@ public class MyHistoryActivity extends AppCompatActivity {
 
     private HistoryDetails historyDetails;
     private FirebaseAuth authProfile;
-
+    public MyHistoryActivity(HistoryDetails historyDetails) {
+        this.historyDetails = historyDetails;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
