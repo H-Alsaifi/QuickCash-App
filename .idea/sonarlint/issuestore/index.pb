@@ -13,14 +13,6 @@ j
 Oapp/src/main/java/com/example/g2_qc/user_profile/job_details/MyJobActivity.java,3\a\3a2eaa8a0a0550d77d06ab1a34006b70021c3b4d
 |
 Lapp/src/main/java/com/example/g2_qc/user_profile/job_details/jobDetails.java,3\c\3ccd69de4ca6cc3340b2d3ec2fb3eb470283dc12
-Š
-Zapp/src/main/java/com/example/g2_qc/user_profile/personal_information/ProfileFragment.java,a\3\a32f66143f07e93708d66b475dd1d2dd6221593c
-‹
-[app/src/main/java/com/example/g2_qc/user_profile/personal_information/RatingExperience.java,2\d\2d198b383d4cd62a7adbd9d4c5d973cb5d974730
-†
-Vapp/src/main/java/com/example/g2_qc/user_profile/personal_information/userDetails.java,c\d\cd4f40db154bed1617e302b818106da7cc6a5677
-†
-Vapp/src/main/java/com/example/g2_qc/user_profile/personal_information/userProfile.java,b\d\bd4b3cdd23a6bbb13c4e93fe0b259ef54145b0e5
 s
 Capp/src/main/java/com/example/g2_qc/greeting_page/greetingPage.java,c\4\c4c55630fae72b12377517428a5d813e39771c8f
 q
@@ -33,5 +25,3 @@ r
 Bapp/src/main/java/com/example/g2_qc/location/LocationActivity.java,3\b\3b491acc464478b6b8e15cd7b8b4558b86ac934d
 }
 Mapp/src/main/java/com/example/g2_qc/forgot_password/forgot_password_page.java,e\6\e6b3f5b5565edf7eae3404eeba3ced20a4e26f0f
-y
-Iapp/src/main/java/com/example/g2_qc/paypal_integration/ApplyActivity.java,4\3\438a801c66829c18eacbdd21e36ca05fd96f0340
