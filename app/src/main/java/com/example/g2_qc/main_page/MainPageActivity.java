@@ -275,7 +275,7 @@ public class MainPageActivity extends AppCompatActivity {
      */
     public void enableNotification() {
         // Get a reference to the notification manager and create a notification channel if the device is running Android O or higher
-        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && notificationManager != null) {
             NotificationChannel channel = new NotificationChannel("my_channel", "My Channel", NotificationManager.IMPORTANCE_HIGH);
@@ -317,7 +317,6 @@ public class MainPageActivity extends AppCompatActivity {
             }
         }
     }
-
 
 
     /**
