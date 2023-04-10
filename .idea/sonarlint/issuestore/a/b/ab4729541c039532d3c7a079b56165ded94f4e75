@@ -1,10 +1,0 @@
-
-k	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å”ä‚þÿÿÿÿ
-e	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ¬Ë?
->
-java:S1604"(Make this anonymous inner class a lambda(¾‡µà
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í÷Ãá
-|	java:S116"bRename this field "PostsAsEmployerTextView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü¾Ý›ýÿÿÿÿ
-|	java:S116"bRename this field "PostsAsEmployeeTextView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü¾Ý›ýÿÿÿÿ
-o
-java:S1659"TDeclare "PostsAsEmployerTextView" and all following declarations on a separate line.(Ü¾Ý›ýÿÿÿÿ
