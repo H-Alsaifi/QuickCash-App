@@ -18,10 +18,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * A class representing the user's history activity screen that displays their post and income history.
+ */
 public class MyHistoryActivity extends AppCompatActivity {
 
     private HistoryDetails historyDetails;
     private FirebaseAuth authProfile;
+
+    /**
+     * Initializes the MyHistoryActivity and sets the layout to be displayed.
+     * Also sets a click listener on the back button to go back to previous screen.
+     * Retrieves and displays the user's history details.
+     * @param savedInstanceState savedInstanceState Bundle containing the activity's previously
+     *                           saved state, or null if none exists
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +52,9 @@ public class MyHistoryActivity extends AppCompatActivity {
         retrieveHistoryDetails();
     }
 
-    // Method to retrieve history details from Firebase database
+    /**
+     * Retrieves the user's history details and displays them in the UI.
+     */
     public void retrieveHistoryDetails() {
         // Get the current authenticated user
         authProfile = FirebaseAuth.getInstance();

@@ -79,8 +79,6 @@ public class login_page extends AppCompatActivity {
     private void initializeViews() {
         etEmail = findViewById(R.id.et_email_address);
         etPassword = findViewById(R.id.et_password);
-        etPassword.setText("Mo@12345");
-        etEmail.setText("m@dal.ca");
         btnLogin = findViewById(R.id.btn_login);
         tvForgotPassword = findViewById(R.id.tv_forgot_password);
         tvForgotPassword.setPaintFlags(tvForgotPassword.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);

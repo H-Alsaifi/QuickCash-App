@@ -39,7 +39,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
-
+/**
+ * This class is used for submitting a job as an employee to the Firebase Realtime Database.
+ */
 public class SubmitJobAsEmployee extends AppCompatActivity {
 
     // Notification channel constants
@@ -63,6 +65,11 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference("Users");
     private static final int REQUEST_CODE_OPEN_DOCUMENT = 1;
 
+    /**
+     * Initializes all UI elements and sets up the click listeners for buttons.
+     * Also sets up the adapter for the categories spinner.
+     * @param savedInstanceState The saved instance state of the app.
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,12 +103,20 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
         });
     }
 
+    /**
+     * Opens an Intent to allow the user to select an image file from their device's storage.
+     */
     private void openFilePicker() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_CODE_OPEN_DOCUMENT);
     }
 
+    /**
+     * Submits a job to the Firebase Realtime Database with the input values entered by the user
+     * and the selected image URI. Displays an error message if any of the fields are empty or if the payment
+     * amount is invalid.
+     */
     private void submitJob() {
         // Get the input values entered by the user
         String name = jobName.getText().toString();
@@ -147,7 +162,16 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
         }
     }
 
-    // This method is called when the user has selected an image from their device's storage
+    /**
+     * This method is called when the user has selected an image from their device's storage.
+     * @param requestCode The integer request code originally supplied to
+     *                    startActivityForResult(), allowing you to identify who this
+     *                    result came from.
+     * @param resultCode The integer result code returned by the child activity
+     *                   through its setResult().
+     * @param data An Intent, which can return result data to the caller
+     *               (various data can be attached to Intent "extras").
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -236,7 +260,10 @@ public class SubmitJobAsEmployee extends AppCompatActivity {
         }
     }
 
-    //add the time that the post is posted at
+    /**
+     * computes the current time in the Canada/Atlantic timezone as a formatted string.
+     * @return a string representing the current time in the "yyyy-MM-dd HH:mm" format
+     */
     public String timePosted() {
         long currentTime = System.currentTimeMillis();
         TimeZone timeZone = TimeZone.getTimeZone("Canada/Atlantic");

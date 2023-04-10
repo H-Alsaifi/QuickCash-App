@@ -12,6 +12,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * This class represents the history details of a user.
+ */
 public class HistoryDetails {
 
     private long totalPosts;
@@ -21,6 +24,9 @@ public class HistoryDetails {
     private long appliedJobs;
     private static HistoryDetails instance = null;
 
+    /**
+     * Default constructor for the HistoryDetails class.
+     */
     public HistoryDetails() {
     }
 
@@ -32,6 +38,15 @@ public class HistoryDetails {
         return instance;
     }
 
+    /**
+     * Constructor for the HistoryDetails class that initializes all the fields.
+     *
+     * @param totalPosts        The total number of posts made by the user.
+     * @param postsAsEmployer   The number of posts made by the user as an employer.
+     * @param postsAsEmployee   The number of posts made by the user as an employee.
+     * @param totalIncome       The total income earned by the user.
+     * @param appliedJobs       The total number of jobs the user has applied to.
+     */
     public HistoryDetails(long totalPosts, long postsAsEmployer, long postsAsEmployee, long totalIncome, long appliedJobs) {
         this.totalPosts = totalPosts;
         this.postsAsEmployer = postsAsEmployer;
@@ -40,6 +55,16 @@ public class HistoryDetails {
         this.appliedJobs = appliedJobs;
     }
 
+    /**
+     * Retrieves the history details from the database and displays them in the given TextViews.
+     *
+     * @param totalPostsTextView     The TextView to display the total number of posts.
+     * @param PostsAsEmployerTextView The TextView to display the number of posts made as an employer.
+     * @param PostsAsEmployeeTextView The TextView to display the number of posts made as an employee.
+     * @param totalIncomeTextView    The TextView to display the total income earned.
+     * @param appliedJobsTextView    The TextView to display the total number of jobs applied to.
+     * @param authProfile            The FirebaseAuth object representing the current user.
+     */
     public void retrieveHistoryDetails(TextView totalPostsTextView, TextView PostsAsEmployerTextView, TextView PostsAsEmployeeTextView, TextView totalIncomeTextView, TextView appliedJobsTextView, FirebaseAuth authProfile) {
         FirebaseUser user = authProfile.getCurrentUser();
         if (user != null) {
@@ -118,6 +143,12 @@ public class HistoryDetails {
         this.postsAsEmployee = postsAsEmployee;
     }
 
+    /**
+     * Adds a post to the user's history in the Firebase Realtime Database.
+     * @param profileRef the DatabaseReference of the user's profile
+     * @param authProfile the FirebaseAuth instance of the user's profile
+     * @param type a String indicating the type of post ("postsAsEmployer" or "postsAsEmployee")
+     */
     public void addPostToHistory(DatabaseReference profileRef, FirebaseAuth authProfile, String type) {
         FirebaseUser user = authProfile.getCurrentUser();
         if (user != null) {
