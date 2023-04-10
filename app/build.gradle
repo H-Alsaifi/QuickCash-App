@@ -5,8 +5,8 @@ plugins {
 
 android {
     namespace 'com.example.g2_qc'
-    compileSdk 29
-    buildToolsVersion "29.0.3"
+    compileSdk 33
+    
 
     defaultConfig {
         applicationId "com.example.g2_qc"
