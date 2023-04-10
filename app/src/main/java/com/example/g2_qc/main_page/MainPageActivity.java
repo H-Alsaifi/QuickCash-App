@@ -42,8 +42,15 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.checkerframework.checker.units.qual.A;
+import org.checkerframework.common.returnsreceiver.qual.This;
+
 import java.util.ArrayList;
 
+/**
+ This class represents the main page of the application.
+ It sets up the UI, navigation, and functionality for the main page.
+ */
 public class MainPageActivity extends AppCompatActivity {
 
     // Declare required variables
@@ -57,7 +64,10 @@ public class MainPageActivity extends AppCompatActivity {
     private ArrayList<String> list = new ArrayList<String>();
     private ArrayList<String> list2 = new ArrayList<String>();
 
-    // onCreate method - called when activity is created
+    /**
+     Called when the activity is created. Sets up the UI, navigation, and functionality.
+     @param savedInstanceState saved instance state of the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,7 +143,13 @@ public class MainPageActivity extends AppCompatActivity {
         enableNotification();
     }
 
-    // onCreateOptionsMenu method - called when the options menu is created
+    /**
+     * Called when the options menu is created.
+     * Inflates the menu with the options menu layout.
+     * Gets a reference to the logout menu item and sets its onClickListener.
+     * @param menu The menu to be displayed.
+     * @return true to display the options menu.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu with the options menu layout
@@ -147,7 +163,10 @@ public class MainPageActivity extends AppCompatActivity {
         return true;
     }
 
-    // Handle up navigation by delegating it to the nav controller
+    /**
+     * Delegates up navigation to the nav controller.
+     * @return true if the navigation was handled by the nav controller, false otherwise.
+     */
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -155,7 +174,13 @@ public class MainPageActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    // ExtractInfo method - extracts user info from the Firebase database
+    /**
+     * Extracts user info from the Firebase database.
+     * Gets the user's ID and a reference to their profile info in the database.
+     * Adds a listener to the profile info reference to get the user's email, location, and category.
+     * Sets the email as the subtitle of the navigation view header and sets the text of the location button based on the user's location.
+     * @param firebaseUser The FirebaseUser object representing the current user.
+     */
     private void ExtractInfo(FirebaseUser firebaseUser) {
         if (firebaseUser == null) {
             // Handle the case where the FirebaseUser object is null
@@ -199,7 +224,11 @@ public class MainPageActivity extends AppCompatActivity {
         });
     }
 
-    // onOptionsItemSelected method - handles options menu item selection
+    /**
+     This method handles options menu item selection.
+     @param item The selected menu item.
+     @return boolean Returns true if the event has been handled, false otherwise.
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
@@ -216,19 +245,34 @@ public class MainPageActivity extends AppCompatActivity {
 
             // Return true to indicate that the event has been handled
             return true;
+        } else if (id == R.id.action_Refresh) {
+            // Perform the refresh operation here
+            // For example, you can reload the current activity/fragment by recreating it
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+            Toast.makeText(this, "Refresh successful", Toast.LENGTH_SHORT).show();
+
+            // Return true to indicate that the event has been handled
+            return true;
         }
 
         // Return the result of the super class method
         return super.onOptionsItemSelected(item);
     }
 
-    // onLocationButtonClick method - launches the location activity
+    /**
+     This method launches the location activity.
+     @param view The view that was clicked.
+     */
     public void onLocationButtonClick(View view) {
         Intent intent = new Intent(this, LocationActivity.class);
         startActivity(intent);
     }
 
-    // enableNotification method - enables notifications for the app
+    /**
+     This method enables notifications for the app.
+     */
     public void enableNotification() {
         // Get a reference to the notification manager and create a notification channel if the device is running Android O or higher
         NotificationManager notificationManager = getSystemService(NotificationManager.class);
@@ -273,6 +317,13 @@ public class MainPageActivity extends AppCompatActivity {
             }
         }
     }
+
+
+
+    /**
+     Displays a notification alert for new job postings by fetching data from Firebase Realtime Database and
+     checking for matching job categories.
+     */
     public void showNotification(){
     // showNotification method - displays a notification alert for new job postings
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -282,6 +333,11 @@ public class MainPageActivity extends AppCompatActivity {
         // Get a reference to the Users node in the database and add a listener to get all users
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            /**
+             * Callback method triggered when data is changed in the database.
+             * Loops through all users in the database and fetches their job postings.
+             * @param dataSnapshot the data snapshot of the Users node
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Loop through all users in the database
@@ -291,6 +347,11 @@ public class MainPageActivity extends AppCompatActivity {
                     // Get a reference to the user's Employee Posts and add a listener to get all job postings
                     DatabaseReference postsReferenceEmployee = userSnapshot.child("Employee").child("Posts").getRef();
                     postsReferenceEmployee.addListenerForSingleValueEvent(new ValueEventListener() {
+                        /**
+                         * Callback method triggered when data is changed in the database.
+                         * Checks each job posting for a matching job category and adds it to the list of jobs if it matches.
+                         * @param dataSnapshot the data snapshot of the Employee Posts node
+                         */
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             // Check each job posting for a matching job category and add it to the list of jobs if it matches
@@ -300,6 +361,11 @@ public class MainPageActivity extends AppCompatActivity {
                             progressDialog.dismiss();
                         }
 
+                        /**
+                         * Callback method triggered when database read is cancelled.
+                         * Displays an error message if the database read was cancelled.
+                         * @param databaseError the database error that caused the read to be cancelled
+                         */
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
                             // Display an error message if the database read was cancelled
@@ -311,6 +377,11 @@ public class MainPageActivity extends AppCompatActivity {
                     // Get a reference to the user's Employer Posts and add a listener to get all job postings
                     DatabaseReference postsReferenceEmployer = userSnapshot.child("Employer").child("Posts").getRef();
                     postsReferenceEmployer.addListenerForSingleValueEvent(new ValueEventListener() {
+                        /**
+                         * Callback method triggered when data is changed in the database.
+                         * Checks each job posting for a matching job category and adds it to the list of jobs if it matches.
+                         * @param dataSnapshot the data snapshot of the Employer Posts node
+                         */
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             // Check each job posting for a matching job category and add it to the list of jobs if it matches
@@ -340,7 +411,14 @@ public class MainPageActivity extends AppCompatActivity {
         });
     }
 
-    // notificationCheck method - checks if a job posting matches the user's job category and adds it to the list of jobs if it does
+    /**
+     This method checks if a job posting matches the user's job category and adds it to the list of jobs if it does.
+     It also calculates the distance between the job's location and the user's location, and adds the job to the
+     list if it's within 10KM of the user's location. If there are no new job postings in the user's job category,
+     it displays an alert dialog indicating so.
+     @param dataSnapshot - a snapshot of the job postings data in the database
+     @param userLocation - the user's current location
+     */
     public void notificationCheck(DataSnapshot dataSnapshot, LocationDetails userLocation) {
 
         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
@@ -377,7 +455,10 @@ public class MainPageActivity extends AppCompatActivity {
         }
     }
 
-    // showNotificationAlert method - displays an alert dialog containing a list of new job postings in the user's job category
+    /**
+     This method displays an alert dialog containing a list of new job postings in the user's job category.
+     If there are no new job postings in the user's job category, it displays an alert dialog indicating so.
+     */
     public void showNotificationAlert() {
         // Create an alert dialog builder
         AlertDialog.Builder builder = new AlertDialog.Builder(MainPageActivity.this);
