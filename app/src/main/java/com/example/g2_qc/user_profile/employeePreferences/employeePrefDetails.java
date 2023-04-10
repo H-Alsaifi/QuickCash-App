@@ -15,6 +15,8 @@ import com.example.g2_qc.login_page.demo_login_page;
 import com.example.g2_qc.main_page.MainPageActivity;
 import com.example.g2_qc.user_profile.personal_information.userDetails;
 import com.example.g2_qc.user_profile.personal_information.userProfile;
+import com.google.firebase.database.DatabaseReference;
+
 
 public class employeePrefDetails extends AppCompatActivity {
 
@@ -22,6 +24,8 @@ public class employeePrefDetails extends AppCompatActivity {
     private EditText fieldOfWork;
     private EditText primaryLocation;
     private Button complete;
+
+    private DatabaseReference addToDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,18 @@ public class employeePrefDetails extends AppCompatActivity {
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
+                String yearsOfExp = yrsExp.getText().toString();
+                String field = fieldOfWork.getText().toString();
+                String location = primaryLocation.getText().toString();
+
+                DatabaseReference userRef = addToDatabase.child("users").push();
+                userRef.child("yearsOfExp").setValue(yearsOfExp);
+                userRef.child("fieldOfWork").setValue(field);
+                userRef.child("primaryLocation").setValue(location);
+
+                 */
+
                 Intent intent = new Intent(employeePrefDetails.this, MainPageActivity.class);
                 startActivity(intent);
             }
