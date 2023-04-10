@@ -117,7 +117,7 @@
             android:queryHint="Browse talented candidates" />
 
         <ImageView
-            android:id="@+id/filter_icon"
+            android:id="@+id/filter_icon_employee"
             android:layout_width="46dp"
             android:layout_height="43dp"
             android:layout_alignParentEnd="true"

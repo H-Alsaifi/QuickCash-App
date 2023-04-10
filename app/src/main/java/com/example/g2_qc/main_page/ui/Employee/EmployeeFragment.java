@@ -134,7 +134,7 @@ public class EmployeeFragment extends Fragment {
         });
 
         // Set up the filter icon and add a listener for it
-        ImageView filterIcon = getView().findViewById(R.id.filter_icon);
+        ImageView filterIcon = getView().findViewById(R.id.filter_icon_employee);
         filterIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
