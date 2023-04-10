@@ -1,50 +1,4 @@
 # This file is a template, and might need editing before it works on your project.
-<<<<<<< HEAD
-
-image: openjdk:11
-
-variables:
-  ANDROID_COMPILE_SDK: "33"
-  ANDROID_BUILD_TOOLS: "30.0.3"
-  ANDROID_SDK_TOOLS: "7583922"
-
-before_script:
-  - export ANDROID_SDK_ROOT="${PWD}/android-home"
-  - install -d $ANDROID_SDK_ROOT
-  - wget --output-document=$ANDROID_SDK_ROOT/cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_SDK_TOOLS}_latest.zip
-  - pushd $ANDROID_SDK_ROOT
-  - unzip -d cmdline-tools cmdline-tools.zip
-  - pushd cmdline-tools
-  - mv cmdline-tools tools || true
-  - popd
-  - popd
-  - export PATH=$PATH:${ANDROID_SDK_ROOT}/cmdline-tools/tools/bin/
-  - yes | sdkmanager --licenses || true
-  - sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}"
-  - sdkmanager "platform-tools"
-  - sdkmanager "build-tools;${ANDROID_BUILD_TOOLS}"
-  - chmod +x ./gradlew
-
-
-lintDebug:
-  stage: build
-  script:
-    - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
-  tags:
-    - dalfcs_docker_autoscale
-
-assembleDebug:
-  stage: build
-  script:
-    - ./gradlew assembleDebug
-
-  artifacts:
-    paths:
-      - app/build/outputs/
-  tags:
-    - dalfcs_docker_autoscale
-    
-=======
 # To contribute improvements to CI/CD templates, please follow the Development guide at:
 # https://docs.gitlab.com/ee/development/cicd/templates.html
 # This specific template is located at:
@@ -130,21 +84,12 @@ debugTests:
   script:
     - ./gradlew -Pci --console=plain :app:testDebug
 
->>>>>>> 6f34a7bfc0a85c9ac74e3f8c2b0f1616db2612d3
 unit_tests:
   stage: test
   script:
     - ./gradlew test
   artifacts:
     when: always
-<<<<<<< HEAD
-    expire_in: 3 days
-    paths:
-      - app/build/reports/tests/
-  tags:
-    - dalfcs_docker_autoscale
-=======
     expire_in: 30 days
     paths:
       - app/build/reports/tests/
->>>>>>> 6f34a7bfc0a85c9ac74e3f8c2b0f1616db2612d3
