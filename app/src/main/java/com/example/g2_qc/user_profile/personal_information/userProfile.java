@@ -21,11 +21,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class userProfile extends AppCompatActivity{
+public class userProfile extends AppCompatActivity {
 
     private TextView textViewWelcome, textViewFirstName, textViewLastName, textViewEmail, textViewAge;
     private ProgressBar progressBar;
-    private Button my_jobs, my_personal_p, update, rateYourExperienceButton;
+    private Button myJobsButton, myPersonalPrefsButton, updateButton, rateYourExperienceButton;
     private FirebaseAuth authProfile;
     private String firstName, lastName, email, age;
 
@@ -35,38 +35,36 @@ public class userProfile extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_profile);
 
-        my_jobs = findViewById(R.id.jobs);
-        my_personal_p = findViewById(R.id.personal_p);
-        update = findViewById(R.id.update);
+        myJobsButton = findViewById(R.id.jobs);
+        myPersonalPrefsButton = findViewById(R.id.personal_p);
+        updateButton = findViewById(R.id.update);
         rateYourExperienceButton = findViewById(R.id.rate);
 
-        my_jobs.setOnClickListener(new View.OnClickListener() {
+        myJobsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(userProfile.this, jobDetails.class);
-                startActivity(intent);
+                startActivity(new Intent(userProfile.this, jobDetails.class));
             }
         });
 
-
-        my_personal_p.setOnClickListener(new View.OnClickListener() {
+        myPersonalPrefsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // TODO: Implement personal preferences screen
             }
         });
+
         rateYourExperienceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(userProfile.this, RatingExperience.class);
-                startActivity(intent);
+                startActivity(new Intent(userProfile.this, RatingExperience.class));
             }
         });
 
-        update.setOnClickListener(new View.OnClickListener() {
+        updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(userProfile.this, userDetails.class);
-                startActivity(intent);
+                startActivity(new Intent(userProfile.this, userDetails.class));
             }
         });
 
@@ -82,20 +80,17 @@ public class userProfile extends AppCompatActivity{
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser user = authProfile.getCurrentUser();
 
-
-        if(user == null) {
-            Toast.makeText(userProfile.this, "user profile details not found", Toast.LENGTH_LONG).show();
-        }
-        else{
+        if (user == null) {
+            Toast.makeText(userProfile.this, "User profile details not found", Toast.LENGTH_LONG).show();
+        } else {
             progressBar.setVisibility(View.VISIBLE);
             showProfile(user);
         }
     }
 
     private void showProfile(FirebaseUser firebaseUser) {
-        String ID = firebaseUser.getUid();
-        DatabaseReference profile_ref = FirebaseDatabase.getInstance().getReference("Users");
-        profile_ref.child(ID).addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference profileRef = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+        profileRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userDetails userDetails = snapshot.getValue(userDetails.class);
@@ -114,7 +109,6 @@ public class userProfile extends AppCompatActivity{
                     progressBar.setVisibility(View.INVISIBLE);
                 }
             }
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

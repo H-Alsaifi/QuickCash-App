@@ -22,11 +22,20 @@ public class HistoryDetails {
     private long postsAsEmployee;
     private long totalIncome;
     private long appliedJobs;
+    private static HistoryDetails instance = null;
 
     /**
      * Default constructor for the HistoryDetails class.
      */
     public HistoryDetails() {
+    }
+
+    // Static method to get the singleton instance
+    public static HistoryDetails getInstance() {
+        if (instance == null) {
+            instance = new HistoryDetails();
+        }
+        return instance;
     }
 
     /**
@@ -77,7 +86,7 @@ public class HistoryDetails {
                             totalPostsTextView.setText(String.valueOf(totalPosts));
                             PostsAsEmployerTextView.setText(CurrPostsAsEmployer);
                             PostsAsEmployeeTextView.setText(CurrPostsAsEmployee);
-                            totalIncomeTextView.setText(String.valueOf(totalIncome));
+                            totalIncomeTextView.setText("$" + String.valueOf(totalIncome)); // Add dollar symbol here
                             appliedJobsTextView.setText(String.valueOf(appliedJobs));
                         }
                     } else {
