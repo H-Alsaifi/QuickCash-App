@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.G2QC"
+        tools:targetApi="33">
+        <activity
+            android:name=".display_details.display_details"
+            android:exported="true" />
+        <activity
+            android:name=".welcome_page.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".welcome_page.Welcome"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar">
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDAo-xAoS676VreHt5x60E9n_e7vU3KDL4" />
+        <activity
+            android:name=".login_page.login_page"
+            android:exported="true" />
+        <activity android:name=".location.LocationActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".signup_page.signup"
+            android:exported="true" />
+        <activity
+            android:name=".forgot_password.forgot_password_page"
+            android:exported="true" />
+        <activity
+            android:name=".user_profile.personal_information.RatingExperience"
+            android:exported="true" />
+        <activity
+            android:name=".user_profile.personal_information.userProfile"
+            android:exported="true" />
+        <activity
+            android:name=".submitNewJob.SubmitJobAsEmployer"
+            android:exported="true" />
+        <activity
+            android:name=".submitNewJob.SubmitJobAsEmployee"
+            android:exported="true" />
+        <activity
+            android:name=".main_page.MainPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.G2QC.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".main_page.ui.Employee.EmployeeFragment"
+            android:label="@string/employee_fragment_label" />
+        <activity
+            android:name=".main_page.ui.Employer.EmployerFragment"
+            android:label="@string/employer_fragment_label" />
+
+        <activity android:name=".user_profile.job_details.MyJobActivity" />
+        <activity
+            android:name=".greeting_page.greetingPage"
+            android:exported="true" />
+        <activity
+            android:name=".user_profile.History.MyHistoryActivity"
+            android:exported="true" />
+        <activity android:name=".paypal_integration.ApplyActivity"
+            android:exported="true"/>
+        <activity android:name=".user_profile.employeePreferences.employeePrefDetails"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,291 @@
+04-09 23:48:04.577  6038  6067 I TestRunner: started: testJobDescriptionFieldRequired(com.example.g2_qc.SubmitJobAsEmployerTest)
+04-09 23:48:04.598  6038  6067 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+04-09 23:48:04.631   803   865 D SplashScreenView: Build android.window.SplashScreenView{b2fcc62 V.E...... ......ID 0,0-0,0}
+04-09 23:48:04.631   803   865 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-09 23:48:04.631   803   865 D SplashScreenView: Branding: view: android.view.View{96c11f3 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-09 23:48:04.643   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:04.661   607   650 E libprocessgroup: AddTidToCgroup failed to write '6038'; fd=526: Invalid argument
+04-09 23:48:04.661   607   650 E libprocessgroup: Failed to add task into cgroup
+04-09 23:48:04.667   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e0603000 0x3e0f68000]
+04-09 23:48:04.680  6038  6071 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+04-09 23:48:04.684  6038  6071 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+04-09 23:48:04.692   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e0f68000 0x3e18cd000]
+04-09 23:48:04.693  1175  2067 D EGL_emulation: app_time_stats: avg=1665.33ms min=1665.33ms max=1665.33ms count=1
+04-09 23:48:04.696  6038  6071 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+04-09 23:48:04.696   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e18cd000 0x3e2232000]
+04-09 23:48:04.701   803   886 W Parcel  : Expecting binder but got null!
+04-09 23:48:04.751  1727  1727 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+04-09 23:48:04.755  1727  2508 E HwDetectorWithState: a: 3
+04-09 23:48:04.783   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e2232000 0x3e248c000]
+04-09 23:48:04.786   607  5798 D HostConnection: createUnique: call
+04-09 23:48:04.787   607  5798 D HostConnection: HostConnection::get() New Host Connection established 0x792cf9636dd0, tid 5798
+04-09 23:48:04.793   607  5798 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2
+04-09 23:48:04.798   607  5798 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-09 23:48:04.799   607  5798 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+04-09 23:48:04.814   607  5798 D EGL_emulation: eglCreateContext: 0x792cf9640490: maj 2 min 0 rcv 2
+04-09 23:48:04.847   607  5798 D EGL_emulation: eglMakeCurrent: 0x792cf9640490: ver 2 0 (tinfo 0x792f23b29100) (first time)
+04-09 23:48:04.852   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3196230
+04-09 23:48:04.852   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3196230
+04-09 23:48:04.853   607   623 D HostConnection: createUnique: call
+04-09 23:48:04.857   607   623 D HostConnection: HostConnection::get() New Host Connection established 0x792cf9641c90, tid 623
+04-09 23:48:04.861   607   623 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2
+04-09 23:48:04.869  6038  6038 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+04-09 23:48:04.883  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985 in: PRE_ON_CREATE
+04-09 23:48:04.884  6038  6038 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+04-09 23:48:05.035  6038  6038 W m.example.g2_qc: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+04-09 23:48:05.035  6038  6038 W m.example.g2_qc: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+04-09 23:48:05.043  6038  6038 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10159; state: ENABLED
+04-09 23:48:05.059   803   886 D EGL_emulation: app_time_stats: avg=2065.33ms min=19.66ms max=26233.48ms count=13
+04-09 23:48:05.242  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985 in: CREATED
+04-09 23:48:05.243  6038  6038 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985
+04-09 23:48:05.245  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985 in: STARTED
+04-09 23:48:05.246  6038  6038 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985
+04-09 23:48:05.248  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985 in: RESUMED
+04-09 23:48:05.248  6038  6038 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985
+04-09 23:48:05.309   378  6079 I resolv  : GetAddrInfoHandler::run: {103 103 103 983143 10159 0}
+04-09 23:48:05.310   378  6080 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+04-09 23:48:05.313   378  6081 I resolv  : res_nmkquery: (QUERY, IN, A)
+04-09 23:48:05.328  6038  6069 D HostConnection: createUnique: call
+04-09 23:48:05.329  6038  6069 D HostConnection: HostConnection::get() New Host Connection established 0x792cf960a850, tid 6069
+04-09 23:48:05.330   803   886 D EGL_emulation: app_time_stats: avg=5305.20ms min=5305.20ms max=5305.20ms count=1
+04-09 23:48:05.335  6038  6069 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2
+04-09 23:48:05.342  6038  6069 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-09 23:48:05.342  6038  6069 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+04-09 23:48:05.343   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319d190
+04-09 23:48:05.343   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319d250
+04-09 23:48:05.354  6038  6069 D EGL_emulation: eglCreateContext: 0x792cf960b5d0: maj 2 min 0 rcv 2
+04-09 23:48:05.388  6038  6069 D EGL_emulation: eglMakeCurrent: 0x792cf960b5d0: ver 2 0 (tinfo 0x792f14406080) (first time)
+04-09 23:48:05.397   230   230 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+04-09 23:48:05.397  6038  6069 I Gralloc4: mapper 4.x is not supported
+04-09 23:48:05.399  6038  6069 D HostConnection: createUnique: call
+04-09 23:48:05.400  6038  6069 D HostConnection: HostConnection::get() New Host Connection established 0x792cf960a310, tid 6069
+04-09 23:48:05.400  6038  6069 D goldfish-address-space: allocate: Ask for block of size 0x100
+04-09 23:48:05.400  6038  6069 D goldfish-address-space: allocate: ioctl allocate returned offset 0x3dfffe000 size 0x2000
+04-09 23:48:05.402   230   230 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+04-09 23:48:05.403   229   229 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+04-09 23:48:05.408  6038  6069 W Gralloc4: allocator 4.x is not supported
+04-09 23:48:05.412   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e248c000 0x3e2df1000]
+04-09 23:48:05.418   378  6081 I resolv  : res_nsend: used send_dg 145 terrno: 0
+04-09 23:48:05.418   378  6081 I resolv  : doQuery: rcode=0, ancount=1, return value=145
+04-09 23:48:05.419  6038  6069 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2
+04-09 23:48:05.427   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e2df1000 0x3e3756000]
+04-09 23:48:05.430   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e6604000 0x3e6f69000]
+04-09 23:48:05.455   378  6080 I resolv  : res_nsend: used send_dg 157 terrno: 0
+04-09 23:48:05.456   378  6080 I resolv  : doQuery: rcode=0, ancount=1, return value=157
+04-09 23:48:05.460  6038  6078 D TrafficStats: tagSocket(90) with statsTag=0xffffffff, statsUid=-1
+04-09 23:48:05.490  6038  6069 W Parcel  : Expecting binder but got null!
+04-09 23:48:05.495   607   630 W ziparchive: Unable to open '/data/app/~~BTOA7CnM6sq1jk3s5TleCg==/com.example.g2_qc-2qJFW6WnsXC_Th4UEFRv3g==/base.dm': No such file or directory
+04-09 23:48:05.497   607   630 I ActivityTaskManager: Displayed com.example.g2_qc/.submitNewJob.SubmitJobAsEmployer: +882ms
+04-09 23:48:05.506   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.509   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.509   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.512   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.512   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.513   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.513   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.513   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.540  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:05.541   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.541  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:05.541  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.g2_qc fieldId=-1 fieldName=null extras=null}, false)
+04-09 23:48:05.542  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:05.564   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:05.566   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:05.571   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319be70
+04-09 23:48:05.572   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.572   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.572   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.573   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.573   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.588   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199a70
+04-09 23:48:05.588   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319eb70
+04-09 23:48:05.588   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.589   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.590   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.590   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.590   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.590   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.605   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.605   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.639  6038  6067 W FileTestStorage: Output properties is not supported.
+04-09 23:48:05.641  6038  6067 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+04-09 23:48:05.662  6038  6067 D EventInjectionStrategy: Creating injection strategy with input manager.
+04-09 23:48:05.662  6038  6067 W m.example.g2_qc: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+04-09 23:48:05.663  6038  6067 W m.example.g2_qc: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+04-09 23:48:05.664  6038  6067 W m.example.g2_qc: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+04-09 23:48:05.698  6038  6067 W m.example.g2_qc: Accessing hidden method Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I (unsupported, reflection, allowed)
+04-09 23:48:05.720  6038  6038 W m.example.g2_qc: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+04-09 23:48:05.720  6038  6038 W m.example.g2_qc: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+04-09 23:48:05.721  6038  6038 W m.example.g2_qc: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+04-09 23:48:05.730  6038  6038 W m.example.g2_qc: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (unsupported, reflection, allowed)
+04-09 23:48:05.731  6038  6038 W m.example.g2_qc: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+04-09 23:48:05.731  6038  6038 W m.example.g2_qc: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+04-09 23:48:05.740  6038  6038 I ViewInteraction: Performing 'type text()' action on view view.getId() is <2131296551/com.example.g2_qc:id/job_description>
+04-09 23:48:05.745  6038  6038 W TypeTextAction: Supplied string is empty resulting in no-op (nothing is typed).
+04-09 23:48:05.753   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.763  6038  6038 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296809/com.example.g2_qc:id/submit_job>
+04-09 23:48:05.770  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2076.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192365677, downTime=192365677, deviceId=-1, source=0x1002, displayId=0, eventId=-600428894 }
+04-09 23:48:05.784  7580  7602 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+04-09 23:48:05.784  7580  7602 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+04-09 23:48:05.784   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:05.785   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:05.786  7580  7602 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+04-09 23:48:05.799  7580  7602 I FontLog : Pulling font file for id = 56, cache size = 4 [CONTEXT service_id=132 ]
+04-09 23:48:05.808   607  1750 W InputManager-JNI: Input channel object '42bef8f Splash Screen com.example.g2_qc (client)' was disposed without first being removed with the input manager!
+04-09 23:48:05.812  7580  7602 I FontLog : Pulling font file for id = 56, cache size = 4 [CONTEXT service_id=132 ]
+04-09 23:48:05.855   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.856   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.856   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:05.912  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2076.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192365820, downTime=192365677, deviceId=-1, source=0x1002, displayId=0, eventId=-1036922658 }
+04-09 23:48:05.954   607   623 W InputManager-JNI: Input channel object '6a26962 PopupWindow:8cdbbf7 (client)' was disposed without first being removed with the input manager!
+04-09 23:48:05.970   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3197fd0
+04-09 23:48:05.971   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199a70
+04-09 23:48:05.972   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319edb0
+04-09 23:48:05.972   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319edb0
+04-09 23:48:05.973   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31963b0
+04-09 23:48:05.973   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3197fd0
+04-09 23:48:05.976   607  1750 W InputManager-JNI: Input channel object '17ac56b PopupWindow:9fcc085 (client)' was disposed without first being removed with the input manager!
+04-09 23:48:05.989   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319dc70
+04-09 23:48:06.006  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:06.008  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:06.012  6038  6038 D CompatibilityChangeReporter: Compat change id reported: 163400105; UID 10159; state: ENABLED
+04-09 23:48:06.013  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x2002(Number) imeOptions=0x4000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x2000 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296557 fieldName=null extras=Bundle[mParcelledData.dataSize=240]}, false)
+04-09 23:48:06.014  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:06.030   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e3f83000 0x3e3fd9000]
+04-09 23:48:06.036   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e3756000 0x3e37ac000]
+04-09 23:48:06.044   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e37ac000 0x3e3802000]
+04-09 23:48:06.049  6038  6069 W Parcel  : Expecting binder but got null!
+04-09 23:48:06.059   803   886 D EGL_emulation: app_time_stats: avg=17.66ms min=1.39ms max=49.71ms count=53
+04-09 23:48:06.060  6038  6038 I AssistStructure: Flattened final assist data: 3360 bytes, containing 2 windows, 14 views
+04-09 23:48:06.065  6038  6038 I AssistStructure: Flattened final assist data: 3360 bytes, containing 2 windows, 14 views
+04-09 23:48:06.071   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.078  7580  7580 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+04-09 23:48:06.082  6038  6038 I AssistStructure: Flattened final assist data: 3360 bytes, containing 2 windows, 14 views
+04-09 23:48:06.086 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.android.mdd.service.START dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-09 23:48:06.086 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.mdd.service.START dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+04-09 23:48:06.091  7580  7580 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+04-09 23:48:06.116  7580  7580 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+04-09 23:48:06.121  1055  1055 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:1570830227
+04-09 23:48:06.131  7580  7602 I .gms.persistent: oneway function results for code 1 on binder at 0x792c8966ffd0 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+04-09 23:48:06.308   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.309   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.341  6038  6038 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=an instance of android.widget.EditText and editText.getError() to match is "Please enter a job description"}' assertion on view view.getId() is <2131296551/com.example.g2_qc:id/job_description>
+04-09 23:48:06.367   803   865 D SplashScreenView: Build android.window.SplashScreenView{c681212 V.E...... ......ID 0,0-0,0}
+04-09 23:48:06.367   803   865 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-09 23:48:06.367   803   865 D SplashScreenView: Branding: view: android.view.View{9bd5de3 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-09 23:48:06.375  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985 in: PAUSED
+04-09 23:48:06.377  6038  6038 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985
+04-09 23:48:06.387   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.393   379   379 D Zygote  : Forked child process 6098
+04-09 23:48:06.399   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e0603000 0x3e0f68000]
+04-09 23:48:06.403   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e0f68000 0x3e18cd000]
+04-09 23:48:06.405   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e18cd000 0x3e2232000]
+04-09 23:48:06.406  6098  6098 I mple.g2_qc.test: Late-enabling -Xcheck:jni
+04-09 23:48:06.415   803   886 W Parcel  : Expecting binder but got null!
+04-09 23:48:06.437   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e3802000 0x3e3e05000]
+04-09 23:48:06.438  6098  6098 W mple.g2_qc.test: Unexpected CPU variant for x86: x86_64.
+04-09 23:48:06.438  6098  6098 W mple.g2_qc.test: Known variants: atom, sandybridge, silvermont, kabylake, default
+04-09 23:48:06.445   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.445   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.450   478   491 I adbd    : jdwp connection from 6098
+04-09 23:48:06.515  6098  6098 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10160; state: ENABLED
+04-09 23:48:06.532  6098  6098 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+04-09 23:48:06.535  6098  6098 D nativeloader: Configuring classloader-namespace for other apk /system/framework/android.test.mock.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/data/app/~~oRvMmbVkm8lmBQA-JMsZUQ==/com.example.g2_qc.test-uZ6TZhgsCNPJ7uJQOMm8UA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.g2_qc.test
+04-09 23:48:06.536  6098  6098 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+04-09 23:48:06.540  6098  6098 W mple.g2_qc.test: ClassLoaderContext shared library size mismatch. Expected=0, found=2 (PCL[] | PCL[]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*849501951]})
+04-09 23:48:06.542  6098  6098 D nativeloader: Configuring classloader-namespace for other apk /system/framework/android.test.runner.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/data/app/~~oRvMmbVkm8lmBQA-JMsZUQ==/com.example.g2_qc.test-uZ6TZhgsCNPJ7uJQOMm8UA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.g2_qc.test
+04-09 23:48:06.543  6098  6098 W ziparchive: Unable to open '/data/app/~~oRvMmbVkm8lmBQA-JMsZUQ==/com.example.g2_qc.test-uZ6TZhgsCNPJ7uJQOMm8UA==/base.dm': No such file or directory
+04-09 23:48:06.544  6098  6098 W ziparchive: Unable to open '/data/app/~~oRvMmbVkm8lmBQA-JMsZUQ==/com.example.g2_qc.test-uZ6TZhgsCNPJ7uJQOMm8UA==/base.dm': No such file or directory
+04-09 23:48:06.548  6038  6069 D EGL_emulation: app_time_stats: avg=18.02ms min=1.55ms max=149.00ms count=49
+04-09 23:48:06.589  6098  6098 D nativeloader: Configuring classloader-namespace for other apk /data/app/~~oRvMmbVkm8lmBQA-JMsZUQ==/com.example.g2_qc.test-uZ6TZhgsCNPJ7uJQOMm8UA==/base.apk. target_sdk_version=33, uses_libraries=, library_path=/data/app/~~oRvMmbVkm8lmBQA-JMsZUQ==/com.example.g2_qc.test-uZ6TZhgsCNPJ7uJQOMm8UA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.g2_qc.test
+04-09 23:48:06.597  6098  6098 V GraphicsEnvironment: ANGLE Developer option for 'com.example.g2_qc.test' set to: 'default'
+04-09 23:48:06.597  6098  6098 V GraphicsEnvironment: ANGLE GameManagerService for com.example.g2_qc.test: false
+04-09 23:48:06.597  6098  6098 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+04-09 23:48:06.601  6098  6098 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+04-09 23:48:06.601  6098  6098 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+04-09 23:48:06.619  6098  6131 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+04-09 23:48:06.632  6098  6131 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+04-09 23:48:06.635  6098  6131 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+04-09 23:48:06.639   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.640   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.640   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.640   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.640   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:06.699   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:06.699   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:06.715   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e6f69000 0x3e756c000]
+04-09 23:48:06.745  6098  6130 D HostConnection: createUnique: call
+04-09 23:48:06.746  6098  6130 D HostConnection: HostConnection::get() New Host Connection established 0x792cf960c890, tid 6130
+04-09 23:48:06.753  6098  6130 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2
+04-09 23:48:06.756  6098  6130 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+04-09 23:48:06.756  6098  6130 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+04-09 23:48:06.767  6098  6130 D EGL_emulation: eglCreateContext: 0x792cf960c110: maj 2 min 0 rcv 2
+04-09 23:48:06.800  6098  6130 D EGL_emulation: eglMakeCurrent: 0x792cf960c110: ver 2 0 (tinfo 0x792f1f400080) (first time)
+04-09 23:48:06.813   230   230 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+04-09 23:48:06.813  6098  6130 I Gralloc4: mapper 4.x is not supported
+04-09 23:48:06.815  6098  6130 D HostConnection: createUnique: call
+04-09 23:48:06.816  6098  6130 D HostConnection: HostConnection::get() New Host Connection established 0x792cf960c7d0, tid 6130
+04-09 23:48:06.817  6098  6130 D goldfish-address-space: allocate: Ask for block of size 0x100
+04-09 23:48:06.817  6098  6130 D goldfish-address-space: allocate: ioctl allocate returned offset 0x3dfffe000 size 0x2000
+04-09 23:48:06.818   230   230 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+04-09 23:48:06.819   229   229 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+04-09 23:48:06.820  6098  6130 W Gralloc4: allocator 4.x is not supported
+04-09 23:48:06.825   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e756c000 0x3e7ed1000]
+04-09 23:48:06.837  6098  6130 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2
+04-09 23:48:06.846   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e4000000 0x3e4965000]
+04-09 23:48:06.849   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e4965000 0x3e52ca000]
+04-09 23:48:06.868  6098  6130 W Parcel  : Expecting binder but got null!
+04-09 23:48:06.886   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:06.886   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:06.905   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e52ca000 0x3e5c2f000]
+04-09 23:48:06.910   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f0965000]
+04-09 23:48:06.921   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f0965000 0x3f12ca000]
+04-09 23:48:06.926   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3f12ca000 0x3f1c2f000]
+04-09 23:48:06.938   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f1c2f000 0x3f2594000]
+04-09 23:48:06.950   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f2594000 0x3f2ef9000]
+04-09 23:48:06.951   803   886 D EGL_emulation: app_time_stats: avg=118.87ms min=4.77ms max=1254.70ms count=13
+04-09 23:48:06.955   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3195e70
+04-09 23:48:06.955   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319e690
+04-09 23:48:06.955   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319e690
+04-09 23:48:06.955   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3195e70
+04-09 23:48:06.962 10015 10015 W A       : Can't get WAA status for Mavatar!
+04-09 23:48:06.962 10015 10015 W A       : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.z.b(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.at.a(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.tracing.ec.a(PG:2)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.aj.a(PG:2)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.ac.apply(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.h.e(PG:2)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.j.run(PG:9)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.d.i(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.d.iq(PG:5)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.j.h(PG:2)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.ax.d(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.au.a(PG:5)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.dr.c(PG:5)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.dp.run(PG:6)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.concurrent.ak.run(PG:6)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.apps.tiktok.tracing.ei.run(PG:2)
+04-09 23:48:06.962 10015 10015 W A       : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:463)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.dy.a(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.cv.run(PG:4)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.google.common.util.concurrent.dz.run(PG:1)
+04-09 23:48:06.962 10015 10015 W A       : 	at android.os.Handler.handleCallback(Handler.java:942)
+04-09 23:48:06.962 10015 10015 W A       : 	at android.os.Handler.dispatchMessage(Handler.java:99)
+04-09 23:48:06.962 10015 10015 W A       : 	at android.os.Looper.loopOnce(Looper.java:201)
+04-09 23:48:06.962 10015 10015 W A       : 	at android.os.Looper.loop(Looper.java:288)
+04-09 23:48:06.962 10015 10015 W A       : 	at android.app.ActivityThread.main(ActivityThread.java:7872)
+04-09 23:48:06.962 10015 10015 W A       : 	at java.lang.reflect.Method.invoke(Native Method)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+04-09 23:48:06.962 10015 10015 W A       : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:936)
+04-09 23:48:06.963  1727  1727 I GsaVoiceInteractionSrv: Handling ACTION_START_HOTWORD
+04-09 23:48:06.963  1727  2438 I GsaVoiceInteractionSrv: disregardVoiceMatch: false
+04-09 23:48:06.964  1727  2438 I GsaVoiceInteractionSrv: Cannot start hotword, hotword has been explicitly disabled.
+04-09 23:48:07.005   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319eff0
+04-09 23:48:07.008  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985 in: STOPPED
+04-09 23:48:07.008  6038  6038 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985
+04-09 23:48:07.010  6038  6038 D AutofillManager: onActivityFinishing(): calling cancelLocked()
+04-09 23:48:07.011  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@3295985 in: DESTROYED
+04-09 23:48:07.012  6038  6038 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+04-09 23:48:07.015  6038  6067 I TestRunner: finished: testJobDescriptionFieldRequired(com.example.g2_qc.SubmitJobAsEmployerTest)

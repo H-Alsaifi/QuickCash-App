@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".greeting_page.greetingPage"
+    android:id="@+id/fragmentContainer">
+
+
+    <TextView
+        android:id="@+id/welcomeUser"
+        android:layout_width="174dp"
+        android:layout_height="78dp"
+        android:text=""
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/greetingText"
+        app:layout_constraintStart_toStartOf="@+id/greetingText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/greetingText"
+        android:layout_width="347dp"
+        android:layout_height="281dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="204dp"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="10dp"
+        android:text="Quick Cash is the easiest way to fulfill employment needs. Whether you are an employer or a striving employee, We've got you covered. Click the button below to get started!"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/getStartedButtom"
+        android:layout_width="199dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="73dp"
+        android:text="Get Started"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/greetingText"
+        app:layout_constraintStart_toStartOf="@+id/greetingText"
+        app:layout_constraintTop_toBottomOf="@+id/greetingText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

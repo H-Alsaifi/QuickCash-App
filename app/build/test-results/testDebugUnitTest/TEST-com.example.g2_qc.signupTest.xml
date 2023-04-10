@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.g2_qc.signupTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-03-20T02:07:13" hostname="LAPTOP-1H5A68A4" time="0.009">
+  <properties/>
+  <testcase name="checkInvalidAge" classname="com.example.g2_qc.signupTest" time="0.006"/>
+  <testcase name="checkInvalidLN" classname="com.example.g2_qc.signupTest" time="0.0"/>
+  <testcase name="checkValidLN" classname="com.example.g2_qc.signupTest" time="0.001"/>
+  <testcase name="checkValidAge" classname="com.example.g2_qc.signupTest" time="0.0"/>
+  <testcase name="checkInvalidName" classname="com.example.g2_qc.signupTest" time="0.001"/>
+  <testcase name="checkValidFirstName" classname="com.example.g2_qc.signupTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

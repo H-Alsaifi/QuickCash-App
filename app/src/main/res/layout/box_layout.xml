@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:layout_margin="1dp"
+    android:layout_marginBottom="20dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/aqua_dark"
+        android:layout_margin=".5mm">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:padding="4dp">
+
+
+            <ImageView
+                android:id="@+id/box_image"
+                android:layout_width="128dp"
+                android:layout_height="118dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/box_empty_image"/>
+
+
+            <TextView
+                android:id="@+id/box_title"
+                android:layout_width="272dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="-22dp"
+                android:layout_toEndOf="@+id/box_image"
+                android:fontFamily="serif"
+                android:gravity="start"
+                android:text="Box Title"
+                android:textColor="@color/aqua_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/box_content"
+                android:layout_width="228dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/box_title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="-39dp"
+                android:layout_toEndOf="@+id/box_image"
+                android:text="Box Content"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/box_wage"
+                android:layout_width="217dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="102dp"
+                android:layout_marginEnd="50dp"
+                android:layout_toEndOf="@+id/box_image"
+                android:text="Box Content"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/more_details"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="-16dp"
+                android:text="Click For more details"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+</FrameLayout>

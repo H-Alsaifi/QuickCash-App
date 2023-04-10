@@ -1,0 +1,373 @@
+04-09 23:48:07.034  6038  6067 I TestRunner: started: testSubmitJobButtonEnabledWhenFieldsFilled(com.example.g2_qc.SubmitJobAsEmployerTest)
+04-09 23:48:07.040   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199050
+04-09 23:48:07.041   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199650
+04-09 23:48:07.042   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199290
+04-09 23:48:07.042   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319bb10
+04-09 23:48:07.044   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3196ef0
+04-09 23:48:07.050  6038  6067 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+04-09 23:48:07.094  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf in: PRE_ON_CREATE
+04-09 23:48:07.095  6038  6038 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+04-09 23:48:07.103   803   865 D SplashScreenView: Build android.window.SplashScreenView{e84d2a4 V.E...... ......ID 0,0-0,0}
+04-09 23:48:07.103   803   865 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-09 23:48:07.103   803   865 D SplashScreenView: Branding: view: android.view.View{593d80d G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-09 23:48:07.106   803   886 D EGL_emulation: app_time_stats: avg=13.21ms min=1.08ms max=58.28ms count=51
+04-09 23:48:07.115   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.115   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.116   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.116   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.117   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.117   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.117   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.118   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.118   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.119   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.127  6038  6038 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+04-09 23:48:07.152  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf in: CREATED
+04-09 23:48:07.153  6038  6038 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf
+04-09 23:48:07.157   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.157   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.157  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf in: STARTED
+04-09 23:48:07.157  6038  6038 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf
+04-09 23:48:07.158  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf in: RESUMED
+04-09 23:48:07.158  6038  6038 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf
+04-09 23:48:07.162   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e248c000 0x3e2df1000]
+04-09 23:48:07.172   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e2df1000 0x3e3756000]
+04-09 23:48:07.180   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e6604000 0x3e6f69000]
+04-09 23:48:07.189  1727  1727 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+04-09 23:48:07.190  1727  2440 E HwDetectorWithState: a: 3
+04-09 23:48:07.193   803   886 W Parcel  : Expecting binder but got null!
+04-09 23:48:07.247   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f2ef9000 0x3f385e000]
+04-09 23:48:07.255   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.261   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f4000000 0x3f4965000]
+04-09 23:48:07.265   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f4965000 0x3f52ca000]
+04-09 23:48:07.275   607  1854 W InputManager-JNI: Input channel object 'a7f6740 Splash Screen com.example.g2_qc.test (client)' was disposed without first being removed with the input manager!
+04-09 23:48:07.284  6038  6069 W Parcel  : Expecting binder but got null!
+04-09 23:48:07.293   607   630 W ziparchive: Unable to open '/data/app/~~BTOA7CnM6sq1jk3s5TleCg==/com.example.g2_qc-2qJFW6WnsXC_Th4UEFRv3g==/base.dm': No such file or directory
+04-09 23:48:07.295   607   630 I ActivityTaskManager: Displayed com.example.g2_qc/.submitNewJob.SubmitJobAsEmployer: +236ms
+04-09 23:48:07.305   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.306   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.308   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.308   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.309   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.322  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:07.323  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:07.323  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.g2_qc fieldId=-1 fieldName=null extras=null}, false)
+04-09 23:48:07.325  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:07.369  6038  6046 I m.example.g2_qc: Compiler allocated 4533KB to compile void android.view.ViewRootImpl.performTraversals()
+04-09 23:48:07.371   607  1854 W InputManager-JNI: Input channel object '67ffdd2 com.example.g2_qc.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+04-09 23:48:07.456   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199350
+04-09 23:48:07.456   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3195c90
+04-09 23:48:07.456   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31974f0
+04-09 23:48:07.456   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31974f0
+04-09 23:48:07.456   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3195c90
+04-09 23:48:07.457   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3195c90
+04-09 23:48:07.458   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.470   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31974f0
+04-09 23:48:07.471   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319be70
+04-09 23:48:07.488   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.489   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.507  6038  6038 I ViewInteraction: Performing 'type text(Test Job)' action on view view.getId() is <2131296555/com.example.g2_qc:id/job_name>
+04-09 23:48:07.512   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319bf30
+04-09 23:48:07.512   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319bf30
+04-09 23:48:07.518   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319daf0
+04-09 23:48:07.518   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319daf0
+04-09 23:48:07.518   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319bf30
+04-09 23:48:07.518  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=359.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192367419, downTime=192367419, deviceId=-1, source=0x1002, displayId=0, eventId=-253009143 }
+04-09 23:48:07.523   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.523   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.555   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199590
+04-09 23:48:07.567  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=359.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192367461, downTime=192367419, deviceId=-1, source=0x1002, displayId=0, eventId=-765447167 }
+04-09 23:48:07.578  6038  6038 D InputMethodManager: showSoftInput() view=androidx.appcompat.widget.AppCompatEditText{672c3ac VFED..CL. .F.P..ID 110,71-971,209 #7f09012b app:id/job_name aid=1073741825} flags=0 reason=SHOW_SOFT_INPUT
+04-09 23:48:07.578  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:07.579  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:07.582  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x20001(Normal) imeOptions=0x48000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296555 fieldName=null extras=Bundle[mParcelledData.dataSize=240]}, false)
+04-09 23:48:07.584  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:07.591  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.592  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2023 onStartInputView(EditorInfo{inputType=0x20001(Normal) imeOptions=0x48000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296555 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=8, android.support.text.emoji.emojiCompat_replaceAll=false}]}, false)
+04-09 23:48:07.594  1450  1535 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.598  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:07.600  6038  6038 I AssistStructure: Flattened final assist data: 3160 bytes, containing 1 windows, 12 views
+04-09 23:48:07.600  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+04-09 23:48:07.602  1450  1450 I AndroidIME: AbstractIme.onActivate():91 LatinIme.onActivate() : EditorInfo = inputType=0x20001(Normal) imeOptions=0x48000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296555 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=8, android.support.text.emoji.emojiCompat_replaceAll=false}], IncognitoMode = false, DeviceLocked = false
+04-09 23:48:07.603  1450  1450 I Delight5Facilitator: Delight5Facilitator.initializeForIme():777 initializeForIme() : Locale = [en_US], layout = qwerty
+04-09 23:48:07.603  1450  1450 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+04-09 23:48:07.603  1450  1450 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+04-09 23:48:07.604   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.604   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.606  1450  1450 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1295 inline flag updated to:false
+04-09 23:48:07.608  1450  5867 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():202 maybeScheduleAutoPackDownloadForFallback()
+04-09 23:48:07.608  1450  5867 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+04-09 23:48:07.613  1450  1450 I KeyboardWrapper: KeyboardWrapper.consumeEvent():273 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+04-09 23:48:07.618   607  1868 W InputManager-JNI: Input channel object '3d58bdf Splash Screen com.example.g2_qc (client)' was disposed without first being removed with the input manager!
+04-09 23:48:07.628  7580  7580 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+04-09 23:48:07.635  1055  1055 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:115151896
+04-09 23:48:07.638  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():44 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+04-09 23:48:07.639  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.641  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():44 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+04-09 23:48:07.643  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.645  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.645  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.646  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:07.648  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:07.653  1450  1450 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():382 No private IME option set to start voice input.
+04-09 23:48:07.654  6038  6038 W OnBackInvokedCallback: OnBackInvokedCallback is not enabled for the application.
+04-09 23:48:07.654  6038  6038 W OnBackInvokedCallback: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+04-09 23:48:07.663 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.firebase.dynamiclinks.service.START pkg=com.google.android.gms }
+04-09 23:48:07.663 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.firebase.dynamiclinks.service.START pkg=com.google.android.gms }
+04-09 23:48:07.663   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e0000000 0x3e0920000]
+04-09 23:48:07.694   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e0920000 0x3e1240000]
+04-09 23:48:07.698  6038  6038 D InsetsController: show(ime(), fromIme=true)
+04-09 23:48:07.699  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.700  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:07.701  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:07.702  1450  2327 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():442 setKeyboardLayout()
+04-09 23:48:07.704   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.721   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e1240000 0x3e1b60000]
+04-09 23:48:07.736 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:07.736 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:07.751 10627 10627 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:07.752 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:07.752 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:07.761 10627 10627 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:07.772   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.775   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:07.788   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199650
+04-09 23:48:07.788   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319edb0
+04-09 23:48:07.790   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3192090
+04-09 23:48:07.790   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3192090
+04-09 23:48:07.792   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319edb0
+04-09 23:48:07.820  1450  1450 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+04-09 23:48:07.824  6038  6038 D UiControllerImpl: Injecting string: "Test Job"
+04-09 23:48:07.846   607  2053 D InputDispatcher: Touch mode switch rejected, caller (pid=0, uid=10159) doesn't own the focused window nor none of the previously interacted window
+04-09 23:48:07.868  1450  1450 W AndroidSpellCheckerService: AndroidSpellCheckerService.initialize():81 initialize...
+04-09 23:48:07.868  1450  1450 I ShortcutsDataManager: ShortcutsDataManager.onContentChanged():70 onContentChanged()
+04-09 23:48:07.868  1450  1450 I ContactsDataManager: ContactsDataManager.onContentChanged():155 onContentChanged()
+04-09 23:48:07.868  1450  1450 W AndroidSpellCheckerService: AndroidSpellCheckerService.initialize():93 initialize...done
+04-09 23:48:08.000  1450  2327 I native  : I0000 00:00:1681094888.000665    2327 input-context-store.cc:179] Using roll back input context for operation: [FetchSuggestions] rolled back operation: [OverrideDecodedCandidates] reason: client [3186] vs decoder [3188]
+04-09 23:48:08.009  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3267<3268, inputStateId=3188, lastInputStateId=3186
+04-09 23:48:08.099  6038  6038 I ViewInteraction: Performing 'type text(This is a test job)' action on view view.getId() is <2131296551/com.example.g2_qc:id/job_description>
+04-09 23:48:08.103  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=830.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192368011, downTime=192368011, deviceId=-1, source=0x1002, displayId=0, eventId=-290971531 }
+04-09 23:48:08.113   803   886 D EGL_emulation: app_time_stats: avg=17.59ms min=2.58ms max=55.05ms count=51
+04-09 23:48:08.151  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=830.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192368054, downTime=192368011, deviceId=-1, source=0x1002, displayId=0, eventId=-45408579 }
+04-09 23:48:08.153  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2266
+04-09 23:48:08.153  1450  1450 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+04-09 23:48:08.154  6038  6038 D InputMethodManager: showSoftInput() view=androidx.appcompat.widget.AppCompatEditText{a9bd5f VFED..CL. .F.P..ID 110,281-971,941 #7f090127 app:id/job_description aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+04-09 23:48:08.158  1450  1450 I InputBundle: InputBundle.consumeEvent():894 Skip consuming an event as keyboard status is 0
+04-09 23:48:08.159  1450  1450 I KeyboardWrapper: KeyboardWrapper.consumeEvent():273 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+04-09 23:48:08.160  1450  1450 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+04-09 23:48:08.160  1450  2327 I native  : I0000 00:00:1681094888.370521    2327 input-context-store.cc:239] Ignoring stale client request for FetchSuggestions
+04-09 23:48:08.162  1450  2327 I native  : I0000 00:00:1681094888.371825    2327 input-context-store.cc:162] Ignoring stale client request for OverrideDecodedCandidates
+04-09 23:48:08.162  1450  1450 I AndroidIME: AbstractIme.onDeactivate():213 LatinIme.onDeactivate()
+04-09 23:48:08.164  6038  6038 W RemoteInputConnectionImpl: setComposingRegion on inactive InputConnection
+04-09 23:48:08.169  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:08.170  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:08.170  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x20001(Normal) imeOptions=0x4c000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296551 fieldName=null extras=Bundle[mParcelledData.dataSize=240]}, false)
+04-09 23:48:08.170  1450  2456 E native  : E0000 00:00:1681094888.261426    2456 keyboard.cc:26] Cannot create a keyboard with 0 valid keys
+04-09 23:48:08.175  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:08.176  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2023 onStartInputView(EditorInfo{inputType=0x20001(Normal) imeOptions=0x4c000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296551 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=8, android.support.text.emoji.emojiCompat_replaceAll=false}]}, false)
+04-09 23:48:08.177  1450  1535 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.178  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:08.179  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+04-09 23:48:08.179  1450  1450 I AndroidIME: AbstractIme.onActivate():91 LatinIme.onActivate() : EditorInfo = inputType=0x20001(Normal) imeOptions=0x4c000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296551 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=8, android.support.text.emoji.emojiCompat_replaceAll=false}], IncognitoMode = false, DeviceLocked = false
+04-09 23:48:08.180  1450  1450 I Delight5Facilitator: Delight5Facilitator.initializeForIme():777 initializeForIme() : Locale = [en_US], layout = qwerty
+04-09 23:48:08.181  1450  1450 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+04-09 23:48:08.181  1450  1450 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+04-09 23:48:08.182  1450  1450 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1295 inline flag updated to:false
+04-09 23:48:08.182  1450  5867 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():202 maybeScheduleAutoPackDownloadForFallback()
+04-09 23:48:08.182  1450  5867 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+04-09 23:48:08.184  1450  1450 I KeyboardWrapper: KeyboardWrapper.consumeEvent():273 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+04-09 23:48:08.192  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():44 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+04-09 23:48:08.193  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.193  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():44 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+04-09 23:48:08.194  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.195  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.195  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.195  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:08.196  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:08.200  1450  1450 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():382 No private IME option set to start voice input.
+04-09 23:48:08.201  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.202  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.202  6038  6038 W OnBackInvokedCallback: OnBackInvokedCallback is not enabled for the application.
+04-09 23:48:08.202  6038  6038 W OnBackInvokedCallback: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+04-09 23:48:08.204   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:08.204   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:08.204   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:08.204   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:08.205   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:08.205  6038  6038 D InsetsController: show(ime(), fromIme=true)
+04-09 23:48:08.208  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3274<3277, inputStateId=0, lastInputStateId=3197
+04-09 23:48:08.209  1450  1450 I ShortcutsDataManager: AbstractContentDataManager.startImportContentTask():238 startImportContentTask()
+04-09 23:48:08.210  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.210  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:08.211  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:08.212  1450  2327 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():442 setKeyboardLayout()
+04-09 23:48:08.215  1450  1714 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.doInBackground():252 doInBackground()
+04-09 23:48:08.216  1450  1714 I PersonalDictionaryDataHandler: PersonalDictionaryDataHandler.beginProcess():111 LanguageTags = [en-US]
+04-09 23:48:08.220  6038  6038 D InsetsController: show(ime(), fromIme=true)
+04-09 23:48:08.232 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:08.232 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:08.235  1450  1714 I ShortcutsDataManager: AbstractContentDataManager.importRecords():342 importRecords() : Success : Count = 0
+04-09 23:48:08.237  1450  1714 I ShortcutsDataManager: AbstractContentDataManager.importContentData():292 importContentData() : Ending import process
+04-09 23:48:08.239 10627 10627 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:08.240  1450  2327 I Delight5Decoder: Delight5DecoderWrapper.unloadLanguageModel():831 unloadLanguageModel() : 4, version [n/a]
+04-09 23:48:08.247 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:08.247 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:08.255 10627 10627 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:08.263  1450  1714 I PersonalLanguageModelUpdater: PersonalLanguageModelUpdater$UpdateOperation.performInternal():160 run() : Added 0 words and 0 shortcuts
+04-09 23:48:08.263  1450  1714 I DynamicLanguageModelOperation: DynamicLanguageModelOperation.perform():38 perform() : 4 : ccz : Completed
+04-09 23:48:08.264  1450  2327 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():626 loadLanguageModel() : 4, version [n/a]
+04-09 23:48:08.264  1450  2327 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():667 Loaded dynamic LM 4.en
+04-09 23:48:08.265  1450  1450 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.onPostExecute():263 onPostExecute() : Result = [2,0]
+04-09 23:48:08.265  1450  1450 I ShortcutsDataManager: ShortcutsDataManager.onImportFinished():80 onImportFinished() : Result = 2 : Count = 0
+04-09 23:48:08.384  6038  6038 D UiControllerImpl: Injecting string: "This is a test job"
+04-09 23:48:08.388  1450  1450 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+04-09 23:48:08.409  6038  6069 D EGL_emulation: app_time_stats: avg=44.90ms min=11.93ms max=248.32ms count=25
+04-09 23:48:08.416   607  1550 D InputDispatcher: Touch mode switch rejected, caller (pid=0, uid=10159) doesn't own the focused window nor none of the previously interacted window
+04-09 23:48:08.760  1450  1725 D EGL_emulation: app_time_stats: avg=48.10ms min=15.24ms max=203.49ms count=22
+04-09 23:48:08.783  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3296<3298, inputStateId=3219, lastInputStateId=3221
+04-09 23:48:08.849  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3303<3306, inputStateId=3228, lastInputStateId=3230
+04-09 23:48:08.857  1450  2327 I native  : I0000 00:00:1681094889.772636    2327 input-context-store.cc:239] Ignoring stale client request for FetchSuggestions
+04-09 23:48:08.862  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3306<3308, inputStateId=3231, lastInputStateId=3231
+04-09 23:48:08.901  1450  1450 I KeyboardViewController: KeyboardViewController.lambda$showSelfAndAncestors$6():610 current view doesn't has the priority com.google.android.libraries.inputmethod.accesspoint.widget.AccessPointsBar{e33bf6f I.E...... ......ID 116,0-952,121 #7f0b0017 app:id/0_resource_name_obfuscated} to show itself, DEFAULT
+04-09 23:48:08.914  1450  2327 I native  : I0000 00:00:1681094889.828908    2327 input-context-store.cc:239] Ignoring stale client request for FetchSuggestions
+04-09 23:48:08.917  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3310<3312, inputStateId=3234, lastInputStateId=3234
+04-09 23:48:08.945  1450  1450 I KeyboardViewController: KeyboardViewController.lambda$showSelfAndAncestors$6():610 current view doesn't has the priority com.google.android.libraries.inputmethod.accesspoint.widget.AccessPointsBar{e33bf6f I.E...... ......ID 116,0-952,121 #7f0b0017 app:id/0_resource_name_obfuscated} to show itself, DEFAULT
+04-09 23:48:08.950  1450  2327 I native  : I0000 00:00:1681094889.040641    2327 input-context-store.cc:239] Ignoring stale client request for FetchSuggestions
+04-09 23:48:08.950  1450  2327 I native  : I0000 00:00:1681094889.041371    2327 input-context-store.cc:162] Ignoring stale client request for OverrideDecodedCandidates
+04-09 23:48:08.959  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3312<3314, inputStateId=0, lastInputStateId=3235
+04-09 23:48:08.984  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3316<3319, inputStateId=3239, lastInputStateId=3241
+04-09 23:48:08.989  1450  2327 I native  : I0000 00:00:1681094889.080401    2327 input-context-store.cc:239] Ignoring stale client request for FetchSuggestions
+04-09 23:48:08.993  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3319<3321, inputStateId=3242, lastInputStateId=3242
+04-09 23:48:09.024  6038  6038 I ViewInteraction: Performing 'type text(50)' action on view view.getId() is <2131296557/com.example.g2_qc:id/job_payment>
+04-09 23:48:09.026  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1300.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192368934, downTime=192368934, deviceId=-1, source=0x1002, displayId=0, eventId=-349517642 }
+04-09 23:48:09.068  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1300.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192368975, downTime=192368934, deviceId=-1, source=0x1002, displayId=0, eventId=-607836482 }
+04-09 23:48:09.072  6038  6038 D InputMethodManager: showSoftInput() view=androidx.appcompat.widget.AppCompatEditText{983e875 VFED..CL. .F.P..ID 110,1012-971,1150 #7f09012d app:id/job_payment aid=1073741826} flags=0 reason=SHOW_SOFT_INPUT
+04-09 23:48:09.072  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2266
+04-09 23:48:09.073  1450  1450 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+04-09 23:48:09.077  6038  6038 W RemoteInputConnectionImpl: setComposingRegion on inactive InputConnection
+04-09 23:48:09.084  1450  1450 I InputBundle: InputBundle.consumeEvent():894 Skip consuming an event as keyboard status is 0
+04-09 23:48:09.085  1450  1450 I KeyboardWrapper: KeyboardWrapper.consumeEvent():273 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+04-09 23:48:09.086  1450  1450 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+04-09 23:48:09.087  1450  2327 I native  : I0000 00:00:1681094890.002533    2327 input-context-store.cc:239] Ignoring stale client request for FetchSuggestions
+04-09 23:48:09.089  1450  2327 I native  : I0000 00:00:1681094890.003805    2327 input-context-store.cc:162] Ignoring stale client request for OverrideDecodedCandidates
+04-09 23:48:09.089  1450  1450 I AndroidIME: AbstractIme.onDeactivate():213 LatinIme.onDeactivate()
+04-09 23:48:09.090  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:09.092  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:09.093  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x2002(Number) imeOptions=0x4000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x2000 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296557 fieldName=null extras=Bundle[mParcelledData.dataSize=240]}, false)
+04-09 23:48:09.095  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:09.099  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2023 onStartInputView(EditorInfo{inputType=0x2002(Number) imeOptions=0x4000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x2000 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296557 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=8, android.support.text.emoji.emojiCompat_replaceAll=false}]}, false)
+04-09 23:48:09.101  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:09.101  1450  1535 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.102  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+04-09 23:48:09.104  1450  2456 E native  : E0000 00:00:1681094889.189481    2456 keyboard.cc:26] Cannot create a keyboard with 0 valid keys
+04-09 23:48:09.105  1450  1450 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():44 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+04-09 23:48:09.106  1450  1450 W Keyboard: Keyboard.getKeyboardViewHelper():611 null helper is returned: keyboardDef=hyz{className=.latin.keyboard.LatinNumberKeyboard, id=#0x7f0b062a, initialStates=0, keyboardViewDefs=[hzr{direction=LOCALE, id=#0x7f0b013c, isScalable=false, layoutId=#0x7f0e03db, type=HEADER, touchable=true}, hzr{direction=null, id=#0x7f0b013c, isScalable=true, layoutId=#0x7f0e041e, type=BODY, touchable=true}], keyTextSizeRatio=1.0, persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e04a2, recentKeyLayoutId=0, recentKeyPopupLayoutId=0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=0}, type=FLOATING_CANDIDATES, helpersCreated=[hro@14ec634, hro@f266c5d, null],
+04-09 23:48:09.107  1450  1450 W Keyboard: Keyboard.getKeyboardViewHelper():611 null helper is returned: keyboardDef=hyz{className=.latin.keyboard.LatinNumberKeyboard, id=#0x7f0b062a, initialStates=0, keyboardViewDefs=[hzr{direction=LOCALE, id=#0x7f0b013c, isScalable=false, layoutId=#0x7f0e03db, type=HEADER, touchable=true}, hzr{direction=null, id=#0x7f0b013c, isScalable=true, layoutId=#0x7f0e041e, type=BODY, touchable=true}], keyTextSizeRatio=1.0, persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e04a2, recentKeyLayoutId=0, recentKeyPopupLayoutId=0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=0}, type=FLOATING_CANDIDATES, helpersCreated=[hro@14ec634, hro@f266c5d, null],
+04-09 23:48:09.108  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.109  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.109  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.109  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:09.110  1450  1450 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+04-09 23:48:09.116  1450  1450 I CurrentMicStatusHolder: CurrentMicStatusHolder.onStartInputView():79 Current Mic status = {MicIconHidden-SettingOff,MicIconHidden-PasswordOrNumberOrDateInputType,}
+04-09 23:48:09.116  1450  1450 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():382 No private IME option set to start voice input.
+04-09 23:48:09.117  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.118   803   886 D EGL_emulation: app_time_stats: avg=5.14ms min=1.01ms max=31.96ms count=58
+04-09 23:48:09.120  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.121  6038  6038 W OnBackInvokedCallback: OnBackInvokedCallback is not enabled for the application.
+04-09 23:48:09.121  6038  6038 W OnBackInvokedCallback: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+04-09 23:48:09.124  6038  6038 D InsetsController: show(ime(), fromIme=true)
+04-09 23:48:09.127  6038  6038 D InsetsController: show(ime(), fromIme=true)
+04-09 23:48:09.134  1450  1450 W InputContextProxyV4: InputContextProxyV4.applyClientDiffInternal():896 Ignore [FetchSuggestions] diff due to stale request: 3323<3324, inputStateId=0, lastInputStateId=3245
+04-09 23:48:09.138 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:09.139 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:09.141  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.142  1450  1450 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():117 Get device mode phone by ui mode:1 and smallestScreenWidthDp:393
+04-09 23:48:09.148 10627 10627 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:09.156 10627 10627 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:09.157 10627 10627 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:09.164 10627 10627 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+04-09 23:48:09.310  6038  6038 D UiControllerImpl: Injecting string: "50"
+04-09 23:48:09.314   607  2053 D InputDispatcher: Touch mode switch rejected, caller (pid=0, uid=10159) doesn't own the focused window nor none of the previously interacted window
+04-09 23:48:09.371  6038  6038 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=view.isEnabled() is <true>}' assertion on view view.getId() is <2131296809/com.example.g2_qc:id/submit_job>
+04-09 23:48:09.409   803   865 D SplashScreenView: Build android.window.SplashScreenView{b420172 V.E...... ......ID 0,0-0,0}
+04-09 23:48:09.409   803   865 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-09 23:48:09.409   803   865 D SplashScreenView: Branding: view: android.view.View{7b789c3 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-09 23:48:09.412  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf in: PAUSED
+04-09 23:48:09.413  6038  6038 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf
+04-09 23:48:09.448   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e248c000 0x3e2dac000]
+04-09 23:48:09.466   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e2dac000 0x3e3711000]
+04-09 23:48:09.478   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e6604000 0x3e6f69000]
+04-09 23:48:09.479  6038  6069 D EGL_emulation: app_time_stats: avg=36.56ms min=8.42ms max=231.81ms count=29
+04-09 23:48:09.480   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e756c000 0x3e7ed1000]
+04-09 23:48:09.484   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:09.484   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:09.494  6098  6130 W Parcel  : Expecting binder but got null!
+04-09 23:48:09.502   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e1b60000 0x3e2163000]
+04-09 23:48:09.509   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e4000000 0x3e4965000]
+04-09 23:48:09.514   607   630 W ziparchive: Unable to open '/data/app/~~oRvMmbVkm8lmBQA-JMsZUQ==/com.example.g2_qc.test-uZ6TZhgsCNPJ7uJQOMm8UA==/base.dm': No such file or directory
+04-09 23:48:09.517   607   630 I ActivityTaskManager: Displayed com.example.g2_qc.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +115ms
+04-09 23:48:09.520   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e4965000 0x3e4f68000]
+04-09 23:48:09.527   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e4f68000 0x3e58cd000]
+04-09 23:48:09.530   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e58cd000 0x3e6232000]
+04-09 23:48:09.548   803   886 D EGL_emulation: app_time_stats: avg=170.14ms min=2.01ms max=2050.09ms count=15
+04-09 23:48:09.552   803   886 W Parcel  : Expecting binder but got null!
+04-09 23:48:09.561   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3edc2f000 0x3ee594000]
+04-09 23:48:09.566   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f0965000]
+04-09 23:48:09.569   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3f0965000 0x3f12ca000]
+04-09 23:48:09.571   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319a130
+04-09 23:48:09.572   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3f12ca000 0x3f1c2f000]
+04-09 23:48:09.596   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3f1c2f000 0x3f2594000]
+04-09 23:48:09.598   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3f2594000 0x3f2ef9000]
+04-09 23:48:09.602  1727  1727 I GsaVoiceInteractionSrv: Handling ACTION_START_HOTWORD
+04-09 23:48:09.602  1727  2505 I GsaVoiceInteractionSrv: disregardVoiceMatch: false
+04-09 23:48:09.603  1727  2505 I GsaVoiceInteractionSrv: Cannot start hotword, hotword has been explicitly disabled.
+04-09 23:48:09.616 10015 10015 W A       : Can't get WAA status for Mavatar!
+04-09 23:48:09.616 10015 10015 W A       : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.z.b(PG:1)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.at.a(PG:1)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.apps.tiktok.tracing.ec.a(PG:2)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.aj.a(PG:2)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.ac.apply(PG:1)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.h.e(PG:2)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.j.run(PG:9)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.d.i(PG:1)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.d.l(PG:12)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.d.n(PG:2)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.i.f(PG:1)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.common.util.concurrent.j.run(PG:12)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+04-09 23:48:09.616 10015 10015 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+04-09 23:48:09.616 10015 10015 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+04-09 23:48:09.616 10015 10015 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+04-09 23:48:09.616 10015 10015 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+04-09 23:48:09.623   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.623   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.627   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:09.627   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:09.656   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319a370
+04-09 23:48:09.687   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.697  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2266
+04-09 23:48:09.697  1450  1450 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+04-09 23:48:09.701  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:09.714  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:09.715  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.google.android.apps.nexuslauncher fieldId=2131361913 fieldName=null extras=null}, false)
+04-09 23:48:09.716  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:09.725   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319ee70
+04-09 23:48:09.737   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31997d0
+04-09 23:48:09.773   607   619 I system_server: NativeAlloc concurrent copying GC freed 562757(27MB) AllocSpace objects, 29(1028KB) LOS objects, 46% free, 27MB/51MB, paused 521us,93us total 259.917ms
+04-09 23:48:09.852   607  1550 W InputManager-JNI: Input channel object '82cabe0 Splash Screen com.example.g2_qc.test (client)' was disposed without first being removed with the input manager!
+04-09 23:48:09.854   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199770
+04-09 23:48:09.854   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.858   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.859   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.860   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.861   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:09.909   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.012  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf in: STOPPED
+04-09 23:48:10.013  6038  6038 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf
+04-09 23:48:10.017  6038  6038 D AutofillManager: onActivityFinishing(): calling cancelLocked()
+04-09 23:48:10.018  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@5b18fbf in: DESTROYED
+04-09 23:48:10.019  6038  6038 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+04-09 23:48:10.021  6038  6067 I TestRunner: finished: testSubmitJobButtonEnabledWhenFieldsFilled(com.example.g2_qc.SubmitJobAsEmployerTest)

@@ -1,0 +1,16 @@
+#Sun Apr 09 23:46:58 ADT 2023
+path.4=5/classes.dex
+path.3=2/classes.dex
+path.2=0/classes.dex
+path.1=0/classes.dex
+path.0=classes.dex
+base.4=C\:\\Users\\Mohammed Salim\\Desktop\\CS\\CSCI3130\\QC\\group-2-quick-cash\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\5\\classes.dex
+base.3=C\:\\Users\\Mohammed Salim\\Desktop\\CS\\CSCI3130\\QC\\group-2-quick-cash\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\2\\classes.dex
+base.2=C\:\\Users\\Mohammed Salim\\Desktop\\CS\\CSCI3130\\QC\\group-2-quick-cash\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.1=C\:\\Users\\Mohammed Salim\\Desktop\\CS\\CSCI3130\\QC\\group-2-quick-cash\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeLibDexDebugAndroidTest\\0\\classes.dex
+base.0=C\:\\Users\\Mohammed Salim\\Desktop\\CS\\CSCI3130\\QC\\group-2-quick-cash\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+renamed.4=classes5.dex

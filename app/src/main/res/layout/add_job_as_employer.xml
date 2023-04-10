@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/job_description"
+        android:layout_width="313dp"
+        android:layout_height="240dp"
+        android:background="@drawable/outline"
+        android:clipToOutline="false"
+        android:gravity="top|left"
+        android:hint="Enter your text here..."
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minLines="5"
+        android:padding="16dp"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/job_payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/job_name"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/job_name"
+        android:layout_width="313dp"
+        android:layout_height="50dp"
+        android:background="@drawable/outline"
+        android:clipToOutline="false"
+        android:gravity="top|left"
+        android:hint="Enter job name"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minLines="5"
+        android:padding="16dp"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/job_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/job_payment"
+        android:layout_width="313dp"
+        android:layout_height="50dp"
+        android:hint="Payment"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/jobImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/job_description"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/jobImage"
+        android:layout_width="180dp"
+        android:layout_height="88dp"
+        android:background="#ECECEC"
+        app:layout_constraintBottom_toTopOf="@+id/categories_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/job_payment"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@android:drawable/ic_menu_upload" />
+
+    <Button
+        android:id="@+id/submit_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories_spinner"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Spinner
+        android:id="@+id/categories_spinner"
+        android:layout_width="313dp"
+        android:layout_height="67dp"
+        android:background="@drawable/spinner_outline"
+        app:layout_constraintBottom_toTopOf="@+id/submit_job"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobImage"
+        app:layout_constraintVertical_bias="0.5"
+        android:contentDescription="spinner widget for selecting categories"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

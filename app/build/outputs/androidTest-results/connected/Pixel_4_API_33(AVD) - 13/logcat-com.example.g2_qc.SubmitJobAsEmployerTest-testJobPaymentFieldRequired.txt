@@ -1,0 +1,189 @@
+04-09 23:48:10.048  6038  6067 I TestRunner: started: testJobPaymentFieldRequired(com.example.g2_qc.SubmitJobAsEmployerTest)
+04-09 23:48:10.051   607  1750 W InputManager-JNI: Input channel object 'c2e3c74 com.example.g2_qc.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+04-09 23:48:10.061   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31946d0
+04-09 23:48:10.061   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199c50
+04-09 23:48:10.062  6038  6067 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+04-09 23:48:10.061   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319c350
+04-09 23:48:10.064   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319d130
+04-09 23:48:10.065   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319eff0
+04-09 23:48:10.065   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3198db0
+04-09 23:48:10.082   803   865 D SplashScreenView: Build android.window.SplashScreenView{1e260ed V.E...... ......ID 0,0-0,0}
+04-09 23:48:10.082   803   865 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-09 23:48:10.082   803   865 D SplashScreenView: Branding: view: android.view.View{b39ab22 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-09 23:48:10.112   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e248c000 0x3e2df1000]
+04-09 23:48:10.113  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72 in: PRE_ON_CREATE
+04-09 23:48:10.113  6038  6038 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+04-09 23:48:10.126   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e2df1000 0x3e3756000]
+04-09 23:48:10.128   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e4000000 0x3e4965000]
+04-09 23:48:10.132   803   886 D EGL_emulation: app_time_stats: avg=21.98ms min=1.07ms max=436.04ms count=30
+04-09 23:48:10.134  6038  6038 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+04-09 23:48:10.136   803   886 W Parcel  : Expecting binder but got null!
+04-09 23:48:10.168  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72 in: CREATED
+04-09 23:48:10.168  6038  6038 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72
+04-09 23:48:10.172  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72 in: STARTED
+04-09 23:48:10.173  6038  6038 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72
+04-09 23:48:10.174  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72 in: RESUMED
+04-09 23:48:10.174  6038  6038 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72
+04-09 23:48:10.193  1727  1727 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+04-09 23:48:10.194  1727  2508 E HwDetectorWithState: a: 3
+04-09 23:48:10.218   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e6604000 0x3e6f69000]
+04-09 23:48:10.232   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e756c000 0x3e7ed1000]
+04-09 23:48:10.234   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e4f68000 0x3e58cd000]
+04-09 23:48:10.245  6038  6069 W Parcel  : Expecting binder but got null!
+04-09 23:48:10.251   607   630 W ziparchive: Unable to open '/data/app/~~BTOA7CnM6sq1jk3s5TleCg==/com.example.g2_qc-2qJFW6WnsXC_Th4UEFRv3g==/base.dm': No such file or directory
+04-09 23:48:10.253   607   630 I ActivityTaskManager: Displayed com.example.g2_qc/.submitNewJob.SubmitJobAsEmployer: +179ms
+04-09 23:48:10.269  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:10.270  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:10.270  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.g2_qc fieldId=-1 fieldName=null extras=null}, false)
+04-09 23:48:10.271  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:10.273   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3199590
+04-09 23:48:10.288   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3196a70
+04-09 23:48:10.288   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319bd50
+04-09 23:48:10.405   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.438   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319ecf0
+04-09 23:48:10.438   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3197190
+04-09 23:48:10.438   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3197190
+04-09 23:48:10.438   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319ecf0
+04-09 23:48:10.447  6038  6038 I ViewInteraction: Performing 'type text()' action on view view.getId() is <2131296557/com.example.g2_qc:id/job_payment>
+04-09 23:48:10.449  6038  6038 W TypeTextAction: Supplied string is empty resulting in no-op (nothing is typed).
+04-09 23:48:10.455  6038  6038 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296809/com.example.g2_qc:id/submit_job>
+04-09 23:48:10.456   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.456   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.456   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.463   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.470  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2076.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192370365, downTime=192370365, deviceId=-1, source=0x1002, displayId=0, eventId=-982490320 }
+04-09 23:48:10.488   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319b4b0
+04-09 23:48:10.498  1175  1175 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2076.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=192370406, downTime=192370365, deviceId=-1, source=0x1002, displayId=0, eventId=-348878277 }
+04-09 23:48:10.505   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319a430
+04-09 23:48:10.519   431   573 D AudioFlinger: mixer(0x797ff5d969a0) throttle end: throttle time(34)
+04-09 23:48:10.531   607  1550 W InputManager-JNI: Input channel object '5f65548 PopupWindow:e39e7db (client)' was disposed without first being removed with the input manager!
+04-09 23:48:10.538   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319d8b0
+04-09 23:48:10.538   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319d8b0
+04-09 23:48:10.566   607  1550 W InputManager-JNI: Input channel object '8f5e1b Splash Screen com.example.g2_qc (client)' was disposed without first being removed with the input manager!
+04-09 23:48:10.571   607  1868 W InputManager-JNI: Input channel object '2c4f4bf PopupWindow:7710d8d (client)' was disposed without first being removed with the input manager!
+04-09 23:48:10.596   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.596   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.603   803   864 W FrameTracker: Missed App frame:JANK_APP_DEADLINE_MISSED, 2375658, 28232330, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.604   803   864 W FrameTracker: Missed SF frame:UNKNOWN: 80, 2375701, 25899164, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.608   803   864 W FrameTracker: Missed SF frame:UNKNOWN: 80, 2375737, 24920798, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.609   803   864 W FrameTracker: Missed SF frame:UNKNOWN: 66, 2375824, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.609   803   864 W FrameTracker: Missing HWUI jank callback for vsyncId: 2375824, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.610   803   864 W FrameTracker: Missing HWUI jank callback for vsyncId: 2375875, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.610   803   864 W FrameTracker: Missed SF frame:UNKNOWN: 80, 2375904, 43417202, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.611   803   864 W FrameTracker: Missed SF frame:UNKNOWN: 80, 2375934, 30262470, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.612   803   864 W FrameTracker: Missed SF frame:UNKNOWN: 80, 2375949, 29145904, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.614   803   864 W FrameTracker: Missing HWUI jank callback for vsyncId: 2376071, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.614   803   864 W FrameTracker: Missing SF jank callback for vsyncId: 2376114, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+04-09 23:48:10.628  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:10.629  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:10.633  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x2002(Number) imeOptions=0x4000006 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x2000 hintText=non-empty label=null packageName=com.example.g2_qc fieldId=2131296557 fieldName=null extras=Bundle[mParcelledData.dataSize=240]}, false)
+04-09 23:48:10.634  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:10.641  6038  6046 I m.example.g2_qc: Compiler allocated 4160KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+04-09 23:48:10.651   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e3f83000 0x3e3fd9000]
+04-09 23:48:10.668   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e3e05000 0x3e3e5b000]
+04-09 23:48:10.671   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e3e5b000 0x3e3eb1000]
+04-09 23:48:10.681  6038  6069 W Parcel  : Expecting binder but got null!
+04-09 23:48:10.686  6038  6038 I AssistStructure: Flattened final assist data: 3360 bytes, containing 2 windows, 14 views
+04-09 23:48:10.694  6038  6038 I AssistStructure: Flattened final assist data: 3360 bytes, containing 2 windows, 14 views
+04-09 23:48:10.701  6038  6038 I AssistStructure: Flattened final assist data: 3360 bytes, containing 2 windows, 14 views
+04-09 23:48:10.705  7580  7580 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+04-09 23:48:10.710  1055  1055 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:424835238
+04-09 23:48:10.711  7580  7580 W pps     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+04-09 23:48:10.722   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319c110
+04-09 23:48:10.722   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319e2d0
+04-09 23:48:10.722   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3198db0
+04-09 23:48:10.722   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3198db0
+04-09 23:48:10.722   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319e2d0
+04-09 23:48:10.722   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.805   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.805   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:10.956   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3198450
+04-09 23:48:10.958   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3198450
+04-09 23:48:10.968  6038  6038 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=an instance of android.widget.EditText and editText.getError() to match is "Please enter a job payment"}' assertion on view view.getId() is <2131296557/com.example.g2_qc:id/job_payment>
+04-09 23:48:10.987   803   865 D SplashScreenView: Build android.window.SplashScreenView{1eea534 V.E...... ......ID 0,0-0,0}
+04-09 23:48:10.987   803   865 D SplashScreenView: Icon: view: null drawable: null size: 0
+04-09 23:48:10.987   803   865 D SplashScreenView: Branding: view: android.view.View{32a5f5d G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+04-09 23:48:10.995  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72 in: PAUSED
+04-09 23:48:10.995  6038  6038 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72
+04-09 23:48:11.029   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:11.031   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:11.041   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.069   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e248c000 0x3e2df1000]
+04-09 23:48:11.085   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e2df1000 0x3e3756000]
+04-09 23:48:11.087   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.088   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.088   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.088   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.088   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.089   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e0000000 0x3e0965000]
+04-09 23:48:11.101  6098  6130 W Parcel  : Expecting binder but got null!
+04-09 23:48:11.107   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e0965000 0x3e12ca000]
+04-09 23:48:11.116   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e4000000 0x3e4965000]
+04-09 23:48:11.118   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e58cd000 0x3e6232000]
+04-09 23:48:11.123   803   886 W Parcel  : Expecting binder but got null!
+04-09 23:48:11.144   803   886 D EGL_emulation: app_time_stats: avg=12.72ms min=1.40ms max=56.92ms count=50
+04-09 23:48:11.152   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:11.152   950  1205 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+04-09 23:48:11.158   607  1867 W InputManager-JNI: Input channel object '48640a2 com.example.g2_qc.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+04-09 23:48:11.166   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e0000000 0x3e0965000]
+04-09 23:48:11.171   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319bdb0
+04-09 23:48:11.172   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31975b0
+04-09 23:48:11.179   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3e2df1000 0x3e3756000]
+04-09 23:48:11.183   400   447 D goldfish-address-space: claimShared: Ask to claim region [0x3edc2f000 0x3ee594000]
+04-09 23:48:11.185   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f0965000]
+04-09 23:48:11.200   607  1550 W InputManager-JNI: Input channel object 'fb78d8f Splash Screen com.example.g2_qc.test (client)' was disposed without first being removed with the input manager!
+04-09 23:48:11.200   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e4000000 0x3e4965000]
+04-09 23:48:11.204   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e58cd000 0x3e6232000]
+04-09 23:48:11.206   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3196cb0
+04-09 23:48:11.206   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319e750
+04-09 23:48:11.215  1727  1727 I GsaVoiceInteractionSrv: Handling ACTION_START_HOTWORD
+04-09 23:48:11.215  1727  2438 I GsaVoiceInteractionSrv: disregardVoiceMatch: false
+04-09 23:48:11.215  1727  2438 I GsaVoiceInteractionSrv: Cannot start hotword, hotword has been explicitly disabled.
+04-09 23:48:11.224 10015 10015 W A       : Can't get WAA status for Mavatar!
+04-09 23:48:11.224 10015 10015 W A       : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.z.b(PG:1)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.apps.tiktok.dataservice.at.a(PG:1)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.apps.tiktok.tracing.ec.a(PG:2)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.aj.a(PG:2)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.ac.apply(PG:1)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.h.e(PG:2)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.j.run(PG:9)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.d.i(PG:1)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.d.l(PG:12)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.d.n(PG:2)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.i.f(PG:1)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.common.util.concurrent.j.run(PG:12)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+04-09 23:48:11.224 10015 10015 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+04-09 23:48:11.224 10015 10015 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+04-09 23:48:11.224 10015 10015 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+04-09 23:48:11.224 10015 10015 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+04-09 23:48:11.239   400   454 D goldfish-address-space: claimShared: Ask to claim region [0x3e248c000 0x3e2a8f000]
+04-09 23:48:11.255   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3198d50
+04-09 23:48:11.255   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d31998f0
+04-09 23:48:11.255   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d3197490
+04-09 23:48:11.255   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.257   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.266  6038  6069 D EGL_emulation: app_time_stats: avg=13.83ms min=1.89ms max=66.91ms count=51
+04-09 23:48:11.274  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+04-09 23:48:11.275  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+04-09 23:48:11.275  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.google.android.apps.nexuslauncher fieldId=2131361913 fieldName=null extras=null}, false)
+04-09 23:48:11.276  1450  1450 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+04-09 23:48:11.288   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319a9d0
+04-09 23:48:11.317  1175  1188 W System  : A resource failed to call release.
+04-09 23:48:11.317  1175  1188 W System  : A resource failed to call release.
+04-09 23:48:11.317  1175  1188 W System  : A resource failed to call release.
+04-09 23:48:11.317  1175  1188 W System  : A resource failed to call release.
+04-09 23:48:11.317  1175  1188 W System  : A resource failed to call release.
+04-09 23:48:11.318  1175  1188 W System  : A resource failed to call release.
+04-09 23:48:11.318  1175  1188 W System  : A resource failed to call release.
+04-09 23:48:11.626   448   475 W TransactionTracing: Could not find layer handle 0x7ff5d319aaf0
+04-09 23:48:11.687  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72 in: STOPPED
+04-09 23:48:11.688  6038  6038 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72
+04-09 23:48:11.692   448   475 W TransactionTracing: Could not find layer id -1
+04-09 23:48:11.697  6038  6038 D AutofillManager: onActivityFinishing(): calling cancelLocked()
+04-09 23:48:11.698  6038  6038 D LifecycleMonitor: Lifecycle status change: com.example.g2_qc.submitNewJob.SubmitJobAsEmployer@8040b72 in: DESTROYED
+04-09 23:48:11.698  6038  6038 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+04-09 23:48:11.699  6038  6067 I TestRunner: finished: testJobPaymentFieldRequired(com.example.g2_qc.SubmitJobAsEmployerTest)

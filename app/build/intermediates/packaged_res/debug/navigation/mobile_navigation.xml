@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_employee">
+
+    <fragment
+        android:id="@+id/nav_employee"
+        android:name="com.example.g2_qc.main_page.ui.Employee.EmployeeFragment"
+        android:label="@string/menu_employee"
+        tools:layout="@layout/fragment_employee" />
+
+    <fragment
+        android:id="@+id/nav_employer"
+        android:name="com.example.g2_qc.main_page.ui.Employer.EmployerFragment"
+        android:label="@string/menu_employer"
+        tools:layout="@layout/fragment_employer" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.g2_qc.user_profile.personal_information.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

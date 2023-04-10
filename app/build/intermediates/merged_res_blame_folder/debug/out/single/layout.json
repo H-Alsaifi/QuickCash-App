@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\fragment_employee.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\fragment_employee.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\add_job_as_employee.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\add_job_as_employee.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\forgot_password_page.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\forgot_password_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\app_bar_main.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\employee_preferences_page.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\employee_preferences_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\activity_display_details.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\activity_display_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\paypal_layout.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\paypal_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\activity_location.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\activity_location.xml"
+    },
+    {
+        "merged": "com.example.g2_qc.app-mergeDebugResources-51:/layout/fragment_employer.xml",
+        "source": "com.example.g2_qc.app-main-54:/layout/fragment_employer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\greeting_page_layout.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\greeting_page_layout.xml"
+    },
+    {
+        "merged": "com.example.g2_qc.app-mergeDebugResources-51:/layout/fragment_employee.xml",
+        "source": "com.example.g2_qc.app-main-54:/layout/fragment_employee.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\job_page.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\job_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\filter_dialog.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\filter_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\box_layout.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\box_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\add_job_as_employer.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\add_job_as_employer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\content_main.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\content_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\welcome_page.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\welcome_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\login_page_layout.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\login_page_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\nav_header_main.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\signup_page.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\signup_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\rating_layout.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\rating_layout.xml"
+    },
+    {
+        "merged": "com.example.g2_qc.app-mergeDebugResources-51:/layout/activity_splash.xml",
+        "source": "com.example.g2_qc.app-main-54:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\fragment_employer.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\fragment_employer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-mergeDebugResources-51:\\layout\\history_page.xml",
+        "source": "C:\\Users\\Mohammed Salim\\.gradle\\daemon\\7.4\\com.example.g2_qc.app-main-54:\\layout\\history_page.xml"
+    }
+]
